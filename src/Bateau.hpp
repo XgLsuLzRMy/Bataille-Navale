@@ -1,6 +1,16 @@
 #ifndef __BATEAU_HPP__
 #define __BATEAU_HPP__
 
+/*!
+ * \file Bateau.hpp
+ * \brief classe Bateau
+ * \author Groupe B7
+ * \version 0.1
+ * \date 13 Avril 2018
+ * Classe Bateau qui fixe des bateaux au début de la partie
+ *
+ */
+
 class Bateau{
 	private:
 		int taille, xExtremite, yExtremite; // l'extremite est à gauche pour horizontal et en haut pour vertical
