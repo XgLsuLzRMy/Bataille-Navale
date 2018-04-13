@@ -43,7 +43,7 @@ void Grille::reset(){
 }
 
 void Grille::afficher(){
-	std::cout << "    ";
+	std::cout << "   ";
 	for(int i=0;i<Grille::tailleHorizontal;i++){
 		std::cout << " " << i+1;
 	}
