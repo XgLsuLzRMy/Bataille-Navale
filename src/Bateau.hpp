@@ -37,7 +37,7 @@ class Bateau{
 	
 	   /**
            * \fn public setxExtremite  
-           * \brief fonction qui modifie l'attribut xExtremite (coordonnée en x) du bateau
+           * \brief fonction qui modifie l'attribut xExtremite (coordonnée x d'extremité) du bateau
 	   *
            * \param xExtremite : coordonnée en x voulue du bateau
 	   *
@@ -47,7 +47,7 @@ class Bateau{
 	/**
            * \fn public setyExtremite  
 	   *
-           * \brief fonction qui modifie l'attribut yExtremite (coordonnée en y) du bateau
+           * \brief fonction qui modifie l'attribut yExtremite (coordonnée  y d'extremité) du bateau
 	   *
            * \param xExtremite : coordonnée en y voulue du bateau
         */
@@ -64,7 +64,7 @@ class Bateau{
 	
 	/**
             * \fn public getxExtremite  
-            * \brief fonction qui renvoie l'attribut xExtremite (coordonnée en x) d'un bateau
+            * \brief fonction qui renvoie l'attribut xExtremite (coordonnée x d'extremité) d'un bateau
             *
             * \return la fonction retourne la coordonnée x du bateau. 
             */
@@ -73,7 +73,7 @@ class Bateau{
 	
 	/**
             * \fn public getyExtremite  
-            * \brief fonction qui renvoie l'attribut xExtremite (coordonnée en y) d'un bateau
+            * \brief fonction qui renvoie l'attribut xExtremite (coordonnée y d'extremité) d'un bateau
             *
             * \return la fonction retourne la coordonnée en y du bateau.
          */
