@@ -29,29 +29,29 @@ class Grille{
 		
 	public:
 	/**
-	* \fn public Grille()
+	*\fn public Grille()
 	*\brief constructeur de la classe Grille
 */
 		Grille();
 		~Grille();
 		
 /**
-	*\ fn public initialiserGrille()
+	*\fn public initialiserGrille()
 	*\brief fonction permettant d'initialiser la grille
 */
 		void initialiserGrille();
 /**
-	*\ fn public afficher()
+	*\fn public afficher()
 	*\brief fonction permettant d'afficher la grille en fonction du codage
 */
 		void afficher();
 /**
-	*\ fn public reset()
+	*\fn public reset()
 	*\brief fonction permettant de réinitialiser la grille
 */
 		void reset();
 /**
-	*\ fn public fini()
+	*\fn public fini()
 	*\brief fonction permettant de detecter l'absence de bateaux sur la grille donc la fin du jeu
 */
 		bool fini();
