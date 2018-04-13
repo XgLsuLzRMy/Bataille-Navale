@@ -15,7 +15,7 @@
 #include "Bateau.hpp"
 
 /**
-	*\fn classe Grille
+	*\class Grille
 	*\brief Grille representant le support du jeu
 */
 
