@@ -1,0 +1,106 @@
+\hypertarget{class_jeu_bataille_navale}{}\section{Référence de la classe Jeu\+Bataille\+Navale}
+\label{class_jeu_bataille_navale}\index{Jeu\+Bataille\+Navale@{Jeu\+Bataille\+Navale}}
+
+
+classe representant la partie de bataille navale  
+
+
+
+
+{\ttfamily \#include $<$Jeu\+Bataille\+Navale.\+hpp$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_jeu_bataille_navale_aae41366decd137f03ac95aff8b8e0f49}\label{class_jeu_bataille_navale_aae41366decd137f03ac95aff8b8e0f49}} 
+\mbox{\hyperlink{class_jeu_bataille_navale_aae41366decd137f03ac95aff8b8e0f49}{Jeu\+Bataille\+Navale}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_jeu_bataille_navale_a3f59d8ee46918984df4a13cd261d5491}\label{class_jeu_bataille_navale_a3f59d8ee46918984df4a13cd261d5491}} 
+void \mbox{\hyperlink{class_jeu_bataille_navale_a3f59d8ee46918984df4a13cd261d5491}{nouveau\+Jeu}} ()
+\begin{DoxyCompactList}\small\item\em commence un nouveau jeu, demande au joueur si quels serons les jeurs \+: 2 IA, 2 humains ou un humain et une IA. Modifie l\textquotesingle{}attribut type\+Jeu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_jeu_bataille_navale_a72a08bdbc3562a7e1ea38dc1b3b935a2}{initialiser\+Nom\+Joueur}} (char nb\+Joueurs)
+\begin{DoxyCompactList}\small\item\em initialise le nom d\textquotesingle{}un joueur. Modifie l\textquotesingle{}attribut joueur1 ou joueur2 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_jeu_bataille_navale_ad0029d6b8cf47bb3b9a00ef2986f5145}\label{class_jeu_bataille_navale_ad0029d6b8cf47bb3b9a00ef2986f5145}} 
+void \mbox{\hyperlink{class_jeu_bataille_navale_ad0029d6b8cf47bb3b9a00ef2986f5145}{choisir\+Type\+Jeu}} ()
+\begin{DoxyCompactList}\small\item\em fonction qui permet au joueur de choisir son type de jeu \+: bataille classique ou bataille ~\newline
+améliorée. Modifie l\textquotesingle{}attribut nb\+Joueurs\+Humains. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_jeu_bataille_navale_ad23d49de0aee0b1b182c96a22cb42ffb}{check\+Fin\+Jeu}} ()
+\begin{DoxyCompactList}\small\item\em Fonction pour déterminer si le jeu est fini. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_jeu_bataille_navale_a24122527800e0958f476ae7de409f665}\label{class_jeu_bataille_navale_a24122527800e0958f476ae7de409f665}} 
+\mbox{\hyperlink{class_joueur}{Joueur}} {\bfseries joueur1}
+\item 
+\mbox{\hyperlink{class_joueur}{Joueur}} \mbox{\hyperlink{class_jeu_bataille_navale_a1f339275662a73e0e17ae34a1948c5f9}{joueur2}}
+\item 
+char \mbox{\hyperlink{class_jeu_bataille_navale_af35393d1b2ba1d0984414fed7b887875}{nb\+Joueurs\+Humains}}
+\item 
+char \mbox{\hyperlink{class_jeu_bataille_navale_abac1f29d41caf119a9766f323506dbe0}{type\+Jeu}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+classe representant la partie de bataille navale 
+
+La classe gere la partie. 
+
+\subsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_jeu_bataille_navale_ad23d49de0aee0b1b182c96a22cb42ffb}\label{class_jeu_bataille_navale_ad23d49de0aee0b1b182c96a22cb42ffb}} 
+\index{Jeu\+Bataille\+Navale@{Jeu\+Bataille\+Navale}!check\+Fin\+Jeu@{check\+Fin\+Jeu}}
+\index{check\+Fin\+Jeu@{check\+Fin\+Jeu}!Jeu\+Bataille\+Navale@{Jeu\+Bataille\+Navale}}
+\subsubsection{\texorpdfstring{check\+Fin\+Jeu()}{checkFinJeu()}}
+{\footnotesize\ttfamily private Jeu\+Bataille\+Navale\+::check\+Fin\+Jeu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Fonction pour déterminer si le jeu est fini. 
+
+\begin{DoxyReturn}{Renvoie}
+0 si ce n\textquotesingle{}est pas la fin du jeu et 1 si c\textquotesingle{}est la fin du jeu. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_jeu_bataille_navale_a72a08bdbc3562a7e1ea38dc1b3b935a2}\label{class_jeu_bataille_navale_a72a08bdbc3562a7e1ea38dc1b3b935a2}} 
+\index{Jeu\+Bataille\+Navale@{Jeu\+Bataille\+Navale}!initialiser\+Nom\+Joueur@{initialiser\+Nom\+Joueur}}
+\index{initialiser\+Nom\+Joueur@{initialiser\+Nom\+Joueur}!Jeu\+Bataille\+Navale@{Jeu\+Bataille\+Navale}}
+\subsubsection{\texorpdfstring{initialiser\+Nom\+Joueur()}{initialiserNomJoueur()}}
+{\footnotesize\ttfamily private Jeu\+Bataille\+Navale\+::initialiser\+Nom\+Joueur (\begin{DoxyParamCaption}\item[{char}]{nb\+Joueurs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+initialise le nom d\textquotesingle{}un joueur. Modifie l\textquotesingle{}attribut joueur1 ou joueur2 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nb\+Joueur} & Donne le nombre de joueurs humains à qui il faut demander le nom. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des données membres}
+\mbox{\Hypertarget{class_jeu_bataille_navale_a1f339275662a73e0e17ae34a1948c5f9}\label{class_jeu_bataille_navale_a1f339275662a73e0e17ae34a1948c5f9}} 
+\index{Jeu\+Bataille\+Navale@{Jeu\+Bataille\+Navale}!joueur2@{joueur2}}
+\index{joueur2@{joueur2}!Jeu\+Bataille\+Navale@{Jeu\+Bataille\+Navale}}
+\subsubsection{\texorpdfstring{joueur2}{joueur2}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_joueur}{Joueur}} Jeu\+Bataille\+Navale\+::joueur2\hspace{0.3cm}{\ttfamily [private]}}
+
+les joueurs de la partie \mbox{\Hypertarget{class_jeu_bataille_navale_af35393d1b2ba1d0984414fed7b887875}\label{class_jeu_bataille_navale_af35393d1b2ba1d0984414fed7b887875}} 
+\index{Jeu\+Bataille\+Navale@{Jeu\+Bataille\+Navale}!nb\+Joueurs\+Humains@{nb\+Joueurs\+Humains}}
+\index{nb\+Joueurs\+Humains@{nb\+Joueurs\+Humains}!Jeu\+Bataille\+Navale@{Jeu\+Bataille\+Navale}}
+\subsubsection{\texorpdfstring{nb\+Joueurs\+Humains}{nbJoueursHumains}}
+{\footnotesize\ttfamily char Jeu\+Bataille\+Navale\+::nb\+Joueurs\+Humains\hspace{0.3cm}{\ttfamily [private]}}
+
+le nombre de joueurs humains dans la partie \mbox{\Hypertarget{class_jeu_bataille_navale_abac1f29d41caf119a9766f323506dbe0}\label{class_jeu_bataille_navale_abac1f29d41caf119a9766f323506dbe0}} 
+\index{Jeu\+Bataille\+Navale@{Jeu\+Bataille\+Navale}!type\+Jeu@{type\+Jeu}}
+\index{type\+Jeu@{type\+Jeu}!Jeu\+Bataille\+Navale@{Jeu\+Bataille\+Navale}}
+\subsubsection{\texorpdfstring{type\+Jeu}{typeJeu}}
+{\footnotesize\ttfamily char Jeu\+Bataille\+Navale\+::type\+Jeu\hspace{0.3cm}{\ttfamily [private]}}
+
+le type de jeu \+: une bataille navalle normale ou améliorée 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\mbox{\hyperlink{_jeu_bataille_navale_8hpp}{Jeu\+Bataille\+Navale.\+hpp}}\item 
+D\+:/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/Jeu\+Bataille\+Navale.\+cpp\end{DoxyCompactItemize}
