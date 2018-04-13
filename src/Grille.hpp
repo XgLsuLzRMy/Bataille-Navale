@@ -1,4 +1,4 @@
-**
+/**
  * \file Grille.hpp
  * \brief classe Grille
  * \author Groupe B7
