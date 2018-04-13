@@ -11,6 +11,12 @@
  *
  */
 
+/*!
+ * \class Bateau
+ * \brief classe fixant des bateaux au début de la partie
+ *
+ */
+
 class Bateau{
 	private:
 		int taille, xExtremite, yExtremite; /*!< Paramètres caractéristiques du bateau incluant sa taille et ses coordonnées (x,y) en extrimité qui est à gauche pour l'orientation horizontal et en haut pour l'orientation verticlal */
