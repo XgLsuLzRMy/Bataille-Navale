@@ -64,14 +64,14 @@ void Tests::testFini(void)
 {
 	Grille grilleFinie;
 	grilleFinie.reset(); // remplie de 0 donc finie
-	mTestFini->joueur1.setGrille(grilleFinie); // La grille du joueur 1 est finie
+	mTestJeu->joueur1.setGrille(grilleFinie); // La grille du joueur 1 est finie
 	CPPUNIT_ASSERT(true == mTestFini->fini());
 	grilleFinie.set(2,2,1) // remplie de 0 et d'un 1
-	mTestFini->joueur1.setGrille(grilleFinie);// La grille du joueur 1 n'est pas finie
+	mTestJeu->joueur1.setGrille(grilleFinie);// La grille du joueur 1 n'est pas finie
 	CPPUNIT_ASSERT(false == mTestFini->fini());
 	grilleFinie.reset();
 	grilleFinie.set(2,2,2)// remplie de 0 et d'un 2
-	mTestFini->joueur1.setGrille(grilleFinie);// La grille du joueur 1 est finie
+	mTestJeu->joueur1.setGrille(grilleFinie);// La grille du joueur 1 est finie
 	CPPUNIT_ASSERT(true == mTestFini->fini());
 }
 
