@@ -49,15 +49,18 @@ void Tests::testCheckFinJeu(void)
 {
 	Grille grilleFinie;
 	grilleFinie.reset(); // remplie de 0 donc finie
-	mTestJeuBatailleNavale->joueur1.setGrille(grilleFinie); // La grille du joueur 1 est finie
-	CPPUNIT_ASSERT(true == mTestJeuBatailleNavale->checkFinJeu());
+	mTestJeu->joueur1.setGrille(grilleFinie); // La grille du joueur 1 est finie
+	CPPUNIT_ASSERT(true == mTestJeu->checkFinJeu());
 	grilleFinie.set(2,2,1) // remplie de 0 et d'un 1
-	mTestJeuBatailleNavale->joueur1.setGrille(grilleFinie);// La grille du joueur 1 n'est pas finie
-	CPPUNIT_ASSERT(false == mTestJeuBatailleNavale->checkFinJeu());
+	mTestJeu->joueur1.setGrille(grilleFinie);// La grille du joueur 1 n'est pas finie
+	CPPUNIT_ASSERT(false == mTestJeu->checkFinJeu());
 	grilleFinie.reset();
 	grilleFinie.set(2,2,2)// remplie de 0 et d'un 2
-	mTestJeuBatailleNavale->joueur1.setGrille(grilleFinie);// La grille du joueur 1 est finie
-	CPPUNIT_ASSERT(true == mTestJeuBatailleNavale->checkFinJeu());
+	mTestJeu->joueur1.setGrille(grilleFinie);// La grille du joueur 1 est finie
+	CPPUNIT_ASSERT(true == mTestJeu->checkFinJeu());
+	grilleFinie.set(2,2,-1) // remplie de 0 et d'un -1
+	mTestJeu->joueur1.setGrille(grilleFinie);// La grille du joueur 1 n'est pas finie
+	CPPUNIT_ASSERT(false == mTestJeu->checkFinJeu());
 }
 
 void Tests::testFini(void)
@@ -65,14 +68,14 @@ void Tests::testFini(void)
 	Grille grilleFinie;
 	grilleFinie.reset(); // remplie de 0 donc finie
 	mTestJeu->joueur1.setGrille(grilleFinie); // La grille du joueur 1 est finie
-	CPPUNIT_ASSERT(true == mTestFini->fini());
+	CPPUNIT_ASSERT(true == mTestJeu->fini());
 	grilleFinie.set(2,2,1) // remplie de 0 et d'un 1
 	mTestJeu->joueur1.setGrille(grilleFinie);// La grille du joueur 1 n'est pas finie
-	CPPUNIT_ASSERT(false == mTestFini->fini());
+	CPPUNIT_ASSERT(false == mTestJeu->fini());
 	grilleFinie.reset();
 	grilleFinie.set(2,2,2)// remplie de 0 et d'un 2
 	mTestJeu->joueur1.setGrille(grilleFinie);// La grille du joueur 1 est finie
-	CPPUNIT_ASSERT(true == mTestFini->fini());
+	CPPUNIT_ASSERT(true == mTestJeu->fini());
 }
 
 void Tests::testPlacerBateau(void)
