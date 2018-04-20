@@ -32,6 +32,7 @@ class Tests : public CppUnit::TestFixture
 	CPPUNIT_TEST(testVerifierPlace);
 	CPPUNIT_TEST(testGetCoordonneesCompletes);
 	CPPUNIT_TEST(testPlacerBateau);
+	CPPUNIT_TEST(testNombreJoueurs);
 	CPPUNIT_TEST_SUITE_END();
 public:
 	void setUp(void);
@@ -42,6 +43,7 @@ protected:
 	void testFini(void);
 	void testVerifierPlace(void);
 	void testGetCoordonneesCompletes(void);
+	void testNombreJoueurs(void);
 private:
 	Joueur *mTestJoueur;
 	JeuBatailleNavale* mTestJeu,
@@ -99,6 +101,10 @@ void Tests::testGetCoordonneesCompletes(void)
 	CPPUNIT_ASSERT(true == mTestJeu->getCoordonneesCompletes());
 }
 
+void Tests::testNombreJoueurs(){
+CPPUNIT_ASSERT(true == mTestJeu ->NombreJoueurs());
+}
+
 
 void Tests::setUp(void)
 {
@@ -111,3 +117,4 @@ void Tests::tearDown(void)
 {
 	delete mTestJeu;
 }
+
