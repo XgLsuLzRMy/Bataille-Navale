@@ -28,6 +28,7 @@ class Tests : public CppUnit::TestFixture
 {
 	CPPUNIT_TEST_SUITE(Tests);
 	CPPUNIT_TEST(testCheckFinJeu);
+	CPPUNIT_TEST(testFini);
 	CPPUNIT_TEST(testPlacerBateau);
 	CPPUNIT_TEST_SUITE_END();
 public:
@@ -36,6 +37,7 @@ public:
 protected:
 	void testplacerBateau(void);
 	void testCheckFinJeu(void);
+	void testFini(void);
 private:
 	Joueur *mTestJoueur;
 	JeuBatailleNavale* mTestJeu,
@@ -55,8 +57,24 @@ void Tests::testCheckFinJeu(void)
 	grilleFinie.reset();
 	grilleFinie.set(2,2,2)// remplie de 0 et d'un 2
 	mTestJeuBatailleNavale->joueur1.setGrille(grilleFinie);// La grille du joueur 1 est finie
-	CPPUNIT_ASSERT(false == mTestJeuBatailleNavale->checkFinJeu());
+	CPPUNIT_ASSERT(true == mTestJeuBatailleNavale->checkFinJeu());
 }
+
+void Tests::testFini(void)
+{
+	Grille grilleFinie;
+	grilleFinie.reset(); // remplie de 0 donc finie
+	mTestFini->joueur1.setGrille(grilleFinie); // La grille du joueur 1 est finie
+	CPPUNIT_ASSERT(true == mTestFini->fini());
+	grilleFinie.set(2,2,1) // remplie de 0 et d'un 1
+	mTestFini->joueur1.setGrille(grilleFinie);// La grille du joueur 1 n'est pas finie
+	CPPUNIT_ASSERT(false == mTestFini->fini());
+	grilleFinie.reset();
+	grilleFinie.set(2,2,2)// remplie de 0 et d'un 2
+	mTestFini->joueur1.setGrille(grilleFinie);// La grille du joueur 1 est finie
+	CPPUNIT_ASSERT(true == mTestFini->fini());
+}
+
 void Tests::testPlacerBateau(void)
 {
 	
