@@ -36,7 +36,7 @@ class Joueur{
  * \fn private ajoutBateau(Bateau *b)
  * \brief demande les coordonnées du bateau et demande si le bateau est à la verticale ou à 
  * l'horizontale. Appelle setxExtremite, setyExtremite et setOrientation, setTaille de la classe  
- * Bateau et utilise ajoutBateau.
+ * Bateau et utilise placerBateau.
  * \param *b pointeur sur un bateau.
  */
 		void ajoutBateau(Bateau *b);
