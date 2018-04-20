@@ -98,11 +98,11 @@ void Tests::testVerifierPlace(void)
 
 void Tests::testGetCoordonneesCompletes(void)
 {
-	CPPUNIT_ASSERT(true == mTestJeu->getCoordonneesCompletes());
+	CPPUNIT_ASSERT(tableau == mTestJeu->getCoordonneesCompletes());
 }
 
 void Tests::testNombreJoueurs(){
-CPPUNIT_ASSERT(true == mTestJeu ->NombreJoueurs());
+CPPUNIT_ASSERT( 2 >= mTestJeu->NombreJoueurs());
 }
 
 
