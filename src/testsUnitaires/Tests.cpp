@@ -48,7 +48,14 @@ void Tests::testCheckFinJeu(void)
 	Grille grilleFinie;
 	grilleFinie.reset(); // remplie de 0 donc finie
 	mTestJeuBatailleNavale->joueur1.setGrille(grilleFinie); // La grille du joueur 1 est finie
-	CPPUNIT_ASSERT(true == mTestJeuBatailleNavale->chekFinJeu());
+	CPPUNIT_ASSERT(true == mTestJeuBatailleNavale->checkFinJeu());
+	grilleFinie.set(2,2,1) // remplie de 0 et d'un 1
+	mTestJeuBatailleNavale->joueur1.setGrille(grilleFinie);// La grille du joueur 1 n'est pas finie
+	CPPUNIT_ASSERT(false == mTestJeuBatailleNavale->checkFinJeu());
+	grilleFinie.reset();
+	grilleFinie.set(2,2,2)// remplie de 0 et d'un 2
+	mTestJeuBatailleNavale->joueur1.setGrille(grilleFinie);// La grille du joueur 1 est finie
+	CPPUNIT_ASSERT(false == mTestJeuBatailleNavale->checkFinJeu());
 }
 void Tests::testPlacerBateau(void)
 {
