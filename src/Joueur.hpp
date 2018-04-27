@@ -3,7 +3,7 @@
 
 /**
  * \file Joueur.hpp
- * \brief classe JeuBatailleNavale
+ * \brief classe Joueur
  * \author groupe B7
  * \version 0.1
  * \date 13 Avril 2018
