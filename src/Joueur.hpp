@@ -27,9 +27,9 @@ class Joueur{
 		std::string nom; /*!< nom du joueur */
 		bool isIA; /*!<0 si c'est une IA 1 si c'est un humain */
 		Grille grille; /*!< la grille où sont placés les bateaux du joueur */
-		int nbBateauxTouches; /*!< est incrementé quand un des bateaux est touche pour facilite la verification de la fin de partie*/
+		int nbCaseBateauxTouches; /*!< est incrementé quand un des bateaux est touche pour facilite la verification de la fin de partie*/
 		
-		int nbBateaux; /*!< nombre de bateaux dont dispose le joueur */
+		int nbCaseBateaux; /*!< nombre de bateaux dont dispose le joueur */
 		Bateau* bateaux; /*!< tazbleau des bateaux du joueur */
 		
  /**
