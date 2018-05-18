@@ -1,0 +1,50 @@
+@startuml
+actor joueur1
+actor joueur2
+
+joueur1 -> JeuBatailleNavale : nouveauJeu
+activate JeuBatailleNavale
+JeuBatailleNavale -> Joueur :  initialiserNom()
+activate Joueur
+Joueur -> joueur1 :saisirNom()
+deactivate Joueur
+joueur1 -> Joueur : entrerNom
+activate Joueur
+Joueur -> joueur2 :saisirNom()
+deactivate Joueur
+joueur2 -> Joueur : entrerNom
+Joueur -> JeuBatailleNavale 
+JeuBatailleNavale -> joueur1 : choisirParametres()
+joueur1 -> JeuBatailleNavale : choisis
+JeuBatailleNavale -> Grille :initialiserGrille()
+activate Grille
+Grille ->JeuBatailleNavale
+deactivate Grille
+JeuBatailleNavale -> Grille : reinitialisation()
+activate Grille
+Grille ->JeuBatailleNavale
+deactivate Grille  
+JeuBatailleNavale -> joueur1 : placerPions()
+loop nb de bateaux
+   joueur1 -> Joueur : placer 
+   activate Joueur
+   Joueur -> Grille : placerBateau()
+   deactivate Joueur
+   activate Grille
+   Grille -> Joueur
+   deactivate Grille
+end
+JeuBatailleNavale -> joueur2 : placerPions()
+loop nb de bateaux
+   joueur2 -> Joueur : placer 
+   activate Joueur
+   Joueur -> Grille : placerBateau()
+   deactivate Joueur
+   activate Grille
+   Grille -> Joueur
+   deactivate Grille
+end
+
+
+deactivate JeuBatailleNavale
+@enduml

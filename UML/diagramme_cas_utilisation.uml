@@ -1,0 +1,23 @@
+@startuml
+left to right direction
+
+skinparam pakageStyle rectangle
+
+actor joueur1
+actor joueur2
+
+rectangle Jeu_de_bataille_navale {
+   joueur1 -- (nouvelle partie)
+   joueur1 -- (charger sauvegarde)
+   joueur1 -- (choisir type joueur)
+   joueur1 -- (choisir taille grille)
+   joueur1 -- (nom joueur)
+   joueur1 -- (placer bateau)
+   joueur1 -- (placer bombe)
+   joueur1 -- (sauvegarder partie)
+   joueur2 -- (nom joueur)
+   joueur2 -- (placer bateau)
+   joueur2 -- (placer bombe)
+
+}
+@enduml

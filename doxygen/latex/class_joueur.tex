@@ -1,0 +1,90 @@
+\hypertarget{class_joueur}{}\section{Référence de la classe Joueur}
+\label{class_joueur}\index{Joueur@{Joueur}}
+Graphe d\textquotesingle{}héritage de Joueur\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_joueur}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries reset\+Grilles} ()\hypertarget{class_joueur_a2f7fe616414bfb0ab31631ea10b38ae6}{}\label{class_joueur_a2f7fe616414bfb0ab31631ea10b38ae6}
+
+\item 
+virtual void \hyperlink{class_joueur_a9027bfc622d9a175340b5fffe915c7b2}{demander\+Nom} ()\hypertarget{class_joueur_a9027bfc622d9a175340b5fffe915c7b2}{}\label{class_joueur_a9027bfc622d9a175340b5fffe915c7b2}
+
+\begin{DoxyCompactList}\small\item\em initialise le nom du joueur en demandant le nom au joueur \end{DoxyCompactList}\item 
+virtual void {\bfseries demander\+Taille\+Grille} ()\hypertarget{class_joueur_a6a492734cdd1d8363c1617d598df9817}{}\label{class_joueur_a6a492734cdd1d8363c1617d598df9817}
+
+\item 
+virtual char {\bfseries demander\+Type\+Jeu} ()\hypertarget{class_joueur_a84baf36faf6b22fc23e4e793d4988793}{}\label{class_joueur_a84baf36faf6b22fc23e4e793d4988793}
+
+\item 
+virtual void \hyperlink{class_joueur_aa97f71a90328693e0047ba2f48d61b4b}{placement\+Des\+Bateaux} (char type\+Jeu)
+\begin{DoxyCompactList}\small\item\em demande au joueur de placer ses différents bateaux. Utilise ajout\+Bateau pour chaqun des bateaux du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres protégées}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries placer\+Bateau} (Bateau $\ast$b)\hypertarget{class_joueur_a82aa78e161543bbbc01f759d71e0bbc7}{}\label{class_joueur_a82aa78e161543bbbc01f759d71e0bbc7}
+
+\end{DoxyCompactItemize}
+\subsection*{Attributs protégés}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string {\bfseries nom}\hypertarget{class_joueur_abaee0b4f259181bf66dbab54bef971bb}{}\label{class_joueur_abaee0b4f259181bf66dbab54bef971bb}
+
+\item 
+\hyperlink{class_grille}{Grille} {\bfseries grille}\hypertarget{class_joueur_a97a052f0b9966c94c49862df3144a62f}{}\label{class_joueur_a97a052f0b9966c94c49862df3144a62f}
+
+\item 
+\hyperlink{class_grille}{Grille} {\bfseries grille\+Tentatives}\hypertarget{class_joueur_abbef5ee9c9c05a24ffa2c462e14cdfd7}{}\label{class_joueur_abbef5ee9c9c05a24ffa2c462e14cdfd7}
+
+\item 
+int {\bfseries nb\+Cases\+Bateaux\+Touches}\hypertarget{class_joueur_a3a41069191547937ddd3acd15eecd4ee}{}\label{class_joueur_a3a41069191547937ddd3acd15eecd4ee}
+
+\item 
+int {\bfseries nb\+Cases\+Bateaux}\hypertarget{class_joueur_a29e4485fe7b0a3f2c962757b7c7bf2a5}{}\label{class_joueur_a29e4485fe7b0a3f2c962757b7c7bf2a5}
+
+\item 
+int {\bfseries nb\+Bateaux}\hypertarget{class_joueur_a56752b0a96da94b17b07fd0312035a13}{}\label{class_joueur_a56752b0a96da94b17b07fd0312035a13}
+
+\item 
+Bateau $\ast$ {\bfseries bateaux}\hypertarget{class_joueur_acf537ce482b493555318da7da14d8ac9}{}\label{class_joueur_acf537ce482b493555318da7da14d8ac9}
+
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Jeu\+Bataille\+Navale}\hypertarget{class_joueur_a5e820295bb9a9381c14f9067e97ca6c1}{}\label{class_joueur_a5e820295bb9a9381c14f9067e97ca6c1}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentation des fonctions membres}
+\index{Joueur@{Joueur}!placement\+Des\+Bateaux@{placement\+Des\+Bateaux}}
+\index{placement\+Des\+Bateaux@{placement\+Des\+Bateaux}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{placement\+Des\+Bateaux(char type\+Jeu)}{placementDesBateaux(char typeJeu)}}]{\setlength{\rightskip}{0pt plus 5cm}private Joueur\+::placement\+Des\+Bateaux (
+\begin{DoxyParamCaption}
+\item[{char}]{type\+Jeu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_joueur_aa97f71a90328693e0047ba2f48d61b4b}{}\label{class_joueur_aa97f71a90328693e0047ba2f48d61b4b}
+
+
+demande au joueur de placer ses différents bateaux. Utilise ajout\+Bateau pour chaqun des bateaux du joueur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type\+Jeu} & le type de jeu choisis \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée dans \hyperlink{class_joueur_humain_a31e23d1e076b0e6110e0a9d354d80674}{Joueur\+Humain}, et \hyperlink{class_joueur_i_a_a62bb7d4785bcb817102e41c3e9c9b84a}{Joueur\+IA}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/Joueur.\+hpp\item 
+/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/Joueur.\+cpp\end{DoxyCompactItemize}

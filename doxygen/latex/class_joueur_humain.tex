@@ -1,0 +1,75 @@
+\hypertarget{class_joueur_humain}{}\section{Référence de la classe Joueur\+Humain}
+\label{class_joueur_humain}\index{Joueur\+Humain@{Joueur\+Humain}}
+
+
+classe representant le joueur qui est humain. Cette classe hérite de la classe \hyperlink{class_joueur}{Joueur}  
+
+
+
+
+{\ttfamily \#include $<$Joueur\+Humain.\+hpp$>$}
+
+Graphe d\textquotesingle{}héritage de Joueur\+Humain\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_joueur_humain}
+\end{center}
+\end{figure}
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_joueur_humain_afde5ace70d8664257e7774beea718120}{demander\+Nom} ()\hypertarget{class_joueur_humain_afde5ace70d8664257e7774beea718120}{}\label{class_joueur_humain_afde5ace70d8664257e7774beea718120}
+
+\begin{DoxyCompactList}\small\item\em initialise le nom du joueur en demandant le nom au joueur \end{DoxyCompactList}\item 
+virtual void {\bfseries demander\+Taille\+Grille} ()\hypertarget{class_joueur_humain_aecd25abe7629ee3925004e2f0bcb7c7e}{}\label{class_joueur_humain_aecd25abe7629ee3925004e2f0bcb7c7e}
+
+\item 
+virtual char {\bfseries demander\+Type\+Jeu} ()\hypertarget{class_joueur_humain_a63677d4f1eb52cfa30d932a78098aee7}{}\label{class_joueur_humain_a63677d4f1eb52cfa30d932a78098aee7}
+
+\item 
+virtual void \hyperlink{class_joueur_humain_a31e23d1e076b0e6110e0a9d354d80674}{placement\+Des\+Bateaux} (char type\+Jeu)
+\begin{DoxyCompactList}\small\item\em demande au joueur de placer ses différents bateaux. Utilise ajout\+Bateau pour chaqun des bateaux du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+virtual void {\bfseries placer\+Bateau} (Bateau $\ast$b)\hypertarget{class_joueur_humain_a12d0d611801d881138d9af0ca8e219c8}{}\label{class_joueur_humain_a12d0d611801d881138d9af0ca8e219c8}
+
+\item 
+void {\bfseries demander\+Coordonnees\+Bateau} (Bateau $\ast$b)\hypertarget{class_joueur_humain_aee35cac62f530e2ba30663853c87646d}{}\label{class_joueur_humain_aee35cac62f530e2ba30663853c87646d}
+
+\end{DoxyCompactItemize}
+\subsection*{Membres hérités additionnels}
+
+
+\subsection{Description détaillée}
+classe representant le joueur qui est humain. Cette classe hérite de la classe \hyperlink{class_joueur}{Joueur} 
+
+La classe gere les actions du joueur. 
+
+\subsection{Documentation des fonctions membres}
+\index{Joueur\+Humain@{Joueur\+Humain}!placement\+Des\+Bateaux@{placement\+Des\+Bateaux}}
+\index{placement\+Des\+Bateaux@{placement\+Des\+Bateaux}!Joueur\+Humain@{Joueur\+Humain}}
+\subsubsection[{\texorpdfstring{placement\+Des\+Bateaux(char type\+Jeu)}{placementDesBateaux(char typeJeu)}}]{\setlength{\rightskip}{0pt plus 5cm}void Joueur\+Humain\+::placement\+Des\+Bateaux (
+\begin{DoxyParamCaption}
+\item[{char}]{type\+Jeu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_humain_a31e23d1e076b0e6110e0a9d354d80674}{}\label{class_joueur_humain_a31e23d1e076b0e6110e0a9d354d80674}
+
+
+demande au joueur de placer ses différents bateaux. Utilise ajout\+Bateau pour chaqun des bateaux du joueur. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type\+Jeu} & le type de jeu choisis \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée à partir de \hyperlink{class_joueur_aa97f71a90328693e0047ba2f48d61b4b}{Joueur}.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\hyperlink{_joueur_humain_8hpp}{Joueur\+Humain.\+hpp}\item 
+/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/Joueur\+Humain.\+cpp\end{DoxyCompactItemize}

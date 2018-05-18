@@ -1,0 +1,139 @@
+\begin{theindex}
+
+  \item {ajout\+Bateau}
+    \subitem {Joueur}, \hyperpage{12}
+
+  \indexspace
+
+  \item {Bateau}, \hyperpage{5}
+    \subitem {get\+Coordonnees\+Completes}, \hyperpage{6}
+    \subitem {get\+Orientation}, \hyperpage{6}
+    \subitem {get\+Taille}, \hyperpage{6}
+    \subitem {getx\+Extremite}, \hyperpage{6}
+    \subitem {gety\+Extremite}, \hyperpage{6}
+    \subitem {orientation}, \hyperpage{8}
+    \subitem {set\+Orientation}, \hyperpage{7}
+    \subitem {set\+Taille}, \hyperpage{7}
+    \subitem {setx\+Extremite}, \hyperpage{7}
+    \subitem {sety\+Extremite}, \hyperpage{8}
+    \subitem {y\+Extremite}, \hyperpage{8}
+  \item {bateaux}
+    \subitem {Joueur}, \hyperpage{13}
+
+  \indexspace
+
+  \item {check\+Fin\+Jeu}
+    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{10}
+
+  \indexspace
+
+  \item {D\+:/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Bateau.\+hpp}, 
+		\hyperpage{15}
+  \item {D\+:/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Grille.\+hpp}, 
+		\hyperpage{15}
+  \item {D\+:/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Jeu\+Bataille\+Navale.\+hpp}, 
+		\hyperpage{16}
+  \item {D\+:/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Joueur.\+hpp}, 
+		\hyperpage{17}
+
+  \indexspace
+
+  \item {get\+Coordonnees\+Completes}
+    \subitem {Bateau}, \hyperpage{6}
+  \item {get\+Orientation}
+    \subitem {Bateau}, \hyperpage{6}
+  \item {get\+Taille}
+    \subitem {Bateau}, \hyperpage{6}
+  \item {getx\+Extremite}
+    \subitem {Bateau}, \hyperpage{6}
+  \item {gety\+Extremite}
+    \subitem {Bateau}, \hyperpage{6}
+  \item {Grille}, \hyperpage{8}
+  \item {grille}
+    \subitem {Joueur}, \hyperpage{14}
+
+  \indexspace
+
+  \item {initialiser\+Nom\+Joueur}
+    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{10}
+  \item {is\+IA}
+    \subitem {Joueur}, \hyperpage{14}
+
+  \indexspace
+
+  \item {Jeu\+Bataille\+Navale}, \hyperpage{9}
+    \subitem {check\+Fin\+Jeu}, \hyperpage{10}
+    \subitem {initialiser\+Nom\+Joueur}, \hyperpage{10}
+    \subitem {joueur2}, \hyperpage{10}
+    \subitem {nb\+Joueurs\+Humains}, \hyperpage{10}
+    \subitem {type\+Jeu}, \hyperpage{10}
+  \item {Joueur}, \hyperpage{11}
+    \subitem {ajout\+Bateau}, \hyperpage{12}
+    \subitem {bateaux}, \hyperpage{13}
+    \subitem {grille}, \hyperpage{14}
+    \subitem {is\+IA}, \hyperpage{14}
+    \subitem {nb\+Bateaux}, \hyperpage{14}
+    \subitem {nb\+Bateaux\+Touches}, \hyperpage{14}
+    \subitem {nom}, \hyperpage{14}
+    \subitem {placement\+Des\+Bateaux}, \hyperpage{12}
+    \subitem {placer\+Bateau}, \hyperpage{12}
+    \subitem {retirer\+Bateau}, \hyperpage{13}
+    \subitem {verifier\+Place}, \hyperpage{13}
+  \item {joueur2}
+    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{10}
+
+  \indexspace
+
+  \item {nb\+Bateaux}
+    \subitem {Joueur}, \hyperpage{14}
+  \item {nb\+Bateaux\+Touches}
+    \subitem {Joueur}, \hyperpage{14}
+  \item {nb\+Joueurs\+Humains}
+    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{10}
+  \item {nom}
+    \subitem {Joueur}, \hyperpage{14}
+
+  \indexspace
+
+  \item {orientation}
+    \subitem {Bateau}, \hyperpage{8}
+
+  \indexspace
+
+  \item {placement\+Des\+Bateaux}
+    \subitem {Joueur}, \hyperpage{12}
+  \item {placer\+Bateau}
+    \subitem {Joueur}, \hyperpage{12}
+
+  \indexspace
+
+  \item {retirer\+Bateau}
+    \subitem {Joueur}, \hyperpage{13}
+
+  \indexspace
+
+  \item {set\+Orientation}
+    \subitem {Bateau}, \hyperpage{7}
+  \item {set\+Taille}
+    \subitem {Bateau}, \hyperpage{7}
+  \item {setx\+Extremite}
+    \subitem {Bateau}, \hyperpage{7}
+  \item {sety\+Extremite}
+    \subitem {Bateau}, \hyperpage{8}
+
+  \indexspace
+
+  \item {type\+Jeu}
+    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{10}
+
+  \indexspace
+
+  \item {verifier\+Place}
+    \subitem {Joueur}, \hyperpage{13}
+
+  \indexspace
+
+  \item {y\+Extremite}
+    \subitem {Bateau}, \hyperpage{8}
+
+\end{theindex}

@@ -1,0 +1,200 @@
+\hypertarget{class_bateau}{}\section{Référence de la classe Bateau}
+\label{class_bateau}\index{Bateau@{Bateau}}
+
+
+classe fixant des bateaux au début de la partie  
+
+
+
+
+{\ttfamily \#include $<$Bateau.\+hpp$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bateau_af46de2e08abe6b61e218b6cbdc595bfb}\label{class_bateau_af46de2e08abe6b61e218b6cbdc595bfb}} 
+\mbox{\hyperlink{class_bateau_af46de2e08abe6b61e218b6cbdc595bfb}{Bateau}} ()
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \mbox{\hyperlink{class_bateau}{Bateau}} qui met ses caractéristques en ses valeurs par défaut. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bateau_ac06303b2d1c9b2c9d6b29e6f65eaff26}{set\+Taille}} (int taille)
+\begin{DoxyCompactList}\small\item\em fonction qui modifie l\textquotesingle{}attribut taille du bateau \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bateau_aecf45729913eb0c51a82475b996273ce}{setx\+Extremite}} (int x\+Extremite)
+\begin{DoxyCompactList}\small\item\em fonction qui modifie l\textquotesingle{}attribut x\+Extremite (coordonnée x d\textquotesingle{}extremité) du bateau \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bateau_a7fa9258d53309fcf41de04199d702fe7}{sety\+Extremite}} (int \mbox{\hyperlink{class_bateau_a32294182fa76970d9be2c4de5d8329e6}{y\+Extremite}})
+\begin{DoxyCompactList}\small\item\em fonction qui modifie l\textquotesingle{}attribut y\+Extremite (coordonnée y d\textquotesingle{}extremité) du bateau \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_bateau_a0c88ac8759c24674a23b7523cb3f6667}{set\+Orientation}} (char orientation\+Input)
+\begin{DoxyCompactList}\small\item\em fonction qui modifiE l\textquotesingle{}orientation du bateau. O pour une orientation horizontale et 1 pour la vertciale. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_bateau_ad8a7212a50596757a10a429ed69400ce}{getx\+Extremite}} ()
+\begin{DoxyCompactList}\small\item\em fonction qui renvoie l\textquotesingle{}attribut x\+Extremite (coordonnée x d\textquotesingle{}extremité) d\textquotesingle{}un bateau \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_bateau_a326527275685c457dd95fd1a71924b21}{gety\+Extremite}} ()
+\begin{DoxyCompactList}\small\item\em fonction qui renvoie l\textquotesingle{}attribut x\+Extremite (coordonnée y d\textquotesingle{}extremité) d\textquotesingle{}un bateau \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_bateau_a693e60e6b97d17a04b3f10de4e68f741}{get\+Orientation}} ()
+\begin{DoxyCompactList}\small\item\em fonction qui renvoie l\textquotesingle{}orientation du bateau en booléen ( 0 s\textquotesingle{}il est horizontal, 1 s\textquotesingle{}il est vertical) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_bateau_a9f0b81c06a5760d0aa40bed0cb9d2a58}{get\+Taille}} ()
+\begin{DoxyCompactList}\small\item\em fonction qui renvoie la taille d\textquotesingle{}un bateau. \end{DoxyCompactList}\item 
+int $\ast$$\ast$ \mbox{\hyperlink{class_bateau_a55c31fbdc2dc0c92786583d9bbd14985}{get\+Coordonnees\+Completes}} ()
+\begin{DoxyCompactList}\small\item\em fonction renvoie tous les coordonnées en x et y occupées par le bateau \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_bateau_a1dd818ea44eed67f756400eaac344a95}\label{class_bateau_a1dd818ea44eed67f756400eaac344a95}} 
+int {\bfseries taille}
+\item 
+\mbox{\Hypertarget{class_bateau_ab63ce4226907ed0961b47eded901658e}\label{class_bateau_ab63ce4226907ed0961b47eded901658e}} 
+int {\bfseries x\+Extremite}
+\item 
+int \mbox{\hyperlink{class_bateau_a32294182fa76970d9be2c4de5d8329e6}{y\+Extremite}}
+\item 
+bool \mbox{\hyperlink{class_bateau_a2d3074370ff0c372286522f298830f63}{orientation}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+classe fixant des bateaux au début de la partie 
+
+\subsection{Documentation des fonctions membres}
+\mbox{\Hypertarget{class_bateau_a55c31fbdc2dc0c92786583d9bbd14985}\label{class_bateau_a55c31fbdc2dc0c92786583d9bbd14985}} 
+\index{Bateau@{Bateau}!get\+Coordonnees\+Completes@{get\+Coordonnees\+Completes}}
+\index{get\+Coordonnees\+Completes@{get\+Coordonnees\+Completes}!Bateau@{Bateau}}
+\subsubsection{\texorpdfstring{get\+Coordonnees\+Completes()}{getCoordonneesCompletes()}}
+{\footnotesize\ttfamily public Bateau\+::get\+Coordonnees\+Completes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+fonction renvoie tous les coordonnées en x et y occupées par le bateau 
+
+\begin{DoxyReturn}{Renvoie}
+cette fonction retourne les coordonnées entiers (x,y) du bateau; 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bateau_a693e60e6b97d17a04b3f10de4e68f741}\label{class_bateau_a693e60e6b97d17a04b3f10de4e68f741}} 
+\index{Bateau@{Bateau}!get\+Orientation@{get\+Orientation}}
+\index{get\+Orientation@{get\+Orientation}!Bateau@{Bateau}}
+\subsubsection{\texorpdfstring{get\+Orientation()}{getOrientation()}}
+{\footnotesize\ttfamily public Bateau\+::get\+Orientation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+fonction qui renvoie l\textquotesingle{}orientation du bateau en booléen ( 0 s\textquotesingle{}il est horizontal, 1 s\textquotesingle{}il est vertical) 
+
+\begin{DoxyReturn}{Renvoie}
+cette fonction retourne l\textquotesingle{}orientation du bateau. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bateau_a9f0b81c06a5760d0aa40bed0cb9d2a58}\label{class_bateau_a9f0b81c06a5760d0aa40bed0cb9d2a58}} 
+\index{Bateau@{Bateau}!get\+Taille@{get\+Taille}}
+\index{get\+Taille@{get\+Taille}!Bateau@{Bateau}}
+\subsubsection{\texorpdfstring{get\+Taille()}{getTaille()}}
+{\footnotesize\ttfamily public Bateau\+::get\+Taille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+fonction qui renvoie la taille d\textquotesingle{}un bateau. 
+
+\begin{DoxyReturn}{Renvoie}
+cette fonction retourne la taille du bateau 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bateau_ad8a7212a50596757a10a429ed69400ce}\label{class_bateau_ad8a7212a50596757a10a429ed69400ce}} 
+\index{Bateau@{Bateau}!getx\+Extremite@{getx\+Extremite}}
+\index{getx\+Extremite@{getx\+Extremite}!Bateau@{Bateau}}
+\subsubsection{\texorpdfstring{getx\+Extremite()}{getxExtremite()}}
+{\footnotesize\ttfamily public Bateau\+::getx\+Extremite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+fonction qui renvoie l\textquotesingle{}attribut x\+Extremite (coordonnée x d\textquotesingle{}extremité) d\textquotesingle{}un bateau 
+
+\begin{DoxyReturn}{Renvoie}
+la fonction retourne la coordonnée x du bateau. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bateau_a326527275685c457dd95fd1a71924b21}\label{class_bateau_a326527275685c457dd95fd1a71924b21}} 
+\index{Bateau@{Bateau}!gety\+Extremite@{gety\+Extremite}}
+\index{gety\+Extremite@{gety\+Extremite}!Bateau@{Bateau}}
+\subsubsection{\texorpdfstring{gety\+Extremite()}{getyExtremite()}}
+{\footnotesize\ttfamily public Bateau\+::gety\+Extremite (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+fonction qui renvoie l\textquotesingle{}attribut x\+Extremite (coordonnée y d\textquotesingle{}extremité) d\textquotesingle{}un bateau 
+
+\begin{DoxyReturn}{Renvoie}
+la fonction retourne la coordonnée en y du bateau. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_bateau_a0c88ac8759c24674a23b7523cb3f6667}\label{class_bateau_a0c88ac8759c24674a23b7523cb3f6667}} 
+\index{Bateau@{Bateau}!set\+Orientation@{set\+Orientation}}
+\index{set\+Orientation@{set\+Orientation}!Bateau@{Bateau}}
+\subsubsection{\texorpdfstring{set\+Orientation()}{setOrientation()}}
+{\footnotesize\ttfamily public Bateau\+::set\+Orientation (\begin{DoxyParamCaption}\item[{char}]{orientation\+Input }\end{DoxyParamCaption})}
+
+
+
+fonction qui modifiE l\textquotesingle{}orientation du bateau. O pour une orientation horizontale et 1 pour la vertciale. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em orientation\+Input} & \+: caractère h (pour horizontal) ou v (pour vertical) qui va être transformé en son booléen correspondant (0 pour h et 1 pour v). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bateau_ac06303b2d1c9b2c9d6b29e6f65eaff26}\label{class_bateau_ac06303b2d1c9b2c9d6b29e6f65eaff26}} 
+\index{Bateau@{Bateau}!set\+Taille@{set\+Taille}}
+\index{set\+Taille@{set\+Taille}!Bateau@{Bateau}}
+\subsubsection{\texorpdfstring{set\+Taille()}{setTaille()}}
+{\footnotesize\ttfamily public Bateau\+::set\+Taille (\begin{DoxyParamCaption}\item[{int}]{taille }\end{DoxyParamCaption})}
+
+
+
+fonction qui modifie l\textquotesingle{}attribut taille du bateau 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em taille} & \+: taille voulue du bateau \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bateau_aecf45729913eb0c51a82475b996273ce}\label{class_bateau_aecf45729913eb0c51a82475b996273ce}} 
+\index{Bateau@{Bateau}!setx\+Extremite@{setx\+Extremite}}
+\index{setx\+Extremite@{setx\+Extremite}!Bateau@{Bateau}}
+\subsubsection{\texorpdfstring{setx\+Extremite()}{setxExtremite()}}
+{\footnotesize\ttfamily public Bateau\+::setx\+Extremite (\begin{DoxyParamCaption}\item[{int}]{x\+Extremite }\end{DoxyParamCaption})}
+
+
+
+fonction qui modifie l\textquotesingle{}attribut x\+Extremite (coordonnée x d\textquotesingle{}extremité) du bateau 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x\+Extremite} & \+: coordonnée en x voulue du bateau \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bateau_a7fa9258d53309fcf41de04199d702fe7}\label{class_bateau_a7fa9258d53309fcf41de04199d702fe7}} 
+\index{Bateau@{Bateau}!sety\+Extremite@{sety\+Extremite}}
+\index{sety\+Extremite@{sety\+Extremite}!Bateau@{Bateau}}
+\subsubsection{\texorpdfstring{sety\+Extremite()}{setyExtremite()}}
+{\footnotesize\ttfamily public Bateau\+::sety\+Extremite (\begin{DoxyParamCaption}\item[{int}]{y\+Extremite }\end{DoxyParamCaption})}
+
+
+
+fonction qui modifie l\textquotesingle{}attribut y\+Extremite (coordonnée y d\textquotesingle{}extremité) du bateau 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x\+Extremite} & \+: coordonnée en y voulue du bateau \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des données membres}
+\mbox{\Hypertarget{class_bateau_a2d3074370ff0c372286522f298830f63}\label{class_bateau_a2d3074370ff0c372286522f298830f63}} 
+\index{Bateau@{Bateau}!orientation@{orientation}}
+\index{orientation@{orientation}!Bateau@{Bateau}}
+\subsubsection{\texorpdfstring{orientation}{orientation}}
+{\footnotesize\ttfamily bool Bateau\+::orientation\hspace{0.3cm}{\ttfamily [private]}}
+
+orientation du bateau 0 pour l\textquotesingle{}horizontal et 1 pour le vertical \mbox{\Hypertarget{class_bateau_a32294182fa76970d9be2c4de5d8329e6}\label{class_bateau_a32294182fa76970d9be2c4de5d8329e6}} 
+\index{Bateau@{Bateau}!y\+Extremite@{y\+Extremite}}
+\index{y\+Extremite@{y\+Extremite}!Bateau@{Bateau}}
+\subsubsection{\texorpdfstring{y\+Extremite}{yExtremite}}
+{\footnotesize\ttfamily int Bateau\+::y\+Extremite\hspace{0.3cm}{\ttfamily [private]}}
+
+Paramètres caractéristiques du bateau incluant sa taille et ses coordonnées (x,y) en extrimité qui est à gauche pour l\textquotesingle{}orientation horizontal et en haut pour l\textquotesingle{}orientation verticlal 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\mbox{\hyperlink{_bateau_8hpp}{Bateau.\+hpp}}\item 
+D\+:/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/Bateau.\+cpp\end{DoxyCompactItemize}
