@@ -1,9 +1,0 @@
-@startuml
-hide members
-Bateau ..|> Pion
-Joueur<--> JeuBatailleNavale
-Pion --> Grille
-Grille --> Joueur
-Grille --> JeuBatailleNavale
-
-@enduml
