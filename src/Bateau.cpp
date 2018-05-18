@@ -9,7 +9,6 @@ Bateau::Bateau(){
 }
 
 bool Bateau::placerSurGrille(Grille *grille){
-	std::cout << "Dans placerSurGrille : xExtremite = " << Bateau::xExtremite << " yExtremite = " << Bateau::yExtremite << "\n";
 	int **coordonneesBateau = Bateau::getCoordonneesCompletes();
 	if(grille->verifierPlace(coordonneesBateau, Bateau::taille)){
 		for(int i=0; i < Bateau::taille; i++){

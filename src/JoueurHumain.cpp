@@ -110,7 +110,7 @@ void JoueurHumain::demanderCoordonneesBateau(Bateau *b){
 		std::cin.clear();
 	}while(orientationInput!='v' && orientationInput!='h');
 
-	(*b).setOrientation(orientationInput);
-	(*b).setxExtremite(xExtremite);
-	(*b).setyExtremite(yExtremite);
+	b->setOrientation(orientationInput);
+	b->setxExtremite(xExtremite);
+	b->setyExtremite(yExtremite);
 }
