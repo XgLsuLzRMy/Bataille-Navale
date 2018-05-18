@@ -23,7 +23,6 @@ void JoueurHumain::demanderTailleGrille(){
 	do{
 		std::cout << "Donner la hauteur de la grille : ";
 		std::cin >> h;
-		std::cin.clear();
 	}while(h <= 0);
 	JoueurHumain::grille.setTaille(l,h);
 }
@@ -111,8 +110,7 @@ void JoueurHumain::demanderCoordonneesBateau(Bateau *b){
 		std::cin.clear();
 	}while(orientationInput!='v' && orientationInput!='h');
 
-	b->setOrientation(orientationInput);
-	b->setxExtremite(xExtremite);
-	b->setyExtremite(yExtremite);
-	std::cout << "Dans demanderCoordonneesBateau : xExtremite = " << b->getxExtremite() << " yExtremite = " << b->getyExtremite() << "\n";
+	(*b).setOrientation(orientationInput);
+	(*b).setxExtremite(xExtremite);
+	(*b).setyExtremite(yExtremite);
 }
