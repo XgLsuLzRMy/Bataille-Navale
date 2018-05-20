@@ -41,6 +41,15 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 post-build: main
 	
 
+sauvegarde: $(OBJDIR)/main_test_sauvegarde.o $(OBJDIR)/GestionSauvegarde.o
+	g++ -o $(BINDIR)/sauvegarde $^
+
+$(OBJDIR)/main_test_sauvegarde.o: $(SRCDIR)/main_test_sauvegarde.cpp
+	g++ -c $< -o $@
+
+$(OBJDIR)/GestionSauvegarde.o: $(SRCDIR)/GestionSauvegarde.cpp
+	g++ -c $< -o $@
+
 clean:
 	rm -f $(BINDIR)/$(TARGET)
 	rm -rf $(OBJDIR)

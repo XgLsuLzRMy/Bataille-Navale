@@ -3,8 +3,8 @@
 #include "GestionSauvegarde.hpp"
 
 int main(){
-	
-	GestionSauvegarde g("sauvegader.sav");
-	char* s = g.lire("IA");
-	std::cout << s << "\n";
+
+	GestionSauvegarde g("sauvegarde.sav");
+	g.ecrireNomJoueur('1', "toto");
+	g.lireNomJoueur('1');
 }
