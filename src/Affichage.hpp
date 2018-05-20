@@ -33,6 +33,7 @@ public:
   char demanderPlacementCorrect();
   int demanderCoordonneesBateau(char coordonneee);
   char demanderOrientationBateau();
+  int demanderTailleBateau();
   int demanderCoordonneesBombe(char coordonnee);
 };
 
