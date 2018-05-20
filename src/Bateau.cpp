@@ -12,7 +12,7 @@ bool Bateau::placerSurGrille(Grille *grille){
 	int **coordonneesBateau = Bateau::getCoordonneesCompletes();
 	if(grille->verifierPlace(coordonneesBateau, Bateau::taille)){
 		for(int i=0; i < Bateau::taille; i++){
-			grille->set(coordonneesBateau[i][1], coordonneesBateau[i][0], 1);
+			grille->set(coordonneesBateau[i][1], coordonneesBateau[i][0], BATEAU);
 		}
 		return true;
 	}else{
@@ -23,7 +23,7 @@ bool Bateau::placerSurGrille(Grille *grille){
 void Bateau::retirerDeLaGrille(Grille *grille){
 	int **coordonneesBateau = Bateau::getCoordonneesCompletes();
 	for(int i=0; i<Bateau::taille; i++){
-		grille->set(coordonneesBateau[i][1], coordonneesBateau[i][0], 0);
+		grille->set(coordonneesBateau[i][1], coordonneesBateau[i][0], EAU);
 	}
 }
 
