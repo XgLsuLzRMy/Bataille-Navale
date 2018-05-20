@@ -2,13 +2,13 @@
 #define __AFFICHAGE_HPP__
 
 /**
-* \file JeuBatailleNavale.hpp
-* \brief classe JeuBatailleNavale
+* \file Affichage.hpp
+* \brief classe Affichage
 * \author groupe B7
 * \version 0.1
 * \date 13 Avril 2018
 *
-* Classe JeuBatailleNavale, classe principale qui contrôle la partie entre les deux joueurs.
+* Classe Affichage, classe qui gère l'affichage d'une partie de Bataille Navale.
 *
 */
 
