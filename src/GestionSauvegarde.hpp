@@ -1,6 +1,8 @@
 #ifndef __GESTION_SAUVEGARDE_HPP__
 #define __GESTION_SAUVEGARDE_HPP__
 
+#define ERREUR "$"
+
 #include <iostream>
 #include <fstream>
 #include <string>

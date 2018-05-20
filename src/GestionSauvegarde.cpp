@@ -14,20 +14,16 @@ void GestionSauvegarde::ecrireNomJoueur(char numeroJoueur, std::string nomJoueur
 }
 
 std::string GestionSauvegarde::lireAttribut(std::string attribut){
-  std::string res = "$"; // caractere d'erreur
+  std::string res = ERREUR; // caractere d'erreur
   std::ifstream flux(GestionSauvegarde::nomFichier.c_str());
   if(flux){
     std::string ligne, ligneAvantEgal;
     int tailleAttribut = attribut.size();
-    std::cout << "taille = " << tailleAttribut << "\n";
     bool trouve = false;
     std::string::size_type positionDuEgal, positionEspace;
-    int i = 0;
     // Ordre des 2 conditions du while important car si dans l'autre sens (getline && !trouve) alors on quittera la boucle en lisant la ligne suivante et on ne pourra pas recuperer les donnees dans la partie suivant le while
     // On pourrait aussi recuperer directement les donnees dans le while
     while(!trouve && getline(flux, ligne)){
-      i++;
-      std::cout << "ligne " << i << "\n";
       positionDuEgal = ligne.find('=');
       if(positionDuEgal != std::string::npos){
         if(positionDuEgal >= tailleAttribut){
@@ -60,7 +56,6 @@ std::string GestionSauvegarde::lireAttribut(std::string attribut){
     }
     flux.close();
   }
-  std::cout << "resultat " << res << "\n";
   return res;
 }
 
