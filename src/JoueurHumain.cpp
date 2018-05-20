@@ -40,16 +40,51 @@ void JoueurHumain::placementDesBateaux(char typeJeu){
 	if (typeJeu!=1){
 		// il faut demander le nb de bateaux et leur taille
 		int nbMaxDeBateaux = 5;
-		//Joueur::definirBateauxType2(nbMaxDeBateaux);
-		JoueurHumain::affichage->afficherMessage("\n===\nTYPE DE JEU PAS ENCORE FAIT\n===\n\n");
+		//vector<Bateau>  bateauxPossibles = Joueur::definirBateauxType2(nbMaxDeBateaux);
+		JoueurHumain::affichage->afficherMessage("\n===\nA TESTER\n===\n\n");
+		//annonce le nombre de bateaux a placer 
+		for(int i=0;i<Joueur::nbBateaux;i++){
+			std::stringstream sstm; // pour concatener un int et une string
+			sstm << "Encore " << JoueurHumain::nbBateaux-i << " bateaux a placer...\n";
+			std::string str = sstm.str();
+			JoueurHumain::affichage->afficherMessage(str);
+			// afficher les bateaux possibles 
+			std::cout << "vous pouvez placer les bateaux de tailles suivantes :";
+			std::stringstream sstm; // pour concatener un int et une string
+			char listeTaille ="";
+			for (int x=0;x<nbMaxDeBateau-i;x++){
+				if (Joueur::bateaux[x]->getTaille() != 0){
+					listeTaille = listeTaille+ str(Joueur::bateaux[x]->getTaille())+"  ";
+				}				
+			}
+			sstm << listeTaille;
+			std::string str = sstm.str();
+			JoueurHumain::affichage->afficherMessage(str);
+			// demande la taille du bateau qui va etre placer
+			int tailleBateau = 90;
+			tailleBateau = JoueurHumain::affichage->demanderTailleBateau();
+			// on verrifie que cette taile existe 
+			for (int x=0;x<nbMaxDeBateau-i;x++){
+				if (Joueur::bateaux[x]->getTaille() == tailleBateau){ // le bateau existe et on le place
+					JoueurHumain::placerBateau(&(Joueur::bateaux[x]));
+					// on suprime le bateau de la liste des possibles (on met la taille du bateau utilise a 0)
+					Joueur::bateaux[x].taille = 0;		
+				}
+				else { // le bateau n'existe pas
+					i = i-1;
+ 					std::cout << "cette taille n'est pas disponible";
+				}				
+			} 
+		}
 	}
-
-	for(int i=0;i<Joueur::nbBateaux;i++){
-		std::stringstream sstm; // pour concatener un int et une string
-		sstm << "Encore " << JoueurHumain::nbBateaux-i << " bateaux a placer...\n";
-		std::string str = sstm.str();
-		JoueurHumain::affichage->afficherMessage(str);
-		JoueurHumain::placerBateau(&(Joueur::bateaux[i]));
+	else {
+		for(int i=0;i<Joueur::nbBateaux;i++){
+			std::stringstream sstm; // pour concatener un int et une string
+			sstm << "Encore " << JoueurHumain::nbBateaux-i << " bateaux a placer...\n";
+			std::string str = sstm.str();
+			JoueurHumain::affichage->afficherMessage(str);
+			JoueurHumain::placerBateau(&(Joueur::bateaux[i]));
+		}
 	}
 }
 
@@ -65,8 +100,7 @@ void JoueurHumain::placerBateau(Bateau *b){
 		std::stringstream sstm; // pour concatener un int et une string
 		sstm << "Bateau de taille " << tailleBateau << "\n";
 		std::string str = sstm.str();
-		JoueurHumain::affichage->afficherMessage(str);
-
+		JoueurHumain::affichage->afficherMessage(str);	
 		demanderCoordonneesBateau(b);
 
 		placementReussi = b->placerSurGrille(&(JoueurHumain::grille));
