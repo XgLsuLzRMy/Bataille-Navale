@@ -1,10 +1,29 @@
-nomJoueur1   =toto1
-nomJoueur2  =tata1
-IA1=0
-IA2=0
-
-nomJoueur2=tata2
-nomJoueur1 =toto2
-nomJoueur2=tata3
-nomJoueur1Nom=Autretoto
-nomJoueur1= toto3
+[donnees]
+nomJoueur1=toto
+nomJoueur2=tata
+typeJeu=1
+joueurEnCours=1
+[grille1]
+1 1 1 0 0
+1 1 1 0 0
+1 1 1 0 0
+0 0 0 0 0
+0 0 0 0 0
+[grille2]
+0 2 1 1 0
+0 0 1 0 0
+0 1 1 1 1
+0 1 0 0 0
+0 1 0 0 0
+[grilleTentatives1]
+5 4 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+0 0 0 0 0
+[grilleTentatives2]
+0 0 0 0 0
+0 0 0 0 0
+0 0 4 0 0
+0 0 0 5 0
+0 0 0 0 0

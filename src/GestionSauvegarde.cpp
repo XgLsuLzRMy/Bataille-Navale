@@ -7,13 +7,12 @@ GestionSauvegarde::GestionSauvegarde(std::string nomFichier){
 void GestionSauvegarde::ecrireNomJoueur(char numeroJoueur, std::string nomJoueur){
   std::ofstream flux(GestionSauvegarde::nomFichier.c_str(), std::ios::app);
   if(flux){
-    flux << "nomJoueur" << numeroJoueur << "=" << nomJoueur << "\n";
-
+    // TODO
     flux.close();
   }
 }
 
-int GestionSauvegarde::positionAttribut(std::string attribut){
+int GestionSauvegarde::positionAttribut(std::string attribut, bool verifierEgale){
   int res = -1;
   std::ifstream flux(GestionSauvegarde::nomFichier.c_str());
   if(flux){
@@ -25,7 +24,11 @@ int GestionSauvegarde::positionAttribut(std::string attribut){
     // Ordre des 2 conditions du while important car si dans l'autre sens (getline && !trouve) alors on quittera la boucle en lisant la ligne suivante et on ne pourra pas recuperer les donnees dans la partie suivant le while
     // On pourrait aussi recuperer directement les donnees dans le while
     while(!trouve && getline(flux, ligne)){
-      positionDuEgal = ligne.find('=');
+      if(verifierEgale==false){
+        positionDuEgal = ligne.size();
+      }else{
+        positionDuEgal = ligne.find('=');
+      }
       if(positionDuEgal != std::string::npos){
         if(positionDuEgal >= tailleAttribut){
           ligneAvantEgal = ligne.substr(0, positionDuEgal);
@@ -69,6 +72,7 @@ std::string GestionSauvegarde::lireAttribut(std::string attribut){
         std::cout << "Attention des caracteres se trouvent a la suite de l'attribut " << attribut <<" et ont ete ignores\n";
         res = res.substr(0, positionEspace);
       }
+      flux.close();
     }
   }
   return res;
@@ -85,6 +89,131 @@ std::string::size_type GestionSauvegarde::debutDeLaChaineSansEspaces(std::string
 std::string GestionSauvegarde::lireNomJoueur(char numeroJoueur){
   std::string attribut = "nomJoueur";
   attribut += numeroJoueur;
-  std::cout << "Position:" << GestionSauvegarde::positionAttribut(attribut)<<"\n";
   return GestionSauvegarde::lireAttribut(attribut);
+}
+
+char* GestionSauvegarde::parseLigneGrille(std::string ligne, int taille){
+  int decal = 0;
+  char* res = new char[taille];
+  for(int i=0; i<ligne.size(); i++){
+    if(i%2 == 1 && ligne[i] == ' '){
+      decal++;
+    }else if(i%2 != 1){
+      res[i-decal] = ligne[i];
+    }else{
+      std::cout << "Erreur lors de la lecture de la ligne de la grille \n  " << ligne << "\n";
+      res[0] = -1;
+    }
+  }
+  return res;
+}
+
+bool GestionSauvegarde::estNumerique(char c){
+  bool res = false;
+  if(c>='0' && c<='9'){
+    res = true;
+  }
+  return res;
+}
+
+int GestionSauvegarde::recupererHauteurGrille(int pos){
+  std::ifstream flux(GestionSauvegarde::nomFichier.c_str());
+  int res = -1;
+  if(flux){
+    flux.seekg(pos, std::ios::beg);
+    res = 0;
+    bool finGrille = false;
+    std::string ligne;
+    while(!finGrille && getline(flux, ligne)){
+      if(!GestionSauvegarde::estNumerique(ligne[0])){
+        finGrille = true;
+      }else{
+        res++;
+      }
+    }
+    flux.close();
+  }
+  return res;
+}
+
+char** GestionSauvegarde::lireGrille(std::string nomGrille){
+  char **res;
+  std::string attribut = "["+ nomGrille +"]";
+  int pos = GestionSauvegarde::positionAttribut(attribut, false);
+  if(pos != -1){
+    std::ifstream flux(GestionSauvegarde::nomFichier.c_str());
+    if(flux){
+      flux.seekg(pos, std::ios::beg);
+      std::string ligne;
+      getline(flux, ligne);
+      pos = flux.tellg();
+      flux.close();
+      int h = GestionSauvegarde::recupererHauteurGrille(pos);
+      res = new char* [h];
+      std::ifstream flux(GestionSauvegarde::nomFichier.c_str());
+      if (flux){
+        flux.seekg(pos, std::ios::beg);
+        bool finGrille = false;
+        int i = 0;
+        int taille = round((ligne.size()+1)/2);
+        for (int k=0; k<h; k++){
+          res[k] = new char[taille];
+        }
+        while(!finGrille && getline(flux, ligne)){
+          if(!GestionSauvegarde::estNumerique(ligne[0])){
+            finGrille = true;
+          }else{
+            char* l = GestionSauvegarde::parseLigneGrille(ligne, taille);
+            if(l[0] != -1){
+              res[i] = l;
+            }else{
+              res[0][0] = -1;
+            }
+          }
+          i++;
+        }
+        flux.close();
+      }
+    }
+  }
+  return res;
+}
+
+int GestionSauvegarde::lireHauteurGrille(std::string nomGrille){
+  int h = -1;
+  std::string attribut = "["+ nomGrille +"]";
+  int pos = GestionSauvegarde::positionAttribut(attribut, false);
+  if(pos != -1){
+    std::ifstream flux(GestionSauvegarde::nomFichier.c_str());
+    if(flux){
+      flux.seekg(pos, std::ios::beg);
+      std::string ligne;
+      getline(flux, ligne);
+      pos = flux.tellg();
+      flux.close();
+      h = GestionSauvegarde::recupererHauteurGrille(pos);
+    }
+    flux.close();
+  }
+  return h;
+}
+
+int GestionSauvegarde::lireLargeurGrille(std::string nomGrille){
+  int largeur = -1;
+  std::string attribut = "["+ nomGrille +"]";
+  int pos = GestionSauvegarde::positionAttribut(attribut, false);
+  if(pos != -1){
+    std::ifstream flux(GestionSauvegarde::nomFichier.c_str());
+    if(flux){
+      flux.seekg(pos, std::ios::beg);
+      std::string ligne;
+      getline(flux, ligne);
+      getline(flux, ligne);
+      if(GestionSauvegarde::estNumerique(ligne[0])){
+        largeur = round((ligne.size()+1)/2);
+      }
+      flux.close();
+    }
+  }
+  return largeur;
 }
