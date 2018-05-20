@@ -15,6 +15,7 @@ private:
   // Si le fichier présente plusieurs attributs portant le même nom, alors seul le 1er attribut sera lu.
   std::string lireAttribut(std::string attribut);
   std::string::size_type debutDeLaChaineSansEspaces(std::string chaine);
+  int positionAttribut(std::string attribut);
 public:
   GestionSauvegarde(std::string nomFichier);
   // Fonctions d'ecriture

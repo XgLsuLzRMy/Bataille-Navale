@@ -13,10 +13,11 @@ void GestionSauvegarde::ecrireNomJoueur(char numeroJoueur, std::string nomJoueur
   }
 }
 
-std::string GestionSauvegarde::lireAttribut(std::string attribut){
-  std::string res = ERREUR; // caractere d'erreur
+int GestionSauvegarde::positionAttribut(std::string attribut){
+  int res = -1;
   std::ifstream flux(GestionSauvegarde::nomFichier.c_str());
   if(flux){
+    int anciennePos = flux.tellg();
     std::string ligne, ligneAvantEgal;
     int tailleAttribut = attribut.size();
     bool trouve = false;
@@ -37,24 +38,38 @@ std::string GestionSauvegarde::lireAttribut(std::string attribut){
             }
             if(ligneAvantEgal.size() == tailleAttribut){
               trouve = true;
+              res = anciennePos;
             }
           }
         }
       }
+      anciennePos = flux.tellg();
     }
-    // On recupere les donnees
-    if (trouve){
+    flux.close();
+  }
+  return res;
+}
+
+std::string GestionSauvegarde::lireAttribut(std::string attribut){
+  std::string res = ERREUR;
+  int pos = GestionSauvegarde::positionAttribut(attribut);
+  if(pos != -1){
+    std::ifstream flux(GestionSauvegarde::nomFichier.c_str());
+    if(flux){
+      std::string ligne;
+      flux.seekg(pos, std::ios::beg);
+      getline(flux, ligne);
+      int positionDuEgal = ligne.find('=');
       res = ligne.substr(positionDuEgal+1, ligne.size());
       res = res.substr(debutDeLaChaineSansEspaces(res), res.size()); // On enleve tous les espaces presents en debut de chaine
       // On enleve tout ce qui se trouve apres le 1er espace que l'on trouve
       // Si on veut garder le reste de la ligne on peut supprimer le if suivant
-      positionEspace = res.find(' ');
+      int positionEspace = res.find(' ');
       if(positionEspace != std::string::npos){
         std::cout << "Attention des caracteres se trouvent a la suite de l'attribut " << attribut <<" et ont ete ignores\n";
         res = res.substr(0, positionEspace);
       }
     }
-    flux.close();
   }
   return res;
 }
@@ -70,5 +85,6 @@ std::string::size_type GestionSauvegarde::debutDeLaChaineSansEspaces(std::string
 std::string GestionSauvegarde::lireNomJoueur(char numeroJoueur){
   std::string attribut = "nomJoueur";
   attribut += numeroJoueur;
+  std::cout << "Position:" << GestionSauvegarde::positionAttribut(attribut)<<"\n";
   return GestionSauvegarde::lireAttribut(attribut);
 }
