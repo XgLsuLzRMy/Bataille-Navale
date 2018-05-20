@@ -21,3 +21,11 @@ void Joueur::resetGrilles(){
 	Joueur::grille.reset();
 	Joueur::grilleTentatives.reset();
 }
+
+void Joueur::marquerResultatBombeSurGrilleTentative(bool touche, int x, int y){
+	if(touche){
+		Joueur::grilleTentatives.set(x, y, TENTATIVEREUSSIE);
+	}else{
+		Joueur::grilleTentatives.set(x, y, TENTATIVERATEE);
+	}
+}

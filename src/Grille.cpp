@@ -69,17 +69,23 @@ void Grille::afficher(){
 		for (int j=0;j<Grille::largeur;j++){
 			std::cout << "|";
 			switch (Grille::grille[i][j]){
-				case 0:
-					std::cout << " ";
-					break;
-				case 1:
-					std::cout << "*";
-					break;
-				case 2:
-					std::cout << "$";
-					break;
+				case EAU:
+				std::cout << "~";
+				break;
+				case BATEAU:
+				std::cout << "*";
+				break;
+				case BATEAUTOUCHE:
+				std::cout << "$";
+				break;
+				case TENTATIVEREUSSIE:
+				std::cout << "&";
+				break;
+				case TENTATIVERATEE:
+				std::cout << "-";
+				break;
 				default:
-					std::cout << "#";
+				std::cout << "#";
 			}
 		}
 

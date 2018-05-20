@@ -31,5 +31,14 @@ void JoueurIA::placementDesBateaux(char typeJeu){
 }
 
 void JoueurIA::placerBateau(Bateau *b){
-	
+	// TODO
+}
+
+int* JoueurIA::tour(){
+	// TODO
+	return NULL;
+}
+
+void JoueurIA::resultatBombe(bool touche, int x, int y){
+	JoueurIA::marquerResultatBombeSurGrilleTentative(touche, x, y);
 }

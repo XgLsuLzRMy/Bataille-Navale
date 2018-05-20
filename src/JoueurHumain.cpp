@@ -114,3 +114,39 @@ void JoueurHumain::demanderCoordonneesBateau(Bateau *b){
 	b->setxExtremite(xExtremite);
 	b->setyExtremite(yExtremite);
 }
+
+int* JoueurHumain::tour(){
+	std::cout << "Tour de " << JoueurHumain::nom << "\n";
+	JoueurHumain::grille.afficher();
+	// tour du joueur
+	std::cout << "La grille de vos tentatives : \n";
+	JoueurHumain::grilleTentatives.afficher();
+	return donnerCoordonneesBombes();
+}
+
+int* JoueurHumain::donnerCoordonneesBombes(){
+	int x,y;
+	do{
+		std::cout << "Donner la coordonnee en x : ";
+		std::cin >> x;
+		std::cin.clear();
+		std::cout << "Donner la coordonnee en y : ";
+		std::cin >> y;
+		std::cin.clear();
+		x--;
+		y--;
+	}while(x<0 || y<0 || x>JoueurHumain::grille.getLargeur() || y>JoueurHumain::grille.getHauteur());
+	int* res = new int [2];
+	res[0] = x;
+	res[1] = y;
+	return res;
+}
+
+void JoueurHumain::resultatBombe(bool touche, int x, int y){
+	JoueurHumain::marquerResultatBombeSurGrilleTentative(touche, x, y);
+	if (touche){
+		std::cout << "Touche !\n";
+	}else{
+		std::cout << "Dommage...\n";
+	}
+}

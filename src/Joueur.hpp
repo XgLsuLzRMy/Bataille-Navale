@@ -7,59 +7,65 @@
 #include "Bateau.hpp"
 
 class Joueur{
-	protected:
-		// Le nom du joueur
-		std::string nom;
-		// La grille sur laquelle le joueur place ses bateaux
-		Grille grille;
-		// La grille permettant de garder en mémoire les tentatives de bombes effectuées par le joueur
-		Grille grilleTentatives;
-		// Correspond au nombre de fois que l'adversaire a touché un bateau.Va être incrementé quand un des bateaux est touché pour faciliter la vérification de la fin de partie.
-		int nbCasesBateauxTouches; 
-		// Le nombre de cases occupées par des bateaux sur la grille
-		int nbCasesBateaux;
-		// Le nombre de bateau initial du joueur. Permet de simplifier l'écriture de certaines boucles. ( i < nbBateaux etc)
-		int nbBateaux;
-		// Un tableau contenant les bateaux possédés par le joueur et qu'il a placé sur la grille.
-		Bateau* bateaux;
-		
-		virtual void placerBateau(Bateau *b) {};
-		
-	public:
-		Joueur();
-		~Joueur();
-		
-		void resetGrilles();
-		
-  /**
- * \fn public demanderNom()
- * \brief initialise le nom du joueur en demandant le nom au joueur
- *   
- */
-		virtual void demanderNom() {};
-  /**
- * \fn public demanderTailleGrile()
- * \brief initialise la taille de la grille en la demandant au joueur
- *   
- */
-		virtual void demanderTailleGrille() {};
-/**
- * \fn private choisirTypeJeu()
- * \brief fonction qui permet au joueur de choisir son type de jeu : bataille classique ou bataille
- * améliorée
- */
-		virtual char demanderTypeJeu() {} ;
+protected:
+	// Le nom du joueur
+	std::string nom;
+	// La grille sur laquelle le joueur place ses bateaux
+	Grille grille;
+	// La grille permettant de garder en mémoire les tentatives de bombes effectuées par le joueur
+	Grille grilleTentatives;
+	// Correspond au nombre de fois que l'adversaire a touché un bateau.Va être incrementé quand un des bateaux est touché pour faciliter la vérification de la fin de partie.
+	int nbCasesBateauxTouches;
+	// Le nombre de cases occupées par des bateaux sur la grille
+	int nbCasesBateaux;
+	// Le nombre de bateau initial du joueur. Permet de simplifier l'écriture de certaines boucles. ( i < nbBateaux etc)
+	int nbBateaux;
+	// Un tableau contenant les bateaux possédés par le joueur et qu'il a placé sur la grille.
+	Bateau* bateaux;
 
- /**
- * \fn private placementDesBateaux(char typeJeu)
- * \brief  demande au joueur de placer ses différents bateaux. Utilise 
- * ajoutBateau pour chaqun des bateaux du joueur.  
- * 
- * \param  typeJeu le type de jeu choisis
- */
-		virtual void placementDesBateaux(char typeJeu) {};
+	virtual void placerBateau(Bateau *b) {};
 
-		friend class JeuBatailleNavale; // on met JeuBatailleNavale en amie pour qu'on puisse acceder a nom directement mais on pourrait faire par accesseurs
+	void marquerResultatBombeSurGrilleTentative(bool touche, int x, int y);
+
+public:
+	Joueur();
+	~Joueur();
+
+	void resetGrilles();
+
+	/**
+	* \fn public demanderNom()
+	* \brief initialise le nom du joueur en demandant le nom au joueur
+	*
+	*/
+	virtual void demanderNom() {};
+	/**
+	* \fn public demanderTailleGrile()
+	* \brief initialise la taille de la grille en la demandant au joueur
+	*
+	*/
+	virtual void demanderTailleGrille() {};
+	/**
+	* \fn private choisirTypeJeu()
+	* \brief fonction qui permet au joueur de choisir son type de jeu : bataille classique ou bataille
+	* améliorée
+	*/
+	virtual char demanderTypeJeu() {};
+
+	/**
+	* \fn private placementDesBateaux(char typeJeu)
+	* \brief  demande au joueur de placer ses différents bateaux. Utilise
+	* ajoutBateau pour chaqun des bateaux du joueur.
+	*
+	* \param  typeJeu le type de jeu choisis
+	*/
+	virtual void placementDesBateaux(char typeJeu) {};
+
+	virtual int* tour() {};
+
+	virtual void resultatBombe(bool touche, int x, int y) {};
+
+	friend class JeuBatailleNavale; // on met JeuBatailleNavale en amie pour qu'on puisse acceder a nom directement mais on pourrait faire par accesseurs
 
 };
 #endif
