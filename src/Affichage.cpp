@@ -133,6 +133,15 @@ char Affichage::demanderOrientationBateau(){
   return orientationInput;
 }
 
+int Affichage::demanderTailleBateau() {
+  int taille = 0;
+  std::cout << "taille du bateau choisis : ";
+  std::cin >> taille;
+  std::cin.clear();
+  std::cin.ignore(10000, '\n');
+  return taille;
+}
+
 int Affichage::demanderCoordonneesBombe(char coordonnee){
   int res = 0;
   std::cout << "Donner la coordonnee en " << coordonnee << " : ";
