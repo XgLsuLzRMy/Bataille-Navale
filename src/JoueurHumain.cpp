@@ -61,16 +61,19 @@ void JoueurHumain::placementDesBateaux(char typeJeu){
 			int tailleBateau = 90;
 			tailleBateau = JoueurHumain::affichage->demanderTailleBateau();
 			// on verrifie que cette taile existe
+			bool tailleOK = false;
 			for (int x=0;x<nbMaxDeBateaux-i;x++){
 				if (Joueur::bateaux[x].getTaille() == tailleBateau){ // le bateau existe et on le place
 					JoueurHumain::placerBateau(&(Joueur::bateaux[x]));
 					// on suprime le bateau de la liste des possibles (on met la taille du bateau utilise a 0)
 					Joueur::bateaux[x].setTaille(0);
+				        tailleOK= true;
 				}
-				else { // le bateau n'existe pas
-					i = i-1;
- 					std::cout << "cette taille n'est pas disponible";
-				}
+				
+			}
+			if ( tailleOK==false ) {
+				i =i-1;
+				JoueurHumain::affichage->afficherMessage("la taille demandée n'est pas valide");
 			}
 		}
 	}
