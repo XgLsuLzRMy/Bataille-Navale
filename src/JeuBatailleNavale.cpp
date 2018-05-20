@@ -84,6 +84,11 @@ void JeuBatailleNavale::jouer(){
 		coordonneesBombes = joueurEnCours->tour();
 		bool touche = joueurPlaceBombe(tour, coordonneesBombes[0], coordonneesBombes[1]);
 		joueurEnCours->resultatBombe(touche, coordonneesBombes[0], coordonneesBombes[1]);
+
+		std::cout << "Appuyer sur entree pour passer au tour du joueur suivant\n";
+		std::cin.get();
+		std::cin.ignore();
+
 		//tour = (tour+1)%2; // on passe au tour du joueur suivant
 		tour = !tour;
 		fini = JeuBatailleNavale::checkFinJeu();
