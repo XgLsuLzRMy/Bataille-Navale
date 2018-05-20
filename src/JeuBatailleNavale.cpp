@@ -24,10 +24,10 @@ void JeuBatailleNavale::instanciationDesJoueurs(char choix){
 		JeuBatailleNavale::joueur2 = new JoueurIA();
 		break;
 		case 'q':
-		std::cout << "Au revoir\n";
+		Affichage::afficherMessage("Au revoir.\n");
 		break;
 		default:
-		std::cout << "Pas encore dispo\n";
+		Affichage::afficherMessage("Pas encore dispo.\n");
 		JeuBatailleNavale::nouveauJeu();
 	}
 }
@@ -49,9 +49,7 @@ bool JeuBatailleNavale::joueurPlaceBombe(bool joueur, int xBombe, int yBombe){
 }
 
 void JeuBatailleNavale::nouveauJeu(){
-	char choix = 0;
-	std::cout << "\n\n1-Joueur contre joueur\n2-Joueur contre IA\n3-IA contre IA\nq-quitter\n> ";
-	std::cin >> choix;
+	char choix = Affichage::menuPrincipal();
 	JeuBatailleNavale::instanciationDesJoueurs(choix);
 	if (choix != 'q'){
 		JeuBatailleNavale::demanderNomJoueurs();
@@ -85,9 +83,7 @@ void JeuBatailleNavale::jouer(){
 		bool touche = joueurPlaceBombe(tour, coordonneesBombes[0], coordonneesBombes[1]);
 		joueurEnCours->resultatBombe(touche, coordonneesBombes[0], coordonneesBombes[1]);
 
-		std::cout << "Appuyer sur entree pour passer au tour du joueur suivant\n";
-		std::cin.get();
-		std::cin.ignore();
+		Affichage::attendreJoueurSuivant();
 
 		//tour = (tour+1)%2; // on passe au tour du joueur suivant
 		tour = !tour;
@@ -96,13 +92,12 @@ void JeuBatailleNavale::jouer(){
 	// Si la partie est finie et que c'est le tour du joueur1 alors c'est que c'est suite
 	// au tour de joueur2 que la partie se termine. Donc c'est joueur2 qui a gagne. Et inversement.
 	// (c'est parce qu'on actualise 'tour' a la fin de la boucle while)
-	std::cout << "\n\n=============\n";
+
 	if (tour){
-		std::cout << JeuBatailleNavale::joueur1->nom;
+		Affichage::afficherGagnant(JeuBatailleNavale::joueur1->nom + " a gagne la partie\n=============\n");
 	}else{
-		std::cout << JeuBatailleNavale::joueur2->nom;
+		Affichage::afficherGagnant(JeuBatailleNavale::joueur2->nom + " a gagne la partie\n=============\n");
 	}
-	std::cout << " a gagne la partie\n=============\n";
 }
 
 bool JeuBatailleNavale::checkFinJeu(){

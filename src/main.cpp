@@ -1,5 +1,3 @@
-#include <iostream>
-
 #include "JeuBatailleNavale.hpp"
 
 int main(){

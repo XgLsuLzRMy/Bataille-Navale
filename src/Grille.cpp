@@ -4,7 +4,7 @@ int Grille::largeur = 10;
 int Grille::hauteur = 10;
 
 Grille::Grille(){
-	Grille::grille = NULL;
+	Grille::grille = null;
 }
 
 Grille::~Grille(){
@@ -12,7 +12,7 @@ Grille::~Grille(){
 }
 
 void Grille::reset(){
-	if(Grille::grille!=NULL){
+	if(Grille::grille!=null){
 		delete [] Grille::grille;
 	}
 	Grille::grille = new char* [Grille::hauteur];
@@ -51,7 +51,7 @@ bool Grille::fini(){
 	return true;
 }
 
-void Grille::afficher(){
+/*void Grille::afficher(){
 	std::cout << "   ";
 	for(int i=0;i<Grille::largeur;i++){
 		std::cout << " " << i+1;
@@ -104,7 +104,7 @@ void Grille::afficher(){
 		std::cout << "-";
 	}
 	std::cout << "+\n";
-}
+}*/
 
 // Accesseurs
 

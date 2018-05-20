@@ -1,10 +1,11 @@
 #ifndef __JOUEUR_HPP__
 #define __JOUEUR_HPP__
 
-#include <iostream>
+#include <sstream> // pour concatener string et int
 #include <string>
 #include "Grille.hpp"
 #include "Bateau.hpp"
+#include "Affichage.hpp"
 
 class Joueur{
 protected:
@@ -22,6 +23,8 @@ protected:
 	int nbBateaux;
 	// Un tableau contenant les bateaux possédés par le joueur et qu'il a placé sur la grille.
 	Bateau* bateaux;
+	// Un affichage
+	Affichage* affichage;
 
 	virtual void placerBateau(Bateau *b) {};
 

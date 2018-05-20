@@ -12,7 +12,7 @@
 *
 */
 
-#include <iostream>
+#include "Affichage.hpp"
 #include "Joueur.hpp"
 #include "JoueurHumain.hpp"
 #include "JoueurIA.hpp"
