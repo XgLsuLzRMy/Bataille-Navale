@@ -12,15 +12,17 @@ void GestionSauvegarde::ecrireNomJoueur(char numeroJoueur, std::string nomJoueur
 // Cherche d'abord si l'attribut que l'on souhaite ecrire est deja present dans le fichier. Si c'est le cas, on change sa valeur. Sinon on cree l'attribut.
 void GestionSauvegarde::ecrireAttribut(std::string attribut, std::string valeur){
   int pos = GestionSauvegarde::positionAttribut(attribut);
+  std::string nouvelleLigne = attribut + "=" + valeur;
   if (pos != -1){
-    std::string nouvelleLigne = attribut + "=" + valeur;
     // On a trouve l'attribut. Il s'agit donc de modifier sa valeur
     GestionSauvegarde::remplacerLigne(pos, nouvelleLigne);
+  }else{
+    GestionSauvegarde::remplacerLigne(std::ios::end, nouvelleLigne, true);
   }
 }
 
 // on recopie le contenu du fichier dans le fichier temporaire sauf la ligne en question. Puis on supprime le fichier d'origine et on renomme le fichier temporaire
-void GestionSauvegarde::remplacerLigne(int pos, std::string nouvelleLigne){
+void GestionSauvegarde::remplacerLigne(int pos, std::string nouvelleLigne, bool ajouterLaLigne){
   std::string nomFichierTemporaire = GestionSauvegarde::nomFichier + "_temp";
   std::ofstream fluxFichierTemporaire(nomFichierTemporaire.c_str());
   std::ifstream flux(GestionSauvegarde::nomFichier.c_str());
@@ -34,6 +36,9 @@ void GestionSauvegarde::remplacerLigne(int pos, std::string nouvelleLigne){
     }
     fluxFichierTemporaire << nouvelleLigne << "\n";
     getline(flux, ligne); // on passe la ligne
+    if(ajouterLaLigne){
+      fluxFichierTemporaire << ligne << "\n";
+    }
     while(getline(flux, ligne)){
       fluxFichierTemporaire << ligne << "\n";
     }

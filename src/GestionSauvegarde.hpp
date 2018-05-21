@@ -22,7 +22,7 @@ private:
   int recupererHauteurGrille(int pos);
 
   void ecrireAttribut(std::string attribut, std::string valeur);
-  void remplacerLigne(int pos, std::string nouvelleLigne);
+  void remplacerLigne(int pos, std::string nouvelleLigne, bool ajouterLaLigne = false); // ajouterLeLigne permet de ne pas supprimer la ligne située en pos
 public:
   GestionSauvegarde(std::string nomFichier);
   // Fonctions d'ecriture

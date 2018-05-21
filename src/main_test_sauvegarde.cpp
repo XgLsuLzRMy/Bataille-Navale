@@ -44,11 +44,11 @@ int main(){
 
 	}
 
-	std::string nouveauNom = "ceNouveauNom";
-	std::cout << "On renomme Joueur1 " << nouveauNom << "\n";
-	g.ecrireNomJoueur('1', nouveauNom);
+	std::string nouveauNom = "nomDuJoueur2";
+	std::cout << "On modifie l'attribut nomJoueur2 " << nouveauNom << "\n";
+	g.ecrireNomJoueur('2', nouveauNom);
 
-	nom = g.lireNomJoueur('1');
+	nom = g.lireNomJoueur('2');
 	if (nom != ERREUR){
 		std::cout << "==" << nom << "==\n";
 	}else{
