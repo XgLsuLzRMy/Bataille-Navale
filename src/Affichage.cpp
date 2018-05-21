@@ -6,7 +6,7 @@ void Affichage::afficherMessage(std::string message){
 
 char Affichage::proposerNouveauJeuOuSauvegarde(){
   char choix = 0;
-  std::cout << "Voulez-vous,\n1) Faire un nouveau jeu ?\n2) Charger une sauvegarde ?\n";
+  std::cout << "Voulez-vous,\n1) Faire un nouveau jeu ?\n2) Charger une sauvegarde ?\n3) Supprimer une sauvegarde\n";
   std::cin >> choix;
   std::cin.clear();
   std::cin.ignore(10000, '\n');
