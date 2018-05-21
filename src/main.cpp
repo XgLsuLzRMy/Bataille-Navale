@@ -31,6 +31,8 @@ int main(){
 			char** grilleTentatives1 = g.lireGrille("grilleTentatives1");
 			char** grille2 = g.lireGrille("grille2");
 			char** grilleTentatives2 = g.lireGrille("grilleTentatives2");
+			int h = g.lireHauteurGrille("grille1");
+		  int l = g.lireLargeurGrille("grille1");
 			std::string nomJoueur1 = g.lireNomJoueur('1');
 			std::string nomJoueur2 = g.lireNomJoueur('2');
 			std::string joueurEnCoursStr = g.lireAttribut("joueurEnCours"); // variable temporaire
@@ -48,6 +50,9 @@ int main(){
 			std::cout << "tour = " << tour << "\n";
 			std::cout << "IA1 = " << IA1 << "\n";
 			std::cout << "IA2 = " << IA2 << "\n";
+
+			JeuBatailleNavale j(nomJoueur1, nomJoueur2, typeJeu, IA1, IA2, grille1, grilleTentatives1, grille2, grilleTentatives2, h, l);
+			j.jouer(tour);
 		}else{
 			std::cout << "Pas de sauvegarde...\n";
 		}

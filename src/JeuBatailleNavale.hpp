@@ -38,7 +38,6 @@ private:
 
 	bool joueurPlaceBombe(bool joueur, int xBombe, int yBombe);
 
-	void jouer();
 
 public:
 
@@ -49,7 +48,7 @@ public:
 	*/
 	JeuBatailleNavale();
 
-
+	JeuBatailleNavale(std::string nomJoueur1, std::string nomJoueur2, char typeJeu, bool IA1, bool IA2, char** grille1, char** grilleTentatives1, char** grille2, char** grilleTentatives2, int h, int l);
 
 
 	/**
@@ -58,6 +57,8 @@ public:
 	*
 	*/
 	void nouveauJeu();
+
+	void jouer(bool tour = false);
 
 	/**
 	* \fn private checkFinJeu()

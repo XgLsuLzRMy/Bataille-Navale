@@ -25,6 +25,7 @@ public:
 	Grille();
 	~Grille();
 	void setTaille(int largeur, int hauteur);
+	void setGrille(char **grille);
 	//void afficher();
 	void reset(); // alloue la mémoire pour la grille et la remplie de 0.
 	bool verifierPlace(int **tableauDeCoordonnees, int taille);

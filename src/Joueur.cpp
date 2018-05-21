@@ -17,6 +17,18 @@ Joueur::~Joueur(){
 	delete [] Joueur::bateaux;
 }
 
+void Joueur::setNom(std::string nouveauNom){
+	Joueur::nom = nouveauNom;
+}
+
+void Joueur::setGrille(char **grille, int h, int l){
+	Joueur::grille.setGrille(grille);
+	Joueur::grille.setTaille(l, h);
+}
+void Joueur::setGrilleTentatives(char **grilleTentatives){
+	Joueur::grilleTentatives.setGrille(grilleTentatives);
+}
+
 void Joueur::resetGrilles(){
 	Joueur::grille.reset();
 	Joueur::grilleTentatives.reset();

@@ -47,7 +47,9 @@ public:
 
 	void definirBateauxType2(int nbMaxDeBateaux, int tailleGrille);
 
-
+	void setNom(std::string nouveauNom);
+	void setGrille(char **grille, int h, int l);
+	void setGrilleTentatives(char **grilleTentatives);
 
 	virtual void demanderNom() {};
 	/**

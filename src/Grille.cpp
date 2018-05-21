@@ -11,6 +11,11 @@ Grille::~Grille(){
 	delete [] Grille::grille;
 }
 
+void Grille::setGrille(char **grille){
+	delete [] Grille::grille;
+	Grille::grille = grille;
+}
+
 void Grille::reset(){
 	if(Grille::grille!=null){
 		delete [] Grille::grille;

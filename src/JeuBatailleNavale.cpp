@@ -4,6 +4,29 @@ JeuBatailleNavale::JeuBatailleNavale(){
 
 }
 
+JeuBatailleNavale::JeuBatailleNavale(std::string nomJoueur1, std::string nomJoueur2, char typeJeu, bool IA1, bool IA2, char** grille1, char** grilleTentatives1, char** grille2, char** grilleTentatives2, int h, int l){
+	if(IA1){
+		JeuBatailleNavale::joueur1 = new JoueurIA();
+	}else{
+		JeuBatailleNavale::joueur1 = new JoueurHumain();
+	}
+	if(IA2){
+		JeuBatailleNavale::joueur2 = new JoueurIA();
+	}else{
+		JeuBatailleNavale::joueur2 = new JoueurHumain();
+	}
+	JeuBatailleNavale::joueur1->setNom(nomJoueur1);
+	JeuBatailleNavale::joueur2->setNom(nomJoueur2);
+
+	JeuBatailleNavale::joueur1->setGrille(grille1, h, l);
+	JeuBatailleNavale::joueur2->setGrille(grille2, h, l);
+
+	JeuBatailleNavale::joueur1->setGrilleTentatives(grilleTentatives1);
+	JeuBatailleNavale::joueur2->setGrilleTentatives(grilleTentatives2);
+
+	Affichage::afficherMessage("Chargement de la sauvegarde reussi\n");
+}
+
 void JeuBatailleNavale::demanderNomJoueurs(){
 	JeuBatailleNavale::joueur1->demanderNom();
 	JeuBatailleNavale::joueur2->demanderNom();
@@ -67,10 +90,10 @@ void JeuBatailleNavale::nouveauJeu(){
 	}
 }
 
-void JeuBatailleNavale::jouer(){
+void JeuBatailleNavale::jouer(bool tour){
 	bool fini = false;
 	//int tour = 0;
-	bool tour = false; // le joueur 1 commence en premier
+	//bool tour = false; // le joueur 1 commence en premier
 	int* coordonneesBombes = new int [2];
 	Joueur* joueurEnCours;
 	Joueur* joueurEnAttente;
