@@ -27,7 +27,16 @@ int main(){
 		for(int i=0; i<5; i++){
 			std::cout << "|";
 			for (int j=0; j<5; j++){
-				std::cout << grille1[i][j] << " ";
+				switch(grille1[i][j]){
+					case 0:
+						std::cout << "~ ";
+					break;
+					case 1:
+						std::cout << "* ";
+					break;
+					default:
+						std::cout << "$ ";
+				}
 			}
 			std::cout << "|";
 			std::cout << "\n";

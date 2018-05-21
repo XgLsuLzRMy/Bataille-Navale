@@ -99,10 +99,11 @@ char* GestionSauvegarde::parseLigneGrille(std::string ligne, int taille){
     if(i%2 == 1 && ligne[i] == ' '){
       decal++;
     }else if(i%2 != 1){
-      res[i-decal] = ligne[i];
+      res[i-decal] = ligne[i] - '0'; // convertit le caratere '1' en le nombre 1 (exemple si ligne[i] = '1')
     }else{
       std::cout << "Erreur lors de la lecture de la ligne de la grille \n  " << ligne << "\n";
       res[0] = -1;
+      i = ligne.size(); // on sort de la boucle
     }
   }
   return res;
