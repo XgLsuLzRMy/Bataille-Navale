@@ -8,7 +8,7 @@ void JoueurHumain::demanderNom(){
 	JoueurHumain::nom = JoueurHumain::affichage->demanderNom();
 }
 
-bool JoueurIA::estUneIA(){
+bool JoueurHumain::estUneIA(){
 	return false;
 }
 

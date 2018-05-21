@@ -15,7 +15,7 @@ bool JoueurIA::estUneIA(){
 
 void JoueurIA::demanderTailleGrille(){
 	JoueurIA::grille.setTaille(10, 10);
-// On a deux IA, on renome donc la premiere InteligenceArtificielle
+	// On a deux IA, on renome donc la premiere InteligenceArtificielle
 	JoueurIA::setNom("IntelligenceArtificielle");
 }
 
@@ -40,7 +40,7 @@ void JoueurIA::placementDesBateaux(char typeJeu){
 					JoueurIA::placerBateau(&(Joueur::bateaux[x]));
 					// on suprime le bateau de la liste des possibles (on met la taille du bateau utilise a 0)
 					Joueur::bateaux[x].setTaille(grille.getHauteur());
-				        tailleOK= true;
+					tailleOK= true;
 					break;
 				}
 				x=x+1;
@@ -50,7 +50,7 @@ void JoueurIA::placementDesBateaux(char typeJeu){
 				i =i-1;
 			}
 		}
-	}	
+	}
 	else {
 		for(int i=0;i<Joueur::nbBateaux;i++){
 			JoueurIA::placerBateau(&(Joueur::bateaux[i]));
@@ -63,15 +63,14 @@ void JoueurIA::placerBateau(Bateau *b){
 	int xExtremite, yExtremite;
 	char orientationInput;
 	bool orientation;
-	xExtremite =rand()%(JoueurIA::grille.getLargeur()-b.getTaille()) ;
-	yExtremite =rand()%(JoueurIA::grille.getHauteur()-b.getTaille()) ;
+	xExtremite =rand()%(JoueurIA::grille.getLargeur()-b->getTaille()) ;
+	yExtremite =rand()%(JoueurIA::grille.getHauteur()-b->getTaille()) ;
 	orientationInput = rand()%(1);
 	if (orientationInput == 0 ) {
 		orientationInput ='v';
 	}
 	else {
 		orientationInput ='h';
-	}
 	}
 	b->setOrientation(orientationInput);
 	b->setxExtremite(xExtremite);
@@ -87,7 +86,7 @@ int* JoueurIA::tour(){
 	JoueurIA::affichage->afficherMessage("La grille des tentatives de l'IA : \n");
 	JoueurIA::affichage->afficherGrille(&(JoueurIA::grilleTentatives));
 	int* res = new int [2];
-// une bombe aléatoire
+	// une bombe aléatoire
 	x =rand()%(JoueurIA::grille.getLargeur()) ;
 	y =rand()%(JoueurIA::grille.getHauteur()) ;
 	res[0] = x;
