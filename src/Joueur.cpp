@@ -30,6 +30,12 @@ void Joueur::marquerResultatBombeSurGrilleTentative(bool touche, int x, int y){
 	}
 }
 
+void Joueur::marquerResultatBombeSurGrille(bool touche, int x, int y){
+	if(touche){
+		Joueur::grille.set(x, y, BATEAUTOUCHE);
+	}
+}
+
 void Joueur::definirBateauxType2(int nbMaxDeBateaux,  int tailleGrille){
 	Joueur::bateaux= new Bateau[nbMaxDeBateaux];
 	Bateau b;

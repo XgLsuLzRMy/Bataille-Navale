@@ -33,5 +33,6 @@ public:
 	virtual void placementDesBateaux(char typeJeu);
 	virtual int* tour();
 	virtual void resultatBombe(bool touche, int x, int y);
+	virtual void resultatBombeAdverse(bool touche, int x, int y);
 };
 #endif

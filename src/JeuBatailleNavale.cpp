@@ -73,15 +73,19 @@ void JeuBatailleNavale::jouer(){
 	bool tour = false; // le joueur 1 commence en premier
 	int* coordonneesBombes = new int [2];
 	Joueur* joueurEnCours;
+	Joueur* joueurEnAttente;
 	while (!fini){
 		if(tour){
 			joueurEnCours = JeuBatailleNavale::joueur2;
+			joueurEnAttente = JeuBatailleNavale::joueur1;
 		}else{
 			joueurEnCours = JeuBatailleNavale::joueur1;
+			joueurEnAttente = JeuBatailleNavale::joueur2;
 		}
 		coordonneesBombes = joueurEnCours->tour();
 		bool touche = joueurPlaceBombe(tour, coordonneesBombes[0], coordonneesBombes[1]);
 		joueurEnCours->resultatBombe(touche, coordonneesBombes[0], coordonneesBombes[1]);
+		joueurEnAttente->resultatBombeAdverse(touche, coordonneesBombes[0], coordonneesBombes[1]);
 
 		Affichage::attendreJoueurSuivant();
 

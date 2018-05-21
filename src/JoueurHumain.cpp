@@ -70,7 +70,7 @@ void JoueurHumain::placementDesBateaux(char typeJeu){
 					// on suprime le bateau de la liste des possibles (on met la taille du bateau utilise a 0)
 					Joueur::bateaux[x].setTaille(grille.getHauteur());
 				        tailleOK= true;
-					break;	
+					break;
 				}
 				x=x+1;
 
@@ -172,5 +172,14 @@ void JoueurHumain::resultatBombe(bool touche, int x, int y){
 		JoueurHumain::affichage->afficherMessage("Touche !\n");
 	}else{
 		JoueurHumain::affichage->afficherMessage("Dommage...\n");
+	}
+}
+
+void JoueurHumain::resultatBombeAdverse(bool touche, int x, int y){
+	JoueurHumain::marquerResultatBombeSurGrille(touche, x, y);
+	if (touche){
+		JoueurHumain::affichage->afficherMessage("Un de vos navires a ete touche ...\n");
+	}else{
+		JoueurHumain::affichage->afficherMessage("Le tir adverse est dans l'eau !\n");
 	}
 }

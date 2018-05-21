@@ -31,6 +31,7 @@ protected:
 	virtual void placerBateau(Bateau *b) {};
 
 	void marquerResultatBombeSurGrilleTentative(bool touche, int x, int y);
+	void marquerResultatBombeSurGrille(bool touche, int x, int y);
 
 public:
 	Joueur();
@@ -74,6 +75,7 @@ public:
 	virtual int* tour() {};
 
 	virtual void resultatBombe(bool touche, int x, int y) {};
+	virtual void resultatBombeAdverse(bool touche, int x, int y) {};
 
 	friend class JeuBatailleNavale; // on met JeuBatailleNavale en amie pour qu'on puisse acceder a nom directement mais on pourrait faire par accesseurs
 
