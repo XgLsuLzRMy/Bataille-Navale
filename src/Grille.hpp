@@ -34,6 +34,7 @@ public:
 	int getLargeur();
 	int getHauteur();
 	void set(int x, int y, char valeur);
+	char** getGrille();
 
 	friend class Affichage;
 };

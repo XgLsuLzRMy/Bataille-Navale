@@ -37,6 +37,8 @@ public:
 	Joueur();
 	~Joueur();
 
+	virtual bool estUneIA() {};
+
 	void resetGrilles();
 
 	/**

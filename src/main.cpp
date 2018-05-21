@@ -38,7 +38,14 @@ int main(){
 			std::string joueurEnCoursStr = g.lireAttribut("joueurEnCours"); // variable temporaire
 			bool tour = joueurEnCoursStr=="2";
 			std::string typeJeuStr = g.lireAttribut("typeJeu"); // variable temporaire
-			char typeJeu = typeJeuStr[0];
+			char typeJeu;
+			if(typeJeuStr[0]=='1'){
+				typeJeu = 1;
+			}else if(typeJeuStr[0]=='2'){
+				typeJeu = 2;
+			}else{
+				std::cout << "erreur type jeu\n";
+			}
 			std::string IA1Str = g.lireAttribut("IA1"); // variable temporaire
 			bool IA1 = IA1Str == "1";
 			std::string IA2Str = g.lireAttribut("IA2"); // variable temporaire

@@ -5,7 +5,7 @@
 
 int main(){
 
-	GestionSauvegarde g("sauvegarde.sav");
+	/*GestionSauvegarde g("sauvegarde.sav");
 
 	std::string nom = g.lireNomJoueur('1');
 	if (nom != ERREURATTRIBUT){
@@ -74,6 +74,8 @@ int main(){
 		}
 	}else{
 		std::cout << "liste vide\n";
-	}
+	}*/
+
+	GestionSauvegarde::supprimerSauvegarde("sauvegarde2.sav");
 
 }

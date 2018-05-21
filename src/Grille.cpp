@@ -80,3 +80,7 @@ void Grille::setTaille(int largeur, int hauteur){
 		Grille::hauteur = hauteur;
 	}
 }
+
+char** Grille::getGrille(){
+	return Grille::grille;
+}

@@ -4,6 +4,10 @@ JoueurIA::JoueurIA(){
 
 }
 
+bool JoueurIA::estUneIA(){
+	return true;
+}
+
 void JoueurIA::demanderNom(){
 	JoueurIA::nom = "IA";
 }

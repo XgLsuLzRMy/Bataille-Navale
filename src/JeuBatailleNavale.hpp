@@ -16,6 +16,7 @@
 #include "Joueur.hpp"
 #include "JoueurHumain.hpp"
 #include "JoueurIA.hpp"
+#include "GestionSauvegarde.hpp"
 
 class JeuBatailleNavale{
 private:
@@ -38,6 +39,7 @@ private:
 
 	bool joueurPlaceBombe(bool joueur, int xBombe, int yBombe);
 
+	void ecrireSauvegarde(std::string nomSauvegarde, bool tour);
 
 public:
 

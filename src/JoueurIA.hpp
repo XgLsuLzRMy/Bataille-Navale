@@ -25,6 +25,7 @@ private:
 	virtual void placerBateau(Bateau *bateau);
 public:
 	JoueurIA();
+	virtual bool estUneIA();
 	virtual void demanderNom();
 	virtual void demanderTailleGrille();
 	virtual char demanderTypeJeu();

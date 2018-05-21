@@ -13,6 +13,22 @@ char Affichage::proposerNouveauJeuOuSauvegarde(){
   return choix;
 }
 
+char Affichage::proposerSauvegarder(){
+  char choix = 0;
+  std::cout << "Voulez-vous,sauvegarder (o/n) ?\n";
+  std::cin >> choix;
+  std::cin.clear();
+  std::cin.ignore(10000, '\n');
+  return choix;
+}
+
+std::string Affichage::demanderNomSauvegarde(){
+  std::string res;
+  std::cout << "Donner le nom de la sauvegarde : \n";
+  getline(std::cin, res);
+  return res;
+}
+
 char Affichage::choixSauvegarde(std::string *liste){
   char choix = 0;
   int i = 0;

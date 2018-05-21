@@ -27,6 +27,7 @@ private:
 	int* donnerCoordonneesBombes();
 public:
 	JoueurHumain();
+	virtual bool estUneIA();
 	virtual void demanderNom();
 	virtual void demanderTailleGrille();
 	virtual char demanderTypeJeu();

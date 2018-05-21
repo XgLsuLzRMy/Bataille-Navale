@@ -24,6 +24,8 @@ JeuBatailleNavale::JeuBatailleNavale(std::string nomJoueur1, std::string nomJoue
 	JeuBatailleNavale::joueur1->setGrilleTentatives(grilleTentatives1);
 	JeuBatailleNavale::joueur2->setGrilleTentatives(grilleTentatives2);
 
+	JeuBatailleNavale::typeJeu = typeJeu;
+
 	Affichage::afficherMessage("Chargement de la sauvegarde reussi\n");
 }
 
@@ -92,12 +94,13 @@ void JeuBatailleNavale::nouveauJeu(){
 
 void JeuBatailleNavale::jouer(bool tour){
 	bool fini = false;
+	bool sauvegarde = false;
 	//int tour = 0;
 	//bool tour = false; // le joueur 1 commence en premier
 	int* coordonneesBombes = new int [2];
 	Joueur* joueurEnCours;
 	Joueur* joueurEnAttente;
-	while (!fini){
+	while (!fini && !sauvegarde){
 		if(tour){
 			joueurEnCours = JeuBatailleNavale::joueur2;
 			joueurEnAttente = JeuBatailleNavale::joueur1;
@@ -115,16 +118,60 @@ void JeuBatailleNavale::jouer(bool tour){
 		//tour = (tour+1)%2; // on passe au tour du joueur suivant
 		tour = !tour;
 		fini = JeuBatailleNavale::checkFinJeu();
+		if(!fini){
+			char choix = Affichage::proposerSauvegarder();
+			if(choix == 'o'){
+				sauvegarde = true;
+			}
+		}
 	}
-	// Si la partie est finie et que c'est le tour du joueur1 alors c'est que c'est suite
-	// au tour de joueur2 que la partie se termine. Donc c'est joueur2 qui a gagne. Et inversement.
-	// (c'est parce qu'on actualise 'tour' a la fin de la boucle while)
+	if(fini){
+		// Si la partie est finie et que c'est le tour du joueur1 alors c'est que c'est suite
+		// au tour de joueur2 que la partie se termine. Donc c'est joueur2 qui a gagne. Et inversement.
+		// (c'est parce qu'on actualise 'tour' a la fin de la boucle while)
+		if (tour){
+			Affichage::afficherGagnant(JeuBatailleNavale::joueur1->nom + " a gagne la partie\n=============\n");
+		}else{
+			Affichage::afficherGagnant(JeuBatailleNavale::joueur2->nom + " a gagne la partie\n=============\n");
+		}
+	}else if(sauvegarde){
+		std::string nomSauvegarde = Affichage::demanderNomSauvegarde();
+		JeuBatailleNavale::ecrireSauvegarde(nomSauvegarde, tour);
+	}
+}
 
-	if (tour){
-		Affichage::afficherGagnant(JeuBatailleNavale::joueur1->nom + " a gagne la partie\n=============\n");
+void JeuBatailleNavale::ecrireSauvegarde(std::string nomSauvegarde, bool tour){
+	GestionSauvegarde g(nomSauvegarde);
+	g.nouvelleSauvegarde(true); // on ecrase la sauvegarde s'il y en avait une
+	g.ecrireNomJoueur('1', JeuBatailleNavale::joueur1->nom);
+	g.ecrireNomJoueur('2', JeuBatailleNavale::joueur2->nom);
+	std::string typeJeuStr;
+	if(JeuBatailleNavale::typeJeu == 1){
+		typeJeuStr = "1";
 	}else{
-		Affichage::afficherGagnant(JeuBatailleNavale::joueur2->nom + " a gagne la partie\n=============\n");
+		typeJeuStr = "2";
 	}
+	g.ecrireAttribut("typeJeu", typeJeuStr);
+	std::string joueurEnCours;
+	if(tour){
+		joueurEnCours = "2";
+	}else{
+		joueurEnCours = "1";
+	}
+	g.ecrireAttribut("joueurEnCours", joueurEnCours);
+	bool IA1 = JeuBatailleNavale::joueur1->estUneIA();
+	std::stringstream sstm;
+	sstm << IA1;
+	g.ecrireAttribut("IA1", sstm.str());
+	sstm.str("");
+	bool IA2 = JeuBatailleNavale::joueur2->estUneIA();
+	sstm << IA2;
+	g.ecrireAttribut("IA2", sstm.str());
+	sstm.str("");
+	g.ecrireGrille("grille1", JeuBatailleNavale::joueur1->grille.getGrille(), JeuBatailleNavale::joueur1->grille.getLargeur(), JeuBatailleNavale::joueur1->grille.getHauteur());
+	g.ecrireGrille("grille2", JeuBatailleNavale::joueur2->grille.getGrille(), JeuBatailleNavale::joueur2->grille.getLargeur(), JeuBatailleNavale::joueur2->grille.getHauteur());
+	g.ecrireGrille("grilleTentatives1", JeuBatailleNavale::joueur1->grilleTentatives.getGrille(), JeuBatailleNavale::joueur1->grilleTentatives.getLargeur(), JeuBatailleNavale::joueur1->grilleTentatives.getHauteur());
+	g.ecrireGrille("grilleTentatives2", JeuBatailleNavale::joueur2->grilleTentatives.getGrille(), JeuBatailleNavale::joueur2->grilleTentatives.getLargeur(), JeuBatailleNavale::joueur2->grilleTentatives.getHauteur());
 }
 
 bool JeuBatailleNavale::checkFinJeu(){
