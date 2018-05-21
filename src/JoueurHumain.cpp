@@ -8,6 +8,10 @@ void JoueurHumain::demanderNom(){
 	JoueurHumain::nom = JoueurHumain::affichage->demanderNom();
 }
 
+bool JoueurIA::estUneIA(){
+	return false;
+}
+
 void JoueurHumain::demanderTailleGrille(){
 	int l = 0;
 	int h = 0;
