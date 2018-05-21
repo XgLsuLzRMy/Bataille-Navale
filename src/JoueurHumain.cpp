@@ -47,33 +47,38 @@ void JoueurHumain::placementDesBateaux(char typeJeu){
 			std::string str = sstm.str();
 			JoueurHumain::affichage->afficherMessage(str);
 			// afficher les bateaux possibles
-			JoueurHumain::affichage->afficherMessage("vous pouvez placer les bateaux de tailles suivantes :");
+			JoueurHumain::affichage->afficherMessage("vous pouvez placer les bateaux de tailles suivantes : \n");
 			sstm.clear(); // pour concatener un int et une string
-			std::string listeTaille;
-			for (int x=0;x<nbMaxDeBateaux-i;x++){
-				if (Joueur::bateaux[x].getTaille() != 0){
-					sstm << Joueur::bateaux[x].getTaille()+" ";
+			std::stringstream sstp;
+			for (int x=0;x<nbMaxDeBateaux;x++){
+				if (Joueur::bateaux[x].getTaille() != grille.getHauteur()){
+					sstp << Joueur::bateaux[x].getTaille() << "\n";
 				}
 			}
-			listeTaille = sstm.str();
+			std::string listeTaille = sstp.str();
 			JoueurHumain::affichage->afficherMessage(listeTaille);
+			sstp.clear();
 			// demande la taille du bateau qui va etre placer
 			int tailleBateau = 90;
 			tailleBateau = JoueurHumain::affichage->demanderTailleBateau();
 			// on verrifie que cette taile existe
 			bool tailleOK = false;
-			for (int x=0;x<nbMaxDeBateaux-i;x++){
-				if (Joueur::bateaux[x].getTaille() == tailleBateau){ // le bateau existe et on le place
+			int x=0;
+			//for (int x=0;x<nbMaxDeBateaux-i;x++){
+			while(tailleOK == false && x<nbMaxDeBateaux){
+				if (tailleOK == false && Joueur::bateaux[x].getTaille() == tailleBateau){ // le bateau existe et on le place
 					JoueurHumain::placerBateau(&(Joueur::bateaux[x]));
 					// on suprime le bateau de la liste des possibles (on met la taille du bateau utilise a 0)
-					Joueur::bateaux[x].setTaille(0);
+					Joueur::bateaux[x].setTaille(grille.getHauteur());
 				        tailleOK= true;
+					break;	
 				}
+				x=x+1;
 
 			}
 			if ( tailleOK==false ) {
 				i =i-1;
-				JoueurHumain::affichage->afficherMessage("la taille demandée n'est pas valide");
+				JoueurHumain::affichage->afficherMessage("la taille demandée n'est pas valide \n");
 			}
 		}
 	}
