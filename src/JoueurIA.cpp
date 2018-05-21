@@ -28,32 +28,35 @@ void JoueurIA::placementDesBateaux(char typeJeu){
 	if (typeJeu!=1){
 		// il faut demander le nb de bateaux et leur taille
 		int nbMaxDeBateaux = 5;
-		Joueur::definirBateauxType2(nbMaxDeBateaux, std::min(grille.getHauteur(), grille.getLargeur()));
-		for(int i=0;i<Joueur::nbBateaux;i++){
-			int tailleBateau = 90;
-			tailleBateau = rand()%(grille.getHauteur()/2);
+		int tailleBateau;
+		bool tailleOK = false;
+		int x = 0;
+		JoueurIA::definirBateauxType2(nbMaxDeBateaux, std::min(grille.getHauteur(), grille.getLargeur()));
+		// L'IA place nbBateaux
+		for(int i=0;i<JoueurIA::nbBateaux;i++){
+			tailleBateau = rand()%(grille.getHauteur()/2); // chaque bateau du joueur a une taille aleatoire
 			// on verrifie que cette taile existe
-			bool tailleOK = false;
-			int x=0;
+			tailleOK = false;
+			x = 0;
+			// boucle pour verifier si la tailleBateau fait partie des tailles possibles dans bateaux
 			while(tailleOK == false && x<nbMaxDeBateaux){
-				if (tailleOK == false && Joueur::bateaux[x].getTaille() == tailleBateau){ // le bateau existe et on le place
-					JoueurIA::placerBateau(&(Joueur::bateaux[x]));
-					// on suprime le bateau de la liste des possibles (on met la taille du bateau utilise a 0)
-					Joueur::bateaux[x].setTaille(grille.getHauteur());
+				if (JoueurIA::bateaux[x].getTaille() == tailleBateau){ // le bateau existe et on le place
+					JoueurIA::placerBateau(&(JoueurIA::bateaux[x]));
+					// on suprime le bateau de la liste des possibles (on met la taille du bateau utilise a la hauteur de la grille)
+					JoueurIA::bateaux[x].setTaille(grille.getHauteur());
 					tailleOK= true;
-					break;
+					//break;
 				}
 				x=x+1;
-
 			}
 			if ( tailleOK==false ) {
-				i =i-1;
+				i = i-1; // Le bateau n'a pas été placé donc
+				// on génére une nouvelle taille pour ce bateau en faisant un nouveau tour de boucle
 			}
 		}
-	}
-	else {
-		for(int i=0;i<Joueur::nbBateaux;i++){
-			JoueurIA::placerBateau(&(Joueur::bateaux[i]));
+	}else { // typeJeu 1
+		for(int i=0; i<JoueurIA::nbBateaux; i++){
+			JoueurIA::placerBateau(&(JoueurIA::bateaux[i]));
 		}
 	}
 	JoueurIA::affichage->afficherGrille(&(JoueurIA::grille));
@@ -63,19 +66,24 @@ void JoueurIA::placerBateau(Bateau *b){
 	int xExtremite, yExtremite;
 	char orientationInput;
 	bool orientation;
-	xExtremite =rand()%(JoueurIA::grille.getLargeur()-b->getTaille()) ;
-	yExtremite =rand()%(JoueurIA::grille.getHauteur()-b->getTaille()) ;
-	orientationInput = rand()%(1);
-	if (orientationInput == 0 ) {
-		orientationInput ='v';
-	}
-	else {
-		orientationInput ='h';
-	}
-	b->setOrientation(orientationInput);
-	b->setxExtremite(xExtremite);
-	b->setyExtremite(yExtremite);
-	b->placerSurGrille(&(JoueurIA::grille));
+	bool placementReussi = false;
+
+		xExtremite =rand()%(JoueurIA::grille.getLargeur()-b->getTaille()) ;
+		yExtremite =rand()%(JoueurIA::grille.getHauteur()-b->getTaille()) ;
+		orientationInput = rand()%(1);
+		if (orientationInput == 0 ) {
+			orientationInput ='v';
+		}
+		else {
+			orientationInput ='h';
+		}
+		b->setOrientation(orientationInput);
+		b->setxExtremite(xExtremite);
+		b->setyExtremite(yExtremite);
+		placementReussi = b->placerSurGrille(&(JoueurIA::grille));
+		if(!placementReussi){
+			Affichage::afficherMessage("mauvais placement \n");
+		}
 }
 
 int* JoueurIA::tour(){
@@ -87,8 +95,8 @@ int* JoueurIA::tour(){
 	JoueurIA::affichage->afficherGrille(&(JoueurIA::grilleTentatives));
 	int* res = new int [2];
 	// une bombe aléatoire
-	x =rand()%(JoueurIA::grille.getLargeur()) ;
-	y =rand()%(JoueurIA::grille.getHauteur()) ;
+	x = rand()%(JoueurIA::grille.getLargeur()) ;
+	y = rand()%(JoueurIA::grille.getHauteur()) ;
 	res[0] = x;
 	res[1] = y;
 	return res;
