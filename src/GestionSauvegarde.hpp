@@ -31,6 +31,7 @@ public:
 
   bool nouvelleSauvegarde(bool ecraserFichierSiExisteDeja = false);
   static std::string* getListeSauvegardes();
+  static void supprimerSauvegarde(std::string nomFichier);
 
   // Fonctions d'ecriture
   void ecrireNomJoueur(char numeroJoueur, std::string nomJoueur);

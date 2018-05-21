@@ -42,6 +42,20 @@ std::string* GestionSauvegarde::getListeSauvegardes(){
   return res;
 }
 
+void GestionSauvegarde::supprimerSauvegarde(std::string nomFichier){
+  GestionSauvegarde g(nomFichier);
+  int pos = g.sauvegardeDejaDansListe();
+  if(pos != -1){
+    GestionSauvegarde g2(FICHIERLISTESAV);
+    g2.remplacerLigne(pos, "__RIEN__"); // on retire la sauvegarde de la liste des sauvegardes
+  }else{
+    std::cout << "La sauvegarde n'est pas dans le fichier de sauvegardes\n";
+  }
+  if(remove(nomFichier.c_str())!=0){
+    std::cout << "Erreur lors de la suppression de la sauvegarde\n";
+  }
+}
+
 bool GestionSauvegarde::fichierExiste(std::string nomFichier){
   if(!nomFichier.empty()){
     nomFichier = GestionSauvegarde::nomFichier;
@@ -137,7 +151,9 @@ void GestionSauvegarde::remplacerLigne(int pos, std::string nouvelleLigne, bool 
       fluxFichierTemporaire << ligne << "\n";
       posActuelle = flux.tellg();
     }
-    fluxFichierTemporaire << nouvelleLigne << "\n";
+    if(nouvelleLigne != "__RIEN__"){
+      fluxFichierTemporaire << nouvelleLigne << "\n";
+    }
     getline(flux, ligne); // on passe la ligne
     if(ajouterLaLigne){
       fluxFichierTemporaire << ligne << "\n";
