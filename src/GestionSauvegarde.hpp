@@ -23,10 +23,12 @@ private:
 
   void ecrireAttribut(std::string attribut, std::string valeur);
   void remplacerLigne(int pos, std::string nouvelleLigne, bool ajouterLaLigne = false); // ajouterLeLigne permet de ne pas supprimer la ligne située en pos
+  void effacerGrille(int pos, int h);
 public:
   GestionSauvegarde(std::string nomFichier);
   // Fonctions d'ecriture
   void ecrireNomJoueur(char numeroJoueur, std::string nomJoueur);
+  void ecrireGrille(std::string nomGrille, char** grille, int largeur, int hauteur);
 
   // Fonctions de lecture
   std::string lireNomJoueur(char numeroJoueur);

@@ -54,6 +54,58 @@ void GestionSauvegarde::remplacerLigne(int pos, std::string nouvelleLigne, bool 
   }
 }
 
+void GestionSauvegarde::effacerGrille(int pos, int h){
+  std::string nomFichierTemporaire = GestionSauvegarde::nomFichier + "_temp";
+  std::ofstream fluxFichierTemporaire(nomFichierTemporaire.c_str());
+  std::ifstream flux(GestionSauvegarde::nomFichier.c_str());
+  if (flux && fluxFichierTemporaire){
+    int posActuelle = 0;
+    std::string ligne;
+    while(posActuelle < pos){
+      getline(flux, ligne);
+      fluxFichierTemporaire << ligne << "\n";
+      posActuelle = flux.tellg();
+    }
+    int i = 0;
+    while(getline(flux, ligne) && i<h){
+      i++;
+    }
+    while(getline(flux, ligne)){
+      fluxFichierTemporaire << ligne << "\n";
+    }
+    flux.close();
+    fluxFichierTemporaire.close();
+    if( remove(GestionSauvegarde::nomFichier.c_str()) == 0){
+      if(rename(nomFichierTemporaire.c_str() , GestionSauvegarde::nomFichier.c_str()) != 0){
+        std::cout << "Erreur lors du renommage\n";
+      }
+    }else{
+      std::cout << "Erreur lors de la suppression\n";
+    }
+  }
+}
+
+void GestionSauvegarde::ecrireGrille(std::string nomGrille, char** grille, int largeur, int hauteur){
+  int pos = GestionSauvegarde::positionAttribut("["+nomGrille+"]", false);
+  if(pos != -1){
+    GestionSauvegarde::effacerGrille(pos, lireHauteurGrille(nomGrille));
+  }
+  std::ofstream flux(GestionSauvegarde::nomFichier.c_str(), std::ios::app);
+  if (flux){
+    char c;
+    flux << "[" << nomGrille << "]\n";
+    for(int i=0;i<hauteur;i++){
+      for (int j=0;j<largeur;j++){
+        c = grille[i][j]+'0';
+        flux << c << " ";
+      }
+      flux << "\n";
+    }
+  }
+}
+
+
+
 int GestionSauvegarde::positionAttribut(std::string attribut, bool verifierEgale){
   int res = -1;
   std::ifstream flux(GestionSauvegarde::nomFichier.c_str());
@@ -181,6 +233,9 @@ int GestionSauvegarde::recupererHauteurGrille(int pos){
 
 char** GestionSauvegarde::lireGrille(std::string nomGrille){
   char **res;
+  res = new char*[1];
+  res[0] = new char[1];
+  res[0][0] = -1; // renvoie -1 si on ne trouve pas la grille
   std::string attribut = "["+ nomGrille +"]";
   int pos = GestionSauvegarde::positionAttribut(attribut, false);
   if(pos != -1){
