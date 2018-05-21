@@ -1,12 +1,14 @@
 #include <iostream>
-
+#include <fstream>
 #include "GestionSauvegarde.hpp"
+#include <string>
 
 int main(){
 
 	GestionSauvegarde g("sauvegarde.sav");
+
 	std::string nom = g.lireNomJoueur('1');
-	if (nom != ERREUR){
+	if (nom != ERREURATTRIBUT){
 		std::cout << "==" << nom << "==\n";
 	}else{
 		std::cout << "erreur\n";
@@ -49,10 +51,29 @@ int main(){
 	g.ecrireNomJoueur('2', nouveauNom);
 
 	nom = g.lireNomJoueur('2');
-	if (nom != ERREUR){
+	if (nom != ERREURATTRIBUT){
 		std::cout << "==" << nom << "==\n";
 	}else{
 		std::cout << "erreur\n";
+	}
+
+	std::cout << "Modification de la grille 1\n";
+	grille1[0][0] = 2;
+	g.ecrireGrille("grille1", grille1, 5, 5);
+
+
+	GestionSauvegarde g2("sauvegarde2.sav");
+		g2.nouvelleSauvegarde(true);
+
+	std::string* liste = GestionSauvegarde::getListeSauvegardes();
+	if(!liste[0].empty()){
+		int i = 0;
+		while(liste[i] != "__FIN__"){
+			std::cout << i << ") " << liste[i] << '\n';
+			i++;
+		}
+	}else{
+		std::cout << "liste vide\n";
 	}
 
 }

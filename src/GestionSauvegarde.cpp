@@ -1,7 +1,110 @@
 #include "GestionSauvegarde.hpp"
 
+GestionSauvegarde::GestionSauvegarde(){
+  GestionSauvegarde::nomFichier = "sauvegarde.sav";
+  std::cout << "Attention pas de nom de sauvegarde ! Le nom de la sauvegarde par defaut est " << GestionSauvegarde::nomFichier << "\n";
+}
+
 GestionSauvegarde::GestionSauvegarde(std::string nomFichier){
   GestionSauvegarde::nomFichier = nomFichier;
+}
+
+std::string* GestionSauvegarde::getListeSauvegardes(){
+  std::string* res;
+  res = new std::string[1];
+  res[0] = "";
+  std::ifstream flux(FICHIERLISTESAV);
+  if(flux){
+    // On compte d'abord le nombre de ligne pour allouer le tableau
+    std::string ligne, ancienneLigne;
+    int nbLignes = 0;
+    while(getline(flux, ligne)){
+      nbLignes++; // On considere qu'il n'y aura pas de lignes vides
+      ancienneLigne = ligne;
+    }
+    if(ancienneLigne.empty()){
+      nbLignes--; // on enleve 1 si le fichier se finit par un retour a la ligne
+    }
+    res = new std::string[nbLignes+1];
+    flux.close(); // pour revenir au debut du fichier (seekg(std::ios::beg) ne fonctionne pas ...)
+    std::ifstream flux(FICHIERLISTESAV);
+    int i = 0;
+    while(getline(flux, ligne)){
+      if(i<nbLignes){
+        res[i] = ligne;
+      }
+      i++;
+    }
+    std::string str("__FIN__");
+    res[nbLignes] = str;
+    flux.close();
+  }
+  return res;
+}
+
+bool GestionSauvegarde::fichierExiste(std::string nomFichier){
+  if(!nomFichier.empty()){
+    nomFichier = GestionSauvegarde::nomFichier;
+  }
+  std::ifstream f(GestionSauvegarde::nomFichier.c_str());
+  return f.good();
+}
+
+// renvoie la position de la sauvegarde dans la liste
+int GestionSauvegarde::sauvegardeDejaDansListe(){
+  int res = -1;
+  std::string attribut = GestionSauvegarde::nomFichier;
+  std::ifstream flux(FICHIERLISTESAV);
+  if(flux){
+    int anciennePos = flux.tellg();
+    std::string ligne;
+    int tailleAttribut = attribut.size();
+    bool trouve = false;
+    // Ordre des 2 conditions du while important car si dans l'autre sens (getline && !trouve) alors on quittera la boucle en lisant la ligne suivante et on ne pourra pas recuperer les donnees dans la partie suivant le while
+    // On pourrait aussi recuperer directement les donnees dans le while
+    while(!trouve && getline(flux, ligne)){
+      if(ligne.find(attribut) != std::string::npos){
+        // l'attribut est une sous chaine de ligne. Si la taille de l'attribut est exactement la meme que celle de ligne alors ligneAvantEgal=attribut.
+        if(ligne.size() == tailleAttribut){
+          trouve = true;
+          res = anciennePos;
+        }
+      }
+      anciennePos = flux.tellg();
+    }
+    flux.close();
+  }
+  return res;
+}
+
+// retourne true si la sauvegarde a été initialiséenu
+// retourne false si le fichier existait deja et que l'on ne souhaitait pas l'ecraser
+bool GestionSauvegarde::nouvelleSauvegarde(bool ecraserFichierSiExisteDeja){
+  bool existe = GestionSauvegarde::fichierExiste();
+  bool ok = !existe || ecraserFichierSiExisteDeja;
+  if(ok){
+    if(GestionSauvegarde::sauvegardeDejaDansListe() == -1){
+      std::ofstream fluxListeSav(FICHIERLISTESAV, std::ios::app);
+      if(fluxListeSav){
+        fluxListeSav << GestionSauvegarde::nomFichier << "\n";
+      }else{
+        ok = false;
+        std::cout << "Erreur ouverture liste des sauvegardes\n";
+      }
+      fluxListeSav.close();
+    }
+    if(ok){
+      std::ofstream flux(GestionSauvegarde::nomFichier.c_str());
+      if(flux){
+        flux << "[donnees]\nnomJoueur1=\nnomJoueur2=\ntypeJeu=\njoueurEnCours=\nIA1=\nIA2=\n";
+        flux.close();
+      }else{
+        ok = false;
+        std::cout << "Erreur ouverture sauvegarde\n";
+      }
+    }
+  }
+  return ok;
 }
 
 void GestionSauvegarde::ecrireNomJoueur(char numeroJoueur, std::string nomJoueur){
@@ -148,7 +251,7 @@ int GestionSauvegarde::positionAttribut(std::string attribut, bool verifierEgale
 }
 
 std::string GestionSauvegarde::lireAttribut(std::string attribut){
-  std::string res = ERREUR;
+  std::string res = ERREURATTRIBUT;
   int pos = GestionSauvegarde::positionAttribut(attribut);
   if(pos != -1){
     std::ifstream flux(GestionSauvegarde::nomFichier.c_str());

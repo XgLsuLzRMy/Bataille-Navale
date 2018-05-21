@@ -1,6 +1,6 @@
 @echo off
 cd ..\src\
-g++ -o main.exe main.cpp JeuBatailleNavale.cpp Grille.cpp Joueur.cpp JoueurHumain.cpp JoueurIA.cpp Bateau.cpp Affichage.cpp
+g++ -o main.exe main.cpp JeuBatailleNavale.cpp Grille.cpp Joueur.cpp JoueurHumain.cpp JoueurIA.cpp Bateau.cpp Affichage.cpp GestionSauvegarde.cpp
 cd ..
 move .\src\main.exe bin\main.exe
 pause

@@ -4,6 +4,28 @@ void Affichage::afficherMessage(std::string message){
   std::cout << message;
 }
 
+char Affichage::proposerNouveauJeuOuSauvegarde(){
+  char choix = 0;
+  std::cout << "Voulez-vous,\n1) Faire un nouveau jeu ?\n2) Charger une sauvegarde ?\n";
+  std::cin >> choix;
+  std::cin.clear();
+  std::cin.ignore(10000, '\n');
+  return choix;
+}
+
+char Affichage::choixSauvegarde(std::string *liste){
+  char choix = 0;
+  int i = 0;
+  while(liste[i] != "__FIN__"){
+    std::cout << i+1 << ") " << liste[i] << '\n';
+    i++;
+  }
+  std::cin >> choix;
+  std::cin.clear();
+  std::cin.ignore(10000, '\n');
+  return choix;
+}
+
 char Affichage::menuPrincipal(){
   char choix = 0;
 	std::cout << "\n\n1-Joueur contre joueur\n2-Joueur contre IA\n3-IA contre IA\nq-quitter\n> ";

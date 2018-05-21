@@ -21,6 +21,8 @@ private:
 
 public:
   static void afficherMessage(std::string message);
+  static char proposerNouveauJeuOuSauvegarde();
+  static char choixSauvegarde(std::string *liste);
   // Fonctions pour JeuBatailleNavale
   static char menuPrincipal();
   static void attendreJoueurSuivant();

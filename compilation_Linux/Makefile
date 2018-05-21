@@ -8,7 +8,7 @@ OBJDIR = ../obj
 TARGET = main
 
 # $(patsubst PATTERN,REPLACEMENT,TEXT)
-OBJ = $(OBJDIR)/main.o $(OBJDIR)/JeuBatailleNavale.o $(OBJDIR)/Joueur.o $(OBJDIR)/JoueurHumain.o $(OBJDIR)/JoueurIA.o $(OBJDIR)/Grille.o $(OBJDIR)/Bateau.o $(OBJDIR)/Affichage.o
+OBJ = $(OBJDIR)/main.o $(OBJDIR)/JeuBatailleNavale.o $(OBJDIR)/Joueur.o $(OBJDIR)/JoueurHumain.o $(OBJDIR)/JoueurIA.o $(OBJDIR)/Grille.o $(OBJDIR)/Bateau.o $(OBJDIR)/Affichage.o $(OBJDIR)/GestionSauvegarde.o
 
 # $@ 	Le nom de la cible
 # $< 	Le nom de la première dépendance
