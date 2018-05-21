@@ -3,6 +3,8 @@
 
 #include <sstream> // pour concatener string et int
 #include <string>
+#include <cstdlib> //pour la fonction rand
+#include <ctime> //pour la fonction rand
 #include "Grille.hpp"
 #include "Bateau.hpp"
 #include "Affichage.hpp"
@@ -41,6 +43,11 @@ public:
 	* \brief initialise le nom du joueur en demandant le nom au joueur
 	*
 	*/
+
+	void definirBateauxType2(int nbMaxDeBateaux, int tailleGrille);
+
+
+
 	virtual void demanderNom() {};
 	/**
 	* \fn public demanderTailleGrile()

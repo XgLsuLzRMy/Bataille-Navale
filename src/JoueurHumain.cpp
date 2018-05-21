@@ -38,7 +38,7 @@ void JoueurHumain::placementDesBateaux(char typeJeu){
 	if (typeJeu!=1){
 		// il faut demander le nb de bateaux et leur taille
 		int nbMaxDeBateaux = 5;
-		//vector<Bateau>  bateauxPossibles = Joueur::definirBateauxType2(nbMaxDeBateaux);
+		Joueur::definirBateauxType2(nbMaxDeBateaux, std::min(grille.getHauteur(), grille.getLargeur()));
 		JoueurHumain::affichage->afficherMessage("\n===\nA TESTER\n===\n\n");
 		//annonce le nombre de bateaux a placer
 		for(int i=0;i<Joueur::nbBateaux;i++){
@@ -69,7 +69,7 @@ void JoueurHumain::placementDesBateaux(char typeJeu){
 					Joueur::bateaux[x].setTaille(0);
 				        tailleOK= true;
 				}
-				
+
 			}
 			if ( tailleOK==false ) {
 				i =i-1;

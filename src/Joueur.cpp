@@ -29,3 +29,13 @@ void Joueur::marquerResultatBombeSurGrilleTentative(bool touche, int x, int y){
 		Joueur::grilleTentatives.set(x, y, TENTATIVERATEE);
 	}
 }
+
+	void Joueur::definirBateauxType2(int nbMaxDeBateaux,  int tailleGrille){
+	Joueur::bateaux= new Bateau[nbMaxDeBateaux];
+	Bateau b;
+	srand(time(NULL));
+	for (int i=0; i<nbMaxDeBateaux+1; i++ ){
+			Joueur::bateaux[i]= b;
+			Joueur::bateaux[i].setTaille(rand()%(tailleGrille/2));
+	}
+}
