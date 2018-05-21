@@ -20,6 +20,9 @@ private:
   char* parseLigneGrille(std::string ligne, int taille);
   bool estNumerique(char c);
   int recupererHauteurGrille(int pos);
+
+  void ecrireAttribut(std::string attribut, std::string valeur);
+  void remplacerLigne(int pos, std::string nouvelleLigne);
 public:
   GestionSauvegarde(std::string nomFichier);
   // Fonctions d'ecriture

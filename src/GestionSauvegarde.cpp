@@ -5,10 +5,47 @@ GestionSauvegarde::GestionSauvegarde(std::string nomFichier){
 }
 
 void GestionSauvegarde::ecrireNomJoueur(char numeroJoueur, std::string nomJoueur){
-  std::ofstream flux(GestionSauvegarde::nomFichier.c_str(), std::ios::app);
-  if(flux){
-    // TODO
+  std::string attribut = "nomJoueur"; attribut += numeroJoueur;
+  GestionSauvegarde::ecrireAttribut(attribut, nomJoueur);
+}
+
+// Cherche d'abord si l'attribut que l'on souhaite ecrire est deja present dans le fichier. Si c'est le cas, on change sa valeur. Sinon on cree l'attribut.
+void GestionSauvegarde::ecrireAttribut(std::string attribut, std::string valeur){
+  int pos = GestionSauvegarde::positionAttribut(attribut);
+  if (pos != -1){
+    std::string nouvelleLigne = attribut + "=" + valeur;
+    // On a trouve l'attribut. Il s'agit donc de modifier sa valeur
+    GestionSauvegarde::remplacerLigne(pos, nouvelleLigne);
+  }
+}
+
+// on recopie le contenu du fichier dans le fichier temporaire sauf la ligne en question. Puis on supprime le fichier d'origine et on renomme le fichier temporaire
+void GestionSauvegarde::remplacerLigne(int pos, std::string nouvelleLigne){
+  std::string nomFichierTemporaire = GestionSauvegarde::nomFichier + "_temp";
+  std::ofstream fluxFichierTemporaire(nomFichierTemporaire.c_str());
+  std::ifstream flux(GestionSauvegarde::nomFichier.c_str());
+  if (flux && fluxFichierTemporaire){
+    int posActuelle = 0;
+    std::string ligne;
+    while(posActuelle < pos){
+      getline(flux, ligne);
+      fluxFichierTemporaire << ligne << "\n";
+      posActuelle = flux.tellg();
+    }
+    fluxFichierTemporaire << nouvelleLigne << "\n";
+    getline(flux, ligne); // on passe la ligne
+    while(getline(flux, ligne)){
+      fluxFichierTemporaire << ligne << "\n";
+    }
     flux.close();
+    fluxFichierTemporaire.close();
+    if( remove(GestionSauvegarde::nomFichier.c_str()) == 0){
+      if(rename(nomFichierTemporaire.c_str() , GestionSauvegarde::nomFichier.c_str()) != 0){
+        std::cout << "Erreur lors du renommage\n";
+      }
+    }else{
+      std::cout << "Erreur lors de la suppression\n";
+    }
   }
 }
 

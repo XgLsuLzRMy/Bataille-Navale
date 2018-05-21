@@ -43,4 +43,16 @@ int main(){
 		}
 
 	}
+
+	std::string nouveauNom = "ceNouveauNom";
+	std::cout << "On renomme Joueur1 " << nouveauNom << "\n";
+	g.ecrireNomJoueur('1', nouveauNom);
+
+	nom = g.lireNomJoueur('1');
+	if (nom != ERREUR){
+		std::cout << "==" << nom << "==\n";
+	}else{
+		std::cout << "erreur\n";
+	}
+
 }
