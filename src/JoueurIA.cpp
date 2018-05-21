@@ -8,6 +8,11 @@ void JoueurIA::demanderNom(){
 	JoueurIA::nom = "IA";
 }
 
+bool JoueurIA::estUneIA(){
+	return true;
+}
+
+
 void JoueurIA::demanderTailleGrille(){
 	JoueurIA::grille.setTaille(10, 10);
 // On a deux IA, on renome donc la premiere InteligenceArtificielle
