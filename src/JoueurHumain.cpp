@@ -4,10 +4,6 @@ JoueurHumain::JoueurHumain(){
 
 }
 
-bool JoueurHumain::estUneIA(){
-	return false;
-}
-
 void JoueurHumain::demanderNom(){
 	JoueurHumain::nom = JoueurHumain::affichage->demanderNom();
 }
@@ -51,7 +47,7 @@ void JoueurHumain::placementDesBateaux(char typeJeu){
 			JoueurHumain::affichage->afficherMessage(str);
 			// afficher les bateaux possibles
 			JoueurHumain::affichage->afficherMessage("vous pouvez placer les bateaux de tailles suivantes : \n");
-			sstm.str(""); // pour concatener un int et une string
+			sstm.clear(); // pour concatener un int et une string
 			std::stringstream sstp;
 			for (int x=0;x<nbMaxDeBateaux;x++){
 				if (Joueur::bateaux[x].getTaille() != grille.getHauteur()){
@@ -60,14 +56,13 @@ void JoueurHumain::placementDesBateaux(char typeJeu){
 			}
 			std::string listeTaille = sstp.str();
 			JoueurHumain::affichage->afficherMessage(listeTaille);
-			sstp.str("");
+			sstp.clear();
 			// demande la taille du bateau qui va etre placer
 			int tailleBateau = 90;
 			tailleBateau = JoueurHumain::affichage->demanderTailleBateau();
 			// on verrifie que cette taile existe
 			bool tailleOK = false;
 			int x=0;
-			//for (int x=0;x<nbMaxDeBateaux-i;x++){
 			while(tailleOK == false && x<nbMaxDeBateaux){
 				if (tailleOK == false && Joueur::bateaux[x].getTaille() == tailleBateau){ // le bateau existe et on le place
 					JoueurHumain::placerBateau(&(Joueur::bateaux[x]));
