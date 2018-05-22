@@ -58,7 +58,7 @@ void Affichage::attendreJoueurSuivant(){
 }
 
 void Affichage::afficherGagnant(std::string nom){
-  std::cout << "\n==============\nLe gagnant est " << nom <<  "!\n==============\n";
+  std::cout << "\n============================\nLe gagnant est " << nom <<  "!\n============================\n";
 }
 
 std::string Affichage::demanderNom(){

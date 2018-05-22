@@ -130,9 +130,9 @@ void JeuBatailleNavale::jouer(bool tour){
 		// au tour de joueur2 que la partie se termine. Donc c'est joueur2 qui a gagne. Et inversement.
 		// (c'est parce qu'on actualise 'tour' a la fin de la boucle while)
 		if (tour){
-			Affichage::afficherGagnant(JeuBatailleNavale::joueur1->nom + " a gagne la partie\n=============\n");
+			Affichage::afficherGagnant(JeuBatailleNavale::joueur1->nom);
 		}else{
-			Affichage::afficherGagnant(JeuBatailleNavale::joueur2->nom + " a gagne la partie\n=============\n");
+			Affichage::afficherGagnant(JeuBatailleNavale::joueur2->nom);
 		}
 	}else if(sauvegarde){
 		std::string nomSauvegarde = Affichage::demanderNomSauvegarde();
