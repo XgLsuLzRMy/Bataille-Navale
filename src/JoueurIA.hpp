@@ -11,7 +11,7 @@
 * Classe Joueur IA, classe qui contrôle ce que peuvent faire les joueurs IA durant la partie.
 *
 */
-
+#include <math.h>
 #include "Joueur.hpp"
 
 /*! \class JoueurIA

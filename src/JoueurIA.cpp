@@ -1,7 +1,7 @@
 #include "JoueurIA.hpp"
 
 JoueurIA::JoueurIA(){
-
+	srand (time(NULL));
 }
 
 void JoueurIA::demanderNom(){
@@ -67,23 +67,28 @@ void JoueurIA::placerBateau(Bateau *b){
 	char orientationInput;
 	bool orientation;
 	bool placementReussi = false;
-
-		xExtremite =rand()%(JoueurIA::grille.getLargeur()-b->getTaille()) ;
-		yExtremite =rand()%(JoueurIA::grille.getHauteur()-b->getTaille()) ;
-		orientationInput = rand()%(1);
+	int xExtremiteMax = JoueurIA::grille.getLargeur()-b->getTaille() + 1;
+	int yExtremiteMax = JoueurIA::grille.getHauteur()-b->getTaille() + 1;
+	int nbTentativesDePlacement = 0;
+	while(!placementReussi && nbTentativesDePlacement<20){
+		xExtremite =trunc(rand()%(xExtremiteMax) + 1) ;
+		yExtremite =trunc(rand()%(yExtremiteMax) + 1) ;
+		orientationInput = round(rand()%(2));
 		if (orientationInput == 0 ) {
 			orientationInput ='v';
 		}
 		else {
 			orientationInput ='h';
 		}
+		std::stringstream sstm;
+		sstm << "xExtremite : " << xExtremite << " yExtremite : " << yExtremite << " orientation : " << orientationInput << "\n";
+		Affichage::afficherMessage(sstm.str());
 		b->setOrientation(orientationInput);
 		b->setxExtremite(xExtremite);
 		b->setyExtremite(yExtremite);
 		placementReussi = b->placerSurGrille(&(JoueurIA::grille));
-		if(!placementReussi){
-			Affichage::afficherMessage("mauvais placement \n");
-		}
+		nbTentativesDePlacement++;
+	}
 }
 
 int* JoueurIA::tour(){

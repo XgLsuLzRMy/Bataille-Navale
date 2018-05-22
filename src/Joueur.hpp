@@ -3,8 +3,10 @@
 
 #include <sstream> // pour concatener string et int
 #include <string>
-#include <cstdlib> //pour la fonction rand
-#include <ctime> //pour la fonction rand
+//#include <cstdlib> //pour la fonction rand
+#include <stdlib.h>
+//#include <ctime> //pour la fonction rand
+#include <time.h>
 #include "Grille.hpp"
 #include "Bateau.hpp"
 #include "Affichage.hpp"
