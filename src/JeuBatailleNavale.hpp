@@ -6,7 +6,7 @@
 * \brief classe JeuBatailleNavale
 * \author groupe B7
 * \version 0.1
-* \date 13 Avril 2018
+* \date 22 mai 2018
 *
 * Classe JeuBatailleNavale, classe principale qui contrôle la partie entre les deux joueurs.
 *
@@ -36,8 +36,23 @@ private:
 	*
 	*/
 	void demanderNomJoueurs();
+	/**
+	* \fn private  joueurPlaceBombe(bool joueur, int xBombe, int yBombe)
+	*
+	* \brief fonction qui verifie qu'à une position donnée, la grille de l'adversaire ne contient pas d'eau
+	*
+	* \param joueur, xBombe, yBombe
+	* \return true si la case de la grille adverse ne contient pas d'eau
+	*/
 
 	bool joueurPlaceBombe(bool joueur, int xBombe, int yBombe);
+	/**
+	* \fn private ecrireSauvegarde(std::string nomSauvegarde, bool tour)
+	*
+	* \brief fonction qui effectue une sauvegarde après un tour
+	*
+	* \param nomSauvegarde, tour
+	*/
 
 	void ecrireSauvegarde(std::string nomSauvegarde, bool tour);
 
@@ -49,6 +64,11 @@ public:
 	*
 	*/
 	JeuBatailleNavale();
+	/**
+	* \fn public JeuBatailleNavale()
+	* \brief Constructeur de la classe permettant de choisir l'initialisation des paramètres
+	*
+	*/
 
 	JeuBatailleNavale(std::string nomJoueur1, std::string nomJoueur2, char typeJeu, bool IA1, bool IA2, char** grille1, char** grilleTentatives1, char** grille2, char** grilleTentatives2, int h, int l);
 
@@ -60,6 +80,13 @@ public:
 	*/
 	void nouveauJeu();
 
+	/**
+	* \fn public jouer(bool tour = false)
+	*
+	* \brief fonction qui verifie si la partie est finie, demande au joueur des coordonnées de bombes, et informe le joueur adverse si un de ses bateaux a été touché
+	*
+	* \param tour
+	*/
 	void jouer(bool tour = false);
 
 	/**
