@@ -42,7 +42,7 @@ protected:
 	int nbBateaux;  /*!</ Le nombre de bateau initial du joueur. Permet de simplifier l'écriture de certaines boucles. ( i < nbBateaux etc)*/
 
 	Bateau* bateaux; /*!< Un tableau contenant les bateaux possédés par le joueur et qu'il a placé sur la grille.*/
-	Affichage* affichage;
+	Affichage* affichage; /*!< Un affichage pour afficher des informations générales sur le jeux.*/
 
 	/**
 	* \fn protected placerBateau(Bateau *b)
@@ -134,13 +134,13 @@ public:
 	*/
 	virtual void demanderNom() {};
 	/**
-	* \fn public demanderTailleGrile()
+	* \fn public demanderTailleGrille()
 	* \brief initialise la taille de la grille en la demandant au joueur
 	*
 	*/
 	virtual void demanderTailleGrille() {};
 	/**
-	* \fn private choisirTypeJeu()
+	* \fn public demanderTypeJeu()
 	* \brief fonction qui permet au joueur de choisir son type de jeu : bataille classique ou bataille
 	* améliorée
 	*/
