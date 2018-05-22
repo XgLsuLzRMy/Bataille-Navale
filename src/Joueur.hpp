@@ -147,7 +147,7 @@ public:
 	virtual char demanderTypeJeu() {};
 
 	/**
-	* \fn private placementDesBateaux(char typeJeu)
+	* \fn public placementDesBateaux(char typeJeu)
 	* \brief  demande au joueur de placer ses différents bateaux. Utilise
 	* ajoutBateau pour chaqun des bateaux du joueur.
 	*
