@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['isia',['isIA',['../class_joueur.html#ac9305d8a63a4a02417bf2f64a357ee8d',1,'Joueur']]]
+  ['grille',['grille',['../class_grille.html#abd4bc59ff38259962e5d8d3c18d1ae6b',1,'Grille::grille()'],['../class_joueur.html#a97a052f0b9966c94c49862df3144a62f',1,'Joueur::grille()']]],
+  ['grilletentatives',['grilleTentatives',['../class_joueur.html#abbef5ee9c9c05a24ffa2c462e14cdfd7',1,'Joueur']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orientation',['orientation',['../class_bateau.html#a2d3074370ff0c372286522f298830f63',1,'Bateau']]]
+  ['largeur',['largeur',['../class_grille.html#a12252fd7e371af35a0afa6bb12aa4046',1,'Grille']]]
 ];

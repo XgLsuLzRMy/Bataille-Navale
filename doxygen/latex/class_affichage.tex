@@ -1,0 +1,314 @@
+\hypertarget{class_affichage}{}\section{Référence de la classe Affichage}
+\label{class_affichage}\index{Affichage@{Affichage}}
+
+
+classe qui gère l\textquotesingle{}affichage d\textquotesingle{}une partie de Bataille Navale.  
+
+
+
+
+{\ttfamily \#include $<$Affichage.\+hpp$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{class_affichage_a38a16337c9e9df4057d85462c874c1a8}{demander\+Nom} ()
+\begin{DoxyCompactList}\small\item\em fonction qui demande le nom du joueur \end{DoxyCompactList}\item 
+int \hyperlink{class_affichage_a37398da67f8420b766f2a0cc92c1396c}{demander\+Dimension\+Grille} (std\+::string nom\+De\+La\+Dimension)
+\begin{DoxyCompactList}\small\item\em fonction qui demande la dimension de la grille à l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+char \hyperlink{class_affichage_a3a02104019c31b0ce350daa544e9e776}{choix\+Type\+Jeu} ()
+\begin{DoxyCompactList}\small\item\em fonction qui demande à l\textquotesingle{}utilisateur à quel type de jeu il souhaite jouer. \end{DoxyCompactList}\item 
+void \hyperlink{class_affichage_a8ae9b8381b263ba591172a0cf18c9ca1}{afficher\+Grille} (\hyperlink{class_grille}{Grille} $\ast$grille)
+\begin{DoxyCompactList}\small\item\em fonction permettant d\textquotesingle{}afficher la grille \end{DoxyCompactList}\item 
+char \hyperlink{class_affichage_a22b1ff3a190a1043e4c9cfe2eec23404}{demander\+Placement\+Correct} ()
+\begin{DoxyCompactList}\small\item\em fonction qui demande à l\textquotesingle{}utilisateur si le placement demandé correspondant à la position du bateau visible à l\textquotesingle{}écran \end{DoxyCompactList}\item 
+int \hyperlink{class_affichage_afcbb7a5076346a17d32f6ad464951748}{demander\+Coordonnees\+Bateau} (char coordonnee)
+\begin{DoxyCompactList}\small\item\em fonction qui demande à l\textquotesingle{}utilisateur les coordonnées du bateau à placer \end{DoxyCompactList}\item 
+char \hyperlink{class_affichage_a3e47a8396a57fe873cd55bdf22ab2fa4}{demander\+Orientation\+Bateau} ()
+\begin{DoxyCompactList}\small\item\em fonction qui demande à l\textquotesingle{}utilisateur si le bateau à placer doit être parallèle à l\textquotesingle{}axe des abcisses ou à l\textquotesingle{}axe des ordonnées \end{DoxyCompactList}\item 
+int \hyperlink{class_affichage_a5e0b0269a5b41b1c0fcdf6c3ddeee1e7}{demander\+Taille\+Bateau} ()
+\begin{DoxyCompactList}\small\item\em fonction qui demande à l\textquotesingle{}utilisateur la taille du bateau à placer \end{DoxyCompactList}\item 
+int \hyperlink{class_affichage_a5a087aa11bde8b505d992fc38ae21997}{demander\+Coordonnees\+Bombe} (char coordonnee)
+\begin{DoxyCompactList}\small\item\em fonction qui demande à l\textquotesingle{}utilisateur les coordonnées d\textquotesingle{}une bombe à lancer à son adversaire \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_affichage_a42638bc4919117919424b77d78793b5b}{afficher\+Message} (std\+::string message)
+\begin{DoxyCompactList}\small\item\em fonction qui affiche un message à l\textquotesingle{}écran \end{DoxyCompactList}\item 
+static char \hyperlink{class_affichage_ae27cd9961a933077a71790e55c3a0e2d}{proposer\+Nouveau\+Jeu\+Ou\+Sauvegarde} ()
+\begin{DoxyCompactList}\small\item\em fonction qui enregistre le choix de l\textquotesingle{}utiliteur\+: lui porposant de charger une sauvegarde, supprimer une sauvegarde ou faire une nouvelle partie \end{DoxyCompactList}\item 
+static char \hyperlink{class_affichage_a37978f1f21c0e15e6e5c92d661a99618}{choix\+Sauvegarde} (std\+::string $\ast$liste)
+\begin{DoxyCompactList}\small\item\em fonction qui affiche la liste des jeux à charger et enregistre le choix de l\textquotesingle{}utilisateur \end{DoxyCompactList}\item 
+static char \hyperlink{class_affichage_abcc7bec6baf155ab0500b0c134f46f3f}{proposer\+Sauvegarder} ()
+\begin{DoxyCompactList}\small\item\em fonction qui propose à l\textquotesingle{}utilisateur de sauvegarder \end{DoxyCompactList}\item 
+static std\+::string \hyperlink{class_affichage_a8d572996e22f9d78eb56b01eb9142871}{demander\+Nom\+Sauvegarde} ()
+\begin{DoxyCompactList}\small\item\em fonction qui demande le nom associé à la sauvegarde \end{DoxyCompactList}\item 
+static char \hyperlink{class_affichage_af895f714f818a9897830275d6db7ee0c}{menu\+Principal} ()
+\begin{DoxyCompactList}\small\item\em fonction qui affiche le menu principale de la Bataille Navale \end{DoxyCompactList}\item 
+static void \hyperlink{class_affichage_a111be8fcb09e0fe04c0543c814713a88}{attendre\+Joueur\+Suivant} ()\hypertarget{class_affichage_a111be8fcb09e0fe04c0543c814713a88}{}\label{class_affichage_a111be8fcb09e0fe04c0543c814713a88}
+
+\begin{DoxyCompactList}\small\item\em fonction qui demande à l\textquotesingle{}utilisateur d\textquotesingle{}appuyer sur entrée pour changer de joueur. \end{DoxyCompactList}\item 
+static void \hyperlink{class_affichage_a83d4f21e1603009b8f651f2ddb9f973f}{afficher\+Gagnant} (std\+::string nom)
+\begin{DoxyCompactList}\small\item\em fonction qui affiche le gagnant à l\textquotesingle{}écran \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+classe qui gère l\textquotesingle{}affichage d\textquotesingle{}une partie de Bataille Navale. 
+
+\subsection{Documentation des fonctions membres}
+\index{Affichage@{Affichage}!afficher\+Gagnant@{afficher\+Gagnant}}
+\index{afficher\+Gagnant@{afficher\+Gagnant}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{afficher\+Gagnant(std\+::string nom)}{afficherGagnant(std::string nom)}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::afficher\+Gagnant (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{nom}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_affichage_a83d4f21e1603009b8f651f2ddb9f973f}{}\label{class_affichage_a83d4f21e1603009b8f651f2ddb9f973f}
+
+
+fonction qui affiche le gagnant à l\textquotesingle{}écran 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nom} & \+: nom du gagnant à afficher \\
+\hline
+\end{DoxyParams}
+\index{Affichage@{Affichage}!afficher\+Grille@{afficher\+Grille}}
+\index{afficher\+Grille@{afficher\+Grille}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{afficher\+Grille(\+Grille $\ast$grille)}{afficherGrille(Grille *grille)}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::afficher\+Grille (
+\begin{DoxyParamCaption}
+\item[{{\bf Grille} $\ast$}]{grille}
+\end{DoxyParamCaption}
+)}\hypertarget{class_affichage_a8ae9b8381b263ba591172a0cf18c9ca1}{}\label{class_affichage_a8ae9b8381b263ba591172a0cf18c9ca1}
+
+
+fonction permettant d\textquotesingle{}afficher la grille 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$grille} & \+: la grille à afficher \\
+\hline
+\end{DoxyParams}
+\index{Affichage@{Affichage}!afficher\+Message@{afficher\+Message}}
+\index{afficher\+Message@{afficher\+Message}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{afficher\+Message(std\+::string message)}{afficherMessage(std::string message)}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::afficher\+Message (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{message}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_affichage_a42638bc4919117919424b77d78793b5b}{}\label{class_affichage_a42638bc4919117919424b77d78793b5b}
+
+
+fonction qui affiche un message à l\textquotesingle{}écran 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em message} & de caractère message à afficher \\
+\hline
+\end{DoxyParams}
+\index{Affichage@{Affichage}!choix\+Sauvegarde@{choix\+Sauvegarde}}
+\index{choix\+Sauvegarde@{choix\+Sauvegarde}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{choix\+Sauvegarde(std\+::string $\ast$liste)}{choixSauvegarde(std::string *liste)}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::choix\+Sauvegarde (
+\begin{DoxyParamCaption}
+\item[{std\+::string $\ast$}]{liste}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_affichage_a37978f1f21c0e15e6e5c92d661a99618}{}\label{class_affichage_a37978f1f21c0e15e6e5c92d661a99618}
+
+
+fonction qui affiche la liste des jeux à charger et enregistre le choix de l\textquotesingle{}utilisateur 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$liste} & liste des jeux à charger, sauvegardés précedemment. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+choix\+: un caractère précisant le choix de l\textquotesingle{}utilisateur. 
+\end{DoxyReturn}
+\index{Affichage@{Affichage}!choix\+Type\+Jeu@{choix\+Type\+Jeu}}
+\index{choix\+Type\+Jeu@{choix\+Type\+Jeu}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{choix\+Type\+Jeu()}{choixTypeJeu()}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::choix\+Type\+Jeu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_affichage_a3a02104019c31b0ce350daa544e9e776}{}\label{class_affichage_a3a02104019c31b0ce350daa544e9e776}
+
+
+fonction qui demande à l\textquotesingle{}utilisateur à quel type de jeu il souhaite jouer. 
+
+\begin{DoxyReturn}{Renvoie}
+le choix du joueur 
+\end{DoxyReturn}
+\index{Affichage@{Affichage}!demander\+Coordonnees\+Bateau@{demander\+Coordonnees\+Bateau}}
+\index{demander\+Coordonnees\+Bateau@{demander\+Coordonnees\+Bateau}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{demander\+Coordonnees\+Bateau(char coordonnee)}{demanderCoordonneesBateau(char coordonnee)}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::demander\+Coordonnees\+Bateau (
+\begin{DoxyParamCaption}
+\item[{char}]{coordonnee}
+\end{DoxyParamCaption}
+)}\hypertarget{class_affichage_afcbb7a5076346a17d32f6ad464951748}{}\label{class_affichage_afcbb7a5076346a17d32f6ad464951748}
+
+
+fonction qui demande à l\textquotesingle{}utilisateur les coordonnées du bateau à placer 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coordonnee} & \+: indique si on est dans le cas de x\+Extremite ou y\+Extremite\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un entier représentant les coordonnées en question 
+\end{DoxyReturn}
+\index{Affichage@{Affichage}!demander\+Coordonnees\+Bombe@{demander\+Coordonnees\+Bombe}}
+\index{demander\+Coordonnees\+Bombe@{demander\+Coordonnees\+Bombe}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{demander\+Coordonnees\+Bombe(char coordonnee)}{demanderCoordonneesBombe(char coordonnee)}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::demander\+Coordonnees\+Bombe (
+\begin{DoxyParamCaption}
+\item[{char}]{coordonnee}
+\end{DoxyParamCaption}
+)}\hypertarget{class_affichage_a5a087aa11bde8b505d992fc38ae21997}{}\label{class_affichage_a5a087aa11bde8b505d992fc38ae21997}
+
+
+fonction qui demande à l\textquotesingle{}utilisateur les coordonnées d\textquotesingle{}une bombe à lancer à son adversaire 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em coordonnee} & indique si on est dans le cas de x\+Extremite ou y\+Extremite\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un entier représentant les coordonnées en question 
+\end{DoxyReturn}
+\index{Affichage@{Affichage}!demander\+Dimension\+Grille@{demander\+Dimension\+Grille}}
+\index{demander\+Dimension\+Grille@{demander\+Dimension\+Grille}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{demander\+Dimension\+Grille(std\+::string nom\+De\+La\+Dimension)}{demanderDimensionGrille(std::string nomDeLaDimension)}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::demander\+Dimension\+Grille (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{nom\+De\+La\+Dimension}
+\end{DoxyParamCaption}
+)}\hypertarget{class_affichage_a37398da67f8420b766f2a0cc92c1396c}{}\label{class_affichage_a37398da67f8420b766f2a0cc92c1396c}
+
+
+fonction qui demande la dimension de la grille à l\textquotesingle{}utilisateur 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nom\+De\+La\+Dimension} & \+: hauteur, ou largeur\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+un entier representant la dimension voulue par l\textquotesingle{}utilisateur 
+\end{DoxyReturn}
+\index{Affichage@{Affichage}!demander\+Nom@{demander\+Nom}}
+\index{demander\+Nom@{demander\+Nom}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{demander\+Nom()}{demanderNom()}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::demander\+Nom (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_affichage_a38a16337c9e9df4057d85462c874c1a8}{}\label{class_affichage_a38a16337c9e9df4057d85462c874c1a8}
+
+
+fonction qui demande le nom du joueur 
+
+\begin{DoxyReturn}{Renvoie}
+un caractère exprimant la réponse de l\textquotesingle{}utilisateur 
+\end{DoxyReturn}
+\index{Affichage@{Affichage}!demander\+Nom\+Sauvegarde@{demander\+Nom\+Sauvegarde}}
+\index{demander\+Nom\+Sauvegarde@{demander\+Nom\+Sauvegarde}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{demander\+Nom\+Sauvegarde()}{demanderNomSauvegarde()}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::demander\+Nom\+Sauvegarde (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_affichage_a8d572996e22f9d78eb56b01eb9142871}{}\label{class_affichage_a8d572996e22f9d78eb56b01eb9142871}
+
+
+fonction qui demande le nom associé à la sauvegarde 
+
+\begin{DoxyReturn}{Renvoie}
+un caractère res exprimant la réponse de l\textquotesingle{}utilisateur 
+\end{DoxyReturn}
+\index{Affichage@{Affichage}!demander\+Orientation\+Bateau@{demander\+Orientation\+Bateau}}
+\index{demander\+Orientation\+Bateau@{demander\+Orientation\+Bateau}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{demander\+Orientation\+Bateau()}{demanderOrientationBateau()}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::demander\+Orientation\+Bateau (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_affichage_a3e47a8396a57fe873cd55bdf22ab2fa4}{}\label{class_affichage_a3e47a8396a57fe873cd55bdf22ab2fa4}
+
+
+fonction qui demande à l\textquotesingle{}utilisateur si le bateau à placer doit être parallèle à l\textquotesingle{}axe des abcisses ou à l\textquotesingle{}axe des ordonnées 
+
+\begin{DoxyReturn}{Renvoie}
+la réponse de l\textquotesingle{}utilisateur 
+\end{DoxyReturn}
+\index{Affichage@{Affichage}!demander\+Placement\+Correct@{demander\+Placement\+Correct}}
+\index{demander\+Placement\+Correct@{demander\+Placement\+Correct}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{demander\+Placement\+Correct()}{demanderPlacementCorrect()}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::demander\+Placement\+Correct (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_affichage_a22b1ff3a190a1043e4c9cfe2eec23404}{}\label{class_affichage_a22b1ff3a190a1043e4c9cfe2eec23404}
+
+
+fonction qui demande à l\textquotesingle{}utilisateur si le placement demandé correspondant à la position du bateau visible à l\textquotesingle{}écran 
+
+\begin{DoxyReturn}{Renvoie}
+la réponse de l\textquotesingle{}utilisateur 
+\end{DoxyReturn}
+\index{Affichage@{Affichage}!demander\+Taille\+Bateau@{demander\+Taille\+Bateau}}
+\index{demander\+Taille\+Bateau@{demander\+Taille\+Bateau}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{demander\+Taille\+Bateau()}{demanderTailleBateau()}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::demander\+Taille\+Bateau (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_affichage_a5e0b0269a5b41b1c0fcdf6c3ddeee1e7}{}\label{class_affichage_a5e0b0269a5b41b1c0fcdf6c3ddeee1e7}
+
+
+fonction qui demande à l\textquotesingle{}utilisateur la taille du bateau à placer 
+
+\begin{DoxyReturn}{Renvoie}
+la réponse de l\textquotesingle{}utilisateur 
+\end{DoxyReturn}
+\index{Affichage@{Affichage}!menu\+Principal@{menu\+Principal}}
+\index{menu\+Principal@{menu\+Principal}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{menu\+Principal()}{menuPrincipal()}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::menu\+Principal (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_affichage_af895f714f818a9897830275d6db7ee0c}{}\label{class_affichage_af895f714f818a9897830275d6db7ee0c}
+
+
+fonction qui affiche le menu principale de la Bataille Navale 
+
+\begin{DoxyReturn}{Renvoie}
+le choix de l\textquotesingle{}utilisateur\+:1, 2, ou 3 tel que\+: 1)\hyperlink{class_joueur}{Joueur} contre joueur 2) \hyperlink{class_joueur}{Joueur} contre IA 3) IA contre IA q) quitter. 
+\end{DoxyReturn}
+\index{Affichage@{Affichage}!proposer\+Nouveau\+Jeu\+Ou\+Sauvegarde@{proposer\+Nouveau\+Jeu\+Ou\+Sauvegarde}}
+\index{proposer\+Nouveau\+Jeu\+Ou\+Sauvegarde@{proposer\+Nouveau\+Jeu\+Ou\+Sauvegarde}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{proposer\+Nouveau\+Jeu\+Ou\+Sauvegarde()}{proposerNouveauJeuOuSauvegarde()}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::proposer\+Nouveau\+Jeu\+Ou\+Sauvegarde (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_affichage_ae27cd9961a933077a71790e55c3a0e2d}{}\label{class_affichage_ae27cd9961a933077a71790e55c3a0e2d}
+
+
+fonction qui enregistre le choix de l\textquotesingle{}utiliteur\+: lui porposant de charger une sauvegarde, supprimer une sauvegarde ou faire une nouvelle partie 
+
+\begin{DoxyReturn}{Renvoie}
+choix\+: un caractère 1, 2 ou 3. 1) Faire un nouveau jeu 2) Charger une sauvegarde; 3) Supprimer une sauvegarde. 
+\end{DoxyReturn}
+\index{Affichage@{Affichage}!proposer\+Sauvegarder@{proposer\+Sauvegarder}}
+\index{proposer\+Sauvegarder@{proposer\+Sauvegarder}!Affichage@{Affichage}}
+\subsubsection[{\texorpdfstring{proposer\+Sauvegarder()}{proposerSauvegarder()}}]{\setlength{\rightskip}{0pt plus 5cm}public Affichage\+::proposer\+Sauvegarder (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_affichage_abcc7bec6baf155ab0500b0c134f46f3f}{}\label{class_affichage_abcc7bec6baf155ab0500b0c134f46f3f}
+
+
+fonction qui propose à l\textquotesingle{}utilisateur de sauvegarder 
+
+\begin{DoxyReturn}{Renvoie}
+choix\+: un caractère représentant la réponse de l\textquotesingle{}utilisateur. 
+\end{DoxyReturn}
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\hyperlink{_affichage_8hpp}{Affichage.\+hpp}\item 
+/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/Affichage.\+cpp\end{DoxyCompactItemize}

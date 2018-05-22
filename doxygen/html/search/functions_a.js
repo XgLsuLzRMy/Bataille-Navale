@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['setorientation',['setOrientation',['../class_bateau.html#a0c88ac8759c24674a23b7523cb3f6667',1,'Bateau']]],
-  ['settaille',['setTaille',['../class_bateau.html#ac06303b2d1c9b2c9d6b29e6f65eaff26',1,'Bateau']]],
-  ['setxextremite',['setxExtremite',['../class_bateau.html#aecf45729913eb0c51a82475b996273ce',1,'Bateau']]],
-  ['setyextremite',['setyExtremite',['../class_bateau.html#a7fa9258d53309fcf41de04199d702fe7',1,'Bateau']]]
+  ['marquerresultatbombesurgrille',['marquerResultatBombeSurGrille',['../class_joueur.html#a3b77de3d2a5d2845bfefddb051460e80',1,'Joueur']]],
+  ['marquerresultatbombesurgrilletentative',['marquerResultatBombeSurGrilleTentative',['../class_joueur.html#ab42cd00f0ff47934eecde3fbaf06f2a5',1,'Joueur']]],
+  ['menuprincipal',['menuPrincipal',['../class_affichage.html#af895f714f818a9897830275d6db7ee0c',1,'Affichage']]]
 ];

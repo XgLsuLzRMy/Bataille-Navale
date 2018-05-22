@@ -1,4 +1,19 @@
 var searchData=
 [
-  ['jeubataillenavale',['JeuBatailleNavale',['../class_jeu_bataille_navale.html#aae41366decd137f03ac95aff8b8e0f49',1,'JeuBatailleNavale']]]
+  ['debutdelachainesansespaces',['debutDeLaChaineSansEspaces',['../class_gestion_sauvegarde.html#a9f8c29aaf4fdbe9551d03b6aaa0b8e17',1,'GestionSauvegarde']]],
+  ['definirbateauxtype2',['definirBateauxType2',['../class_joueur.html#a1f4357df61efbc2ead45d24a190ebb83',1,'Joueur']]],
+  ['demandercoordonneesbateau',['demanderCoordonneesBateau',['../class_affichage.html#afcbb7a5076346a17d32f6ad464951748',1,'Affichage::demanderCoordonneesBateau()'],['../class_joueur_humain.html#ad176fe72c1265d67cfc99779c044b85d',1,'JoueurHumain::demanderCoordonneesBateau()']]],
+  ['demandercoordonneesbombe',['demanderCoordonneesBombe',['../class_affichage.html#a5a087aa11bde8b505d992fc38ae21997',1,'Affichage']]],
+  ['demanderdimensiongrille',['demanderDimensionGrille',['../class_affichage.html#a37398da67f8420b766f2a0cc92c1396c',1,'Affichage']]],
+  ['demandernom',['demanderNom',['../class_affichage.html#a38a16337c9e9df4057d85462c874c1a8',1,'Affichage::demanderNom()'],['../class_joueur.html#a9027bfc622d9a175340b5fffe915c7b2',1,'Joueur::demanderNom()'],['../class_joueur_humain.html#a1e47a65bf854cc9922c4d13c1715f76e',1,'JoueurHumain::demanderNom()'],['../class_joueur_i_a.html#ac61e1573c44426a797fcd826ad21e03c',1,'JoueurIA::demanderNom()']]],
+  ['demandernomjoueurs',['demanderNomJoueurs',['../class_jeu_bataille_navale.html#a00065487788bcf1a3b5689138a688b13',1,'JeuBatailleNavale']]],
+  ['demandernomsauvegarde',['demanderNomSauvegarde',['../class_affichage.html#a8d572996e22f9d78eb56b01eb9142871',1,'Affichage']]],
+  ['demanderorientationbateau',['demanderOrientationBateau',['../class_affichage.html#a3e47a8396a57fe873cd55bdf22ab2fa4',1,'Affichage']]],
+  ['demanderplacementcorrect',['demanderPlacementCorrect',['../class_affichage.html#a22b1ff3a190a1043e4c9cfe2eec23404',1,'Affichage']]],
+  ['demandertaillebateau',['demanderTailleBateau',['../class_affichage.html#a5e0b0269a5b41b1c0fcdf6c3ddeee1e7',1,'Affichage']]],
+  ['demandertaillegrille',['demanderTailleGrille',['../class_joueur.html#a58fe79e4845404f361d5bc0fe9474135',1,'Joueur::demanderTailleGrille()'],['../class_joueur_humain.html#a50296a0ed2dbce1527011140e6b4af0a',1,'JoueurHumain::demanderTailleGrille()'],['../class_joueur_i_a.html#a073f19ae34a403f4d3bd70e5e82347a0',1,'JoueurIA::demanderTailleGrille()']]],
+  ['demandertypejeu',['demanderTypeJeu',['../class_joueur.html#a72fcb63683baba74922df5de246bff6f',1,'Joueur::demanderTypeJeu()'],['../class_joueur_humain.html#a06ff8df7b6d3fa366df970fd1d137a61',1,'JoueurHumain::demanderTypeJeu()'],['../class_joueur_i_a.html#a3812f9bf6f315236286ea5ebad576a4f',1,'JoueurIA::demanderTypeJeu()']]],
+  ['determinercoordonneesbombesaleatoire',['determinerCoordonneesBombesAleatoire',['../class_joueur_i_a.html#ad1fa6503f6fce1560129ee8cb94a1475',1,'JoueurIA']]],
+  ['determinercoordonneesbombesscan',['determinerCoordonneesBombesScan',['../class_joueur_i_a.html#af67d4959a40d9e99f0f8d99eaaf73c49',1,'JoueurIA']]],
+  ['donnercoordonneesbombes',['donnerCoordonneesBombes',['../class_joueur_humain.html#a7f3de788931d83526b09626814b9b046',1,'JoueurHumain']]]
 ];

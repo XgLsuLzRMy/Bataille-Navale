@@ -87,57 +87,383 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <a href="#pub-methods">Fonctions membres publiques</a> &#124;
 <a href="#pri-attribs">Attributs privés</a> &#124;
 <a href="#pri-static-attribs">Attributs privés statiques</a> &#124;
+<a href="#friends">Amis</a> &#124;
 <a href="class_grille-members.html">Liste de tous les membres</a>  </div>
   <div class="headertitle">
 <div class="title">Référence de la classe Grille</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>classe qui gère les fonctionnalités de la grille des joueurs de la Bataille Navale.  
+ <a href="class_grille.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_grille_8hpp_source.html">Grille.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a31a4d8228d67077f23bce0a5af8dfbdc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a31a4d8228d67077f23bce0a5af8dfbdc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setTaille</b> (int largeur, int hauteur)</td></tr>
-<tr class="separator:a31a4d8228d67077f23bce0a5af8dfbdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7226b2d591556df270e52964a93a450c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7226b2d591556df270e52964a93a450c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>afficher</b> ()</td></tr>
-<tr class="separator:a7226b2d591556df270e52964a93a450c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64a3769c329fede0758e122b3c22205a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a64a3769c329fede0758e122b3c22205a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
-<tr class="separator:a64a3769c329fede0758e122b3c22205a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace593f30f594c04ec3b46cc25b514b67"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ace593f30f594c04ec3b46cc25b514b67"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>verifierPlace</b> (int **tableauDeCoordonnees, int taille)</td></tr>
-<tr class="separator:ace593f30f594c04ec3b46cc25b514b67"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac709fec5615da2df24f1f39bafd07008"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac709fec5615da2df24f1f39bafd07008"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>fini</b> ()</td></tr>
-<tr class="separator:ac709fec5615da2df24f1f39bafd07008"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a835c5667c75f261732d4812b4c85cb43"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a835c5667c75f261732d4812b4c85cb43"></a>
-char&#160;</td><td class="memItemRight" valign="bottom"><b>get</b> (int x, int y)</td></tr>
-<tr class="separator:a835c5667c75f261732d4812b4c85cb43"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3fd72238a85bdef86df421f84e0f3d71"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3fd72238a85bdef86df421f84e0f3d71"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getLargeur</b> ()</td></tr>
-<tr class="separator:a3fd72238a85bdef86df421f84e0f3d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac95b39a21f7a1f1cfb2bb57b96c1adaf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac95b39a21f7a1f1cfb2bb57b96c1adaf"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getHauteur</b> ()</td></tr>
-<tr class="separator:ac95b39a21f7a1f1cfb2bb57b96c1adaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd11a52c6fd45e1417fd1094df2b0bca"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd11a52c6fd45e1417fd1094df2b0bca"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (int x, int y, char valeur)</td></tr>
-<tr class="separator:afd11a52c6fd45e1417fd1094df2b0bca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a15d40f4706c34fb2f75d9289f9f615"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8a15d40f4706c34fb2f75d9289f9f615"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#a8a15d40f4706c34fb2f75d9289f9f615">Grille</a> ()</td></tr>
+<tr class="memdesc:a8a15d40f4706c34fb2f75d9289f9f615"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe <a class="el" href="class_grille.html" title="classe qui gère les fonctionnalités de la grille des joueurs de la Bataille Navale. ">Grille</a> qui initialise la grille. <br /></td></tr>
+<tr class="separator:a8a15d40f4706c34fb2f75d9289f9f615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a595fb00ac47754dccfa9e1ee4cb8b520"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#a595fb00ac47754dccfa9e1ee4cb8b520">setTaille</a> (int <a class="el" href="class_grille.html#a12252fd7e371af35a0afa6bb12aa4046">largeur</a>, int <a class="el" href="class_grille.html#a150412fc1212ec2624c2a62040d5ff88">hauteur</a>)</td></tr>
+<tr class="memdesc:a595fb00ac47754dccfa9e1ee4cb8b520"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui modifie l'attribut taille de la grille  <a href="#a595fb00ac47754dccfa9e1ee4cb8b520">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a595fb00ac47754dccfa9e1ee4cb8b520"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae76eba349ff664fcbfb04107d7a0413d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#ae76eba349ff664fcbfb04107d7a0413d">setGrille</a> (char **<a class="el" href="class_grille.html#abd4bc59ff38259962e5d8d3c18d1ae6b">grille</a>)</td></tr>
+<tr class="memdesc:ae76eba349ff664fcbfb04107d7a0413d"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui modifie l'attribut grille  <a href="#ae76eba349ff664fcbfb04107d7a0413d">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ae76eba349ff664fcbfb04107d7a0413d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d8b9233b4d7fe24fe5e0c4809674e7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a17d8b9233b4d7fe24fe5e0c4809674e7"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#a17d8b9233b4d7fe24fe5e0c4809674e7">reset</a> ()</td></tr>
+<tr class="memdesc:a17d8b9233b4d7fe24fe5e0c4809674e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui alloue la mémoire pour la grille et la remplie de 0, donc d'eau <br /></td></tr>
+<tr class="separator:a17d8b9233b4d7fe24fe5e0c4809674e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfcc3b88c30c6c43bfd98b7ba0a1ddaf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#abfcc3b88c30c6c43bfd98b7ba0a1ddaf">verifierPlace</a> (int **tableauDeCoordonnees, int taille)</td></tr>
+<tr class="memdesc:abfcc3b88c30c6c43bfd98b7ba0a1ddaf"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui verifie les critères à respecter avant de placer le bateau sur la grille  <a href="#abfcc3b88c30c6c43bfd98b7ba0a1ddaf">Plus de détails...</a><br /></td></tr>
+<tr class="separator:abfcc3b88c30c6c43bfd98b7ba0a1ddaf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22b526602ad163f6e6f7f7c8f486aa2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#af22b526602ad163f6e6f7f7c8f486aa2">fini</a> ()</td></tr>
+<tr class="memdesc:af22b526602ad163f6e6f7f7c8f486aa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui scanne la grille jusqu'a ce qu'on trouve au moins 1 bateau qui n'a pas été touché  <a href="#af22b526602ad163f6e6f7f7c8f486aa2">Plus de détails...</a><br /></td></tr>
+<tr class="separator:af22b526602ad163f6e6f7f7c8f486aa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa75d2fdc376faefb921abd355cb60041"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#aa75d2fdc376faefb921abd355cb60041">get</a> (int x, int y)</td></tr>
+<tr class="memdesc:aa75d2fdc376faefb921abd355cb60041"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui renvoie le contenu de la grille (Eau, <a class="el" href="class_bateau.html" title="classe fixant des bateaux au début de la partie. L&#39;extrémité d&#39;un bateau est située en haut et à gauc...">Bateau</a>) sachant une certaine position  <a href="#aa75d2fdc376faefb921abd355cb60041">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aa75d2fdc376faefb921abd355cb60041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab28024c7c9d608d86cc8c42b17863439"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#ab28024c7c9d608d86cc8c42b17863439">getLargeur</a> ()</td></tr>
+<tr class="memdesc:ab28024c7c9d608d86cc8c42b17863439"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui renvoie la largeur de la grille  <a href="#ab28024c7c9d608d86cc8c42b17863439">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab28024c7c9d608d86cc8c42b17863439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dcb62fd32a2fe9528290dc92af84373"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#a4dcb62fd32a2fe9528290dc92af84373">getHauteur</a> ()</td></tr>
+<tr class="memdesc:a4dcb62fd32a2fe9528290dc92af84373"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui renvoie la hauteur de la grille  <a href="#a4dcb62fd32a2fe9528290dc92af84373">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4dcb62fd32a2fe9528290dc92af84373"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7aa99d9ef712057608f3e5792b0f628b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#a7aa99d9ef712057608f3e5792b0f628b">set</a> (int x, int y, char valeur)</td></tr>
+<tr class="memdesc:a7aa99d9ef712057608f3e5792b0f628b"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui permet de modifier le contenu d'une case du tableau sachant des coordonnées  <a href="#a7aa99d9ef712057608f3e5792b0f628b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7aa99d9ef712057608f3e5792b0f628b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28baa1d9b7de654cd0f8386945649aba"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#a28baa1d9b7de654cd0f8386945649aba">getGrille</a> ()</td></tr>
+<tr class="memdesc:a28baa1d9b7de654cd0f8386945649aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui renvoie la grille  <a href="#a28baa1d9b7de654cd0f8386945649aba">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a28baa1d9b7de654cd0f8386945649aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
-<tr class="memitem:abd4bc59ff38259962e5d8d3c18d1ae6b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd4bc59ff38259962e5d8d3c18d1ae6b"></a>
-char **&#160;</td><td class="memItemRight" valign="bottom"><b>grille</b></td></tr>
+<tr class="memitem:abd4bc59ff38259962e5d8d3c18d1ae6b"><td class="memItemLeft" align="right" valign="top">char **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#abd4bc59ff38259962e5d8d3c18d1ae6b">grille</a></td></tr>
 <tr class="separator:abd4bc59ff38259962e5d8d3c18d1ae6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
 Attributs privés statiques</h2></td></tr>
-<tr class="memitem:a12252fd7e371af35a0afa6bb12aa4046"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12252fd7e371af35a0afa6bb12aa4046"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>largeur</b> = 10</td></tr>
+<tr class="memitem:a12252fd7e371af35a0afa6bb12aa4046"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#a12252fd7e371af35a0afa6bb12aa4046">largeur</a> = 10</td></tr>
 <tr class="separator:a12252fd7e371af35a0afa6bb12aa4046"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a150412fc1212ec2624c2a62040d5ff88"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a150412fc1212ec2624c2a62040d5ff88"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>hauteur</b> = 10</td></tr>
+<tr class="memitem:a150412fc1212ec2624c2a62040d5ff88"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_grille.html#a150412fc1212ec2624c2a62040d5ff88">hauteur</a> = 10</td></tr>
 <tr class="separator:a150412fc1212ec2624c2a62040d5ff88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Amis</h2></td></tr>
+<tr class="memitem:a9a74f34e7915d513f565105d779fb4fd"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9a74f34e7915d513f565105d779fb4fd"></a>
+class&#160;</td><td class="memItemRight" valign="bottom"><b>Affichage</b></td></tr>
+<tr class="separator:a9a74f34e7915d513f565105d779fb4fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>classe qui gère les fonctionnalités de la grille des joueurs de la Bataille Navale. </p>
+</div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="af22b526602ad163f6e6f7f7c8f486aa2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Grille::fini </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui scanne la grille jusqu'a ce qu'on trouve au moins 1 bateau qui n'a pas été touché </p>
+<dl class="section return"><dt>Renvoie</dt><dd>true si tous les bateaux ont été touchés </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa75d2fdc376faefb921abd355cb60041"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Grille::get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui renvoie le contenu de la grille (Eau, <a class="el" href="class_bateau.html" title="classe fixant des bateaux au début de la partie. L&#39;extrémité d&#39;un bateau est située en haut et à gauc...">Bateau</a>) sachant une certaine position </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y</td><td>: les coordonnées de la position voulue </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>le contenu de la grille à cette position </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a28baa1d9b7de654cd0f8386945649aba"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Grille::getGrille </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui renvoie la grille </p>
+<dl class="section return"><dt>Renvoie</dt><dd>la grille </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4dcb62fd32a2fe9528290dc92af84373"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Grille::getHauteur </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui renvoie la hauteur de la grille </p>
+<dl class="section return"><dt>Renvoie</dt><dd>un entier représentant la hauteur de la grille </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab28024c7c9d608d86cc8c42b17863439"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Grille::getLargeur </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui renvoie la largeur de la grille </p>
+<dl class="section return"><dt>Renvoie</dt><dd>un entier représentant la largeur de la grille </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7aa99d9ef712057608f3e5792b0f628b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Grille::set </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char&#160;</td>
+          <td class="paramname"><em>valeur</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui permet de modifier le contenu d'une case du tableau sachant des coordonnées </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">x,y,valeur</td><td>les coordonnées de la position voulue et la modification à apporter </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ae76eba349ff664fcbfb04107d7a0413d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Grille::setGrille </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>grille</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui modifie l'attribut grille </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**grille</td><td>le tableau à enregistrer pour grille </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a595fb00ac47754dccfa9e1ee4cb8b520"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Grille::setTaille </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>largeur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>hauteur</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui modifie l'attribut taille de la grille </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">largeur</td><td>: largeur voulue pour la grille </td></tr>
+    <tr><td class="paramname">hauteur</td><td>: hauteur voulue pour la grille </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="abfcc3b88c30c6c43bfd98b7ba0a1ddaf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Grille::verifierPlace </td>
+          <td>(</td>
+          <td class="paramtype">int **&#160;</td>
+          <td class="paramname"><em>tableauDeCoordonnees</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>taille</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui verifie les critères à respecter avant de placer le bateau sur la grille </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tableauDeCoordonnees</td><td>tableau de coordonnées du bateau </td></tr>
+    <tr><td class="paramname">taille</td><td>la taille du bateau </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true: si les caracteristiques sont respectées </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a class="anchor" id="abd4bc59ff38259962e5d8d3c18d1ae6b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">char** Grille::grille</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Le tableau representant le cadrillage. Ici, la valeur d'une case est: EAU, BATEAU, BATEAUTOUCHE, TENTATIVEREUSSIE ou TENTATIVERATEE </p>
+
+</div>
+</div>
+<a class="anchor" id="a150412fc1212ec2624c2a62040d5ff88"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Grille::hauteur = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>La longueur de la grille </p>
+
+</div>
+</div>
+<a class="anchor" id="a12252fd7e371af35a0afa6bb12aa4046"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Grille::largeur = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>La largeur de la grille </p>
+
+</div>
+</div>
 <hr/>La documentation de cette classe a été générée à partir des fichiers suivants :<ul>
 <li>/home/lucas/Documents/GitHub/Bataille-Navale/src/<a class="el" href="_grille_8hpp_source.html">Grille.hpp</a></li>
 <li>/home/lucas/Documents/GitHub/Bataille-Navale/src/Grille.cpp</li>

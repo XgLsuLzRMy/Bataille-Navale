@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yextremite',['yExtremite',['../class_bateau.html#a32294182fa76970d9be2c4de5d8329e6',1,'Bateau']]]
+  ['orientation',['orientation',['../class_bateau.html#a2d3074370ff0c372286522f298830f63',1,'Bateau']]]
 ];

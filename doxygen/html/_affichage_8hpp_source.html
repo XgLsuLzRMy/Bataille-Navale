@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.11"/>
+<title>Bataille Navale:  Fichier source de /home/lucas/Documents/GitHub/Bataille-Navale/src/Affichage.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Bataille Navale
+   </div>
+   <div id="projectbrief">JeudeBatailledeNavale</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.8.11 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Recherche" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
+      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+    </ul>
+  </div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">Affichage.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_affichage_8hpp.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __AFFICHAGE_HPP__</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __AFFICHAGE_HPP__</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_grille_8hpp.html">Grille.hpp</a>&quot;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_affichage.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_affichage.html">Affichage</a>{</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_affichage.html#a42638bc4919117919424b77d78793b5b">afficherMessage</a>(std::string message);</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">char</span> <a class="code" href="class_affichage.html#ae27cd9961a933077a71790e55c3a0e2d">proposerNouveauJeuOuSauvegarde</a>();</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">char</span> <a class="code" href="class_affichage.html#a37978f1f21c0e15e6e5c92d661a99618">choixSauvegarde</a>(std::string *liste);</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">char</span> <a class="code" href="class_affichage.html#abcc7bec6baf155ab0500b0c134f46f3f">proposerSauvegarder</a>();</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">static</span> std::string <a class="code" href="class_affichage.html#a8d572996e22f9d78eb56b01eb9142871">demanderNomSauvegarde</a>();</div><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">char</span> <a class="code" href="class_affichage.html#af895f714f818a9897830275d6db7ee0c">menuPrincipal</a>();</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_affichage.html#a111be8fcb09e0fe04c0543c814713a88">attendreJoueurSuivant</a>();</div><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_affichage.html#a83d4f21e1603009b8f651f2ddb9f973f">afficherGagnant</a>(std::string nom);</div><div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;  std::string <a class="code" href="class_affichage.html#a38a16337c9e9df4057d85462c874c1a8">demanderNom</a>();</div><div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_affichage.html#a37398da67f8420b766f2a0cc92c1396c">demanderDimensionGrille</a>(std::string nomDeLaDimension);</div><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="class_affichage.html#a3a02104019c31b0ce350daa544e9e776">choixTypeJeu</a>();</div><div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="class_affichage.html#a8ae9b8381b263ba591172a0cf18c9ca1">afficherGrille</a>(<a class="code" href="class_grille.html">Grille</a> *grille);</div><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="class_affichage.html#a22b1ff3a190a1043e4c9cfe2eec23404">demanderPlacementCorrect</a>();</div><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_affichage.html#afcbb7a5076346a17d32f6ad464951748">demanderCoordonneesBateau</a>(<span class="keywordtype">char</span> coordonnee);</div><div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;  <span class="keywordtype">char</span> <a class="code" href="class_affichage.html#a3e47a8396a57fe873cd55bdf22ab2fa4">demanderOrientationBateau</a>();</div><div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_affichage.html#a5e0b0269a5b41b1c0fcdf6c3ddeee1e7">demanderTailleBateau</a>();</div><div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="class_affichage.html#a5a087aa11bde8b505d992fc38ae21997">demanderCoordonneesBombe</a>(<span class="keywordtype">char</span> coordonnee);</div><div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;};</div><div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;</div><div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="class_affichage_html_a5e0b0269a5b41b1c0fcdf6c3ddeee1e7"><div class="ttname"><a href="class_affichage.html#a5e0b0269a5b41b1c0fcdf6c3ddeee1e7">Affichage::demanderTailleBateau</a></div><div class="ttdeci">int demanderTailleBateau()</div><div class="ttdoc">fonction qui demande à l&amp;#39;utilisateur la taille du bateau à placer </div><div class="ttdef"><b>Definition:</b> Affichage.cpp:174</div></div>
+<div class="ttc" id="class_affichage_html_a83d4f21e1603009b8f651f2ddb9f973f"><div class="ttname"><a href="class_affichage.html#a83d4f21e1603009b8f651f2ddb9f973f">Affichage::afficherGagnant</a></div><div class="ttdeci">static void afficherGagnant(std::string nom)</div><div class="ttdoc">fonction qui affiche le gagnant à l&amp;#39;écran </div><div class="ttdef"><b>Definition:</b> Affichage.cpp:60</div></div>
+<div class="ttc" id="class_affichage_html_ae27cd9961a933077a71790e55c3a0e2d"><div class="ttname"><a href="class_affichage.html#ae27cd9961a933077a71790e55c3a0e2d">Affichage::proposerNouveauJeuOuSauvegarde</a></div><div class="ttdeci">static char proposerNouveauJeuOuSauvegarde()</div><div class="ttdoc">fonction qui enregistre le choix de l&amp;#39;utiliteur: lui porposant de charger une sauvegarde, supprimer une sauvegarde ou faire une nouvelle partie </div><div class="ttdef"><b>Definition:</b> Affichage.cpp:7</div></div>
+<div class="ttc" id="class_affichage_html_a8d572996e22f9d78eb56b01eb9142871"><div class="ttname"><a href="class_affichage.html#a8d572996e22f9d78eb56b01eb9142871">Affichage::demanderNomSauvegarde</a></div><div class="ttdeci">static std::string demanderNomSauvegarde()</div><div class="ttdoc">fonction qui demande le nom associé à la sauvegarde </div><div class="ttdef"><b>Definition:</b> Affichage.cpp:25</div></div>
+<div class="ttc" id="class_affichage_html_a22b1ff3a190a1043e4c9cfe2eec23404"><div class="ttname"><a href="class_affichage.html#a22b1ff3a190a1043e4c9cfe2eec23404">Affichage::demanderPlacementCorrect</a></div><div class="ttdeci">char demanderPlacementCorrect()</div><div class="ttdoc">fonction qui demande à l&amp;#39;utilisateur si le placement demandé correspondant à la position du bateau vi...</div><div class="ttdef"><b>Definition:</b> Affichage.cpp:147</div></div>
+<div class="ttc" id="class_affichage_html_a5a087aa11bde8b505d992fc38ae21997"><div class="ttname"><a href="class_affichage.html#a5a087aa11bde8b505d992fc38ae21997">Affichage::demanderCoordonneesBombe</a></div><div class="ttdeci">int demanderCoordonneesBombe(char coordonnee)</div><div class="ttdoc">fonction qui demande à l&amp;#39;utilisateur les coordonnées d&amp;#39;une bombe à lancer à son adversaire ...</div><div class="ttdef"><b>Definition:</b> Affichage.cpp:183</div></div>
+<div class="ttc" id="_grille_8hpp_html"><div class="ttname"><a href="_grille_8hpp.html">Grille.hpp</a></div><div class="ttdoc">classe Grille </div></div>
+<div class="ttc" id="class_affichage_html_a111be8fcb09e0fe04c0543c814713a88"><div class="ttname"><a href="class_affichage.html#a111be8fcb09e0fe04c0543c814713a88">Affichage::attendreJoueurSuivant</a></div><div class="ttdeci">static void attendreJoueurSuivant()</div><div class="ttdoc">fonction qui demande à l&amp;#39;utilisateur d&amp;#39;appuyer sur entrée pour changer de joueur. ...</div><div class="ttdef"><b>Definition:</b> Affichage.cpp:54</div></div>
+<div class="ttc" id="class_affichage_html_afcbb7a5076346a17d32f6ad464951748"><div class="ttname"><a href="class_affichage.html#afcbb7a5076346a17d32f6ad464951748">Affichage::demanderCoordonneesBateau</a></div><div class="ttdeci">int demanderCoordonneesBateau(char coordonnee)</div><div class="ttdoc">fonction qui demande à l&amp;#39;utilisateur les coordonnées du bateau à placer </div><div class="ttdef"><b>Definition:</b> Affichage.cpp:156</div></div>
+<div class="ttc" id="class_affichage_html_a8ae9b8381b263ba591172a0cf18c9ca1"><div class="ttname"><a href="class_affichage.html#a8ae9b8381b263ba591172a0cf18c9ca1">Affichage::afficherGrille</a></div><div class="ttdeci">void afficherGrille(Grille *grille)</div><div class="ttdoc">fonction permettant d&amp;#39;afficher la grille </div><div class="ttdef"><b>Definition:</b> Affichage.cpp:92</div></div>
+<div class="ttc" id="class_affichage_html_abcc7bec6baf155ab0500b0c134f46f3f"><div class="ttname"><a href="class_affichage.html#abcc7bec6baf155ab0500b0c134f46f3f">Affichage::proposerSauvegarder</a></div><div class="ttdeci">static char proposerSauvegarder()</div><div class="ttdoc">fonction qui propose à l&amp;#39;utilisateur de sauvegarder </div><div class="ttdef"><b>Definition:</b> Affichage.cpp:16</div></div>
+<div class="ttc" id="class_grille_html"><div class="ttname"><a href="class_grille.html">Grille</a></div><div class="ttdoc">classe qui gère les fonctionnalités de la grille des joueurs de la Bataille Navale. </div><div class="ttdef"><b>Definition:</b> Grille.hpp:29</div></div>
+<div class="ttc" id="class_affichage_html_a37398da67f8420b766f2a0cc92c1396c"><div class="ttname"><a href="class_affichage.html#a37398da67f8420b766f2a0cc92c1396c">Affichage::demanderDimensionGrille</a></div><div class="ttdeci">int demanderDimensionGrille(std::string nomDeLaDimension)</div><div class="ttdoc">fonction qui demande la dimension de la grille à l&amp;#39;utilisateur </div><div class="ttdef"><b>Definition:</b> Affichage.cpp:73</div></div>
+<div class="ttc" id="class_affichage_html_af895f714f818a9897830275d6db7ee0c"><div class="ttname"><a href="class_affichage.html#af895f714f818a9897830275d6db7ee0c">Affichage::menuPrincipal</a></div><div class="ttdeci">static char menuPrincipal()</div><div class="ttdoc">fonction qui affiche le menu principale de la Bataille Navale </div><div class="ttdef"><b>Definition:</b> Affichage.cpp:45</div></div>
+<div class="ttc" id="class_affichage_html_a3e47a8396a57fe873cd55bdf22ab2fa4"><div class="ttname"><a href="class_affichage.html#a3e47a8396a57fe873cd55bdf22ab2fa4">Affichage::demanderOrientationBateau</a></div><div class="ttdeci">char demanderOrientationBateau()</div><div class="ttdoc">fonction qui demande à l&amp;#39;utilisateur si le bateau à placer doit être parallèle à l&amp;#39;axe des abcisses o...</div><div class="ttdef"><b>Definition:</b> Affichage.cpp:165</div></div>
+<div class="ttc" id="class_affichage_html"><div class="ttname"><a href="class_affichage.html">Affichage</a></div><div class="ttdoc">classe qui gère l&amp;#39;affichage d&amp;#39;une partie de Bataille Navale. </div><div class="ttdef"><b>Definition:</b> Affichage.hpp:26</div></div>
+<div class="ttc" id="class_affichage_html_a3a02104019c31b0ce350daa544e9e776"><div class="ttname"><a href="class_affichage.html#a3a02104019c31b0ce350daa544e9e776">Affichage::choixTypeJeu</a></div><div class="ttdeci">char choixTypeJeu()</div><div class="ttdoc">fonction qui demande à l&amp;#39;utilisateur à quel type de jeu il souhaite jouer. </div><div class="ttdef"><b>Definition:</b> Affichage.cpp:82</div></div>
+<div class="ttc" id="class_affichage_html_a38a16337c9e9df4057d85462c874c1a8"><div class="ttname"><a href="class_affichage.html#a38a16337c9e9df4057d85462c874c1a8">Affichage::demanderNom</a></div><div class="ttdeci">std::string demanderNom()</div><div class="ttdoc">fonction qui demande le nom du joueur </div><div class="ttdef"><b>Definition:</b> Affichage.cpp:64</div></div>
+<div class="ttc" id="class_affichage_html_a37978f1f21c0e15e6e5c92d661a99618"><div class="ttname"><a href="class_affichage.html#a37978f1f21c0e15e6e5c92d661a99618">Affichage::choixSauvegarde</a></div><div class="ttdeci">static char choixSauvegarde(std::string *liste)</div><div class="ttdoc">fonction qui affiche la liste des jeux à charger et enregistre le choix de l&amp;#39;utilisateur ...</div><div class="ttdef"><b>Definition:</b> Affichage.cpp:32</div></div>
+<div class="ttc" id="class_affichage_html_a42638bc4919117919424b77d78793b5b"><div class="ttname"><a href="class_affichage.html#a42638bc4919117919424b77d78793b5b">Affichage::afficherMessage</a></div><div class="ttdeci">static void afficherMessage(std::string message)</div><div class="ttdoc">fonction qui affiche un message à l&amp;#39;écran </div><div class="ttdef"><b>Definition:</b> Affichage.cpp:3</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.11
+</small></address>
+</body>
+</html>

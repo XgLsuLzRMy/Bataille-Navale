@@ -1,0 +1,489 @@
+\hypertarget{class_gestion_sauvegarde}{}\section{Référence de la classe Gestion\+Sauvegarde}
+\label{class_gestion_sauvegarde}\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+
+
+classe qui gère les sauvegardes.  
+
+
+
+
+{\ttfamily \#include $<$Gestion\+Sauvegarde.\+hpp$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_gestion_sauvegarde_aa1501596c822ab6230fd224b74308762}{Gestion\+Sauvegarde} ()\hypertarget{class_gestion_sauvegarde_aa1501596c822ab6230fd224b74308762}{}\label{class_gestion_sauvegarde_aa1501596c822ab6230fd224b74308762}
+
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \hyperlink{class_gestion_sauvegarde}{Gestion\+Sauvegarde}. Le nom\+Fichier est mis à \char`\"{}sauvegarde.\+sav\char`\"{} par défaut. \end{DoxyCompactList}\item 
+\hyperlink{class_gestion_sauvegarde_a8747ad1458ee812251fdc01a2d7cdf31}{Gestion\+Sauvegarde} (std\+::string \hyperlink{class_gestion_sauvegarde_afda944907acb4f5660cda5a893a8fb66}{nom\+Fichier})
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \hyperlink{class_gestion_sauvegarde}{Gestion\+Sauvegarde}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_gestion_sauvegarde_a90368ce1ddf00e71d70210255fcb7b9e}{nouvelle\+Sauvegarde} (bool ecraser\+Fichier\+Si\+Existe\+Deja=false)
+\begin{DoxyCompactList}\small\item\em Initialise une nouvelle sauvegarde. \end{DoxyCompactList}\item 
+void \hyperlink{class_gestion_sauvegarde_a018fd16bf08ea7bb861efcb0ef056a02}{ecrire\+Nom\+Joueur} (char numero\+Joueur, std\+::string nom\+Joueur)
+\begin{DoxyCompactList}\small\item\em Ecrit le nom {\ttfamily nom\+Joueur} du joueur numero {\ttfamily numero\+Joueur} dans la sauvegarde. \end{DoxyCompactList}\item 
+void \hyperlink{class_gestion_sauvegarde_a68cf7cf6c6f40297175107adcc7e2409}{ecrire\+Attribut} (std\+::string attribut, std\+::string valeur)
+\begin{DoxyCompactList}\small\item\em Ecrit l\textquotesingle{}attribut {\ttfamily attribut} dans la sauvegarde. \end{DoxyCompactList}\item 
+void \hyperlink{class_gestion_sauvegarde_a70dae5214cefc18c7954fea885f45822}{ecrire\+Grille} (std\+::string nom\+Grille, char $\ast$$\ast$grille, int largeur, int hauteur)
+\begin{DoxyCompactList}\small\item\em Ecrit la grille {\ttfamily grille} dans la sauvegarde. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_gestion_sauvegarde_a89d017d0aef28219d296000d54642e84}{lire\+Nom\+Joueur} (char numero\+Joueur)
+\begin{DoxyCompactList}\small\item\em Lit le nom du joueur numero {\ttfamily numero\+Joueur} dans la sauvegarde. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_gestion_sauvegarde_a63d674d414c6cc7bf431070c6e521f6f}{lire\+Attribut} (std\+::string attribut)
+\begin{DoxyCompactList}\small\item\em Lit le fichier ligne par ligne, s\textquotesingle{}arrête lorsqu\textquotesingle{}on a trouvé l\textquotesingle{}attribut {\ttfamily attribut} et lit les données le concernant puis les renvoie. Si le fichier présente plusieurs attributs portant le même nom, alors seul le 1er attribut sera lu. \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \hyperlink{class_gestion_sauvegarde_af5de8568bb0de4dcc59e7074a3d878b6}{lire\+Grille} (std\+::string nom\+Grille)
+\begin{DoxyCompactList}\small\item\em Récupère la grille dont le nom est {\ttfamily nom\+Grille} dans le fichier de sauvegarde. \end{DoxyCompactList}\item 
+int \hyperlink{class_gestion_sauvegarde_a8953ef10c790d011391139d35855a35f}{lire\+Hauteur\+Grille} (std\+::string nom\+Grille)
+\begin{DoxyCompactList}\small\item\em Récupère la hauteur de la grille portant le nom {\ttfamily nom\+Grille}. \end{DoxyCompactList}\item 
+int \hyperlink{class_gestion_sauvegarde_af9cb7edc20d50f7bef4941d192e9994e}{lire\+Largeur\+Grille} (std\+::string nom\+Grille)
+\begin{DoxyCompactList}\small\item\em Récupère la largeur de la grille portant le nom {\ttfamily nom\+Grille}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres publiques statiques}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string $\ast$ \hyperlink{class_gestion_sauvegarde_a9f45d946956c7e9624a3c81c55f7c7bd}{get\+Liste\+Sauvegardes} ()
+\begin{DoxyCompactList}\small\item\em Récupere la liste des noms de fichier de sauvegardes stockée dans le fichier F\+I\+C\+H\+I\+E\+R\+L\+I\+S\+T\+E\+S\+AV. \end{DoxyCompactList}\item 
+static void \hyperlink{class_gestion_sauvegarde_a7e17e827e1718123008c76c232c38e98}{supprimer\+Sauvegarde} (std\+::string \hyperlink{class_gestion_sauvegarde_afda944907acb4f5660cda5a893a8fb66}{nom\+Fichier})
+\begin{DoxyCompactList}\small\item\em Supprime la sauvegarde contenue dans le fichier portant le nom {\ttfamily nom\+Fichier}. Cette fonction supprime donc le fichier {\ttfamily nom\+Fichier} mais aussi son nom de la liste des sauvegardes située dans le fichier F\+I\+C\+H\+I\+E\+R\+L\+I\+S\+T\+E\+S\+AV. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Fonctions membres privées}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{class_gestion_sauvegarde_ae934513fc79f274e58214115c7a91112}{fichier\+Existe} (std\+::string \hyperlink{class_gestion_sauvegarde_afda944907acb4f5660cda5a893a8fb66}{nom\+Fichier}=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em Permet de savoir si un fichier existe déjà. \end{DoxyCompactList}\item 
+int \hyperlink{class_gestion_sauvegarde_a82e99d080c8faa6eb7a4a485d0a8f9d3}{sauvegarde\+Deja\+Dans\+Liste} ()
+\begin{DoxyCompactList}\small\item\em Donne la position de la sauvegarde dans la liste des sauvegardes si elle est présente dedant. Si elle n\textquotesingle{}est pas présente on renvoie -\/1. \end{DoxyCompactList}\item 
+std\+::string\+::size\+\_\+type \hyperlink{class_gestion_sauvegarde_a9f8c29aaf4fdbe9551d03b6aaa0b8e17}{debut\+De\+La\+Chaine\+Sans\+Espaces} (std\+::string chaine)
+\begin{DoxyCompactList}\small\item\em Donne la position du premier caractère qui n\textquotesingle{}est pas un espace dans la chaine {\ttfamily chaine}. \end{DoxyCompactList}\item 
+int \hyperlink{class_gestion_sauvegarde_a0ad9febb973f56faddba093a2237fbe2}{position\+Attribut} (std\+::string attribut, bool verifier\+Egale=true)
+\begin{DoxyCompactList}\small\item\em Donne la position de l\textquotesingle{}attribut {\ttfamily attribut} dans le fichier de sauvegarde. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{class_gestion_sauvegarde_a42d4903a86cad6b83006028cf399cdba}{parse\+Ligne\+Grille} (std\+::string ligne, int taille)
+\begin{DoxyCompactList}\small\item\em Transforme une ligne de type \char`\"{}1 2 3 4\char`\"{} en un tableau de caractère \mbox{[}1, 2, 3, 4\mbox{]}. Attention le tableau résultant n\textquotesingle{}est pas \mbox{[}\textquotesingle{}1\textquotesingle{}, \textquotesingle{}2\textquotesingle{}, \textquotesingle{}3\textquotesingle{}, \textquotesingle{}4\textquotesingle{}\mbox{]}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_gestion_sauvegarde_a2394d23cf82fe561a2bf49ccb84f3a49}{est\+Numerique} (char c)
+\begin{DoxyCompactList}\small\item\em Permet de savoir si le caractère {\ttfamily c} est un chiffre comme \textquotesingle{}0\textquotesingle{}, \textquotesingle{}1\textquotesingle{}, etc. \end{DoxyCompactList}\item 
+int \hyperlink{class_gestion_sauvegarde_adbab128f25a22a4d759182ac3255584c}{recuperer\+Hauteur\+Grille} (int pos)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}obtenir la hauteur de la grille située à la position {\ttfamily pos} dans le fichier. \end{DoxyCompactList}\item 
+void \hyperlink{class_gestion_sauvegarde_a450f3a31228afa2b6a7d7aef54ce30b5}{remplacer\+Ligne} (int pos, std\+::string nouvelle\+Ligne, bool ajouter\+La\+Ligne=false)
+\begin{DoxyCompactList}\small\item\em Remplace la ligne à la position {\ttfamily pos} dans le fichier. On réécrit le début du fichier dans un fichier temporaire jusqu\textquotesingle{}à la ligne en question. On écrit ensuite la nouvelle ligne dans le fichier temporaire. On réécrit la fin du fichier dans le fichier temporaire jusqu\textquotesingle{}à la fin du fichier. On supprime alors le fichier et on renomme le fichier temporaire pour qu\textquotesingle{}il ait le même nom que le fichier d\textquotesingle{}origine. \end{DoxyCompactList}\item 
+void \hyperlink{class_gestion_sauvegarde_a961a4b996ef36a8601d972dbf6928d93}{effacer\+Grille} (int pos, int h)
+\begin{DoxyCompactList}\small\item\em Efface la grille située à la position {\ttfamily pos} dans le fichier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \hyperlink{class_gestion_sauvegarde_afda944907acb4f5660cda5a893a8fb66}{nom\+Fichier}
+\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+classe qui gère les sauvegardes. 
+
+\subsection{Documentation des constructeurs et destructeur}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{Gestion\+Sauvegarde(std\+::string nom\+Fichier)}{GestionSauvegarde(std::string nomFichier)}}]{\setlength{\rightskip}{0pt plus 5cm}public Gestion\+Sauvegarde\+::\+Gestion\+Sauvegarde (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{nom\+Fichier}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gestion_sauvegarde_a8747ad1458ee812251fdc01a2d7cdf31}{}\label{class_gestion_sauvegarde_a8747ad1458ee812251fdc01a2d7cdf31}
+
+
+Constructeur de la classe \hyperlink{class_gestion_sauvegarde}{Gestion\+Sauvegarde}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nom\+Fichier} & Le nom de la sauvegarde. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des fonctions membres}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!debut\+De\+La\+Chaine\+Sans\+Espaces@{debut\+De\+La\+Chaine\+Sans\+Espaces}}
+\index{debut\+De\+La\+Chaine\+Sans\+Espaces@{debut\+De\+La\+Chaine\+Sans\+Espaces}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{debut\+De\+La\+Chaine\+Sans\+Espaces(std\+::string chaine)}{debutDeLaChaineSansEspaces(std::string chaine)}}]{\setlength{\rightskip}{0pt plus 5cm}private Gestion\+Sauvegarde\+::debut\+De\+La\+Chaine\+Sans\+Espaces (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{chaine}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_gestion_sauvegarde_a9f8c29aaf4fdbe9551d03b6aaa0b8e17}{}\label{class_gestion_sauvegarde_a9f8c29aaf4fdbe9551d03b6aaa0b8e17}
+
+
+Donne la position du premier caractère qui n\textquotesingle{}est pas un espace dans la chaine {\ttfamily chaine}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em chaine} & La chaine que l\textquotesingle{}on veut analyser. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la position du premier caractère qui n\textquotesingle{}est pas un espace dans la chaine {\ttfamily chaine}. 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!ecrire\+Attribut@{ecrire\+Attribut}}
+\index{ecrire\+Attribut@{ecrire\+Attribut}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{ecrire\+Attribut(std\+::string attribut, std\+::string valeur)}{ecrireAttribut(std::string attribut, std::string valeur)}}]{\setlength{\rightskip}{0pt plus 5cm}public Gestion\+Sauvegarde\+::ecrire\+Attribut (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{attribut, }
+\item[{std\+::string}]{valeur}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gestion_sauvegarde_a68cf7cf6c6f40297175107adcc7e2409}{}\label{class_gestion_sauvegarde_a68cf7cf6c6f40297175107adcc7e2409}
+
+
+Ecrit l\textquotesingle{}attribut {\ttfamily attribut} dans la sauvegarde. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em attribut} & le nom de l\textquotesingle{}attribut à écrire. \\
+\hline
+{\em valeur} & la valeur de l\textquotesingle{}attribut à écrire. \\
+\hline
+\end{DoxyParams}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!ecrire\+Grille@{ecrire\+Grille}}
+\index{ecrire\+Grille@{ecrire\+Grille}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{ecrire\+Grille(std\+::string nom\+Grille, char $\ast$$\ast$grille, int largeur, int hauteur)}{ecrireGrille(std::string nomGrille, char **grille, int largeur, int hauteur)}}]{\setlength{\rightskip}{0pt plus 5cm}public Gestion\+Sauvegarde\+::ecrire\+Grille (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{nom\+Grille, }
+\item[{char $\ast$$\ast$}]{grille, }
+\item[{int}]{largeur, }
+\item[{int}]{hauteur}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gestion_sauvegarde_a70dae5214cefc18c7954fea885f45822}{}\label{class_gestion_sauvegarde_a70dae5214cefc18c7954fea885f45822}
+
+
+Ecrit la grille {\ttfamily grille} dans la sauvegarde. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nom\+Grille} & le nom de la grille. Par exemple, \char`\"{}grille1\char`\"{} pour la grille du joueur1, \char`\"{}grille\+Tentatives1\char`\"{} pour la grille des tentatives du joueur1. \\
+\hline
+{\em grille} & la grille à écrire. \\
+\hline
+{\em largeur} & la largeur de la grille. \\
+\hline
+{\em hauteur} & la hauteur de la grille. \\
+\hline
+\end{DoxyParams}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!ecrire\+Nom\+Joueur@{ecrire\+Nom\+Joueur}}
+\index{ecrire\+Nom\+Joueur@{ecrire\+Nom\+Joueur}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{ecrire\+Nom\+Joueur(char numero\+Joueur, std\+::string nom\+Joueur)}{ecrireNomJoueur(char numeroJoueur, std::string nomJoueur)}}]{\setlength{\rightskip}{0pt plus 5cm}public Gestion\+Sauvegarde\+::ecrire\+Nom\+Joueur (
+\begin{DoxyParamCaption}
+\item[{char}]{numero\+Joueur, }
+\item[{std\+::string}]{nom\+Joueur}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gestion_sauvegarde_a018fd16bf08ea7bb861efcb0ef056a02}{}\label{class_gestion_sauvegarde_a018fd16bf08ea7bb861efcb0ef056a02}
+
+
+Ecrit le nom {\ttfamily nom\+Joueur} du joueur numero {\ttfamily numero\+Joueur} dans la sauvegarde. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em numero\+Joueur} & le numero du joueur (joueur 1, joueur 2). Doit être un caractère \textquotesingle{}1\textquotesingle{} ou \textquotesingle{}2\textquotesingle{} par exemple. \\
+\hline
+{\em nom\+Joueur} & le nom du joueur. \\
+\hline
+\end{DoxyParams}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!effacer\+Grille@{effacer\+Grille}}
+\index{effacer\+Grille@{effacer\+Grille}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{effacer\+Grille(int pos, int h)}{effacerGrille(int pos, int h)}}]{\setlength{\rightskip}{0pt plus 5cm}private Gestion\+Sauvegarde\+::effacer\+Grille (
+\begin{DoxyParamCaption}
+\item[{int}]{pos, }
+\item[{int}]{h}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_gestion_sauvegarde_a961a4b996ef36a8601d972dbf6928d93}{}\label{class_gestion_sauvegarde_a961a4b996ef36a8601d972dbf6928d93}
+
+
+Efface la grille située à la position {\ttfamily pos} dans le fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pos} & la position de la grille dans le fichier. \\
+\hline
+{\em h} & la hauteur de la grille. \\
+\hline
+\end{DoxyParams}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!est\+Numerique@{est\+Numerique}}
+\index{est\+Numerique@{est\+Numerique}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{est\+Numerique(char c)}{estNumerique(char c)}}]{\setlength{\rightskip}{0pt plus 5cm}private Gestion\+Sauvegarde\+::est\+Numerique (
+\begin{DoxyParamCaption}
+\item[{char}]{c}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_gestion_sauvegarde_a2394d23cf82fe561a2bf49ccb84f3a49}{}\label{class_gestion_sauvegarde_a2394d23cf82fe561a2bf49ccb84f3a49}
+
+
+Permet de savoir si le caractère {\ttfamily c} est un chiffre comme \textquotesingle{}0\textquotesingle{}, \textquotesingle{}1\textquotesingle{}, etc. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em c} & le caractère dont on veut connaitre la nature. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si {\ttfamily c} est numérique, false sinon. 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!fichier\+Existe@{fichier\+Existe}}
+\index{fichier\+Existe@{fichier\+Existe}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{fichier\+Existe(std\+::string nom\+Fichier="""")}{fichierExiste(std::string nomFichier="")}}]{\setlength{\rightskip}{0pt plus 5cm}private Gestion\+Sauvegarde\+::fichier\+Existe (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{nom\+Fichier = {\ttfamily \char`\"{}\char`\"{}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_gestion_sauvegarde_ae934513fc79f274e58214115c7a91112}{}\label{class_gestion_sauvegarde_ae934513fc79f274e58214115c7a91112}
+
+
+Permet de savoir si un fichier existe déjà. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nom\+Fichier} & Le nom du fichier dont on veut savoir s\textquotesingle{}il existe. S\textquotesingle{}il n\textquotesingle{}est pas donné, alors on utilisera \hyperlink{class_gestion_sauvegarde_afda944907acb4f5660cda5a893a8fb66}{Gestion\+Sauvegarde\+::nom\+Fichier}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si le fichier existe, false sinon. 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!get\+Liste\+Sauvegardes@{get\+Liste\+Sauvegardes}}
+\index{get\+Liste\+Sauvegardes@{get\+Liste\+Sauvegardes}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{get\+Liste\+Sauvegardes()}{getListeSauvegardes()}}]{\setlength{\rightskip}{0pt plus 5cm}public Gestion\+Sauvegarde\+::get\+Liste\+Sauvegardes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_gestion_sauvegarde_a9f45d946956c7e9624a3c81c55f7c7bd}{}\label{class_gestion_sauvegarde_a9f45d946956c7e9624a3c81c55f7c7bd}
+
+
+Récupere la liste des noms de fichier de sauvegardes stockée dans le fichier F\+I\+C\+H\+I\+E\+R\+L\+I\+S\+T\+E\+S\+AV. 
+
+\begin{DoxyReturn}{Renvoie}
+la liste des noms des fichiers de sauvegarde sous la forme d\textquotesingle{}un tableau de string. 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!lire\+Attribut@{lire\+Attribut}}
+\index{lire\+Attribut@{lire\+Attribut}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{lire\+Attribut(std\+::string attribut)}{lireAttribut(std::string attribut)}}]{\setlength{\rightskip}{0pt plus 5cm}public Gestion\+Sauvegarde\+::lire\+Attribut (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{attribut}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gestion_sauvegarde_a63d674d414c6cc7bf431070c6e521f6f}{}\label{class_gestion_sauvegarde_a63d674d414c6cc7bf431070c6e521f6f}
+
+
+Lit le fichier ligne par ligne, s\textquotesingle{}arrête lorsqu\textquotesingle{}on a trouvé l\textquotesingle{}attribut {\ttfamily attribut} et lit les données le concernant puis les renvoie. Si le fichier présente plusieurs attributs portant le même nom, alors seul le 1er attribut sera lu. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em attribut} & le nom de l\textquotesingle{}attribut que l\textquotesingle{}on va chercher dans le fichier de sauvegarde. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la valeur de l\textquotesingle{}attribut. 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!lire\+Grille@{lire\+Grille}}
+\index{lire\+Grille@{lire\+Grille}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{lire\+Grille(std\+::string nom\+Grille)}{lireGrille(std::string nomGrille)}}]{\setlength{\rightskip}{0pt plus 5cm}public Gestion\+Sauvegarde\+::lire\+Grille (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{nom\+Grille}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gestion_sauvegarde_af5de8568bb0de4dcc59e7074a3d878b6}{}\label{class_gestion_sauvegarde_af5de8568bb0de4dcc59e7074a3d878b6}
+
+
+Récupère la grille dont le nom est {\ttfamily nom\+Grille} dans le fichier de sauvegarde. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nom\+Grille} & le nom de la grille que l\textquotesingle{}on va chercher dans le fichier. L\textquotesingle{}attribut que l\textquotesingle{}on va chercher sera alors \mbox{[}{\ttfamily nom\+Grille} \mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La grille sous le format pour \hyperlink{class_jeu_bataille_navale}{Jeu\+Bataille\+Navale}. C\textquotesingle{}est à dire que si on a lu un \textquotesingle{}1\textquotesingle{} on stockera l\textquotesingle{}entier 1 dans la grille. 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!lire\+Hauteur\+Grille@{lire\+Hauteur\+Grille}}
+\index{lire\+Hauteur\+Grille@{lire\+Hauteur\+Grille}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{lire\+Hauteur\+Grille(std\+::string nom\+Grille)}{lireHauteurGrille(std::string nomGrille)}}]{\setlength{\rightskip}{0pt plus 5cm}public Gestion\+Sauvegarde\+::lire\+Hauteur\+Grille (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{nom\+Grille}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gestion_sauvegarde_a8953ef10c790d011391139d35855a35f}{}\label{class_gestion_sauvegarde_a8953ef10c790d011391139d35855a35f}
+
+
+Récupère la hauteur de la grille portant le nom {\ttfamily nom\+Grille}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nom\+Grille} & le nom de la grille que l\textquotesingle{}on va chercher dans le fichier. L\textquotesingle{}attribut que l\textquotesingle{}on va chercher sera alors \mbox{[}{\ttfamily nom\+Grille} \mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La hauteur de la grille en question. 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!lire\+Largeur\+Grille@{lire\+Largeur\+Grille}}
+\index{lire\+Largeur\+Grille@{lire\+Largeur\+Grille}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{lire\+Largeur\+Grille(std\+::string nom\+Grille)}{lireLargeurGrille(std::string nomGrille)}}]{\setlength{\rightskip}{0pt plus 5cm}public Gestion\+Sauvegarde\+::lire\+Largeur\+Grille (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{nom\+Grille}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gestion_sauvegarde_af9cb7edc20d50f7bef4941d192e9994e}{}\label{class_gestion_sauvegarde_af9cb7edc20d50f7bef4941d192e9994e}
+
+
+Récupère la largeur de la grille portant le nom {\ttfamily nom\+Grille}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nom\+Grille} & le nom de la grille que l\textquotesingle{}on va chercher dans le fichier. L\textquotesingle{}attribut que l\textquotesingle{}on va chercher sera alors \mbox{[}{\ttfamily nom\+Grille} \mbox{]}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+La largeur de la grille en question. 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!lire\+Nom\+Joueur@{lire\+Nom\+Joueur}}
+\index{lire\+Nom\+Joueur@{lire\+Nom\+Joueur}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{lire\+Nom\+Joueur(char numero\+Joueur)}{lireNomJoueur(char numeroJoueur)}}]{\setlength{\rightskip}{0pt plus 5cm}public Gestion\+Sauvegarde\+::lire\+Nom\+Joueur (
+\begin{DoxyParamCaption}
+\item[{char}]{numero\+Joueur}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gestion_sauvegarde_a89d017d0aef28219d296000d54642e84}{}\label{class_gestion_sauvegarde_a89d017d0aef28219d296000d54642e84}
+
+
+Lit le nom du joueur numero {\ttfamily numero\+Joueur} dans la sauvegarde. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em numero\+Joueur} & le numero du joueur dont on veut lire le nom. L\textquotesingle{}attribut que l\textquotesingle{}on lire sera alors \char`\"{}nom\+Joueur\char`\"{} +{\ttfamily numero\+Joueur}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+le nom du joueur. 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!nouvelle\+Sauvegarde@{nouvelle\+Sauvegarde}}
+\index{nouvelle\+Sauvegarde@{nouvelle\+Sauvegarde}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{nouvelle\+Sauvegarde(bool ecraser\+Fichier\+Si\+Existe\+Deja=false)}{nouvelleSauvegarde(bool ecraserFichierSiExisteDeja=false)}}]{\setlength{\rightskip}{0pt plus 5cm}public Gestion\+Sauvegarde\+::nouvelle\+Sauvegarde (
+\begin{DoxyParamCaption}
+\item[{bool}]{ecraser\+Fichier\+Si\+Existe\+Deja = {\ttfamily false}}
+\end{DoxyParamCaption}
+)}\hypertarget{class_gestion_sauvegarde_a90368ce1ddf00e71d70210255fcb7b9e}{}\label{class_gestion_sauvegarde_a90368ce1ddf00e71d70210255fcb7b9e}
+
+
+Initialise une nouvelle sauvegarde. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ecraser\+Fichier\+Si\+Existe\+Deja} & si à false, on ne fait rien si le fichier existe déjà. Si à true, on écrase le fichier s\textquotesingle{}il existe déjà. Par défaut à false. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true si l\textquotesingle{}initialisation a réussi. False sinon. 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!parse\+Ligne\+Grille@{parse\+Ligne\+Grille}}
+\index{parse\+Ligne\+Grille@{parse\+Ligne\+Grille}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{parse\+Ligne\+Grille(std\+::string ligne, int taille)}{parseLigneGrille(std::string ligne, int taille)}}]{\setlength{\rightskip}{0pt plus 5cm}private Gestion\+Sauvegarde\+::parse\+Ligne\+Grille (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{ligne, }
+\item[{int}]{taille}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_gestion_sauvegarde_a42d4903a86cad6b83006028cf399cdba}{}\label{class_gestion_sauvegarde_a42d4903a86cad6b83006028cf399cdba}
+
+
+Transforme une ligne de type \char`\"{}1 2 3 4\char`\"{} en un tableau de caractère \mbox{[}1, 2, 3, 4\mbox{]}. Attention le tableau résultant n\textquotesingle{}est pas \mbox{[}\textquotesingle{}1\textquotesingle{}, \textquotesingle{}2\textquotesingle{}, \textquotesingle{}3\textquotesingle{}, \textquotesingle{}4\textquotesingle{}\mbox{]}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em ligne} & La ligne à analyser. \\
+\hline
+{\em taille} & le nombre de caractères qui ne sont pas des \textquotesingle{} \textquotesingle{} dans la {\ttfamily ligne}. C\textquotesingle{}est donc la taille du tableau qui sera retourné. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Un tableau de char correspondant à {\ttfamily ligne}. 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!position\+Attribut@{position\+Attribut}}
+\index{position\+Attribut@{position\+Attribut}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{position\+Attribut(std\+::string attribut, bool verifier\+Egale=true)}{positionAttribut(std::string attribut, bool verifierEgale=true)}}]{\setlength{\rightskip}{0pt plus 5cm}private Gestion\+Sauvegarde\+::position\+Attribut (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{attribut, }
+\item[{bool}]{verifier\+Egale = {\ttfamily true}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_gestion_sauvegarde_a0ad9febb973f56faddba093a2237fbe2}{}\label{class_gestion_sauvegarde_a0ad9febb973f56faddba093a2237fbe2}
+
+
+Donne la position de l\textquotesingle{}attribut {\ttfamily attribut} dans le fichier de sauvegarde. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em attribut} & L\textquotesingle{}attribut que l\textquotesingle{}on souhaite trouver. \\
+\hline
+{\em verifier\+Egale} & Si est placé à false, on cherche l\textquotesingle{}attribut sans savoir s\textquotesingle{}il est bien suivi du caractère \textquotesingle{}\char`\"{}\textquotesingle{}. S\textquotesingle{}il est à true, on ne trouve l\textquotesingle{}aatribut que s\textquotesingle{}il est suivi de \textquotesingle{}=\textquotesingle{}. Par défaut {\ttfamily verifier\+Egale} est à true. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la position de l\textquotesingle{}attribut dans la sauvegarde. Retourne -\/1 s\textquotesingle{}il n\textquotesingle{}est pas présent. 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!recuperer\+Hauteur\+Grille@{recuperer\+Hauteur\+Grille}}
+\index{recuperer\+Hauteur\+Grille@{recuperer\+Hauteur\+Grille}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{recuperer\+Hauteur\+Grille(int pos)}{recupererHauteurGrille(int pos)}}]{\setlength{\rightskip}{0pt plus 5cm}private Gestion\+Sauvegarde\+::recuperer\+Hauteur\+Grille (
+\begin{DoxyParamCaption}
+\item[{int}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_gestion_sauvegarde_adbab128f25a22a4d759182ac3255584c}{}\label{class_gestion_sauvegarde_adbab128f25a22a4d759182ac3255584c}
+
+
+Permet d\textquotesingle{}obtenir la hauteur de la grille située à la position {\ttfamily pos} dans le fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pos} & la position de la grille dans le fichier. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la hauteur de la grille. -\/1 s\textquotesingle{}il y a eu une erreur. 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!remplacer\+Ligne@{remplacer\+Ligne}}
+\index{remplacer\+Ligne@{remplacer\+Ligne}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{remplacer\+Ligne(int pos, std\+::string nouvelle\+Ligne, bool ajouter\+La\+Ligne=false)}{remplacerLigne(int pos, std::string nouvelleLigne, bool ajouterLaLigne=false)}}]{\setlength{\rightskip}{0pt plus 5cm}private Gestion\+Sauvegarde\+::remplacer\+Ligne (
+\begin{DoxyParamCaption}
+\item[{int}]{pos, }
+\item[{std\+::string}]{nouvelle\+Ligne, }
+\item[{bool}]{ajouter\+La\+Ligne = {\ttfamily false}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_gestion_sauvegarde_a450f3a31228afa2b6a7d7aef54ce30b5}{}\label{class_gestion_sauvegarde_a450f3a31228afa2b6a7d7aef54ce30b5}
+
+
+Remplace la ligne à la position {\ttfamily pos} dans le fichier. On réécrit le début du fichier dans un fichier temporaire jusqu\textquotesingle{}à la ligne en question. On écrit ensuite la nouvelle ligne dans le fichier temporaire. On réécrit la fin du fichier dans le fichier temporaire jusqu\textquotesingle{}à la fin du fichier. On supprime alors le fichier et on renomme le fichier temporaire pour qu\textquotesingle{}il ait le même nom que le fichier d\textquotesingle{}origine. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em pos} & la position de la ligne à remplacer. \\
+\hline
+{\em nouvelle\+Ligne} & La ligne que l\textquotesingle{}on écrit à la place de l\textquotesingle{}ancienne \\
+\hline
+{\em ajouter\+La\+Ligne} & si à false, on remplace la ligne, si à true on ajoute la ligne. Par défaut à false. \\
+\hline
+\end{DoxyParams}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!sauvegarde\+Deja\+Dans\+Liste@{sauvegarde\+Deja\+Dans\+Liste}}
+\index{sauvegarde\+Deja\+Dans\+Liste@{sauvegarde\+Deja\+Dans\+Liste}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{sauvegarde\+Deja\+Dans\+Liste()}{sauvegardeDejaDansListe()}}]{\setlength{\rightskip}{0pt plus 5cm}private Gestion\+Sauvegarde\+::sauvegarde\+Deja\+Dans\+Liste (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_gestion_sauvegarde_a82e99d080c8faa6eb7a4a485d0a8f9d3}{}\label{class_gestion_sauvegarde_a82e99d080c8faa6eb7a4a485d0a8f9d3}
+
+
+Donne la position de la sauvegarde dans la liste des sauvegardes si elle est présente dedant. Si elle n\textquotesingle{}est pas présente on renvoie -\/1. 
+
+\begin{DoxyReturn}{Renvoie}
+La position de la sauvegarde dans la liste si elle est présente, -\/1 sinon 
+\end{DoxyReturn}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!supprimer\+Sauvegarde@{supprimer\+Sauvegarde}}
+\index{supprimer\+Sauvegarde@{supprimer\+Sauvegarde}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{supprimer\+Sauvegarde(std\+::string nom\+Fichier)}{supprimerSauvegarde(std::string nomFichier)}}]{\setlength{\rightskip}{0pt plus 5cm}public Gestion\+Sauvegarde\+::supprimer\+Sauvegarde (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{nom\+Fichier}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_gestion_sauvegarde_a7e17e827e1718123008c76c232c38e98}{}\label{class_gestion_sauvegarde_a7e17e827e1718123008c76c232c38e98}
+
+
+Supprime la sauvegarde contenue dans le fichier portant le nom {\ttfamily nom\+Fichier}. Cette fonction supprime donc le fichier {\ttfamily nom\+Fichier} mais aussi son nom de la liste des sauvegardes située dans le fichier F\+I\+C\+H\+I\+E\+R\+L\+I\+S\+T\+E\+S\+AV. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nom\+Fichier} & le nom du fichier de sauvegarde que l\textquotesingle{}on souhaite supprimer. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentation des données membres}
+\index{Gestion\+Sauvegarde@{Gestion\+Sauvegarde}!nom\+Fichier@{nom\+Fichier}}
+\index{nom\+Fichier@{nom\+Fichier}!Gestion\+Sauvegarde@{Gestion\+Sauvegarde}}
+\subsubsection[{\texorpdfstring{nom\+Fichier}{nomFichier}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Gestion\+Sauvegarde\+::nom\+Fichier\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_gestion_sauvegarde_afda944907acb4f5660cda5a893a8fb66}{}\label{class_gestion_sauvegarde_afda944907acb4f5660cda5a893a8fb66}
+Le nom du fichier dans lequel on va sauvegarder ou à partir duquel on va lire la sauvegarde 
+
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
+\item 
+/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\hyperlink{_gestion_sauvegarde_8hpp}{Gestion\+Sauvegarde.\+hpp}\item 
+/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/Gestion\+Sauvegarde.\+cpp\end{DoxyCompactItemize}

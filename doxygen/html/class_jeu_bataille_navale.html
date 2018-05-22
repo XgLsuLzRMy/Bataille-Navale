@@ -92,6 +92,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">Référence de la classe JeuBatailleNavale</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>classe qui gère le déroulement du jeu de Bataille Navale.  
+ <a href="class_jeu_bataille_navale.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_jeu_bataille_navale_8hpp_source.html">JeuBatailleNavale.hpp</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
@@ -99,10 +104,17 @@ Fonctions membres publiques</h2></td></tr>
 &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jeu_bataille_navale.html#aae41366decd137f03ac95aff8b8e0f49">JeuBatailleNavale</a> ()</td></tr>
 <tr class="memdesc:aae41366decd137f03ac95aff8b8e0f49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe. <br /></td></tr>
 <tr class="separator:aae41366decd137f03ac95aff8b8e0f49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d12c52e4d69ab4a9d8dc6945cda7be4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6d12c52e4d69ab4a9d8dc6945cda7be4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jeu_bataille_navale.html#a6d12c52e4d69ab4a9d8dc6945cda7be4">JeuBatailleNavale</a> (std::string nomJoueur1, std::string nomJoueur2, char <a class="el" href="class_jeu_bataille_navale.html#abac1f29d41caf119a9766f323506dbe0">typeJeu</a>, bool IA1, bool IA2, char **grille1, char **grilleTentatives1, char **grille2, char **grilleTentatives2, int h, int l)</td></tr>
+<tr class="memdesc:a6d12c52e4d69ab4a9d8dc6945cda7be4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe permettant de choisir l'initialisation des paramètres pour le chargement d'une sauvegarde. <br /></td></tr>
+<tr class="separator:a6d12c52e4d69ab4a9d8dc6945cda7be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f59d8ee46918984df4a13cd261d5491"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3f59d8ee46918984df4a13cd261d5491"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jeu_bataille_navale.html#a3f59d8ee46918984df4a13cd261d5491">nouveauJeu</a> ()</td></tr>
 <tr class="memdesc:a3f59d8ee46918984df4a13cd261d5491"><td class="mdescLeft">&#160;</td><td class="mdescRight">commence un nouveau jeu, demande au joueur si quels serons les jeurs : 2 IA, 2 humains ou un humain et une IA. Modifie l'attribut typeJeu. <br /></td></tr>
 <tr class="separator:a3f59d8ee46918984df4a13cd261d5491"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcddb891c010b0cd4551b2a99e0490c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jeu_bataille_navale.html#afcddb891c010b0cd4551b2a99e0490c4">jouer</a> (bool tour=false)</td></tr>
+<tr class="memdesc:afcddb891c010b0cd4551b2a99e0490c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui verifie si la partie est finie, demande au joueur des coordonnées de bombes, et informe le joueur adverse si un de ses bateaux a été touché  <a href="#afcddb891c010b0cd4551b2a99e0490c4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:afcddb891c010b0cd4551b2a99e0490c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad23d49de0aee0b1b182c96a22cb42ffb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jeu_bataille_navale.html#ad23d49de0aee0b1b182c96a22cb42ffb">checkFinJeu</a> ()</td></tr>
 <tr class="memdesc:ad23d49de0aee0b1b182c96a22cb42ffb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction pour déterminer si le jeu est fini.  <a href="#ad23d49de0aee0b1b182c96a22cb42ffb">Plus de détails...</a><br /></td></tr>
 <tr class="separator:ad23d49de0aee0b1b182c96a22cb42ffb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -116,18 +128,25 @@ Fonctions membres privées</h2></td></tr>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jeu_bataille_navale.html#a00065487788bcf1a3b5689138a688b13">demanderNomJoueurs</a> ()</td></tr>
 <tr class="memdesc:a00065487788bcf1a3b5689138a688b13"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialise le nom du/des joueur/s. <br /></td></tr>
 <tr class="separator:a00065487788bcf1a3b5689138a688b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed25ee4552993ad95a478f5925cca79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jeu_bataille_navale.html#aeed25ee4552993ad95a478f5925cca79">joueurPlaceBombe</a> (bool joueur, int xBombe, int yBombe)</td></tr>
+<tr class="memdesc:aeed25ee4552993ad95a478f5925cca79"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui verifie qu'à une position donnée, la grille de l'adversaire ne contient pas d'eau  <a href="#aeed25ee4552993ad95a478f5925cca79">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aeed25ee4552993ad95a478f5925cca79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4357f800dc81be128c5b40067f71fe4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jeu_bataille_navale.html#a4357f800dc81be128c5b40067f71fe4f">ecrireSauvegarde</a> (std::string nomSauvegarde, bool tour)</td></tr>
+<tr class="memdesc:a4357f800dc81be128c5b40067f71fe4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui effectue une sauvegarde après un tour  <a href="#a4357f800dc81be128c5b40067f71fe4f">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a4357f800dc81be128c5b40067f71fe4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Attributs privés</h2></td></tr>
-<tr class="memitem:a74843e77b779a96f41de250f075abfe0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74843e77b779a96f41de250f075abfe0"></a>
-<a class="el" href="class_joueur.html">Joueur</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>joueur1</b></td></tr>
+<tr class="memitem:a74843e77b779a96f41de250f075abfe0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joueur.html">Joueur</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jeu_bataille_navale.html#a74843e77b779a96f41de250f075abfe0">joueur1</a></td></tr>
 <tr class="separator:a74843e77b779a96f41de250f075abfe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f8d8306d7101c44006a7a27a74ab640"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joueur.html">Joueur</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jeu_bataille_navale.html#a8f8d8306d7101c44006a7a27a74ab640">joueur2</a></td></tr>
-<tr class="separator:a8f8d8306d7101c44006a7a27a74ab640"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b93aca9dd777873c307842a7e753dab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_joueur.html">Joueur</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jeu_bataille_navale.html#a9b93aca9dd777873c307842a7e753dab">joueur2</a></td></tr>
+<tr class="separator:a9b93aca9dd777873c307842a7e753dab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abac1f29d41caf119a9766f323506dbe0"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_jeu_bataille_navale.html#abac1f29d41caf119a9766f323506dbe0">typeJeu</a></td></tr>
 <tr class="separator:abac1f29d41caf119a9766f323506dbe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>classe qui gère le déroulement du jeu de Bataille Navale. </p>
+</div><h2 class="groupheader">Documentation des fonctions membres</h2>
 <a class="anchor" id="ad23d49de0aee0b1b182c96a22cb42ffb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -143,6 +162,48 @@ Attributs privés</h2></td></tr>
 
 <p>Fonction pour déterminer si le jeu est fini. </p>
 <dl class="section return"><dt>Renvoie</dt><dd>0 si ce n'est pas la fin du jeu et 1 si c'est la fin du jeu. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4357f800dc81be128c5b40067f71fe4f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">private JeuBatailleNavale::ecrireSauvegarde </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nomSauvegarde</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>tour</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>fonction qui effectue une sauvegarde après un tour </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nomSauvegarde,tour</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -178,8 +239,31 @@ Attributs privés</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Documentation des données membres</h2>
-<a class="anchor" id="a8f8d8306d7101c44006a7a27a74ab640"></a>
+<a class="anchor" id="afcddb891c010b0cd4551b2a99e0490c4"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public JeuBatailleNavale::jouer </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>tour</em> = <code>false</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui verifie si la partie est finie, demande au joueur des coordonnées de bombes, et informe le joueur adverse si un de ses bateaux a été touché </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tour</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aeed25ee4552993ad95a478f5925cca79"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -187,7 +271,27 @@ Attributs privés</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_joueur.html">Joueur</a> * JeuBatailleNavale::joueur2</td>
+          <td class="memname">private JeuBatailleNavale::joueurPlaceBombe </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>joueur</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>xBombe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>yBombe</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -196,7 +300,58 @@ Attributs privés</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>les joueurs de la partie </p>
+
+<p>fonction qui verifie qu'à une position donnée, la grille de l'adversaire ne contient pas d'eau </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">joueur,xBombe,yBombe</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>true si la case de la grille adverse ne contient pas d'eau </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a class="anchor" id="a74843e77b779a96f41de250f075abfe0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joueur.html">Joueur</a>* JeuBatailleNavale::joueur1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>le premier joueur de la partie </p>
+
+</div>
+</div>
+<a class="anchor" id="a9b93aca9dd777873c307842a7e753dab"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_joueur.html">Joueur</a>* JeuBatailleNavale::joueur2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>le deuxième joueur de la partie </p>
 
 </div>
 </div>

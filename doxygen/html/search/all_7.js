@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['typejeu',['typeJeu',['../class_jeu_bataille_navale.html#abac1f29d41caf119a9766f323506dbe0',1,'JeuBatailleNavale']]]
+  ['hauteur',['hauteur',['../class_grille.html#a150412fc1212ec2624c2a62040d5ff88',1,'Grille']]]
 ];

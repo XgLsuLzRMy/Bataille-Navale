@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['orientation',['orientation',['../class_bateau.html#a2d3074370ff0c372286522f298830f63',1,'Bateau']]]
+  ['instanciationdesjoueurs',['instanciationDesJoueurs',['../class_jeu_bataille_navale.html#a96f8b9a6d42db7e505e0046ad78b71cc',1,'JeuBatailleNavale']]]
 ];

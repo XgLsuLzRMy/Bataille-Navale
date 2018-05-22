@@ -18,26 +18,36 @@ Graphe d\textquotesingle{}héritage de Joueur\+Humain\+:\begin{figure}[H]
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \hyperlink{class_joueur_humain_afde5ace70d8664257e7774beea718120}{demander\+Nom} ()\hypertarget{class_joueur_humain_afde5ace70d8664257e7774beea718120}{}\label{class_joueur_humain_afde5ace70d8664257e7774beea718120}
+\hyperlink{class_joueur_humain_a99ef059054b5092967730224bf84f4b3}{Joueur\+Humain} ()\hypertarget{class_joueur_humain_a99ef059054b5092967730224bf84f4b3}{}\label{class_joueur_humain_a99ef059054b5092967730224bf84f4b3}
 
-\begin{DoxyCompactList}\small\item\em initialise le nom du joueur en demandant le nom au joueur \end{DoxyCompactList}\item 
-virtual void {\bfseries demander\+Taille\+Grille} ()\hypertarget{class_joueur_humain_aecd25abe7629ee3925004e2f0bcb7c7e}{}\label{class_joueur_humain_aecd25abe7629ee3925004e2f0bcb7c7e}
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{class_joueur_humain}{Joueur\+Humain}. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_joueur_humain_a4d531faca2e5f81966ff11309bd1fd9e}{est\+Une\+IA} ()
+\begin{DoxyCompactList}\small\item\em Permet de savoir si ce joueur est une IA. Est utile lorsque l\textquotesingle{}on manipule un \hyperlink{class_joueur}{Joueur} et que l\textquotesingle{}on ne sait pas s\textquotesingle{}il est IA ou Humain. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_joueur_humain_a1e47a65bf854cc9922c4d13c1715f76e}{demander\+Nom} ()\hypertarget{class_joueur_humain_a1e47a65bf854cc9922c4d13c1715f76e}{}\label{class_joueur_humain_a1e47a65bf854cc9922c4d13c1715f76e}
 
-\item 
-virtual char {\bfseries demander\+Type\+Jeu} ()\hypertarget{class_joueur_humain_a63677d4f1eb52cfa30d932a78098aee7}{}\label{class_joueur_humain_a63677d4f1eb52cfa30d932a78098aee7}
+\begin{DoxyCompactList}\small\item\em Demande au joueur d\textquotesingle{}entrer son nom. Cette fonction modifie l\textquotesingle{}attribut nom. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_joueur_humain_a50296a0ed2dbce1527011140e6b4af0a}{demander\+Taille\+Grille} ()\hypertarget{class_joueur_humain_a50296a0ed2dbce1527011140e6b4af0a}{}\label{class_joueur_humain_a50296a0ed2dbce1527011140e6b4af0a}
 
-\item 
-virtual void \hyperlink{class_joueur_humain_a31e23d1e076b0e6110e0a9d354d80674}{placement\+Des\+Bateaux} (char type\+Jeu)
-\begin{DoxyCompactList}\small\item\em demande au joueur de placer ses différents bateaux. Utilise ajout\+Bateau pour chaqun des bateaux du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Demande au joueur la largeur et la hauteur de la grille sur laquelle il souhaite jouer. \end{DoxyCompactList}\item 
+virtual char \hyperlink{class_joueur_humain_a06ff8df7b6d3fa366df970fd1d137a61}{demander\+Type\+Jeu} ()
+\begin{DoxyCompactList}\small\item\em Demande au joueur selon quel type de jeu de Bataille Navale il souhaite jouer. Le type de jeu est soit 1 soit 2. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_joueur_humain_ae27bf69ba0db87cd8268ba1cd1e4f817}{placement\+Des\+Bateaux} (char type\+Jeu)
+\begin{DoxyCompactList}\small\item\em Permet au joueur de placer tous ses bateaux sur la grille. Fais appel à la fonction \hyperlink{class_joueur_humain_af9e3ccafc7cde958dda81551d0ef6abd}{placer\+Bateau(\+Bateau $\ast$b)}. \end{DoxyCompactList}\item 
+virtual int $\ast$ \hyperlink{class_joueur_humain_a92f4cb99ff2957813da34fb60e211870}{tour} ()
+\begin{DoxyCompactList}\small\item\em Permet au joueur de placer une bombe. Lui affiche aussi sa grille et sa grille de tentatives. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_joueur_humain_a9eeae3b54b174e477a94c75d57a0d403}{resultat\+Bombe} (bool touche, int x, int y)
+\begin{DoxyCompactList}\small\item\em Notifie le joueur si sa bombe a touché l\textquotesingle{}adversaire. On modifie alors sa grille en conséquence. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_joueur_humain_acdd6b332153e1543d083d272fbdf8289}{resultat\+Bombe\+Adverse} (bool touche, int x, int y)
+\begin{DoxyCompactList}\small\item\em Notifie le joueur si la bombe de l\textquotesingle{}adversaire l\textquotesingle{}a touché. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres privées}
 \begin{DoxyCompactItemize}
 \item 
-virtual void {\bfseries placer\+Bateau} (Bateau $\ast$b)\hypertarget{class_joueur_humain_a12d0d611801d881138d9af0ca8e219c8}{}\label{class_joueur_humain_a12d0d611801d881138d9af0ca8e219c8}
-
-\item 
-void {\bfseries demander\+Coordonnees\+Bateau} (Bateau $\ast$b)\hypertarget{class_joueur_humain_aee35cac62f530e2ba30663853c87646d}{}\label{class_joueur_humain_aee35cac62f530e2ba30663853c87646d}
-
-\end{DoxyCompactItemize}
+virtual void \hyperlink{class_joueur_humain_af9e3ccafc7cde958dda81551d0ef6abd}{placer\+Bateau} (\hyperlink{class_bateau}{Bateau} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Permet au joueur de positionner le bateau {\ttfamily $\ast$b} sur la grille. Cette fonction lui demande les coordonnées en x, y du bateau (en utilisant la fonction demander\+Coordonnees\+Bateau) mais aussi son orientation. \end{DoxyCompactList}\item 
+void \hyperlink{class_joueur_humain_ad176fe72c1265d67cfc99779c044b85d}{demander\+Coordonnees\+Bateau} (\hyperlink{class_bateau}{Bateau} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Demande au joueur les coordonnées en x et y du bateau afin de le positionner sur la grille. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{class_joueur_humain_a7f3de788931d83526b09626814b9b046}{donner\+Coordonnees\+Bombes} ()
+\begin{DoxyCompactList}\small\item\em Demande au joueur les coordonnées en x et y de la bombe qu\textquotesingle{}il souhaite envoyer sur les bateaux adverses. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membres hérités additionnels}
 
 
@@ -47,25 +57,181 @@ classe representant le joueur qui est humain. Cette classe hérite de la classe 
 La classe gere les actions du joueur. 
 
 \subsection{Documentation des fonctions membres}
-\index{Joueur\+Humain@{Joueur\+Humain}!placement\+Des\+Bateaux@{placement\+Des\+Bateaux}}
-\index{placement\+Des\+Bateaux@{placement\+Des\+Bateaux}!Joueur\+Humain@{Joueur\+Humain}}
-\subsubsection[{\texorpdfstring{placement\+Des\+Bateaux(char type\+Jeu)}{placementDesBateaux(char typeJeu)}}]{\setlength{\rightskip}{0pt plus 5cm}void Joueur\+Humain\+::placement\+Des\+Bateaux (
+\index{Joueur\+Humain@{Joueur\+Humain}!demander\+Coordonnees\+Bateau@{demander\+Coordonnees\+Bateau}}
+\index{demander\+Coordonnees\+Bateau@{demander\+Coordonnees\+Bateau}!Joueur\+Humain@{Joueur\+Humain}}
+\subsubsection[{\texorpdfstring{demander\+Coordonnees\+Bateau(\+Bateau $\ast$b)}{demanderCoordonneesBateau(Bateau *b)}}]{\setlength{\rightskip}{0pt plus 5cm}private Joueur\+Humain\+::demander\+Coordonnees\+Bateau (
 \begin{DoxyParamCaption}
-\item[{char}]{type\+Jeu}
+\item[{{\bf Bateau} $\ast$}]{b}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_humain_a31e23d1e076b0e6110e0a9d354d80674}{}\label{class_joueur_humain_a31e23d1e076b0e6110e0a9d354d80674}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_joueur_humain_ad176fe72c1265d67cfc99779c044b85d}{}\label{class_joueur_humain_ad176fe72c1265d67cfc99779c044b85d}
 
 
-demande au joueur de placer ses différents bateaux. Utilise ajout\+Bateau pour chaqun des bateaux du joueur. 
+Demande au joueur les coordonnées en x et y du bateau afin de le positionner sur la grille. 
 
 
 \begin{DoxyParams}{Paramètres}
-{\em type\+Jeu} & le type de jeu choisis \\
+{\em $\ast$b} & Un pointeur sur le bateau que le joueur va placer sur la grille. \\
+\hline
+\end{DoxyParams}
+\index{Joueur\+Humain@{Joueur\+Humain}!demander\+Type\+Jeu@{demander\+Type\+Jeu}}
+\index{demander\+Type\+Jeu@{demander\+Type\+Jeu}!Joueur\+Humain@{Joueur\+Humain}}
+\subsubsection[{\texorpdfstring{demander\+Type\+Jeu()}{demanderTypeJeu()}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+Humain\+::demander\+Type\+Jeu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_humain_a06ff8df7b6d3fa366df970fd1d137a61}{}\label{class_joueur_humain_a06ff8df7b6d3fa366df970fd1d137a61}
+
+
+Demande au joueur selon quel type de jeu de Bataille Navale il souhaite jouer. Le type de jeu est soit 1 soit 2. 
+
+\begin{DoxyReturn}{Renvoie}
+le type de jeu. Vaudra soit 1 soit 2. Attention il s\textquotesingle{}agit de la valeur 1 ou 2 et non du caractère \textquotesingle{}1\textquotesingle{} ou \textquotesingle{}2\textquotesingle{}. 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \hyperlink{class_joueur_a72fcb63683baba74922df5de246bff6f}{Joueur}.
+
+\index{Joueur\+Humain@{Joueur\+Humain}!donner\+Coordonnees\+Bombes@{donner\+Coordonnees\+Bombes}}
+\index{donner\+Coordonnees\+Bombes@{donner\+Coordonnees\+Bombes}!Joueur\+Humain@{Joueur\+Humain}}
+\subsubsection[{\texorpdfstring{donner\+Coordonnees\+Bombes()}{donnerCoordonneesBombes()}}]{\setlength{\rightskip}{0pt plus 5cm}private Joueur\+Humain\+::donner\+Coordonnees\+Bombes (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_joueur_humain_a7f3de788931d83526b09626814b9b046}{}\label{class_joueur_humain_a7f3de788931d83526b09626814b9b046}
+
+
+Demande au joueur les coordonnées en x et y de la bombe qu\textquotesingle{}il souhaite envoyer sur les bateaux adverses. 
+
+\begin{DoxyReturn}{Renvoie}
+Un tableau représentant les coordonnées en x et en y de la forme \mbox{[}x, y\mbox{]}. 
+\end{DoxyReturn}
+\index{Joueur\+Humain@{Joueur\+Humain}!est\+Une\+IA@{est\+Une\+IA}}
+\index{est\+Une\+IA@{est\+Une\+IA}!Joueur\+Humain@{Joueur\+Humain}}
+\subsubsection[{\texorpdfstring{est\+Une\+I\+A()}{estUneIA()}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+Humain\+::est\+Une\+IA (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_humain_a4d531faca2e5f81966ff11309bd1fd9e}{}\label{class_joueur_humain_a4d531faca2e5f81966ff11309bd1fd9e}
+
+
+Permet de savoir si ce joueur est une IA. Est utile lorsque l\textquotesingle{}on manipule un \hyperlink{class_joueur}{Joueur} et que l\textquotesingle{}on ne sait pas s\textquotesingle{}il est IA ou Humain. 
+
+\begin{DoxyReturn}{Renvoie}
+true si c\textquotesingle{}est une IA, false sinon. 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \hyperlink{class_joueur_aee337662730df358b20474cac70d83e6}{Joueur}.
+
+\index{Joueur\+Humain@{Joueur\+Humain}!placement\+Des\+Bateaux@{placement\+Des\+Bateaux}}
+\index{placement\+Des\+Bateaux@{placement\+Des\+Bateaux}!Joueur\+Humain@{Joueur\+Humain}}
+\subsubsection[{\texorpdfstring{placement\+Des\+Bateaux(char type\+Jeu)}{placementDesBateaux(char typeJeu)}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+Humain\+::placement\+Des\+Bateaux (
+\begin{DoxyParamCaption}
+\item[{char}]{type\+Jeu}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_humain_ae27bf69ba0db87cd8268ba1cd1e4f817}{}\label{class_joueur_humain_ae27bf69ba0db87cd8268ba1cd1e4f817}
+
+
+Permet au joueur de placer tous ses bateaux sur la grille. Fais appel à la fonction \hyperlink{class_joueur_humain_af9e3ccafc7cde958dda81551d0ef6abd}{placer\+Bateau(\+Bateau $\ast$b)}. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em type\+Jeu} & Le type de jeu auquel le joueur joue. Cela influence le nombre de bateaux et leur taille. \\
 \hline
 \end{DoxyParams}
 
 
 Réimplémentée à partir de \hyperlink{class_joueur_aa97f71a90328693e0047ba2f48d61b4b}{Joueur}.
+
+\index{Joueur\+Humain@{Joueur\+Humain}!placer\+Bateau@{placer\+Bateau}}
+\index{placer\+Bateau@{placer\+Bateau}!Joueur\+Humain@{Joueur\+Humain}}
+\subsubsection[{\texorpdfstring{placer\+Bateau(\+Bateau $\ast$b)}{placerBateau(Bateau *b)}}]{\setlength{\rightskip}{0pt plus 5cm}private Joueur\+Humain\+::placer\+Bateau (
+\begin{DoxyParamCaption}
+\item[{{\bf Bateau} $\ast$}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\hypertarget{class_joueur_humain_af9e3ccafc7cde958dda81551d0ef6abd}{}\label{class_joueur_humain_af9e3ccafc7cde958dda81551d0ef6abd}
+
+
+Permet au joueur de positionner le bateau {\ttfamily $\ast$b} sur la grille. Cette fonction lui demande les coordonnées en x, y du bateau (en utilisant la fonction demander\+Coordonnees\+Bateau) mais aussi son orientation. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$b} & Un pointeur sur le bateau que le joueur va placer sur la grille. \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée à partir de \hyperlink{class_joueur_a817129cc5062c058a153a241c74eee79}{Joueur}.
+
+\index{Joueur\+Humain@{Joueur\+Humain}!resultat\+Bombe@{resultat\+Bombe}}
+\index{resultat\+Bombe@{resultat\+Bombe}!Joueur\+Humain@{Joueur\+Humain}}
+\subsubsection[{\texorpdfstring{resultat\+Bombe(bool touche, int x, int y)}{resultatBombe(bool touche, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+Humain\+::resultat\+Bombe (
+\begin{DoxyParamCaption}
+\item[{bool}]{touche, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_humain_a9eeae3b54b174e477a94c75d57a0d403}{}\label{class_joueur_humain_a9eeae3b54b174e477a94c75d57a0d403}
+
+
+Notifie le joueur si sa bombe a touché l\textquotesingle{}adversaire. On modifie alors sa grille en conséquence. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em touche} & true si la bombe a touché un navire adverse, false sinon. \\
+\hline
+{\em x} & La coordonnée en x de la bombe que le joueur avait choisie. \\
+\hline
+{\em y} & La coordonnée en y de la bombe que le joueur avait choisie. \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée à partir de \hyperlink{class_joueur_a661426005c03ad2ee421249758f5c2a7}{Joueur}.
+
+\index{Joueur\+Humain@{Joueur\+Humain}!resultat\+Bombe\+Adverse@{resultat\+Bombe\+Adverse}}
+\index{resultat\+Bombe\+Adverse@{resultat\+Bombe\+Adverse}!Joueur\+Humain@{Joueur\+Humain}}
+\subsubsection[{\texorpdfstring{resultat\+Bombe\+Adverse(bool touche, int x, int y)}{resultatBombeAdverse(bool touche, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+Humain\+::resultat\+Bombe\+Adverse (
+\begin{DoxyParamCaption}
+\item[{bool}]{touche, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_humain_acdd6b332153e1543d083d272fbdf8289}{}\label{class_joueur_humain_acdd6b332153e1543d083d272fbdf8289}
+
+
+Notifie le joueur si la bombe de l\textquotesingle{}adversaire l\textquotesingle{}a touché. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em touche} & true si la bombe a touché un navire, false sinon. \\
+\hline
+{\em x} & La coordonnée en x de la bombe que le joueur adverse avait choisie. \\
+\hline
+{\em y} & La coordonnée en y de la bombe que le joueur adverse avait choisie. \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée à partir de \hyperlink{class_joueur_aeb9de0a7501a5370d45e670e122b3676}{Joueur}.
+
+\index{Joueur\+Humain@{Joueur\+Humain}!tour@{tour}}
+\index{tour@{tour}!Joueur\+Humain@{Joueur\+Humain}}
+\subsubsection[{\texorpdfstring{tour()}{tour()}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+Humain\+::tour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_humain_a92f4cb99ff2957813da34fb60e211870}{}\label{class_joueur_humain_a92f4cb99ff2957813da34fb60e211870}
+
+
+Permet au joueur de placer une bombe. Lui affiche aussi sa grille et sa grille de tentatives. 
+
+\begin{DoxyReturn}{Renvoie}
+Les coordonnées de la bombe que le joueur souhaite placer. Sous la forme d\textquotesingle{}un tableau \mbox{[}x, y\mbox{]}. 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \hyperlink{class_joueur_a46bdd92b73a1f0d04aeb5f19f33720b0}{Joueur}.
 
 
 

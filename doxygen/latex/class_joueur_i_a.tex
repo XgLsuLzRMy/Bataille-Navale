@@ -18,23 +18,38 @@ Graphe d\textquotesingle{}héritage de Joueur\+IA\+:\begin{figure}[H]
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-virtual void \hyperlink{class_joueur_i_a_a266a69042a52b6346cc2c6a5af9cf3ed}{demander\+Nom} ()\hypertarget{class_joueur_i_a_a266a69042a52b6346cc2c6a5af9cf3ed}{}\label{class_joueur_i_a_a266a69042a52b6346cc2c6a5af9cf3ed}
+\hyperlink{class_joueur_i_a_a88187887d491910b2e7e969fb9ea4188}{Joueur\+IA} ()\hypertarget{class_joueur_i_a_a88187887d491910b2e7e969fb9ea4188}{}\label{class_joueur_i_a_a88187887d491910b2e7e969fb9ea4188}
 
-\begin{DoxyCompactList}\small\item\em initialise le nom du joueur en demandant le nom au joueur \end{DoxyCompactList}\item 
-virtual void {\bfseries demander\+Taille\+Grille} ()\hypertarget{class_joueur_i_a_a06995dbbdb0ebc747d69f82a219fcd2f}{}\label{class_joueur_i_a_a06995dbbdb0ebc747d69f82a219fcd2f}
+\begin{DoxyCompactList}\small\item\em Constructeur de \hyperlink{class_joueur_i_a}{Joueur\+IA}. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_joueur_i_a_a549e94b2b4673dcf97041add34bc49a0}{est\+Une\+IA} ()
+\begin{DoxyCompactList}\small\item\em Permet de savoir si ce joueur est une IA. Est utile lorsque l\textquotesingle{}on manipule un \hyperlink{class_joueur}{Joueur} et que l\textquotesingle{}on ne sait pas s\textquotesingle{}il est IA ou Humain. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_joueur_i_a_ac61e1573c44426a797fcd826ad21e03c}{demander\+Nom} ()\hypertarget{class_joueur_i_a_ac61e1573c44426a797fcd826ad21e03c}{}\label{class_joueur_i_a_ac61e1573c44426a797fcd826ad21e03c}
 
-\item 
-virtual char {\bfseries demander\+Type\+Jeu} ()\hypertarget{class_joueur_i_a_a6b8bc123fded1d1c5ce10e922689f618}{}\label{class_joueur_i_a_a6b8bc123fded1d1c5ce10e922689f618}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}IA donnera \char`\"{}\+I\+A\char`\"{} comme nom. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_joueur_i_a_a073f19ae34a403f4d3bd70e5e82347a0}{demander\+Taille\+Grille} ()\hypertarget{class_joueur_i_a_a073f19ae34a403f4d3bd70e5e82347a0}{}\label{class_joueur_i_a_a073f19ae34a403f4d3bd70e5e82347a0}
 
-\item 
-virtual void \hyperlink{class_joueur_i_a_a62bb7d4785bcb817102e41c3e9c9b84a}{placement\+Des\+Bateaux} (char type\+Jeu)
-\begin{DoxyCompactList}\small\item\em demande au joueur de placer ses différents bateaux. Utilise ajout\+Bateau pour chaqun des bateaux du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}IA donnera toujours 10x10 comme taille de grille. \end{DoxyCompactList}\item 
+virtual char \hyperlink{class_joueur_i_a_a3812f9bf6f315236286ea5ebad576a4f}{demander\+Type\+Jeu} ()
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}IA donnera toujours un jeu de type 2. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_joueur_i_a_a6d7592fa8c653cb5420270d61467419b}{placement\+Des\+Bateaux} (char type\+Jeu)
+\begin{DoxyCompactList}\small\item\em Permet à l\textquotesingle{}IA de placer tous ses bateaux sur la grille. L\textquotesingle{}IA choisit d\textquotesingle{}abord de façon aléatoire quels bateaux elle va placer. Puis fais appel à la fonction \hyperlink{class_joueur_i_a_a70a56322ca6eeeb52612510d7e22d388}{placer\+Bateau(\+Bateau $\ast$b)}. \end{DoxyCompactList}\item 
+virtual int $\ast$ \hyperlink{class_joueur_i_a_a76b3e9af59c86acb34d7e1cb70802436}{tour} ()
+\begin{DoxyCompactList}\small\item\em Permet à l\textquotesingle{}IA de placer une bombe. Lui affiche aussi sa grille et sa grille de tentatives. Les coordonnées de la bombe sont déterminées à l\textquotesingle{}aide d\textquotesingle{}une fonction comme \hyperlink{class_joueur_i_a_af67d4959a40d9e99f0f8d99eaaf73c49}{determiner\+Coordonnees\+Bombes\+Scan()} ou \hyperlink{class_joueur_i_a_ad1fa6503f6fce1560129ee8cb94a1475}{determiner\+Coordonnees\+Bombes\+Aleatoire()}. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_joueur_i_a_a5e7ed6369200fe44382a54cf739ad8b3}{resultat\+Bombe} (bool touche, int x, int y)
+\begin{DoxyCompactList}\small\item\em Notifie l\textquotesingle{}IA si sa bombe a touché l\textquotesingle{}adversaire. On modifie alors sa grille en conséquence. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_joueur_i_a_a35dfe27baa0fb62a927cc13186b09920}{resultat\+Bombe\+Adverse} (bool touche, int x, int y)
+\begin{DoxyCompactList}\small\item\em Notifie l\textquotesingle{}IA si la bombe de l\textquotesingle{}adversaire l\textquotesingle{}a touché. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres privées}
 \begin{DoxyCompactItemize}
 \item 
-virtual void {\bfseries placer\+Bateau} (Bateau $\ast$bateau)\hypertarget{class_joueur_i_a_a9c758c62bd831218c44e3e9bf4c8bfa0}{}\label{class_joueur_i_a_a9c758c62bd831218c44e3e9bf4c8bfa0}
-
-\end{DoxyCompactItemize}
+virtual void \hyperlink{class_joueur_i_a_a70a56322ca6eeeb52612510d7e22d388}{placer\+Bateau} (\hyperlink{class_bateau}{Bateau} $\ast$bateau)
+\begin{DoxyCompactList}\small\item\em Permet au joueur de positionner le bateau {\ttfamily $\ast$b} sur la grille. Cette fonction lui génère les coordonnées en x, y du bateau et son orientation. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{class_joueur_i_a_a83b8a54bbc3d6fad8fbdaee79a5a8246}{retirer\+De\+La\+Liste} (int $\ast$liste, int taille, int ind)
+\begin{DoxyCompactList}\small\item\em Retire la valeur présente à l\textquotesingle{}indice {\ttfamily ind} de la liste {\ttfamily liste}. Il s\textquotesingle{}agit d\textquotesingle{}une liste d\textquotesingle{}indices correspondant aux bateaux que l\textquotesingle{}IA peut choisir. Cette liste est utilisée dans \hyperlink{class_joueur_i_a_a6d7592fa8c653cb5420270d61467419b}{placement\+Des\+Bateaux(char type\+Jeu)} \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{class_joueur_i_a_ad1fa6503f6fce1560129ee8cb94a1475}{determiner\+Coordonnees\+Bombes\+Aleatoire} ()
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}IA choisit d\textquotesingle{}envoyer une bombe à des coordonnées aléatoires sur la grille de l\textquotesingle{}adversaire. \end{DoxyCompactList}\item 
+int $\ast$ \hyperlink{class_joueur_i_a_af67d4959a40d9e99f0f8d99eaaf73c49}{determiner\+Coordonnees\+Bombes\+Scan} ()
+\begin{DoxyCompactList}\small\item\em L\textquotesingle{}IA choisit d\textquotesingle{}envoyer une bombe en partant de la coordonnée \mbox{[}0, 0\mbox{]} puis \mbox{[}1, 0\mbox{]} etc \mbox{[}0, 1\mbox{]} etc \mbox{[}n, n\mbox{]}. Elle balaye donc la grille de haut en bas et de gauche à droite. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Membres hérités additionnels}
 
 
@@ -44,25 +59,204 @@ classe representant le joueur qui est IA. Cette classe hérite de la classe \hyp
 La classe gere les actions du joueur. 
 
 \subsection{Documentation des fonctions membres}
+\index{Joueur\+IA@{Joueur\+IA}!demander\+Type\+Jeu@{demander\+Type\+Jeu}}
+\index{demander\+Type\+Jeu@{demander\+Type\+Jeu}!Joueur\+IA@{Joueur\+IA}}
+\subsubsection[{\texorpdfstring{demander\+Type\+Jeu()}{demanderTypeJeu()}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+I\+A\+::demander\+Type\+Jeu (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_i_a_a3812f9bf6f315236286ea5ebad576a4f}{}\label{class_joueur_i_a_a3812f9bf6f315236286ea5ebad576a4f}
+
+
+L\textquotesingle{}IA donnera toujours un jeu de type 2. 
+
+\begin{DoxyReturn}{Renvoie}
+le type de jeu. Vaudra soit 1 soit 2. Attention il s\textquotesingle{}agit de la valeur 1 ou 2 et non du caractère \textquotesingle{}1\textquotesingle{} ou \textquotesingle{}2\textquotesingle{}. 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \hyperlink{class_joueur_a72fcb63683baba74922df5de246bff6f}{Joueur}.
+
+\index{Joueur\+IA@{Joueur\+IA}!determiner\+Coordonnees\+Bombes\+Aleatoire@{determiner\+Coordonnees\+Bombes\+Aleatoire}}
+\index{determiner\+Coordonnees\+Bombes\+Aleatoire@{determiner\+Coordonnees\+Bombes\+Aleatoire}!Joueur\+IA@{Joueur\+IA}}
+\subsubsection[{\texorpdfstring{determiner\+Coordonnees\+Bombes\+Aleatoire()}{determinerCoordonneesBombesAleatoire()}}]{\setlength{\rightskip}{0pt plus 5cm}private Joueur\+I\+A\+::determiner\+Coordonnees\+Bombes\+Aleatoire (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_joueur_i_a_ad1fa6503f6fce1560129ee8cb94a1475}{}\label{class_joueur_i_a_ad1fa6503f6fce1560129ee8cb94a1475}
+
+
+L\textquotesingle{}IA choisit d\textquotesingle{}envoyer une bombe à des coordonnées aléatoires sur la grille de l\textquotesingle{}adversaire. 
+
+\begin{DoxyReturn}{Renvoie}
+Les coordonnées de la bombe sous la forme d\textquotesingle{}un tableau \mbox{[}x, y\mbox{]}. 
+\end{DoxyReturn}
+\index{Joueur\+IA@{Joueur\+IA}!determiner\+Coordonnees\+Bombes\+Scan@{determiner\+Coordonnees\+Bombes\+Scan}}
+\index{determiner\+Coordonnees\+Bombes\+Scan@{determiner\+Coordonnees\+Bombes\+Scan}!Joueur\+IA@{Joueur\+IA}}
+\subsubsection[{\texorpdfstring{determiner\+Coordonnees\+Bombes\+Scan()}{determinerCoordonneesBombesScan()}}]{\setlength{\rightskip}{0pt plus 5cm}private Joueur\+I\+A\+::determiner\+Coordonnees\+Bombes\+Scan (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_joueur_i_a_af67d4959a40d9e99f0f8d99eaaf73c49}{}\label{class_joueur_i_a_af67d4959a40d9e99f0f8d99eaaf73c49}
+
+
+L\textquotesingle{}IA choisit d\textquotesingle{}envoyer une bombe en partant de la coordonnée \mbox{[}0, 0\mbox{]} puis \mbox{[}1, 0\mbox{]} etc \mbox{[}0, 1\mbox{]} etc \mbox{[}n, n\mbox{]}. Elle balaye donc la grille de haut en bas et de gauche à droite. 
+
+\begin{DoxyReturn}{Renvoie}
+Les coordonnées de la bombe sous la forme d\textquotesingle{}un tableau \mbox{[}x, y\mbox{]}. 
+\end{DoxyReturn}
+\index{Joueur\+IA@{Joueur\+IA}!est\+Une\+IA@{est\+Une\+IA}}
+\index{est\+Une\+IA@{est\+Une\+IA}!Joueur\+IA@{Joueur\+IA}}
+\subsubsection[{\texorpdfstring{est\+Une\+I\+A()}{estUneIA()}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+I\+A\+::est\+Une\+IA (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_i_a_a549e94b2b4673dcf97041add34bc49a0}{}\label{class_joueur_i_a_a549e94b2b4673dcf97041add34bc49a0}
+
+
+Permet de savoir si ce joueur est une IA. Est utile lorsque l\textquotesingle{}on manipule un \hyperlink{class_joueur}{Joueur} et que l\textquotesingle{}on ne sait pas s\textquotesingle{}il est IA ou Humain. 
+
+\begin{DoxyReturn}{Renvoie}
+true si c\textquotesingle{}est une IA, false sinon. 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \hyperlink{class_joueur_aee337662730df358b20474cac70d83e6}{Joueur}.
+
 \index{Joueur\+IA@{Joueur\+IA}!placement\+Des\+Bateaux@{placement\+Des\+Bateaux}}
 \index{placement\+Des\+Bateaux@{placement\+Des\+Bateaux}!Joueur\+IA@{Joueur\+IA}}
-\subsubsection[{\texorpdfstring{placement\+Des\+Bateaux(char type\+Jeu)}{placementDesBateaux(char typeJeu)}}]{\setlength{\rightskip}{0pt plus 5cm}void Joueur\+I\+A\+::placement\+Des\+Bateaux (
+\subsubsection[{\texorpdfstring{placement\+Des\+Bateaux(char type\+Jeu)}{placementDesBateaux(char typeJeu)}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+I\+A\+::placement\+Des\+Bateaux (
 \begin{DoxyParamCaption}
 \item[{char}]{type\+Jeu}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_i_a_a62bb7d4785bcb817102e41c3e9c9b84a}{}\label{class_joueur_i_a_a62bb7d4785bcb817102e41c3e9c9b84a}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_i_a_a6d7592fa8c653cb5420270d61467419b}{}\label{class_joueur_i_a_a6d7592fa8c653cb5420270d61467419b}
 
 
-demande au joueur de placer ses différents bateaux. Utilise ajout\+Bateau pour chaqun des bateaux du joueur. 
+Permet à l\textquotesingle{}IA de placer tous ses bateaux sur la grille. L\textquotesingle{}IA choisit d\textquotesingle{}abord de façon aléatoire quels bateaux elle va placer. Puis fais appel à la fonction \hyperlink{class_joueur_i_a_a70a56322ca6eeeb52612510d7e22d388}{placer\+Bateau(\+Bateau $\ast$b)}. 
 
 
 \begin{DoxyParams}{Paramètres}
-{\em type\+Jeu} & le type de jeu choisis \\
+{\em type\+Jeu} & Le type de jeu auquel l\textquotesingle{}IA joue. Cela influence le nombre de bateaux et leur taille. \\
 \hline
 \end{DoxyParams}
 
 
 Réimplémentée à partir de \hyperlink{class_joueur_aa97f71a90328693e0047ba2f48d61b4b}{Joueur}.
+
+\index{Joueur\+IA@{Joueur\+IA}!placer\+Bateau@{placer\+Bateau}}
+\index{placer\+Bateau@{placer\+Bateau}!Joueur\+IA@{Joueur\+IA}}
+\subsubsection[{\texorpdfstring{placer\+Bateau(\+Bateau $\ast$bateau)}{placerBateau(Bateau *bateau)}}]{\setlength{\rightskip}{0pt plus 5cm}private Joueur\+I\+A\+::placer\+Bateau (
+\begin{DoxyParamCaption}
+\item[{{\bf Bateau} $\ast$}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}\hypertarget{class_joueur_i_a_a70a56322ca6eeeb52612510d7e22d388}{}\label{class_joueur_i_a_a70a56322ca6eeeb52612510d7e22d388}
+
+
+Permet au joueur de positionner le bateau {\ttfamily $\ast$b} sur la grille. Cette fonction lui génère les coordonnées en x, y du bateau et son orientation. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$b} & Un pointeur sur le bateau que l\textquotesingle{}IA va placer sur la grille. \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée à partir de \hyperlink{class_joueur_a817129cc5062c058a153a241c74eee79}{Joueur}.
+
+\index{Joueur\+IA@{Joueur\+IA}!resultat\+Bombe@{resultat\+Bombe}}
+\index{resultat\+Bombe@{resultat\+Bombe}!Joueur\+IA@{Joueur\+IA}}
+\subsubsection[{\texorpdfstring{resultat\+Bombe(bool touche, int x, int y)}{resultatBombe(bool touche, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+I\+A\+::resultat\+Bombe (
+\begin{DoxyParamCaption}
+\item[{bool}]{touche, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_i_a_a5e7ed6369200fe44382a54cf739ad8b3}{}\label{class_joueur_i_a_a5e7ed6369200fe44382a54cf739ad8b3}
+
+
+Notifie l\textquotesingle{}IA si sa bombe a touché l\textquotesingle{}adversaire. On modifie alors sa grille en conséquence. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em touche} & true si la bombe a touché un navire adverse, false sinon. \\
+\hline
+{\em x} & La coordonnée en x de la bombe que le joueur avait choisie. \\
+\hline
+{\em y} & La coordonnée en y de la bombe que le joueur avait choisie. \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée à partir de \hyperlink{class_joueur_a661426005c03ad2ee421249758f5c2a7}{Joueur}.
+
+\index{Joueur\+IA@{Joueur\+IA}!resultat\+Bombe\+Adverse@{resultat\+Bombe\+Adverse}}
+\index{resultat\+Bombe\+Adverse@{resultat\+Bombe\+Adverse}!Joueur\+IA@{Joueur\+IA}}
+\subsubsection[{\texorpdfstring{resultat\+Bombe\+Adverse(bool touche, int x, int y)}{resultatBombeAdverse(bool touche, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+I\+A\+::resultat\+Bombe\+Adverse (
+\begin{DoxyParamCaption}
+\item[{bool}]{touche, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_i_a_a35dfe27baa0fb62a927cc13186b09920}{}\label{class_joueur_i_a_a35dfe27baa0fb62a927cc13186b09920}
+
+
+Notifie l\textquotesingle{}IA si la bombe de l\textquotesingle{}adversaire l\textquotesingle{}a touché. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em touche} & true si la bombe a touché un navire, false sinon. \\
+\hline
+{\em x} & La coordonnée en x de la bombe que le joueur adverse avait choisie. \\
+\hline
+{\em y} & La coordonnée en y de la bombe que le joueur adverse avait choisie. \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée à partir de \hyperlink{class_joueur_aeb9de0a7501a5370d45e670e122b3676}{Joueur}.
+
+\index{Joueur\+IA@{Joueur\+IA}!retirer\+De\+La\+Liste@{retirer\+De\+La\+Liste}}
+\index{retirer\+De\+La\+Liste@{retirer\+De\+La\+Liste}!Joueur\+IA@{Joueur\+IA}}
+\subsubsection[{\texorpdfstring{retirer\+De\+La\+Liste(int $\ast$liste, int taille, int ind)}{retirerDeLaListe(int *liste, int taille, int ind)}}]{\setlength{\rightskip}{0pt plus 5cm}private Joueur\+I\+A\+::retirer\+De\+La\+Liste (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{liste, }
+\item[{int}]{taille, }
+\item[{int}]{ind}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_joueur_i_a_a83b8a54bbc3d6fad8fbdaee79a5a8246}{}\label{class_joueur_i_a_a83b8a54bbc3d6fad8fbdaee79a5a8246}
+
+
+Retire la valeur présente à l\textquotesingle{}indice {\ttfamily ind} de la liste {\ttfamily liste}. Il s\textquotesingle{}agit d\textquotesingle{}une liste d\textquotesingle{}indices correspondant aux bateaux que l\textquotesingle{}IA peut choisir. Cette liste est utilisée dans \hyperlink{class_joueur_i_a_a6d7592fa8c653cb5420270d61467419b}{placement\+Des\+Bateaux(char type\+Jeu)} 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$liste} & La liste que l\textquotesingle{}on va recopier en retirant un élément puis en renvoyer cet copie. \\
+\hline
+{\em taille} & La taille de la {\ttfamily liste}. \\
+\hline
+{\em ind} & L\textquotesingle{}indice de l\textquotesingle{}élément de la {\ttfamily liste} que l\textquotesingle{}on souhaite supprimer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Une liste identique à {\ttfamily liste} mais avec l\textquotesingle{}élément à l\textquotesingle{}indice {\ttfamily ind} supprimé. 
+\end{DoxyReturn}
+\index{Joueur\+IA@{Joueur\+IA}!tour@{tour}}
+\index{tour@{tour}!Joueur\+IA@{Joueur\+IA}}
+\subsubsection[{\texorpdfstring{tour()}{tour()}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+I\+A\+::tour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_joueur_i_a_a76b3e9af59c86acb34d7e1cb70802436}{}\label{class_joueur_i_a_a76b3e9af59c86acb34d7e1cb70802436}
+
+
+Permet à l\textquotesingle{}IA de placer une bombe. Lui affiche aussi sa grille et sa grille de tentatives. Les coordonnées de la bombe sont déterminées à l\textquotesingle{}aide d\textquotesingle{}une fonction comme \hyperlink{class_joueur_i_a_af67d4959a40d9e99f0f8d99eaaf73c49}{determiner\+Coordonnees\+Bombes\+Scan()} ou \hyperlink{class_joueur_i_a_ad1fa6503f6fce1560129ee8cb94a1475}{determiner\+Coordonnees\+Bombes\+Aleatoire()}. 
+
+\begin{DoxyReturn}{Renvoie}
+Les coordonnées de la bombe que l\textquotesingle{}IA souhaite placer. Sous la forme d\textquotesingle{}un tableau \mbox{[}x, y\mbox{]}. 
+\end{DoxyReturn}
+
+
+Réimplémentée à partir de \hyperlink{class_joueur_a46bdd92b73a1f0d04aeb5f19f33720b0}{Joueur}.
 
 
 

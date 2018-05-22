@@ -93,6 +93,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 <div class="title">Référence de la classe Joueur</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>classe <a class="el" href="class_joueur.html" title="classe Joueur regroupant les fonctionnalités générales sur le joueur ">Joueur</a> regroupant les fonctionnalités générales sur le joueur  
+ <a href="class_joueur.html#details">Plus de détails...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_joueur_8hpp_source.html">Joueur.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Graphe d'héritage de Joueur:</div>
 <div class="dyncontent">
@@ -106,52 +111,84 @@ Graphe d'héritage de Joueur:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Fonctions membres publiques</h2></td></tr>
-<tr class="memitem:a2f7fe616414bfb0ab31631ea10b38ae6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2f7fe616414bfb0ab31631ea10b38ae6"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>resetGrilles</b> ()</td></tr>
-<tr class="separator:a2f7fe616414bfb0ab31631ea10b38ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951f6cb508b2d681eac4be586b8aac5f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a951f6cb508b2d681eac4be586b8aac5f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a951f6cb508b2d681eac4be586b8aac5f">Joueur</a> ()</td></tr>
+<tr class="memdesc:a951f6cb508b2d681eac4be586b8aac5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de la classe <a class="el" href="class_joueur.html" title="classe Joueur regroupant les fonctionnalités générales sur le joueur ">Joueur</a> qui met ses caractéristiques en ses valeurs par défaut. <br /></td></tr>
+<tr class="separator:a951f6cb508b2d681eac4be586b8aac5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee337662730df358b20474cac70d83e6"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#aee337662730df358b20474cac70d83e6">estUneIA</a> ()</td></tr>
+<tr class="memdesc:aee337662730df358b20474cac70d83e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de savoir si ce joueur est une IA. Est utile lorsque l'on manipule un <a class="el" href="class_joueur.html" title="classe Joueur regroupant les fonctionnalités générales sur le joueur ">Joueur</a> et que l'on ne sait pas s'il est IA ou Humain.  <a href="#aee337662730df358b20474cac70d83e6">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aee337662730df358b20474cac70d83e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07c1eba4f8531d594380fbcaaab240f6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07c1eba4f8531d594380fbcaaab240f6"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a07c1eba4f8531d594380fbcaaab240f6">resetGrilles</a> ()</td></tr>
+<tr class="memdesc:a07c1eba4f8531d594380fbcaaab240f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui alloue la mémoire pour la grille et la grille des tentatives et les remplie de 0, donc d'eau <br /></td></tr>
+<tr class="separator:a07c1eba4f8531d594380fbcaaab240f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f4357df61efbc2ead45d24a190ebb83"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a1f4357df61efbc2ead45d24a190ebb83">definirBateauxType2</a> (int nbMaxDeBateaux, int tailleGrille)</td></tr>
+<tr class="memdesc:a1f4357df61efbc2ead45d24a190ebb83"><td class="mdescLeft">&#160;</td><td class="mdescRight">function permettant de définir un tableau de bateaux de tailles aléatoires  <a href="#a1f4357df61efbc2ead45d24a190ebb83">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1f4357df61efbc2ead45d24a190ebb83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f016748c27a4ddad2d363f4b5121ab1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a7f016748c27a4ddad2d363f4b5121ab1">setNom</a> (std::string nouveauNom)</td></tr>
+<tr class="memdesc:a7f016748c27a4ddad2d363f4b5121ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui modifie l'attribut nom  <a href="#a7f016748c27a4ddad2d363f4b5121ab1">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a7f016748c27a4ddad2d363f4b5121ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a424aec3294ea6019f372fd2d67ae5001"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a424aec3294ea6019f372fd2d67ae5001">setGrille</a> (char **<a class="el" href="class_joueur.html#a97a052f0b9966c94c49862df3144a62f">grille</a>, int h, int l)</td></tr>
+<tr class="memdesc:a424aec3294ea6019f372fd2d67ae5001"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui modifie les caractéristiques de la grille  <a href="#a424aec3294ea6019f372fd2d67ae5001">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a424aec3294ea6019f372fd2d67ae5001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11942778d97fd6f5823d8ef1ab964047"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a11942778d97fd6f5823d8ef1ab964047">setGrilleTentatives</a> (char **<a class="el" href="class_joueur.html#abbef5ee9c9c05a24ffa2c462e14cdfd7">grilleTentatives</a>)</td></tr>
+<tr class="memdesc:a11942778d97fd6f5823d8ef1ab964047"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui modifie l'attribut grilleTentatives  <a href="#a11942778d97fd6f5823d8ef1ab964047">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a11942778d97fd6f5823d8ef1ab964047"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9027bfc622d9a175340b5fffe915c7b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9027bfc622d9a175340b5fffe915c7b2"></a>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a9027bfc622d9a175340b5fffe915c7b2">demanderNom</a> ()</td></tr>
 <tr class="memdesc:a9027bfc622d9a175340b5fffe915c7b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialise le nom du joueur en demandant le nom au joueur <br /></td></tr>
 <tr class="separator:a9027bfc622d9a175340b5fffe915c7b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a492734cdd1d8363c1617d598df9817"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6a492734cdd1d8363c1617d598df9817"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>demanderTailleGrille</b> ()</td></tr>
-<tr class="separator:a6a492734cdd1d8363c1617d598df9817"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84baf36faf6b22fc23e4e793d4988793"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a84baf36faf6b22fc23e4e793d4988793"></a>
-virtual char&#160;</td><td class="memItemRight" valign="bottom"><b>demanderTypeJeu</b> ()</td></tr>
-<tr class="separator:a84baf36faf6b22fc23e4e793d4988793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58fe79e4845404f361d5bc0fe9474135"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a58fe79e4845404f361d5bc0fe9474135"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a58fe79e4845404f361d5bc0fe9474135">demanderTailleGrille</a> ()</td></tr>
+<tr class="memdesc:a58fe79e4845404f361d5bc0fe9474135"><td class="mdescLeft">&#160;</td><td class="mdescRight">initialise la taille de la grille en la demandant au joueur <br /></td></tr>
+<tr class="separator:a58fe79e4845404f361d5bc0fe9474135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72fcb63683baba74922df5de246bff6f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a72fcb63683baba74922df5de246bff6f"></a>
+virtual char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a72fcb63683baba74922df5de246bff6f">demanderTypeJeu</a> ()</td></tr>
+<tr class="memdesc:a72fcb63683baba74922df5de246bff6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">fonction qui permet au joueur de choisir son type de jeu : bataille classique ou bataille améliorée <br /></td></tr>
+<tr class="separator:a72fcb63683baba74922df5de246bff6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa97f71a90328693e0047ba2f48d61b4b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#aa97f71a90328693e0047ba2f48d61b4b">placementDesBateaux</a> (char typeJeu)</td></tr>
 <tr class="memdesc:aa97f71a90328693e0047ba2f48d61b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">demande au joueur de placer ses différents bateaux. Utilise ajoutBateau pour chaqun des bateaux du joueur.  <a href="#aa97f71a90328693e0047ba2f48d61b4b">Plus de détails...</a><br /></td></tr>
 <tr class="separator:aa97f71a90328693e0047ba2f48d61b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46bdd92b73a1f0d04aeb5f19f33720b0"><td class="memItemLeft" align="right" valign="top">virtual int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a46bdd92b73a1f0d04aeb5f19f33720b0">tour</a> ()</td></tr>
+<tr class="memdesc:a46bdd92b73a1f0d04aeb5f19f33720b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de placer une bombe, affiche aussi la grille et la grille de tentatives.  <a href="#a46bdd92b73a1f0d04aeb5f19f33720b0">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a46bdd92b73a1f0d04aeb5f19f33720b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a661426005c03ad2ee421249758f5c2a7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a661426005c03ad2ee421249758f5c2a7">resultatBombe</a> (bool touche, int x, int y)</td></tr>
+<tr class="memdesc:a661426005c03ad2ee421249758f5c2a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifie le joueur si sa bombe a touché l'adversaire.  <a href="#a661426005c03ad2ee421249758f5c2a7">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a661426005c03ad2ee421249758f5c2a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb9de0a7501a5370d45e670e122b3676"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#aeb9de0a7501a5370d45e670e122b3676">resultatBombeAdverse</a> (bool touche, int x, int y)</td></tr>
+<tr class="memdesc:aeb9de0a7501a5370d45e670e122b3676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notifie le joueur si la bombe de l'adversaire l'a touché.  <a href="#aeb9de0a7501a5370d45e670e122b3676">Plus de détails...</a><br /></td></tr>
+<tr class="separator:aeb9de0a7501a5370d45e670e122b3676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Fonctions membres protégées</h2></td></tr>
-<tr class="memitem:a82aa78e161543bbbc01f759d71e0bbc7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a82aa78e161543bbbc01f759d71e0bbc7"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>placerBateau</b> (Bateau *b)</td></tr>
-<tr class="separator:a82aa78e161543bbbc01f759d71e0bbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a817129cc5062c058a153a241c74eee79"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a817129cc5062c058a153a241c74eee79">placerBateau</a> (<a class="el" href="class_bateau.html">Bateau</a> *b)</td></tr>
+<tr class="memdesc:a817129cc5062c058a153a241c74eee79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet au joueur de positionner le bateau <code>*b</code> sur la grille. Cette fonction lui demande les coordonnées en x, y du bateau (en utilisant la fonction demanderCoordonneesBateau) mais aussi son orientation.  <a href="#a817129cc5062c058a153a241c74eee79">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a817129cc5062c058a153a241c74eee79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab42cd00f0ff47934eecde3fbaf06f2a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#ab42cd00f0ff47934eecde3fbaf06f2a5">marquerResultatBombeSurGrilleTentative</a> (bool touche, int x, int y)</td></tr>
+<tr class="memdesc:ab42cd00f0ff47934eecde3fbaf06f2a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">function permettant de modifier une case de la grille des tentatives sachant les conséquences de la bombe  <a href="#ab42cd00f0ff47934eecde3fbaf06f2a5">Plus de détails...</a><br /></td></tr>
+<tr class="separator:ab42cd00f0ff47934eecde3fbaf06f2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b77de3d2a5d2845bfefddb051460e80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a3b77de3d2a5d2845bfefddb051460e80">marquerResultatBombeSurGrille</a> (bool touche, int x, int y)</td></tr>
+<tr class="memdesc:a3b77de3d2a5d2845bfefddb051460e80"><td class="mdescLeft">&#160;</td><td class="mdescRight">function permettant de modifier une case de la grille sachant les conséquences de la bombe  <a href="#a3b77de3d2a5d2845bfefddb051460e80">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3b77de3d2a5d2845bfefddb051460e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Attributs protégés</h2></td></tr>
-<tr class="memitem:abaee0b4f259181bf66dbab54bef971bb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abaee0b4f259181bf66dbab54bef971bb"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>nom</b></td></tr>
+<tr class="memitem:abaee0b4f259181bf66dbab54bef971bb"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#abaee0b4f259181bf66dbab54bef971bb">nom</a></td></tr>
 <tr class="separator:abaee0b4f259181bf66dbab54bef971bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97a052f0b9966c94c49862df3144a62f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a97a052f0b9966c94c49862df3144a62f"></a>
-<a class="el" href="class_grille.html">Grille</a>&#160;</td><td class="memItemRight" valign="bottom"><b>grille</b></td></tr>
+<tr class="memitem:a97a052f0b9966c94c49862df3144a62f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_grille.html">Grille</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a97a052f0b9966c94c49862df3144a62f">grille</a></td></tr>
 <tr class="separator:a97a052f0b9966c94c49862df3144a62f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abbef5ee9c9c05a24ffa2c462e14cdfd7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abbef5ee9c9c05a24ffa2c462e14cdfd7"></a>
-<a class="el" href="class_grille.html">Grille</a>&#160;</td><td class="memItemRight" valign="bottom"><b>grilleTentatives</b></td></tr>
+<tr class="memitem:abbef5ee9c9c05a24ffa2c462e14cdfd7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_grille.html">Grille</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#abbef5ee9c9c05a24ffa2c462e14cdfd7">grilleTentatives</a></td></tr>
 <tr class="separator:abbef5ee9c9c05a24ffa2c462e14cdfd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a41069191547937ddd3acd15eecd4ee"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a41069191547937ddd3acd15eecd4ee"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>nbCasesBateauxTouches</b></td></tr>
+<tr class="memitem:a3a41069191547937ddd3acd15eecd4ee"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a3a41069191547937ddd3acd15eecd4ee">nbCasesBateauxTouches</a></td></tr>
 <tr class="separator:a3a41069191547937ddd3acd15eecd4ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29e4485fe7b0a3f2c962757b7c7bf2a5"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29e4485fe7b0a3f2c962757b7c7bf2a5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>nbCasesBateaux</b></td></tr>
+<tr class="memitem:a29e4485fe7b0a3f2c962757b7c7bf2a5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a29e4485fe7b0a3f2c962757b7c7bf2a5">nbCasesBateaux</a></td></tr>
 <tr class="separator:a29e4485fe7b0a3f2c962757b7c7bf2a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56752b0a96da94b17b07fd0312035a13"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a56752b0a96da94b17b07fd0312035a13"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>nbBateaux</b></td></tr>
+<tr class="memitem:a56752b0a96da94b17b07fd0312035a13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a56752b0a96da94b17b07fd0312035a13">nbBateaux</a></td></tr>
 <tr class="separator:a56752b0a96da94b17b07fd0312035a13"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf537ce482b493555318da7da14d8ac9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acf537ce482b493555318da7da14d8ac9"></a>
-Bateau *&#160;</td><td class="memItemRight" valign="bottom"><b>bateaux</b></td></tr>
+<tr class="memitem:acf537ce482b493555318da7da14d8ac9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_bateau.html">Bateau</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#acf537ce482b493555318da7da14d8ac9">bateaux</a></td></tr>
 <tr class="separator:acf537ce482b493555318da7da14d8ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a388634e5c242146dad447bc04756bab5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_affichage.html">Affichage</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_joueur.html#a388634e5c242146dad447bc04756bab5">affichage</a></td></tr>
+<tr class="separator:a388634e5c242146dad447bc04756bab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Amis</h2></td></tr>
@@ -159,7 +196,167 @@ Amis</h2></td></tr>
 class&#160;</td><td class="memItemRight" valign="bottom"><b>JeuBatailleNavale</b></td></tr>
 <tr class="separator:a5e820295bb9a9381c14f9067e97ca6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Documentation des fonctions membres</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>classe <a class="el" href="class_joueur.html" title="classe Joueur regroupant les fonctionnalités générales sur le joueur ">Joueur</a> regroupant les fonctionnalités générales sur le joueur </p>
+</div><h2 class="groupheader">Documentation des fonctions membres</h2>
+<a class="anchor" id="a1f4357df61efbc2ead45d24a190ebb83"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Joueur::definirBateauxType2 </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nbMaxDeBateaux</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>tailleGrille</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>function permettant de définir un tableau de bateaux de tailles aléatoires </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nbMaxDeBateaux,tailleGrille</td><td>le nombre de bateaux du tableau et la taille de la grille </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="aee337662730df358b20474cac70d83e6"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Joueur::estUneIA </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Permet de savoir si ce joueur est une IA. Est utile lorsque l'on manipule un <a class="el" href="class_joueur.html" title="classe Joueur regroupant les fonctionnalités générales sur le joueur ">Joueur</a> et que l'on ne sait pas s'il est IA ou Humain. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>true si c'est une IA, false sinon. </dd></dl>
+
+<p>Réimplémentée dans <a class="el" href="class_joueur_i_a.html#a549e94b2b4673dcf97041add34bc49a0">JoueurIA</a>, et <a class="el" href="class_joueur_humain.html#a4d531faca2e5f81966ff11309bd1fd9e">JoueurHumain</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3b77de3d2a5d2845bfefddb051460e80"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">protected Joueur::marquerResultatBombeSurGrille </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>touche</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>function permettant de modifier une case de la grille sachant les conséquences de la bombe </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">touche,x,y</td><td>les coordonnées de la position à modifier, et touche: l'indication si la bombe a atteint sa cible </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="ab42cd00f0ff47934eecde3fbaf06f2a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">protected Joueur::marquerResultatBombeSurGrilleTentative </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>touche</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>function permettant de modifier une case de la grille des tentatives sachant les conséquences de la bombe </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">touche,x,y</td><td>les coordonnées de la position à modifier, et touche: l'indication si la bombe a atteint sa cible </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="aa97f71a90328693e0047ba2f48d61b4b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -190,7 +387,430 @@ class&#160;</td><td class="memItemRight" valign="bottom"><b>JeuBatailleNavale</b
   </dd>
 </dl>
 
-<p>Réimplémentée dans <a class="el" href="class_joueur_humain.html#a31e23d1e076b0e6110e0a9d354d80674">JoueurHumain</a>, et <a class="el" href="class_joueur_i_a.html#a62bb7d4785bcb817102e41c3e9c9b84a">JoueurIA</a>.</p>
+<p>Réimplémentée dans <a class="el" href="class_joueur_i_a.html#a6d7592fa8c653cb5420270d61467419b">JoueurIA</a>, et <a class="el" href="class_joueur_humain.html#ae27bf69ba0db87cd8268ba1cd1e4f817">JoueurHumain</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a817129cc5062c058a153a241c74eee79"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">protected Joueur::placerBateau </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_bateau.html">Bateau</a> *&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Permet au joueur de positionner le bateau <code>*b</code> sur la grille. Cette fonction lui demande les coordonnées en x, y du bateau (en utilisant la fonction demanderCoordonneesBateau) mais aussi son orientation. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*b</td><td>Un pointeur sur le bateau que le joueur va placer sur la grille. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Réimplémentée dans <a class="el" href="class_joueur_humain.html#af9e3ccafc7cde958dda81551d0ef6abd">JoueurHumain</a>, et <a class="el" href="class_joueur_i_a.html#a70a56322ca6eeeb52612510d7e22d388">JoueurIA</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a661426005c03ad2ee421249758f5c2a7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Joueur::resultatBombe </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>touche</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifie le joueur si sa bombe a touché l'adversaire. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">touche</td><td>true si la bombe a touché un navire adverse, false sinon. </td></tr>
+    <tr><td class="paramname">x</td><td>La coordonnée en x de la bombe que le joueur avait choisie. </td></tr>
+    <tr><td class="paramname">y</td><td>La coordonnée en y de la bombe que le joueur avait choisie. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Réimplémentée dans <a class="el" href="class_joueur_i_a.html#a5e7ed6369200fe44382a54cf739ad8b3">JoueurIA</a>, et <a class="el" href="class_joueur_humain.html#a9eeae3b54b174e477a94c75d57a0d403">JoueurHumain</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aeb9de0a7501a5370d45e670e122b3676"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Joueur::resultatBombeAdverse </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>touche</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notifie le joueur si la bombe de l'adversaire l'a touché. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">touche</td><td>true si la bombe a touché un navire, false sinon. </td></tr>
+    <tr><td class="paramname">x</td><td>La coordonnée en x de la bombe que le joueur adverse avait choisie. </td></tr>
+    <tr><td class="paramname">y</td><td>La coordonnée en y de la bombe que le joueur adverse avait choisie. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Réimplémentée dans <a class="el" href="class_joueur_i_a.html#a35dfe27baa0fb62a927cc13186b09920">JoueurIA</a>, et <a class="el" href="class_joueur_humain.html#acdd6b332153e1543d083d272fbdf8289">JoueurHumain</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a424aec3294ea6019f372fd2d67ae5001"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Joueur::setGrille </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>grille</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>l</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui modifie les caractéristiques de la grille </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">grille,h,l</td><td>grille: object modifié, hauteur, largueur </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a11942778d97fd6f5823d8ef1ab964047"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Joueur::setGrilleTentatives </td>
+          <td>(</td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>grilleTentatives</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui modifie l'attribut grilleTentatives </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">**grilleTentatives</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7f016748c27a4ddad2d363f4b5121ab1"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Joueur::setNom </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>nouveauNom</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>fonction qui modifie l'attribut nom </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nouveauNom</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a46bdd92b73a1f0d04aeb5f19f33720b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">public Joueur::tour </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Permet de placer une bombe, affiche aussi la grille et la grille de tentatives. </p>
+<dl class="section return"><dt>Renvoie</dt><dd>Les coordonnées de la bombe cible. Sous la forme d'un tableau [x, y]. </dd></dl>
+
+<p>Réimplémentée dans <a class="el" href="class_joueur_i_a.html#a76b3e9af59c86acb34d7e1cb70802436">JoueurIA</a>, et <a class="el" href="class_joueur_humain.html#a92f4cb99ff2957813da34fb60e211870">JoueurHumain</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des données membres</h2>
+<a class="anchor" id="a388634e5c242146dad447bc04756bab5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_affichage.html">Affichage</a>* Joueur::affichage</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Un affichage pour afficher des informations générales sur le jeux. </p>
+
+</div>
+</div>
+<a class="anchor" id="acf537ce482b493555318da7da14d8ac9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_bateau.html">Bateau</a>* Joueur::bateaux</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Un tableau contenant les bateaux possédés par le joueur et qu'il a placé sur la grille. </p>
+
+</div>
+</div>
+<a class="anchor" id="a97a052f0b9966c94c49862df3144a62f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_grille.html">Grille</a> Joueur::grille</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>La grille sur laquelle le joueur place ses bateaux </p>
+
+</div>
+</div>
+<a class="anchor" id="abbef5ee9c9c05a24ffa2c462e14cdfd7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_grille.html">Grille</a> Joueur::grilleTentatives</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>La grille permettant de garder en mémoire les tentatives de bombes effectuées par le joueur </p>
+
+</div>
+</div>
+<a class="anchor" id="a56752b0a96da94b17b07fd0312035a13"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Joueur::nbBateaux</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>/ Le nombre de bateau initial du joueur. Permet de simplifier l'écriture de certaines boucles. ( i &lt; nbBateaux etc) </p>
+
+</div>
+</div>
+<a class="anchor" id="a29e4485fe7b0a3f2c962757b7c7bf2a5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Joueur::nbCasesBateaux</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Le nombre de cases occupées par des bateaux sur la grille </p>
+
+</div>
+</div>
+<a class="anchor" id="a3a41069191547937ddd3acd15eecd4ee"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Joueur::nbCasesBateauxTouches</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Correspond au nombre de fois que l'adversaire a touché un bateau.Va être incrementé quand un des bateaux est touché pour faciliter la vérification de la fin de partie. </p>
+
+</div>
+</div>
+<a class="anchor" id="abaee0b4f259181bf66dbab54bef971bb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Joueur::nom</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Le nom du joueur </p>
 
 </div>
 </div>

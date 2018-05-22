@@ -1,53 +1,231 @@
 \hypertarget{class_grille}{}\section{Référence de la classe Grille}
 \label{class_grille}\index{Grille@{Grille}}
+
+
+classe qui gère les fonctionnalités de la grille des joueurs de la Bataille Navale.  
+
+
+
+
+{\ttfamily \#include $<$Grille.\+hpp$>$}
+
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries set\+Taille} (int largeur, int hauteur)\hypertarget{class_grille_a31a4d8228d67077f23bce0a5af8dfbdc}{}\label{class_grille_a31a4d8228d67077f23bce0a5af8dfbdc}
+\hyperlink{class_grille_a8a15d40f4706c34fb2f75d9289f9f615}{Grille} ()\hypertarget{class_grille_a8a15d40f4706c34fb2f75d9289f9f615}{}\label{class_grille_a8a15d40f4706c34fb2f75d9289f9f615}
 
-\item 
-void {\bfseries afficher} ()\hypertarget{class_grille_a7226b2d591556df270e52964a93a450c}{}\label{class_grille_a7226b2d591556df270e52964a93a450c}
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \hyperlink{class_grille}{Grille} qui initialise la grille. \end{DoxyCompactList}\item 
+void \hyperlink{class_grille_a595fb00ac47754dccfa9e1ee4cb8b520}{set\+Taille} (int \hyperlink{class_grille_a12252fd7e371af35a0afa6bb12aa4046}{largeur}, int \hyperlink{class_grille_a150412fc1212ec2624c2a62040d5ff88}{hauteur})
+\begin{DoxyCompactList}\small\item\em fonction qui modifie l\textquotesingle{}attribut taille de la grille \end{DoxyCompactList}\item 
+void \hyperlink{class_grille_ae76eba349ff664fcbfb04107d7a0413d}{set\+Grille} (char $\ast$$\ast$\hyperlink{class_grille_abd4bc59ff38259962e5d8d3c18d1ae6b}{grille})
+\begin{DoxyCompactList}\small\item\em fonction qui modifie l\textquotesingle{}attribut grille \end{DoxyCompactList}\item 
+void \hyperlink{class_grille_a17d8b9233b4d7fe24fe5e0c4809674e7}{reset} ()\hypertarget{class_grille_a17d8b9233b4d7fe24fe5e0c4809674e7}{}\label{class_grille_a17d8b9233b4d7fe24fe5e0c4809674e7}
 
-\item 
-void {\bfseries reset} ()\hypertarget{class_grille_a64a3769c329fede0758e122b3c22205a}{}\label{class_grille_a64a3769c329fede0758e122b3c22205a}
-
-\item 
-bool {\bfseries verifier\+Place} (int $\ast$$\ast$tableau\+De\+Coordonnees, int taille)\hypertarget{class_grille_ace593f30f594c04ec3b46cc25b514b67}{}\label{class_grille_ace593f30f594c04ec3b46cc25b514b67}
-
-\item 
-bool {\bfseries fini} ()\hypertarget{class_grille_ac709fec5615da2df24f1f39bafd07008}{}\label{class_grille_ac709fec5615da2df24f1f39bafd07008}
-
-\item 
-char {\bfseries get} (int x, int y)\hypertarget{class_grille_a835c5667c75f261732d4812b4c85cb43}{}\label{class_grille_a835c5667c75f261732d4812b4c85cb43}
-
-\item 
-int {\bfseries get\+Largeur} ()\hypertarget{class_grille_a3fd72238a85bdef86df421f84e0f3d71}{}\label{class_grille_a3fd72238a85bdef86df421f84e0f3d71}
-
-\item 
-int {\bfseries get\+Hauteur} ()\hypertarget{class_grille_ac95b39a21f7a1f1cfb2bb57b96c1adaf}{}\label{class_grille_ac95b39a21f7a1f1cfb2bb57b96c1adaf}
-
-\item 
-void {\bfseries set} (int x, int y, char valeur)\hypertarget{class_grille_afd11a52c6fd45e1417fd1094df2b0bca}{}\label{class_grille_afd11a52c6fd45e1417fd1094df2b0bca}
-
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em fonction qui alloue la mémoire pour la grille et la remplie de 0, donc d\textquotesingle{}eau \end{DoxyCompactList}\item 
+bool \hyperlink{class_grille_abfcc3b88c30c6c43bfd98b7ba0a1ddaf}{verifier\+Place} (int $\ast$$\ast$tableau\+De\+Coordonnees, int taille)
+\begin{DoxyCompactList}\small\item\em fonction qui verifie les critères à respecter avant de placer le bateau sur la grille \end{DoxyCompactList}\item 
+bool \hyperlink{class_grille_af22b526602ad163f6e6f7f7c8f486aa2}{fini} ()
+\begin{DoxyCompactList}\small\item\em fonction qui scanne la grille jusqu\textquotesingle{}a ce qu\textquotesingle{}on trouve au moins 1 bateau qui n\textquotesingle{}a pas été touché \end{DoxyCompactList}\item 
+char \hyperlink{class_grille_aa75d2fdc376faefb921abd355cb60041}{get} (int x, int y)
+\begin{DoxyCompactList}\small\item\em fonction qui renvoie le contenu de la grille (Eau, \hyperlink{class_bateau}{Bateau}) sachant une certaine position \end{DoxyCompactList}\item 
+int \hyperlink{class_grille_ab28024c7c9d608d86cc8c42b17863439}{get\+Largeur} ()
+\begin{DoxyCompactList}\small\item\em fonction qui renvoie la largeur de la grille \end{DoxyCompactList}\item 
+int \hyperlink{class_grille_a4dcb62fd32a2fe9528290dc92af84373}{get\+Hauteur} ()
+\begin{DoxyCompactList}\small\item\em fonction qui renvoie la hauteur de la grille \end{DoxyCompactList}\item 
+void \hyperlink{class_grille_a7aa99d9ef712057608f3e5792b0f628b}{set} (int x, int y, char valeur)
+\begin{DoxyCompactList}\small\item\em fonction qui permet de modifier le contenu d\textquotesingle{}une case du tableau sachant des coordonnées \end{DoxyCompactList}\item 
+char $\ast$$\ast$ \hyperlink{class_grille_a28baa1d9b7de654cd0f8386945649aba}{get\+Grille} ()
+\begin{DoxyCompactList}\small\item\em fonction qui renvoie la grille \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
-char $\ast$$\ast$ {\bfseries grille}\hypertarget{class_grille_abd4bc59ff38259962e5d8d3c18d1ae6b}{}\label{class_grille_abd4bc59ff38259962e5d8d3c18d1ae6b}
-
+char $\ast$$\ast$ \hyperlink{class_grille_abd4bc59ff38259962e5d8d3c18d1ae6b}{grille}
 \end{DoxyCompactItemize}
 \subsection*{Attributs privés statiques}
 \begin{DoxyCompactItemize}
 \item 
-static int {\bfseries largeur} = 10\hypertarget{class_grille_a12252fd7e371af35a0afa6bb12aa4046}{}\label{class_grille_a12252fd7e371af35a0afa6bb12aa4046}
-
+static int \hyperlink{class_grille_a12252fd7e371af35a0afa6bb12aa4046}{largeur} = 10
 \item 
-static int {\bfseries hauteur} = 10\hypertarget{class_grille_a150412fc1212ec2624c2a62040d5ff88}{}\label{class_grille_a150412fc1212ec2624c2a62040d5ff88}
+static int \hyperlink{class_grille_a150412fc1212ec2624c2a62040d5ff88}{hauteur} = 10
+\end{DoxyCompactItemize}
+\subsection*{Amis}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Affichage}\hypertarget{class_grille_a9a74f34e7915d513f565105d779fb4fd}{}\label{class_grille_a9a74f34e7915d513f565105d779fb4fd}
 
 \end{DoxyCompactItemize}
 
 
+\subsection{Description détaillée}
+classe qui gère les fonctionnalités de la grille des joueurs de la Bataille Navale. 
+
+\subsection{Documentation des fonctions membres}
+\index{Grille@{Grille}!fini@{fini}}
+\index{fini@{fini}!Grille@{Grille}}
+\subsubsection[{\texorpdfstring{fini()}{fini()}}]{\setlength{\rightskip}{0pt plus 5cm}public Grille\+::fini (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_grille_af22b526602ad163f6e6f7f7c8f486aa2}{}\label{class_grille_af22b526602ad163f6e6f7f7c8f486aa2}
+
+
+fonction qui scanne la grille jusqu\textquotesingle{}a ce qu\textquotesingle{}on trouve au moins 1 bateau qui n\textquotesingle{}a pas été touché 
+
+\begin{DoxyReturn}{Renvoie}
+true si tous les bateaux ont été touchés 
+\end{DoxyReturn}
+\index{Grille@{Grille}!get@{get}}
+\index{get@{get}!Grille@{Grille}}
+\subsubsection[{\texorpdfstring{get(int x, int y)}{get(int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}public Grille\+::get (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{class_grille_aa75d2fdc376faefb921abd355cb60041}{}\label{class_grille_aa75d2fdc376faefb921abd355cb60041}
+
+
+fonction qui renvoie le contenu de la grille (Eau, \hyperlink{class_bateau}{Bateau}) sachant une certaine position 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x,y} & \+: les coordonnées de la position voulue \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+le contenu de la grille à cette position 
+\end{DoxyReturn}
+\index{Grille@{Grille}!get\+Grille@{get\+Grille}}
+\index{get\+Grille@{get\+Grille}!Grille@{Grille}}
+\subsubsection[{\texorpdfstring{get\+Grille()}{getGrille()}}]{\setlength{\rightskip}{0pt plus 5cm}public Grille\+::get\+Grille (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_grille_a28baa1d9b7de654cd0f8386945649aba}{}\label{class_grille_a28baa1d9b7de654cd0f8386945649aba}
+
+
+fonction qui renvoie la grille 
+
+\begin{DoxyReturn}{Renvoie}
+la grille 
+\end{DoxyReturn}
+\index{Grille@{Grille}!get\+Hauteur@{get\+Hauteur}}
+\index{get\+Hauteur@{get\+Hauteur}!Grille@{Grille}}
+\subsubsection[{\texorpdfstring{get\+Hauteur()}{getHauteur()}}]{\setlength{\rightskip}{0pt plus 5cm}public Grille\+::get\+Hauteur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_grille_a4dcb62fd32a2fe9528290dc92af84373}{}\label{class_grille_a4dcb62fd32a2fe9528290dc92af84373}
+
+
+fonction qui renvoie la hauteur de la grille 
+
+\begin{DoxyReturn}{Renvoie}
+un entier représentant la hauteur de la grille 
+\end{DoxyReturn}
+\index{Grille@{Grille}!get\+Largeur@{get\+Largeur}}
+\index{get\+Largeur@{get\+Largeur}!Grille@{Grille}}
+\subsubsection[{\texorpdfstring{get\+Largeur()}{getLargeur()}}]{\setlength{\rightskip}{0pt plus 5cm}public Grille\+::get\+Largeur (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_grille_ab28024c7c9d608d86cc8c42b17863439}{}\label{class_grille_ab28024c7c9d608d86cc8c42b17863439}
+
+
+fonction qui renvoie la largeur de la grille 
+
+\begin{DoxyReturn}{Renvoie}
+un entier représentant la largeur de la grille 
+\end{DoxyReturn}
+\index{Grille@{Grille}!set@{set}}
+\index{set@{set}!Grille@{Grille}}
+\subsubsection[{\texorpdfstring{set(int x, int y, char valeur)}{set(int x, int y, char valeur)}}]{\setlength{\rightskip}{0pt plus 5cm}public Grille\+::set (
+\begin{DoxyParamCaption}
+\item[{int}]{x, }
+\item[{int}]{y, }
+\item[{char}]{valeur}
+\end{DoxyParamCaption}
+)}\hypertarget{class_grille_a7aa99d9ef712057608f3e5792b0f628b}{}\label{class_grille_a7aa99d9ef712057608f3e5792b0f628b}
+
+
+fonction qui permet de modifier le contenu d\textquotesingle{}une case du tableau sachant des coordonnées 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x,y,valeur} & les coordonnées de la position voulue et la modification à apporter \\
+\hline
+\end{DoxyParams}
+\index{Grille@{Grille}!set\+Grille@{set\+Grille}}
+\index{set\+Grille@{set\+Grille}!Grille@{Grille}}
+\subsubsection[{\texorpdfstring{set\+Grille(char $\ast$$\ast$grille)}{setGrille(char **grille)}}]{\setlength{\rightskip}{0pt plus 5cm}public Grille\+::set\+Grille (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{grille}
+\end{DoxyParamCaption}
+)}\hypertarget{class_grille_ae76eba349ff664fcbfb04107d7a0413d}{}\label{class_grille_ae76eba349ff664fcbfb04107d7a0413d}
+
+
+fonction qui modifie l\textquotesingle{}attribut grille 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$$\ast$grille} & le tableau à enregistrer pour grille \\
+\hline
+\end{DoxyParams}
+\index{Grille@{Grille}!set\+Taille@{set\+Taille}}
+\index{set\+Taille@{set\+Taille}!Grille@{Grille}}
+\subsubsection[{\texorpdfstring{set\+Taille(int largeur, int hauteur)}{setTaille(int largeur, int hauteur)}}]{\setlength{\rightskip}{0pt plus 5cm}public Grille\+::set\+Taille (
+\begin{DoxyParamCaption}
+\item[{int}]{largeur, }
+\item[{int}]{hauteur}
+\end{DoxyParamCaption}
+)}\hypertarget{class_grille_a595fb00ac47754dccfa9e1ee4cb8b520}{}\label{class_grille_a595fb00ac47754dccfa9e1ee4cb8b520}
+
+
+fonction qui modifie l\textquotesingle{}attribut taille de la grille 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em largeur} & \+: largeur voulue pour la grille \\
+\hline
+{\em hauteur} & \+: hauteur voulue pour la grille \\
+\hline
+\end{DoxyParams}
+\index{Grille@{Grille}!verifier\+Place@{verifier\+Place}}
+\index{verifier\+Place@{verifier\+Place}!Grille@{Grille}}
+\subsubsection[{\texorpdfstring{verifier\+Place(int $\ast$$\ast$tableau\+De\+Coordonnees, int taille)}{verifierPlace(int **tableauDeCoordonnees, int taille)}}]{\setlength{\rightskip}{0pt plus 5cm}public Grille\+::verifier\+Place (
+\begin{DoxyParamCaption}
+\item[{int $\ast$$\ast$}]{tableau\+De\+Coordonnees, }
+\item[{int}]{taille}
+\end{DoxyParamCaption}
+)}\hypertarget{class_grille_abfcc3b88c30c6c43bfd98b7ba0a1ddaf}{}\label{class_grille_abfcc3b88c30c6c43bfd98b7ba0a1ddaf}
+
+
+fonction qui verifie les critères à respecter avant de placer le bateau sur la grille 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em tableau\+De\+Coordonnees} & tableau de coordonnées du bateau \\
+\hline
+{\em taille} & la taille du bateau \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+true\+: si les caracteristiques sont respectées 
+\end{DoxyReturn}
+
+
+\subsection{Documentation des données membres}
+\index{Grille@{Grille}!grille@{grille}}
+\index{grille@{grille}!Grille@{Grille}}
+\subsubsection[{\texorpdfstring{grille}{grille}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$$\ast$ Grille\+::grille\hspace{0.3cm}{\ttfamily [private]}}\hypertarget{class_grille_abd4bc59ff38259962e5d8d3c18d1ae6b}{}\label{class_grille_abd4bc59ff38259962e5d8d3c18d1ae6b}
+Le tableau representant le cadrillage. Ici, la valeur d\textquotesingle{}une case est\+: E\+AU, B\+A\+T\+E\+AU, B\+A\+T\+E\+A\+U\+T\+O\+U\+C\+HE, T\+E\+N\+T\+A\+T\+I\+V\+E\+R\+E\+U\+S\+S\+IE ou T\+E\+N\+T\+A\+T\+I\+V\+E\+R\+A\+T\+EE \index{Grille@{Grille}!hauteur@{hauteur}}
+\index{hauteur@{hauteur}!Grille@{Grille}}
+\subsubsection[{\texorpdfstring{hauteur}{hauteur}}]{\setlength{\rightskip}{0pt plus 5cm}int Grille\+::hauteur = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{class_grille_a150412fc1212ec2624c2a62040d5ff88}{}\label{class_grille_a150412fc1212ec2624c2a62040d5ff88}
+La longueur de la grille \index{Grille@{Grille}!largeur@{largeur}}
+\index{largeur@{largeur}!Grille@{Grille}}
+\subsubsection[{\texorpdfstring{largeur}{largeur}}]{\setlength{\rightskip}{0pt plus 5cm}int Grille\+::largeur = 10\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}\hypertarget{class_grille_a12252fd7e371af35a0afa6bb12aa4046}{}\label{class_grille_a12252fd7e371af35a0afa6bb12aa4046}
+La largeur de la grille 
+
 La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
 \item 
-/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/Grille.\+hpp\item 
+/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\hyperlink{_grille_8hpp}{Grille.\+hpp}\item 
 /home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/Grille.\+cpp\end{DoxyCompactItemize}

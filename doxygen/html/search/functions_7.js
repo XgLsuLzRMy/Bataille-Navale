@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nouveaujeu',['nouveauJeu',['../class_jeu_bataille_navale.html#a3f59d8ee46918984df4a13cd261d5491',1,'JeuBatailleNavale']]]
+  ['instanciationdesjoueurs',['instanciationDesJoueurs',['../class_jeu_bataille_navale.html#a96f8b9a6d42db7e505e0046ad78b71cc',1,'JeuBatailleNavale']]]
 ];

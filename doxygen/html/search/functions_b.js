@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['tour',['tour',['../class_joueur.html#a46bdd92b73a1f0d04aeb5f19f33720b0',1,'Joueur']]]
+  ['nouveaujeu',['nouveauJeu',['../class_jeu_bataille_navale.html#a3f59d8ee46918984df4a13cd261d5491',1,'JeuBatailleNavale']]],
+  ['nouvellesauvegarde',['nouvelleSauvegarde',['../class_gestion_sauvegarde.html#a90368ce1ddf00e71d70210255fcb7b9e',1,'GestionSauvegarde']]]
 ];

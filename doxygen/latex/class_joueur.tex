@@ -1,5 +1,14 @@
 \hypertarget{class_joueur}{}\section{Référence de la classe Joueur}
 \label{class_joueur}\index{Joueur@{Joueur}}
+
+
+classe \hyperlink{class_joueur}{Joueur} regroupant les fonctionnalités générales sur le joueur  
+
+
+
+
+{\ttfamily \#include $<$Joueur.\+hpp$>$}
+
 Graphe d\textquotesingle{}héritage de Joueur\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,49 +18,66 @@ Graphe d\textquotesingle{}héritage de Joueur\+:\begin{figure}[H]
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-void {\bfseries reset\+Grilles} ()\hypertarget{class_joueur_a2f7fe616414bfb0ab31631ea10b38ae6}{}\label{class_joueur_a2f7fe616414bfb0ab31631ea10b38ae6}
+\hyperlink{class_joueur_a951f6cb508b2d681eac4be586b8aac5f}{Joueur} ()\hypertarget{class_joueur_a951f6cb508b2d681eac4be586b8aac5f}{}\label{class_joueur_a951f6cb508b2d681eac4be586b8aac5f}
 
-\item 
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe \hyperlink{class_joueur}{Joueur} qui met ses caractéristiques en ses valeurs par défaut. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_joueur_aee337662730df358b20474cac70d83e6}{est\+Une\+IA} ()
+\begin{DoxyCompactList}\small\item\em Permet de savoir si ce joueur est une IA. Est utile lorsque l\textquotesingle{}on manipule un \hyperlink{class_joueur}{Joueur} et que l\textquotesingle{}on ne sait pas s\textquotesingle{}il est IA ou Humain. \end{DoxyCompactList}\item 
+void \hyperlink{class_joueur_a07c1eba4f8531d594380fbcaaab240f6}{reset\+Grilles} ()\hypertarget{class_joueur_a07c1eba4f8531d594380fbcaaab240f6}{}\label{class_joueur_a07c1eba4f8531d594380fbcaaab240f6}
+
+\begin{DoxyCompactList}\small\item\em fonction qui alloue la mémoire pour la grille et la grille des tentatives et les remplie de 0, donc d\textquotesingle{}eau \end{DoxyCompactList}\item 
+void \hyperlink{class_joueur_a1f4357df61efbc2ead45d24a190ebb83}{definir\+Bateaux\+Type2} (int nb\+Max\+De\+Bateaux, int taille\+Grille)
+\begin{DoxyCompactList}\small\item\em function permettant de définir un tableau de bateaux de tailles aléatoires \end{DoxyCompactList}\item 
+void \hyperlink{class_joueur_a7f016748c27a4ddad2d363f4b5121ab1}{set\+Nom} (std\+::string nouveau\+Nom)
+\begin{DoxyCompactList}\small\item\em fonction qui modifie l\textquotesingle{}attribut nom \end{DoxyCompactList}\item 
+void \hyperlink{class_joueur_a424aec3294ea6019f372fd2d67ae5001}{set\+Grille} (char $\ast$$\ast$\hyperlink{class_joueur_a97a052f0b9966c94c49862df3144a62f}{grille}, int h, int l)
+\begin{DoxyCompactList}\small\item\em fonction qui modifie les caractéristiques de la grille \end{DoxyCompactList}\item 
+void \hyperlink{class_joueur_a11942778d97fd6f5823d8ef1ab964047}{set\+Grille\+Tentatives} (char $\ast$$\ast$\hyperlink{class_joueur_abbef5ee9c9c05a24ffa2c462e14cdfd7}{grille\+Tentatives})
+\begin{DoxyCompactList}\small\item\em fonction qui modifie l\textquotesingle{}attribut grille\+Tentatives \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_joueur_a9027bfc622d9a175340b5fffe915c7b2}{demander\+Nom} ()\hypertarget{class_joueur_a9027bfc622d9a175340b5fffe915c7b2}{}\label{class_joueur_a9027bfc622d9a175340b5fffe915c7b2}
 
 \begin{DoxyCompactList}\small\item\em initialise le nom du joueur en demandant le nom au joueur \end{DoxyCompactList}\item 
-virtual void {\bfseries demander\+Taille\+Grille} ()\hypertarget{class_joueur_a6a492734cdd1d8363c1617d598df9817}{}\label{class_joueur_a6a492734cdd1d8363c1617d598df9817}
+virtual void \hyperlink{class_joueur_a58fe79e4845404f361d5bc0fe9474135}{demander\+Taille\+Grille} ()\hypertarget{class_joueur_a58fe79e4845404f361d5bc0fe9474135}{}\label{class_joueur_a58fe79e4845404f361d5bc0fe9474135}
 
-\item 
-virtual char {\bfseries demander\+Type\+Jeu} ()\hypertarget{class_joueur_a84baf36faf6b22fc23e4e793d4988793}{}\label{class_joueur_a84baf36faf6b22fc23e4e793d4988793}
+\begin{DoxyCompactList}\small\item\em initialise la taille de la grille en la demandant au joueur \end{DoxyCompactList}\item 
+virtual char \hyperlink{class_joueur_a72fcb63683baba74922df5de246bff6f}{demander\+Type\+Jeu} ()\hypertarget{class_joueur_a72fcb63683baba74922df5de246bff6f}{}\label{class_joueur_a72fcb63683baba74922df5de246bff6f}
 
-\item 
+\begin{DoxyCompactList}\small\item\em fonction qui permet au joueur de choisir son type de jeu \+: bataille classique ou bataille améliorée \end{DoxyCompactList}\item 
 virtual void \hyperlink{class_joueur_aa97f71a90328693e0047ba2f48d61b4b}{placement\+Des\+Bateaux} (char type\+Jeu)
-\begin{DoxyCompactList}\small\item\em demande au joueur de placer ses différents bateaux. Utilise ajout\+Bateau pour chaqun des bateaux du joueur. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em demande au joueur de placer ses différents bateaux. Utilise ajout\+Bateau pour chaqun des bateaux du joueur. \end{DoxyCompactList}\item 
+virtual int $\ast$ \hyperlink{class_joueur_a46bdd92b73a1f0d04aeb5f19f33720b0}{tour} ()
+\begin{DoxyCompactList}\small\item\em Permet de placer une bombe, affiche aussi la grille et la grille de tentatives. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_joueur_a661426005c03ad2ee421249758f5c2a7}{resultat\+Bombe} (bool touche, int x, int y)
+\begin{DoxyCompactList}\small\item\em Notifie le joueur si sa bombe a touché l\textquotesingle{}adversaire. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_joueur_aeb9de0a7501a5370d45e670e122b3676}{resultat\+Bombe\+Adverse} (bool touche, int x, int y)
+\begin{DoxyCompactList}\small\item\em Notifie le joueur si la bombe de l\textquotesingle{}adversaire l\textquotesingle{}a touché. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres protégées}
 \begin{DoxyCompactItemize}
 \item 
-virtual void {\bfseries placer\+Bateau} (Bateau $\ast$b)\hypertarget{class_joueur_a82aa78e161543bbbc01f759d71e0bbc7}{}\label{class_joueur_a82aa78e161543bbbc01f759d71e0bbc7}
-
-\end{DoxyCompactItemize}
+virtual void \hyperlink{class_joueur_a817129cc5062c058a153a241c74eee79}{placer\+Bateau} (\hyperlink{class_bateau}{Bateau} $\ast$b)
+\begin{DoxyCompactList}\small\item\em Permet au joueur de positionner le bateau {\ttfamily $\ast$b} sur la grille. Cette fonction lui demande les coordonnées en x, y du bateau (en utilisant la fonction demander\+Coordonnees\+Bateau) mais aussi son orientation. \end{DoxyCompactList}\item 
+void \hyperlink{class_joueur_ab42cd00f0ff47934eecde3fbaf06f2a5}{marquer\+Resultat\+Bombe\+Sur\+Grille\+Tentative} (bool touche, int x, int y)
+\begin{DoxyCompactList}\small\item\em function permettant de modifier une case de la grille des tentatives sachant les conséquences de la bombe \end{DoxyCompactList}\item 
+void \hyperlink{class_joueur_a3b77de3d2a5d2845bfefddb051460e80}{marquer\+Resultat\+Bombe\+Sur\+Grille} (bool touche, int x, int y)
+\begin{DoxyCompactList}\small\item\em function permettant de modifier une case de la grille sachant les conséquences de la bombe \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Attributs protégés}
 \begin{DoxyCompactItemize}
 \item 
-std\+::string {\bfseries nom}\hypertarget{class_joueur_abaee0b4f259181bf66dbab54bef971bb}{}\label{class_joueur_abaee0b4f259181bf66dbab54bef971bb}
-
+std\+::string \hyperlink{class_joueur_abaee0b4f259181bf66dbab54bef971bb}{nom}
 \item 
-\hyperlink{class_grille}{Grille} {\bfseries grille}\hypertarget{class_joueur_a97a052f0b9966c94c49862df3144a62f}{}\label{class_joueur_a97a052f0b9966c94c49862df3144a62f}
-
+\hyperlink{class_grille}{Grille} \hyperlink{class_joueur_a97a052f0b9966c94c49862df3144a62f}{grille}
 \item 
-\hyperlink{class_grille}{Grille} {\bfseries grille\+Tentatives}\hypertarget{class_joueur_abbef5ee9c9c05a24ffa2c462e14cdfd7}{}\label{class_joueur_abbef5ee9c9c05a24ffa2c462e14cdfd7}
-
+\hyperlink{class_grille}{Grille} \hyperlink{class_joueur_abbef5ee9c9c05a24ffa2c462e14cdfd7}{grille\+Tentatives}
 \item 
-int {\bfseries nb\+Cases\+Bateaux\+Touches}\hypertarget{class_joueur_a3a41069191547937ddd3acd15eecd4ee}{}\label{class_joueur_a3a41069191547937ddd3acd15eecd4ee}
-
+int \hyperlink{class_joueur_a3a41069191547937ddd3acd15eecd4ee}{nb\+Cases\+Bateaux\+Touches}
 \item 
-int {\bfseries nb\+Cases\+Bateaux}\hypertarget{class_joueur_a29e4485fe7b0a3f2c962757b7c7bf2a5}{}\label{class_joueur_a29e4485fe7b0a3f2c962757b7c7bf2a5}
-
+int \hyperlink{class_joueur_a29e4485fe7b0a3f2c962757b7c7bf2a5}{nb\+Cases\+Bateaux}
 \item 
-int {\bfseries nb\+Bateaux}\hypertarget{class_joueur_a56752b0a96da94b17b07fd0312035a13}{}\label{class_joueur_a56752b0a96da94b17b07fd0312035a13}
-
+int \hyperlink{class_joueur_a56752b0a96da94b17b07fd0312035a13}{nb\+Bateaux}
 \item 
-Bateau $\ast$ {\bfseries bateaux}\hypertarget{class_joueur_acf537ce482b493555318da7da14d8ac9}{}\label{class_joueur_acf537ce482b493555318da7da14d8ac9}
-
+\hyperlink{class_bateau}{Bateau} $\ast$ \hyperlink{class_joueur_acf537ce482b493555318da7da14d8ac9}{bateaux}
+\item 
+\hyperlink{class_affichage}{Affichage} $\ast$ \hyperlink{class_joueur_a388634e5c242146dad447bc04756bab5}{affichage}
 \end{DoxyCompactItemize}
 \subsection*{Amis}
 \begin{DoxyCompactItemize}
@@ -61,7 +87,81 @@ class {\bfseries Jeu\+Bataille\+Navale}\hypertarget{class_joueur_a5e820295bb9a93
 \end{DoxyCompactItemize}
 
 
+\subsection{Description détaillée}
+classe \hyperlink{class_joueur}{Joueur} regroupant les fonctionnalités générales sur le joueur 
+
 \subsection{Documentation des fonctions membres}
+\index{Joueur@{Joueur}!definir\+Bateaux\+Type2@{definir\+Bateaux\+Type2}}
+\index{definir\+Bateaux\+Type2@{definir\+Bateaux\+Type2}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{definir\+Bateaux\+Type2(int nb\+Max\+De\+Bateaux, int taille\+Grille)}{definirBateauxType2(int nbMaxDeBateaux, int tailleGrille)}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+::definir\+Bateaux\+Type2 (
+\begin{DoxyParamCaption}
+\item[{int}]{nb\+Max\+De\+Bateaux, }
+\item[{int}]{taille\+Grille}
+\end{DoxyParamCaption}
+)}\hypertarget{class_joueur_a1f4357df61efbc2ead45d24a190ebb83}{}\label{class_joueur_a1f4357df61efbc2ead45d24a190ebb83}
+
+
+function permettant de définir un tableau de bateaux de tailles aléatoires 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nb\+Max\+De\+Bateaux,taille\+Grille} & le nombre de bateaux du tableau et la taille de la grille \\
+\hline
+\end{DoxyParams}
+\index{Joueur@{Joueur}!est\+Une\+IA@{est\+Une\+IA}}
+\index{est\+Une\+IA@{est\+Une\+IA}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{est\+Une\+I\+A()}{estUneIA()}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+::est\+Une\+IA (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_joueur_aee337662730df358b20474cac70d83e6}{}\label{class_joueur_aee337662730df358b20474cac70d83e6}
+
+
+Permet de savoir si ce joueur est une IA. Est utile lorsque l\textquotesingle{}on manipule un \hyperlink{class_joueur}{Joueur} et que l\textquotesingle{}on ne sait pas s\textquotesingle{}il est IA ou Humain. 
+
+\begin{DoxyReturn}{Renvoie}
+true si c\textquotesingle{}est une IA, false sinon. 
+\end{DoxyReturn}
+
+
+Réimplémentée dans \hyperlink{class_joueur_i_a_a549e94b2b4673dcf97041add34bc49a0}{Joueur\+IA}, et \hyperlink{class_joueur_humain_a4d531faca2e5f81966ff11309bd1fd9e}{Joueur\+Humain}.
+
+\index{Joueur@{Joueur}!marquer\+Resultat\+Bombe\+Sur\+Grille@{marquer\+Resultat\+Bombe\+Sur\+Grille}}
+\index{marquer\+Resultat\+Bombe\+Sur\+Grille@{marquer\+Resultat\+Bombe\+Sur\+Grille}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{marquer\+Resultat\+Bombe\+Sur\+Grille(bool touche, int x, int y)}{marquerResultatBombeSurGrille(bool touche, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}protected Joueur\+::marquer\+Resultat\+Bombe\+Sur\+Grille (
+\begin{DoxyParamCaption}
+\item[{bool}]{touche, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_joueur_a3b77de3d2a5d2845bfefddb051460e80}{}\label{class_joueur_a3b77de3d2a5d2845bfefddb051460e80}
+
+
+function permettant de modifier une case de la grille sachant les conséquences de la bombe 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em touche,x,y} & les coordonnées de la position à modifier, et touche\+: l\textquotesingle{}indication si la bombe a atteint sa cible \\
+\hline
+\end{DoxyParams}
+\index{Joueur@{Joueur}!marquer\+Resultat\+Bombe\+Sur\+Grille\+Tentative@{marquer\+Resultat\+Bombe\+Sur\+Grille\+Tentative}}
+\index{marquer\+Resultat\+Bombe\+Sur\+Grille\+Tentative@{marquer\+Resultat\+Bombe\+Sur\+Grille\+Tentative}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{marquer\+Resultat\+Bombe\+Sur\+Grille\+Tentative(bool touche, int x, int y)}{marquerResultatBombeSurGrilleTentative(bool touche, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}protected Joueur\+::marquer\+Resultat\+Bombe\+Sur\+Grille\+Tentative (
+\begin{DoxyParamCaption}
+\item[{bool}]{touche, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_joueur_ab42cd00f0ff47934eecde3fbaf06f2a5}{}\label{class_joueur_ab42cd00f0ff47934eecde3fbaf06f2a5}
+
+
+function permettant de modifier une case de la grille des tentatives sachant les conséquences de la bombe 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em touche,x,y} & les coordonnées de la position à modifier, et touche\+: l\textquotesingle{}indication si la bombe a atteint sa cible \\
+\hline
+\end{DoxyParams}
 \index{Joueur@{Joueur}!placement\+Des\+Bateaux@{placement\+Des\+Bateaux}}
 \index{placement\+Des\+Bateaux@{placement\+Des\+Bateaux}!Joueur@{Joueur}}
 \subsubsection[{\texorpdfstring{placement\+Des\+Bateaux(char type\+Jeu)}{placementDesBateaux(char typeJeu)}}]{\setlength{\rightskip}{0pt plus 5cm}private Joueur\+::placement\+Des\+Bateaux (
@@ -80,11 +180,178 @@ demande au joueur de placer ses différents bateaux. Utilise ajout\+Bateau pour 
 \end{DoxyParams}
 
 
-Réimplémentée dans \hyperlink{class_joueur_humain_a31e23d1e076b0e6110e0a9d354d80674}{Joueur\+Humain}, et \hyperlink{class_joueur_i_a_a62bb7d4785bcb817102e41c3e9c9b84a}{Joueur\+IA}.
+Réimplémentée dans \hyperlink{class_joueur_i_a_a6d7592fa8c653cb5420270d61467419b}{Joueur\+IA}, et \hyperlink{class_joueur_humain_ae27bf69ba0db87cd8268ba1cd1e4f817}{Joueur\+Humain}.
+
+\index{Joueur@{Joueur}!placer\+Bateau@{placer\+Bateau}}
+\index{placer\+Bateau@{placer\+Bateau}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{placer\+Bateau(\+Bateau $\ast$b)}{placerBateau(Bateau *b)}}]{\setlength{\rightskip}{0pt plus 5cm}protected Joueur\+::placer\+Bateau (
+\begin{DoxyParamCaption}
+\item[{{\bf Bateau} $\ast$}]{b}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}\hypertarget{class_joueur_a817129cc5062c058a153a241c74eee79}{}\label{class_joueur_a817129cc5062c058a153a241c74eee79}
 
 
+Permet au joueur de positionner le bateau {\ttfamily $\ast$b} sur la grille. Cette fonction lui demande les coordonnées en x, y du bateau (en utilisant la fonction demander\+Coordonnees\+Bateau) mais aussi son orientation. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$b} & Un pointeur sur le bateau que le joueur va placer sur la grille. \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée dans \hyperlink{class_joueur_humain_af9e3ccafc7cde958dda81551d0ef6abd}{Joueur\+Humain}, et \hyperlink{class_joueur_i_a_a70a56322ca6eeeb52612510d7e22d388}{Joueur\+IA}.
+
+\index{Joueur@{Joueur}!resultat\+Bombe@{resultat\+Bombe}}
+\index{resultat\+Bombe@{resultat\+Bombe}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{resultat\+Bombe(bool touche, int x, int y)}{resultatBombe(bool touche, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+::resultat\+Bombe (
+\begin{DoxyParamCaption}
+\item[{bool}]{touche, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_joueur_a661426005c03ad2ee421249758f5c2a7}{}\label{class_joueur_a661426005c03ad2ee421249758f5c2a7}
+
+
+Notifie le joueur si sa bombe a touché l\textquotesingle{}adversaire. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em touche} & true si la bombe a touché un navire adverse, false sinon. \\
+\hline
+{\em x} & La coordonnée en x de la bombe que le joueur avait choisie. \\
+\hline
+{\em y} & La coordonnée en y de la bombe que le joueur avait choisie. \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée dans \hyperlink{class_joueur_i_a_a5e7ed6369200fe44382a54cf739ad8b3}{Joueur\+IA}, et \hyperlink{class_joueur_humain_a9eeae3b54b174e477a94c75d57a0d403}{Joueur\+Humain}.
+
+\index{Joueur@{Joueur}!resultat\+Bombe\+Adverse@{resultat\+Bombe\+Adverse}}
+\index{resultat\+Bombe\+Adverse@{resultat\+Bombe\+Adverse}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{resultat\+Bombe\+Adverse(bool touche, int x, int y)}{resultatBombeAdverse(bool touche, int x, int y)}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+::resultat\+Bombe\+Adverse (
+\begin{DoxyParamCaption}
+\item[{bool}]{touche, }
+\item[{int}]{x, }
+\item[{int}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_joueur_aeb9de0a7501a5370d45e670e122b3676}{}\label{class_joueur_aeb9de0a7501a5370d45e670e122b3676}
+
+
+Notifie le joueur si la bombe de l\textquotesingle{}adversaire l\textquotesingle{}a touché. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em touche} & true si la bombe a touché un navire, false sinon. \\
+\hline
+{\em x} & La coordonnée en x de la bombe que le joueur adverse avait choisie. \\
+\hline
+{\em y} & La coordonnée en y de la bombe que le joueur adverse avait choisie. \\
+\hline
+\end{DoxyParams}
+
+
+Réimplémentée dans \hyperlink{class_joueur_i_a_a35dfe27baa0fb62a927cc13186b09920}{Joueur\+IA}, et \hyperlink{class_joueur_humain_acdd6b332153e1543d083d272fbdf8289}{Joueur\+Humain}.
+
+\index{Joueur@{Joueur}!set\+Grille@{set\+Grille}}
+\index{set\+Grille@{set\+Grille}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{set\+Grille(char $\ast$$\ast$grille, int h, int l)}{setGrille(char **grille, int h, int l)}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+::set\+Grille (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{grille, }
+\item[{int}]{h, }
+\item[{int}]{l}
+\end{DoxyParamCaption}
+)}\hypertarget{class_joueur_a424aec3294ea6019f372fd2d67ae5001}{}\label{class_joueur_a424aec3294ea6019f372fd2d67ae5001}
+
+
+fonction qui modifie les caractéristiques de la grille 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em grille,h,l} & grille\+: object modifié, hauteur, largueur \\
+\hline
+\end{DoxyParams}
+\index{Joueur@{Joueur}!set\+Grille\+Tentatives@{set\+Grille\+Tentatives}}
+\index{set\+Grille\+Tentatives@{set\+Grille\+Tentatives}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{set\+Grille\+Tentatives(char $\ast$$\ast$grille\+Tentatives)}{setGrilleTentatives(char **grilleTentatives)}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+::set\+Grille\+Tentatives (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{grille\+Tentatives}
+\end{DoxyParamCaption}
+)}\hypertarget{class_joueur_a11942778d97fd6f5823d8ef1ab964047}{}\label{class_joueur_a11942778d97fd6f5823d8ef1ab964047}
+
+
+fonction qui modifie l\textquotesingle{}attribut grille\+Tentatives 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em $\ast$$\ast$grille\+Tentatives} & \\
+\hline
+\end{DoxyParams}
+\index{Joueur@{Joueur}!set\+Nom@{set\+Nom}}
+\index{set\+Nom@{set\+Nom}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{set\+Nom(std\+::string nouveau\+Nom)}{setNom(std::string nouveauNom)}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+::set\+Nom (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{nouveau\+Nom}
+\end{DoxyParamCaption}
+)}\hypertarget{class_joueur_a7f016748c27a4ddad2d363f4b5121ab1}{}\label{class_joueur_a7f016748c27a4ddad2d363f4b5121ab1}
+
+
+fonction qui modifie l\textquotesingle{}attribut nom 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em nouveau\+Nom} & \\
+\hline
+\end{DoxyParams}
+\index{Joueur@{Joueur}!tour@{tour}}
+\index{tour@{tour}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{tour()}{tour()}}]{\setlength{\rightskip}{0pt plus 5cm}public Joueur\+::tour (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}\hypertarget{class_joueur_a46bdd92b73a1f0d04aeb5f19f33720b0}{}\label{class_joueur_a46bdd92b73a1f0d04aeb5f19f33720b0}
+
+
+Permet de placer une bombe, affiche aussi la grille et la grille de tentatives. 
+
+\begin{DoxyReturn}{Renvoie}
+Les coordonnées de la bombe cible. Sous la forme d\textquotesingle{}un tableau \mbox{[}x, y\mbox{]}. 
+\end{DoxyReturn}
+
+
+Réimplémentée dans \hyperlink{class_joueur_i_a_a76b3e9af59c86acb34d7e1cb70802436}{Joueur\+IA}, et \hyperlink{class_joueur_humain_a92f4cb99ff2957813da34fb60e211870}{Joueur\+Humain}.
+
+
+
+\subsection{Documentation des données membres}
+\index{Joueur@{Joueur}!affichage@{affichage}}
+\index{affichage@{affichage}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{affichage}{affichage}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Affichage}$\ast$ Joueur\+::affichage\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_joueur_a388634e5c242146dad447bc04756bab5}{}\label{class_joueur_a388634e5c242146dad447bc04756bab5}
+Un affichage pour afficher des informations générales sur le jeux. \index{Joueur@{Joueur}!bateaux@{bateaux}}
+\index{bateaux@{bateaux}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{bateaux}{bateaux}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Bateau}$\ast$ Joueur\+::bateaux\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_joueur_acf537ce482b493555318da7da14d8ac9}{}\label{class_joueur_acf537ce482b493555318da7da14d8ac9}
+Un tableau contenant les bateaux possédés par le joueur et qu\textquotesingle{}il a placé sur la grille. \index{Joueur@{Joueur}!grille@{grille}}
+\index{grille@{grille}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{grille}{grille}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Grille} Joueur\+::grille\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_joueur_a97a052f0b9966c94c49862df3144a62f}{}\label{class_joueur_a97a052f0b9966c94c49862df3144a62f}
+La grille sur laquelle le joueur place ses bateaux \index{Joueur@{Joueur}!grille\+Tentatives@{grille\+Tentatives}}
+\index{grille\+Tentatives@{grille\+Tentatives}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{grille\+Tentatives}{grilleTentatives}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Grille} Joueur\+::grille\+Tentatives\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_joueur_abbef5ee9c9c05a24ffa2c462e14cdfd7}{}\label{class_joueur_abbef5ee9c9c05a24ffa2c462e14cdfd7}
+La grille permettant de garder en mémoire les tentatives de bombes effectuées par le joueur \index{Joueur@{Joueur}!nb\+Bateaux@{nb\+Bateaux}}
+\index{nb\+Bateaux@{nb\+Bateaux}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{nb\+Bateaux}{nbBateaux}}]{\setlength{\rightskip}{0pt plus 5cm}int Joueur\+::nb\+Bateaux\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_joueur_a56752b0a96da94b17b07fd0312035a13}{}\label{class_joueur_a56752b0a96da94b17b07fd0312035a13}
+/ Le nombre de bateau initial du joueur. Permet de simplifier l\textquotesingle{}écriture de certaines boucles. ( i $<$ nb\+Bateaux etc) \index{Joueur@{Joueur}!nb\+Cases\+Bateaux@{nb\+Cases\+Bateaux}}
+\index{nb\+Cases\+Bateaux@{nb\+Cases\+Bateaux}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{nb\+Cases\+Bateaux}{nbCasesBateaux}}]{\setlength{\rightskip}{0pt plus 5cm}int Joueur\+::nb\+Cases\+Bateaux\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_joueur_a29e4485fe7b0a3f2c962757b7c7bf2a5}{}\label{class_joueur_a29e4485fe7b0a3f2c962757b7c7bf2a5}
+Le nombre de cases occupées par des bateaux sur la grille \index{Joueur@{Joueur}!nb\+Cases\+Bateaux\+Touches@{nb\+Cases\+Bateaux\+Touches}}
+\index{nb\+Cases\+Bateaux\+Touches@{nb\+Cases\+Bateaux\+Touches}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{nb\+Cases\+Bateaux\+Touches}{nbCasesBateauxTouches}}]{\setlength{\rightskip}{0pt plus 5cm}int Joueur\+::nb\+Cases\+Bateaux\+Touches\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_joueur_a3a41069191547937ddd3acd15eecd4ee}{}\label{class_joueur_a3a41069191547937ddd3acd15eecd4ee}
+Correspond au nombre de fois que l\textquotesingle{}adversaire a touché un bateau.\+Va être incrementé quand un des bateaux est touché pour faciliter la vérification de la fin de partie. \index{Joueur@{Joueur}!nom@{nom}}
+\index{nom@{nom}!Joueur@{Joueur}}
+\subsubsection[{\texorpdfstring{nom}{nom}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Joueur\+::nom\hspace{0.3cm}{\ttfamily [protected]}}\hypertarget{class_joueur_abaee0b4f259181bf66dbab54bef971bb}{}\label{class_joueur_abaee0b4f259181bf66dbab54bef971bb}
+Le nom du joueur 
 
 La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
 \item 
-/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/Joueur.\+hpp\item 
+/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\hyperlink{_joueur_8hpp}{Joueur.\+hpp}\item 
 /home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/Joueur.\+cpp\end{DoxyCompactItemize}

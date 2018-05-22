@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['jeubataillenavale_2ehpp',['JeuBatailleNavale.hpp',['../_jeu_bataille_navale_8hpp.html',1,'']]],
-  ['joueur_2ehpp',['Joueur.hpp',['../_joueur_8hpp.html',1,'']]]
+  ['gestionsauvegarde_2ehpp',['GestionSauvegarde.hpp',['../_gestion_sauvegarde_8hpp.html',1,'']]],
+  ['grille_2ehpp',['Grille.hpp',['../_grille_8hpp.html',1,'']]]
 ];

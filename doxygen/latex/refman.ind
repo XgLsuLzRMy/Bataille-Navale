@@ -1,139 +1,438 @@
 \begin{theindex}
 
-  \item {ajout\+Bateau}
-    \subitem {Joueur}, \hyperpage{12}
+  \item {/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Affichage.\+hpp}, 
+		\hyperpage{39}
+  \item {/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Bateau.\+hpp}, 
+		\hyperpage{40}
+  \item {/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Gestion\+Sauvegarde.\+hpp}, 
+		\hyperpage{40}
+  \item {/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Grille.\+hpp}, 
+		\hyperpage{41}
+  \item {/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Jeu\+Bataille\+Navale.\+hpp}, 
+		\hyperpage{43}
+  \item {/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Joueur.\+hpp}, 
+		\hyperpage{43}
+  \item {/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Joueur\+Humain.\+hpp}, 
+		\hyperpage{44}
+  \item {/home/lucas/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Joueur\+I\+A.\+hpp}, 
+		\hyperpage{45}
 
   \indexspace
 
-  \item {Bateau}, \hyperpage{5}
-    \subitem {get\+Coordonnees\+Completes}, \hyperpage{6}
-    \subitem {get\+Orientation}, \hyperpage{6}
-    \subitem {get\+Taille}, \hyperpage{6}
-    \subitem {getx\+Extremite}, \hyperpage{6}
-    \subitem {gety\+Extremite}, \hyperpage{6}
-    \subitem {orientation}, \hyperpage{8}
-    \subitem {set\+Orientation}, \hyperpage{7}
-    \subitem {set\+Taille}, \hyperpage{7}
-    \subitem {setx\+Extremite}, \hyperpage{7}
-    \subitem {sety\+Extremite}, \hyperpage{8}
-    \subitem {y\+Extremite}, \hyperpage{8}
+  \item {Affichage}, \hyperpage{7}
+    \subitem {afficher\+Gagnant}, \hyperpage{8}
+    \subitem {afficher\+Grille}, \hyperpage{8}
+    \subitem {afficher\+Message}, \hyperpage{8}
+    \subitem {choix\+Sauvegarde}, \hyperpage{8}
+    \subitem {choix\+Type\+Jeu}, \hyperpage{8}
+    \subitem {demander\+Coordonnees\+Bateau}, \hyperpage{9}
+    \subitem {demander\+Coordonnees\+Bombe}, \hyperpage{9}
+    \subitem {demander\+Dimension\+Grille}, \hyperpage{9}
+    \subitem {demander\+Nom}, \hyperpage{9}
+    \subitem {demander\+Nom\+Sauvegarde}, \hyperpage{10}
+    \subitem {demander\+Orientation\+Bateau}, \hyperpage{10}
+    \subitem {demander\+Placement\+Correct}, \hyperpage{10}
+    \subitem {demander\+Taille\+Bateau}, \hyperpage{10}
+    \subitem {menu\+Principal}, \hyperpage{10}
+    \subitem {proposer\+Nouveau\+Jeu\+Ou\+Sauvegarde}, \hyperpage{10}
+    \subitem {proposer\+Sauvegarder}, \hyperpage{11}
+  \item {affichage}
+    \subitem {Joueur}, \hyperpage{31}
+  \item {afficher\+Gagnant}
+    \subitem {Affichage}, \hyperpage{8}
+  \item {afficher\+Grille}
+    \subitem {Affichage}, \hyperpage{8}
+  \item {afficher\+Message}
+    \subitem {Affichage}, \hyperpage{8}
+
+  \indexspace
+
+  \item {B\+A\+T\+E\+A\+U\+T\+O\+U\+C\+HE}
+    \subitem {Grille.\+hpp}, \hyperpage{42}
+  \item {B\+A\+T\+E\+AU}
+    \subitem {Grille.\+hpp}, \hyperpage{42}
+  \item {Bateau}, \hyperpage{11}
+    \subitem {get\+Coordonnees\+Completes}, \hyperpage{12}
+    \subitem {get\+Orientation}, \hyperpage{12}
+    \subitem {get\+Taille}, \hyperpage{12}
+    \subitem {getx\+Extremite}, \hyperpage{12}
+    \subitem {gety\+Extremite}, \hyperpage{12}
+    \subitem {orientation}, \hyperpage{14}
+    \subitem {placer\+Sur\+Grille}, \hyperpage{12}
+    \subitem {retirer\+De\+La\+Grille}, \hyperpage{13}
+    \subitem {set\+Orientation}, \hyperpage{13}
+    \subitem {set\+Taille}, \hyperpage{13}
+    \subitem {setx\+Extremite}, \hyperpage{13}
+    \subitem {sety\+Extremite}, \hyperpage{13}
+    \subitem {taille}, \hyperpage{14}
+    \subitem {x\+Extremite}, \hyperpage{14}
+    \subitem {y\+Extremite}, \hyperpage{14}
   \item {bateaux}
-    \subitem {Joueur}, \hyperpage{13}
+    \subitem {Joueur}, \hyperpage{31}
 
   \indexspace
 
   \item {check\+Fin\+Jeu}
-    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{10}
+    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{25}
+  \item {choix\+Sauvegarde}
+    \subitem {Affichage}, \hyperpage{8}
+  \item {choix\+Type\+Jeu}
+    \subitem {Affichage}, \hyperpage{8}
 
   \indexspace
 
-  \item {D\+:/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Bateau.\+hpp}, 
-		\hyperpage{15}
-  \item {D\+:/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Grille.\+hpp}, 
-		\hyperpage{15}
-  \item {D\+:/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Jeu\+Bataille\+Navale.\+hpp}, 
-		\hyperpage{16}
-  \item {D\+:/\+Documents/\+Git\+Hub/\+Bataille-\/\+Navale/src/\+Joueur.\+hpp}, 
-		\hyperpage{17}
+  \item {debut\+De\+La\+Chaine\+Sans\+Espaces}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{16}
+  \item {definir\+Bateaux\+Type2}
+    \subitem {Joueur}, \hyperpage{28}
+  \item {demander\+Coordonnees\+Bateau}
+    \subitem {Affichage}, \hyperpage{9}
+    \subitem {Joueur\+Humain}, \hyperpage{32}
+  \item {demander\+Coordonnees\+Bombe}
+    \subitem {Affichage}, \hyperpage{9}
+  \item {demander\+Dimension\+Grille}
+    \subitem {Affichage}, \hyperpage{9}
+  \item {demander\+Nom}
+    \subitem {Affichage}, \hyperpage{9}
+  \item {demander\+Nom\+Sauvegarde}
+    \subitem {Affichage}, \hyperpage{10}
+  \item {demander\+Orientation\+Bateau}
+    \subitem {Affichage}, \hyperpage{10}
+  \item {demander\+Placement\+Correct}
+    \subitem {Affichage}, \hyperpage{10}
+  \item {demander\+Taille\+Bateau}
+    \subitem {Affichage}, \hyperpage{10}
+  \item {demander\+Type\+Jeu}
+    \subitem {Joueur\+Humain}, \hyperpage{33}
+    \subitem {Joueur\+IA}, \hyperpage{36}
+  \item {determiner\+Coordonnees\+Bombes\+Aleatoire}
+    \subitem {Joueur\+IA}, \hyperpage{36}
+  \item {determiner\+Coordonnees\+Bombes\+Scan}
+    \subitem {Joueur\+IA}, \hyperpage{36}
+  \item {donner\+Coordonnees\+Bombes}
+    \subitem {Joueur\+Humain}, \hyperpage{33}
 
   \indexspace
 
+  \item {E\+AU}
+    \subitem {Grille.\+hpp}, \hyperpage{42}
+  \item {E\+R\+R\+E\+U\+R\+A\+T\+T\+R\+I\+B\+UT}
+    \subitem {Gestion\+Sauvegarde.\+hpp}, \hyperpage{41}
+  \item {ecrire\+Attribut}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{16}
+  \item {ecrire\+Grille}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{16}
+  \item {ecrire\+Nom\+Joueur}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{17}
+  \item {ecrire\+Sauvegarde}
+    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{25}
+  \item {effacer\+Grille}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{17}
+  \item {est\+Numerique}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{17}
+  \item {est\+Une\+IA}
+    \subitem {Joueur}, \hyperpage{28}
+    \subitem {Joueur\+Humain}, \hyperpage{33}
+    \subitem {Joueur\+IA}, \hyperpage{36}
+
+  \indexspace
+
+  \item {F\+I\+C\+H\+I\+E\+R\+L\+I\+S\+T\+E\+S\+AV}
+    \subitem {Gestion\+Sauvegarde.\+hpp}, \hyperpage{41}
+  \item {fichier\+Existe}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{17}
+  \item {fini}
+    \subitem {Grille}, \hyperpage{22}
+
+  \indexspace
+
+  \item {Gestion\+Sauvegarde}, \hyperpage{14}
+    \subitem {debut\+De\+La\+Chaine\+Sans\+Espaces}, \hyperpage{16}
+    \subitem {ecrire\+Attribut}, \hyperpage{16}
+    \subitem {ecrire\+Grille}, \hyperpage{16}
+    \subitem {ecrire\+Nom\+Joueur}, \hyperpage{17}
+    \subitem {effacer\+Grille}, \hyperpage{17}
+    \subitem {est\+Numerique}, \hyperpage{17}
+    \subitem {fichier\+Existe}, \hyperpage{17}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{16}
+    \subitem {get\+Liste\+Sauvegardes}, \hyperpage{18}
+    \subitem {lire\+Attribut}, \hyperpage{18}
+    \subitem {lire\+Grille}, \hyperpage{18}
+    \subitem {lire\+Hauteur\+Grille}, \hyperpage{18}
+    \subitem {lire\+Largeur\+Grille}, \hyperpage{19}
+    \subitem {lire\+Nom\+Joueur}, \hyperpage{19}
+    \subitem {nom\+Fichier}, \hyperpage{21}
+    \subitem {nouvelle\+Sauvegarde}, \hyperpage{19}
+    \subitem {parse\+Ligne\+Grille}, \hyperpage{19}
+    \subitem {position\+Attribut}, \hyperpage{20}
+    \subitem {recuperer\+Hauteur\+Grille}, \hyperpage{20}
+    \subitem {remplacer\+Ligne}, \hyperpage{20}
+    \subitem {sauvegarde\+Deja\+Dans\+Liste}, \hyperpage{21}
+    \subitem {supprimer\+Sauvegarde}, \hyperpage{21}
+  \item {Gestion\+Sauvegarde.\+hpp}
+    \subitem {E\+R\+R\+E\+U\+R\+A\+T\+T\+R\+I\+B\+UT}, \hyperpage{41}
+    \subitem {F\+I\+C\+H\+I\+E\+R\+L\+I\+S\+T\+E\+S\+AV}, 
+		\hyperpage{41}
+  \item {get}
+    \subitem {Grille}, \hyperpage{22}
   \item {get\+Coordonnees\+Completes}
-    \subitem {Bateau}, \hyperpage{6}
+    \subitem {Bateau}, \hyperpage{12}
+  \item {get\+Grille}
+    \subitem {Grille}, \hyperpage{23}
+  \item {get\+Hauteur}
+    \subitem {Grille}, \hyperpage{23}
+  \item {get\+Largeur}
+    \subitem {Grille}, \hyperpage{23}
+  \item {get\+Liste\+Sauvegardes}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{18}
   \item {get\+Orientation}
-    \subitem {Bateau}, \hyperpage{6}
+    \subitem {Bateau}, \hyperpage{12}
   \item {get\+Taille}
-    \subitem {Bateau}, \hyperpage{6}
+    \subitem {Bateau}, \hyperpage{12}
   \item {getx\+Extremite}
-    \subitem {Bateau}, \hyperpage{6}
+    \subitem {Bateau}, \hyperpage{12}
   \item {gety\+Extremite}
-    \subitem {Bateau}, \hyperpage{6}
-  \item {Grille}, \hyperpage{8}
+    \subitem {Bateau}, \hyperpage{12}
+  \item {Grille}, \hyperpage{21}
+    \subitem {fini}, \hyperpage{22}
+    \subitem {get}, \hyperpage{22}
+    \subitem {get\+Grille}, \hyperpage{23}
+    \subitem {get\+Hauteur}, \hyperpage{23}
+    \subitem {get\+Largeur}, \hyperpage{23}
+    \subitem {grille}, \hyperpage{24}
+    \subitem {hauteur}, \hyperpage{24}
+    \subitem {largeur}, \hyperpage{24}
+    \subitem {set}, \hyperpage{23}
+    \subitem {set\+Grille}, \hyperpage{23}
+    \subitem {set\+Taille}, \hyperpage{24}
+    \subitem {verifier\+Place}, \hyperpage{24}
   \item {grille}
-    \subitem {Joueur}, \hyperpage{14}
+    \subitem {Grille}, \hyperpage{24}
+    \subitem {Joueur}, \hyperpage{31}
+  \item {Grille.\+hpp}
+    \subitem {B\+A\+T\+E\+A\+U\+T\+O\+U\+C\+HE}, \hyperpage{42}
+    \subitem {B\+A\+T\+E\+AU}, \hyperpage{42}
+    \subitem {E\+AU}, \hyperpage{42}
+    \subitem {null}, \hyperpage{42}
+    \subitem {T\+E\+N\+T\+A\+T\+I\+V\+E\+R\+A\+T\+EE}, \hyperpage{42}
+    \subitem {T\+E\+N\+T\+A\+T\+I\+V\+E\+R\+E\+U\+S\+S\+IE}, 
+		\hyperpage{42}
+  \item {grille\+Tentatives}
+    \subitem {Joueur}, \hyperpage{31}
 
   \indexspace
 
-  \item {initialiser\+Nom\+Joueur}
-    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{10}
-  \item {is\+IA}
-    \subitem {Joueur}, \hyperpage{14}
+  \item {hauteur}
+    \subitem {Grille}, \hyperpage{24}
 
   \indexspace
 
-  \item {Jeu\+Bataille\+Navale}, \hyperpage{9}
-    \subitem {check\+Fin\+Jeu}, \hyperpage{10}
-    \subitem {initialiser\+Nom\+Joueur}, \hyperpage{10}
-    \subitem {joueur2}, \hyperpage{10}
-    \subitem {nb\+Joueurs\+Humains}, \hyperpage{10}
-    \subitem {type\+Jeu}, \hyperpage{10}
-  \item {Joueur}, \hyperpage{11}
-    \subitem {ajout\+Bateau}, \hyperpage{12}
-    \subitem {bateaux}, \hyperpage{13}
-    \subitem {grille}, \hyperpage{14}
-    \subitem {is\+IA}, \hyperpage{14}
-    \subitem {nb\+Bateaux}, \hyperpage{14}
-    \subitem {nb\+Bateaux\+Touches}, \hyperpage{14}
-    \subitem {nom}, \hyperpage{14}
-    \subitem {placement\+Des\+Bateaux}, \hyperpage{12}
-    \subitem {placer\+Bateau}, \hyperpage{12}
-    \subitem {retirer\+Bateau}, \hyperpage{13}
-    \subitem {verifier\+Place}, \hyperpage{13}
+  \item {instanciation\+Des\+Joueurs}
+    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{26}
+
+  \indexspace
+
+  \item {Jeu\+Bataille\+Navale}, \hyperpage{25}
+    \subitem {check\+Fin\+Jeu}, \hyperpage{25}
+    \subitem {ecrire\+Sauvegarde}, \hyperpage{25}
+    \subitem {instanciation\+Des\+Joueurs}, \hyperpage{26}
+    \subitem {jouer}, \hyperpage{26}
+    \subitem {joueur1}, \hyperpage{26}
+    \subitem {joueur2}, \hyperpage{26}
+    \subitem {joueur\+Place\+Bombe}, \hyperpage{26}
+    \subitem {type\+Jeu}, \hyperpage{26}
+  \item {jouer}
+    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{26}
+  \item {Joueur}, \hyperpage{27}
+    \subitem {affichage}, \hyperpage{31}
+    \subitem {bateaux}, \hyperpage{31}
+    \subitem {definir\+Bateaux\+Type2}, \hyperpage{28}
+    \subitem {est\+Une\+IA}, \hyperpage{28}
+    \subitem {grille}, \hyperpage{31}
+    \subitem {grille\+Tentatives}, \hyperpage{31}
+    \subitem {marquer\+Resultat\+Bombe\+Sur\+Grille}, \hyperpage{28}
+    \subitem {marquer\+Resultat\+Bombe\+Sur\+Grille\+Tentative}, 
+		\hyperpage{29}
+    \subitem {nb\+Bateaux}, \hyperpage{31}
+    \subitem {nb\+Cases\+Bateaux}, \hyperpage{31}
+    \subitem {nb\+Cases\+Bateaux\+Touches}, \hyperpage{31}
+    \subitem {nom}, \hyperpage{31}
+    \subitem {placement\+Des\+Bateaux}, \hyperpage{29}
+    \subitem {placer\+Bateau}, \hyperpage{29}
+    \subitem {resultat\+Bombe}, \hyperpage{29}
+    \subitem {resultat\+Bombe\+Adverse}, \hyperpage{30}
+    \subitem {set\+Grille}, \hyperpage{30}
+    \subitem {set\+Grille\+Tentatives}, \hyperpage{30}
+    \subitem {set\+Nom}, \hyperpage{30}
+    \subitem {tour}, \hyperpage{30}
+  \item {joueur1}
+    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{26}
   \item {joueur2}
-    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{10}
+    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{26}
+  \item {Joueur\+Humain}, \hyperpage{32}
+    \subitem {demander\+Coordonnees\+Bateau}, \hyperpage{32}
+    \subitem {demander\+Type\+Jeu}, \hyperpage{33}
+    \subitem {donner\+Coordonnees\+Bombes}, \hyperpage{33}
+    \subitem {est\+Une\+IA}, \hyperpage{33}
+    \subitem {placement\+Des\+Bateaux}, \hyperpage{33}
+    \subitem {placer\+Bateau}, \hyperpage{33}
+    \subitem {resultat\+Bombe}, \hyperpage{34}
+    \subitem {resultat\+Bombe\+Adverse}, \hyperpage{34}
+    \subitem {tour}, \hyperpage{34}
+  \item {Joueur\+IA}, \hyperpage{35}
+    \subitem {demander\+Type\+Jeu}, \hyperpage{36}
+    \subitem {determiner\+Coordonnees\+Bombes\+Aleatoire}, 
+		\hyperpage{36}
+    \subitem {determiner\+Coordonnees\+Bombes\+Scan}, \hyperpage{36}
+    \subitem {est\+Une\+IA}, \hyperpage{36}
+    \subitem {placement\+Des\+Bateaux}, \hyperpage{36}
+    \subitem {placer\+Bateau}, \hyperpage{37}
+    \subitem {resultat\+Bombe}, \hyperpage{37}
+    \subitem {resultat\+Bombe\+Adverse}, \hyperpage{37}
+    \subitem {retirer\+De\+La\+Liste}, \hyperpage{37}
+    \subitem {tour}, \hyperpage{38}
+  \item {joueur\+Place\+Bombe}
+    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{26}
+
+  \indexspace
+
+  \item {largeur}
+    \subitem {Grille}, \hyperpage{24}
+  \item {lire\+Attribut}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{18}
+  \item {lire\+Grille}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{18}
+  \item {lire\+Hauteur\+Grille}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{18}
+  \item {lire\+Largeur\+Grille}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{19}
+  \item {lire\+Nom\+Joueur}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{19}
+
+  \indexspace
+
+  \item {marquer\+Resultat\+Bombe\+Sur\+Grille}
+    \subitem {Joueur}, \hyperpage{28}
+  \item {marquer\+Resultat\+Bombe\+Sur\+Grille\+Tentative}
+    \subitem {Joueur}, \hyperpage{29}
+  \item {menu\+Principal}
+    \subitem {Affichage}, \hyperpage{10}
 
   \indexspace
 
   \item {nb\+Bateaux}
-    \subitem {Joueur}, \hyperpage{14}
-  \item {nb\+Bateaux\+Touches}
-    \subitem {Joueur}, \hyperpage{14}
-  \item {nb\+Joueurs\+Humains}
-    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{10}
+    \subitem {Joueur}, \hyperpage{31}
+  \item {nb\+Cases\+Bateaux}
+    \subitem {Joueur}, \hyperpage{31}
+  \item {nb\+Cases\+Bateaux\+Touches}
+    \subitem {Joueur}, \hyperpage{31}
   \item {nom}
-    \subitem {Joueur}, \hyperpage{14}
+    \subitem {Joueur}, \hyperpage{31}
+  \item {nom\+Fichier}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{21}
+  \item {nouvelle\+Sauvegarde}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{19}
+  \item {null}
+    \subitem {Grille.\+hpp}, \hyperpage{42}
 
   \indexspace
 
   \item {orientation}
-    \subitem {Bateau}, \hyperpage{8}
+    \subitem {Bateau}, \hyperpage{14}
 
   \indexspace
 
+  \item {parse\+Ligne\+Grille}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{19}
   \item {placement\+Des\+Bateaux}
-    \subitem {Joueur}, \hyperpage{12}
+    \subitem {Joueur}, \hyperpage{29}
+    \subitem {Joueur\+Humain}, \hyperpage{33}
+    \subitem {Joueur\+IA}, \hyperpage{36}
   \item {placer\+Bateau}
-    \subitem {Joueur}, \hyperpage{12}
+    \subitem {Joueur}, \hyperpage{29}
+    \subitem {Joueur\+Humain}, \hyperpage{33}
+    \subitem {Joueur\+IA}, \hyperpage{37}
+  \item {placer\+Sur\+Grille}
+    \subitem {Bateau}, \hyperpage{12}
+  \item {position\+Attribut}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{20}
+  \item {proposer\+Nouveau\+Jeu\+Ou\+Sauvegarde}
+    \subitem {Affichage}, \hyperpage{10}
+  \item {proposer\+Sauvegarder}
+    \subitem {Affichage}, \hyperpage{11}
 
   \indexspace
 
-  \item {retirer\+Bateau}
-    \subitem {Joueur}, \hyperpage{13}
+  \item {recuperer\+Hauteur\+Grille}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{20}
+  \item {remplacer\+Ligne}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{20}
+  \item {resultat\+Bombe}
+    \subitem {Joueur}, \hyperpage{29}
+    \subitem {Joueur\+Humain}, \hyperpage{34}
+    \subitem {Joueur\+IA}, \hyperpage{37}
+  \item {resultat\+Bombe\+Adverse}
+    \subitem {Joueur}, \hyperpage{30}
+    \subitem {Joueur\+Humain}, \hyperpage{34}
+    \subitem {Joueur\+IA}, \hyperpage{37}
+  \item {retirer\+De\+La\+Grille}
+    \subitem {Bateau}, \hyperpage{13}
+  \item {retirer\+De\+La\+Liste}
+    \subitem {Joueur\+IA}, \hyperpage{37}
 
   \indexspace
 
+  \item {sauvegarde\+Deja\+Dans\+Liste}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{21}
+  \item {set}
+    \subitem {Grille}, \hyperpage{23}
+  \item {set\+Grille}
+    \subitem {Grille}, \hyperpage{23}
+    \subitem {Joueur}, \hyperpage{30}
+  \item {set\+Grille\+Tentatives}
+    \subitem {Joueur}, \hyperpage{30}
+  \item {set\+Nom}
+    \subitem {Joueur}, \hyperpage{30}
   \item {set\+Orientation}
-    \subitem {Bateau}, \hyperpage{7}
+    \subitem {Bateau}, \hyperpage{13}
   \item {set\+Taille}
-    \subitem {Bateau}, \hyperpage{7}
+    \subitem {Bateau}, \hyperpage{13}
+    \subitem {Grille}, \hyperpage{24}
   \item {setx\+Extremite}
-    \subitem {Bateau}, \hyperpage{7}
+    \subitem {Bateau}, \hyperpage{13}
   \item {sety\+Extremite}
-    \subitem {Bateau}, \hyperpage{8}
+    \subitem {Bateau}, \hyperpage{13}
+  \item {supprimer\+Sauvegarde}
+    \subitem {Gestion\+Sauvegarde}, \hyperpage{21}
 
   \indexspace
 
+  \item {T\+E\+N\+T\+A\+T\+I\+V\+E\+R\+A\+T\+EE}
+    \subitem {Grille.\+hpp}, \hyperpage{42}
+  \item {T\+E\+N\+T\+A\+T\+I\+V\+E\+R\+E\+U\+S\+S\+IE}
+    \subitem {Grille.\+hpp}, \hyperpage{42}
+  \item {taille}
+    \subitem {Bateau}, \hyperpage{14}
+  \item {tour}
+    \subitem {Joueur}, \hyperpage{30}
+    \subitem {Joueur\+Humain}, \hyperpage{34}
+    \subitem {Joueur\+IA}, \hyperpage{38}
   \item {type\+Jeu}
-    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{10}
+    \subitem {Jeu\+Bataille\+Navale}, \hyperpage{26}
 
   \indexspace
 
   \item {verifier\+Place}
-    \subitem {Joueur}, \hyperpage{13}
+    \subitem {Grille}, \hyperpage{24}
+
+  \indexspace
+
+  \item {x\+Extremite}
+    \subitem {Bateau}, \hyperpage{14}
 
   \indexspace
 
   \item {y\+Extremite}
-    \subitem {Bateau}, \hyperpage{8}
+    \subitem {Bateau}, \hyperpage{14}
 
 \end{theindex}
