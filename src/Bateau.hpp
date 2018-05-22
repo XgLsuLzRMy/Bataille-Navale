@@ -6,7 +6,7 @@
 * \brief classe Bateau
 * \author Groupe B7
 * \version 0.1
-* \date 13 Avril 2018
+* \date 22 mai 2018
 * Classe Bateau qui fixe des bateaux au début de la partie
 *
 */
@@ -26,7 +26,7 @@ public:
 	/**
 	* \fn public Bateau()
 	*
-	* \brief Constructeur de la classe Bateau qui met ses caractéristques en ses valeurs par défaut
+	* \brief Constructeur de la classe Bateau qui met ses caractéristiques en ses valeurs par défaut
 	*
 	*/
 	Bateau();
@@ -39,6 +39,14 @@ public:
 	* \return true: si le placement a été réussi. false: s'il n'y avait pas de place pour positionner le bateau
 	*/
 	bool placerSurGrille(Grille *grille);
+	/**
+	* \fn public retirerDeLaGrille(Grille *grille)
+	*
+	* \brief fonction qui permet de supprimer un bateau de la grille
+	*
+	* \param Grille *grille: la grille du joueur
+	*/
+
 
 	void retirerDeLaGrille(Grille *grille);
 
@@ -51,14 +59,28 @@ public:
 	*
 	*/
 	void setTaille(int taille);
-
+	/**
+	* \fn public setxExtremite(int xExtremite)
+	*
+	* \brief fonction qui modifie l'attribut xExtremite du bateau
+	*
+	* \param xExtremite: la coordonnée voulue
+	*
+	*/
 	void setxExtremite(int xExtremite);
-
+	/**
+	* \fn public setyExtremite(int yExtremite)
+	*
+	* \brief fonction qui modifie l'attribut yExtremite du bateau
+	*
+	* \param yExtremite: la coordonnée voulue
+	*
+	*/
 	void setyExtremite(int yExtremite);
 	/**
 	* \fn public setOrientation
 	*
-	* \brief fonction qui modifiE l'orientation du bateau. O pour une orientation horizontale et 1 pour la vertciale.
+	* \brief fonction qui modifie l'orientation du bateau. O pour une orientation horizontale et 1 pour la verticale.
 	*
 	* \param orientationInput : caractère h (pour horizontal) ou v (pour vertical) qui va être transformé en son booléen correspondant (0 pour h et 1 pour v).
 	*/
