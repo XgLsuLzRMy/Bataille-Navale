@@ -14,7 +14,7 @@
 #ifndef __GRILLE_HPP__
 #define __GRILLE_HPP__
 
-#define null 0
+#define null 0 /*!< Variable correspondant au pointeur vide  */
 
 #define EAU 0 /*!< Variable correspondant à une case vide sur la grille  */
 #define BATEAU 1 /*!< Variable correspondant à une case où se situe une partie de bateau */
@@ -23,7 +23,7 @@
 #define TENTATIVERATEE 5 /*!< Variable correspondant à une case sur laquelle le joueur a déjà envoyé une bombe mais qui n'a pas touché de navire adverse */
 /*!
 * \class Grille
-* \brief classe classe qui gère les fonctionnalités de la grille des joueurs de la Bataille Navale.
+* \brief classe qui gère les fonctionnalités de la grille des joueurs de la Bataille Navale.
 *
 */
 class Grille{

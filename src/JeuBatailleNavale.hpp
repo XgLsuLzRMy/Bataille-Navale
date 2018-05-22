@@ -17,10 +17,15 @@
 #include "JoueurHumain.hpp"
 #include "JoueurIA.hpp"
 #include "GestionSauvegarde.hpp"
-
+/*!
+* \class JeuBatailleNavale
+* \brief classe qui gère le déroulement du jeu de Bataille Navale.
+*
+*/
 class JeuBatailleNavale{
 private:
-	Joueur *joueur1, *joueur2; /*!< les joueurs de la partie */
+	Joueur *joueur1; /*!< le premier joueur de la partie */
+	Joueur *joueur2; /*!< le deuxième joueur de la partie */
 	char typeJeu; /*!< le type de jeu : une bataille navalle normale ou améliorée */
 
 	/**
@@ -65,11 +70,10 @@ public:
 	*/
 	JeuBatailleNavale();
 	/**
-	* \fn public JeuBatailleNavale()
-	* \brief Constructeur de la classe permettant de choisir l'initialisation des paramètres
+	* \fn public JeuBatailleNavale(std::string nomJoueur1, std::string nomJoueur2, char typeJeu, bool IA1, bool IA2, char** grille1, char** grilleTentatives1, char** grille2, char** grilleTentatives2, int h, int l);
+	* \brief Constructeur de la classe permettant de choisir l'initialisation des paramètres pour le chargement d'une sauvegarde.
 	*
 	*/
-
 	JeuBatailleNavale(std::string nomJoueur1, std::string nomJoueur2, char typeJeu, bool IA1, bool IA2, char** grille1, char** grilleTentatives1, char** grille2, char** grilleTentatives2, int h, int l);
 
 
