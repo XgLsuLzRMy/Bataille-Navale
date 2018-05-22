@@ -24,6 +24,8 @@ class JoueurIA : public Joueur {
 private:
 	virtual void placerBateau(Bateau *bateau);
 	int* retirerDeLaListe(int *liste, int taille, int ind);
+	int* determinerCoordonneesBombesAleatoire();
+	int* determinerCoordonneesBombesScan();
 public:
 	JoueurIA();
 	virtual bool estUneIA();
@@ -33,5 +35,6 @@ public:
 	virtual void placementDesBateaux(char typeJeu);
 	virtual int* tour();
 	virtual void resultatBombe(bool touche, int x, int y);
+	virtual void resultatBombeAdverse(bool touche, int x, int y);
 };
 #endif
