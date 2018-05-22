@@ -35,7 +35,7 @@ private:
 
 public:
 	/**
-	* \fn public 	Grille()
+	* \fn public Grille()
 	*
 	* \brief Constructeur de la classe Grille qui initialise la grille
 	*
