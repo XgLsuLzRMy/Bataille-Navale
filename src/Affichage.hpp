@@ -32,7 +32,7 @@ public:
   *
   * \brief fonction qui affiche un message à l'écran
   *
-  * \param chaine de caractère message à afficher
+  * \param message de caractère message à afficher
   */
   static void afficherMessage(std::string message);
   /**
@@ -48,7 +48,7 @@ public:
 	*
 	* \brief fonction qui affiche la liste des jeux à charger et enregistre le choix de l'utilisateur
 	*
-	* \param std::string *liste: liste des jeux à charger, sauvegardés précedemment.
+	* \param *liste: liste des jeux à charger, sauvegardés précedemment.
 	* \return choix: un caractère précisant le choix de l'utilisateur.
 	*/
   static char choixSauvegarde(std::string *liste);
@@ -87,7 +87,7 @@ public:
   *
   * \brief fonction qui affiche le gagnant à l'écran
   *
-  * \param std::String nom: nom du gagnant à afficher
+  * \param nom : nom du gagnant à afficher
   */
 
   static void afficherGagnant(std::string nom);
@@ -105,11 +105,10 @@ public:
   *
   * \brief fonction qui demande la dimension de la grille à l'utilisateur
   *
-  * \param std::string nomDeLaDimension: hauteur, ou largeur
+  * \param nomDeLaDimension : hauteur, ou largeur
   *
   * \return un entier representant la dimension voulue par l'utilisateur
   */
-
   int demanderDimensionGrille(std::string nomDeLaDimension);
   /**
   * \fn public choixTypeJeu();
@@ -123,7 +122,7 @@ public:
   *
   * \brief fonction permettant d'afficher la grille
   *
-  * \param Grille *grille: la grille à afficher
+  * \param *grille : la grille à afficher
   */
   void afficherGrille(Grille *grille);
   /**
@@ -134,15 +133,15 @@ public:
   */
   char demanderPlacementCorrect();
   /**
-  * \fn public demanderCoordonneesBateau(char coordonneee)
+  * \fn public demanderCoordonneesBateau(char coordonnee)
   *
   * \brief fonction qui demande à l'utilisateur les coordonnées du bateau à placer
   *
-  * \param coordonnee: indique si on est dans le cas de xExtremite ou yExtremite
+  * \param coordonnee : indique si on est dans le cas de xExtremite ou yExtremite
   *
   * \return un entier représentant les coordonnées en question
   */
-  int demanderCoordonneesBateau(char coordonneee);
+  int demanderCoordonneesBateau(char coordonnee);
   /**
   * \fn public demanderOrientationBateau()
   * \brief fonction qui demande à l'utilisateur si le bateau à placer doit être parallèle à l'axe des abcisses ou à l'axe des ordonnées

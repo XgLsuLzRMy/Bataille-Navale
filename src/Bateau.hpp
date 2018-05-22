@@ -15,12 +15,14 @@
 
 /*!
 * \class Bateau
-* \brief classe fixant des bateaux au début de la partie
+* \brief classe fixant des bateaux au début de la partie. L'extrémité d'un bateau est située en haut et à gauche. C'est à dire que l'éxtrémité d'un bateau situé en position verticale est en haut et l'éxtrémité d'un bateau situé à l'horizontale est à gauche.
 *
 */
 class Bateau{
 private:
-	int taille, xExtremite, yExtremite; /*!< Paramètres caractéristiques du bateau incluant sa taille et ses coordonnées (x,y) en extrimité qui est à gauche pour l'orientation horizontal et en haut pour l'orientation verticlal */
+	int taille; /*!< La taille du bateau */
+	int xExtremite; /*!< La position selon la coordonnée en x du bateau sur la grille. */
+	int yExtremite; /*!< La position selon la coordonnée en y du bateau sur la grille. */
 	bool orientation; /*!< orientation du bateau 0 pour l'horizontal et 1 pour le vertical */
 public:
 	/**
@@ -35,7 +37,7 @@ public:
 	*
 	* \brief fonction qui modifie la grille passée en paramètre afin de placer le bateau dessus.
 	*
-	* \param Grille *grille: la grille sur laquelle on souhaite placer le bateau
+	* \param *grille : la grille sur laquelle on souhaite placer le bateau
 	* \return true: si le placement a été réussi. false: s'il n'y avait pas de place pour positionner le bateau
 	*/
 	bool placerSurGrille(Grille *grille);
@@ -44,10 +46,8 @@ public:
 	*
 	* \brief fonction qui permet de supprimer un bateau de la grille
 	*
-	* \param Grille *grille: la grille du joueur
+	* \param *grille : la grille du joueur
 	*/
-
-
 	void retirerDeLaGrille(Grille *grille);
 
 	/**
@@ -86,33 +86,33 @@ public:
 	*/
 	void setOrientation(char orientationInput);
 	/**
-	* \fn public getxExtremite
-	* \brief fonction qui renvoie l'attribut xExtremite (coordonnée x d'extremité) d'un bateau
+	* \fn public getOrientation
+	* \brief fonction qui renvoie l'orientation du bateau
 	*
-	* \return la fonction retourne la coordonnée x du bateau.
+	* \return un booléen représentant l'orientation du bateau.
 	*/
 	bool getOrientation();
 	/**
-	* \fn public getCoordonneesCompletes
-	* \brief fonction renvoie tous les coordonnées en x et y occupées par le bateau
+	* \fn public getTaille
+	* \brief fonction renvoie la longueur du bateau.
 	*
-	* \return cette fonction retourne les coordonnées entiers (x,y) du bateau;
+	* \return la longueur du bateau.
 	*/
 	int getTaille();
 	/**
-	* \fn public setxExtremite
-	* \brief fonction qui modifie l'attribut xExtremite (coordonnée x d'extremité) du bateau
+	* \fn public getxExtremite
+	* \brief fonction qui renvoie l'attribut xExtremite (coordonnée x d'extremité) du bateau
 	*
-	* \param xExtremite : coordonnée en x voulue du bateau
+	* \return le coordonnée x d'extremité du bateau
 	*
 	*/
 	int getxExtremite();
 	/**
-	* \fn public setyExtremite
+	* \fn public getyExtremite
 	*
-	* \brief fonction qui modifie l'attribut yExtremite (coordonnée  y d'extremité) du bateau
+	* \brief fonction qui renvoie l'attribut yExtremite (coordonnée  y d'extremité) du bateau
 	*
-	* \param xExtremite : coordonnée en y voulue du bateau
+	* \return la coordonnée en y de l'extremite du bateau
 	*/
 	int getyExtremite();
 	/**
