@@ -16,11 +16,11 @@
 
 #define null 0
 
-#define EAU 0
-#define BATEAU 1
-#define BATEAUTOUCHE 2
-#define TENTATIVEREUSSIE 4
-#define TENTATIVERATEE 5
+#define EAU 0 /*!< Variable correspondant à une case vide sur la grille  */
+#define BATEAU 1 /*!< Variable correspondant à une case où se situe une partie de bateau */
+#define BATEAUTOUCHE 2 /*!< Variable correspondant à une case où se situe une partie de bateau qui a été touché par une bombe adverse */
+#define TENTATIVEREUSSIE 4 /*!< Variable correspondant à une case sur laquelle le joueur a déjà envoyé une bombe et qui a touché un navire adverse */
+#define TENTATIVERATEE 5 /*!< Variable correspondant à une case sur laquelle le joueur a déjà envoyé une bombe mais qui n'a pas touché de navire adverse */
 /*!
 * \class Grille
 * \brief classe classe qui gère les fonctionnalités de la grille des joueurs de la Bataille Navale.
@@ -29,8 +29,9 @@
 class Grille{
 private:
 
-	char** grille;	/*!< Le tableau representant le cadrillage. Ici, la valeur d'une case est: 0 : eau, 1 : bateau,2 : bateau touche  */
-	static int largeur, hauteur;
+	char** grille; /*!< Le tableau representant le cadrillage. Ici, la valeur d'une case est: EAU, BATEAU, BATEAUTOUCHE, TENTATIVEREUSSIE ou TENTATIVERATEE  */
+	static int largeur; /*!< La largeur de la grille  */
+	static int hauteur; /*!< La longueur de la grille */
 
 public:
 	/**
@@ -46,7 +47,8 @@ public:
 	*
 	* \brief fonction qui modifie l'attribut taille de la grille
 	*
-	* \param taille : largeur et longueur voulue pour la grille
+	* \param largeur : largeur voulue pour la grille
+	* \param hauteur : hauteur voulue pour la grille
 	*
 	*/
 	void setTaille(int largeur, int hauteur);
@@ -71,7 +73,8 @@ public:
 	*
 	* \brief fonction qui verifie les critères à respecter avant de placer le bateau sur la grille
 	*
-	* \param tableauDeCoordonnees: tableau de coordonnées du bateau, taille: taille du bateau
+	* \param tableauDeCoordonnees: tableau de coordonnées du bateau
+	* \param taille: la taille du bateau
 	* \return true: si les caracteristiques sont respectées
 	*/
 	bool verifierPlace(int **tableauDeCoordonnees, int taille);
