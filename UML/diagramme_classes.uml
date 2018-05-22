@@ -3,50 +3,71 @@ skinparam classAttributeIconSize 0
 
 
 class JeuBatailleNavale{
-   +Joueur joueur1
-   +Joueur joueur2
+   -Joueur joueur1
+   -Joueur joueur2
+   -char typeJeu
    +int nbJoueursHumains
 
    +JeuBatailleNavale()
-   +void initialiserNomJoueur()
+   +JeuBatailleNavale(string nomJoueur1, string nomJoueur2, char typeJeu, bool IA1, bool IA2, char** grille1, char** grilleTentatives1, char** grille2, char** grilleTentatives2, int h, int l)
+   -void instanciationDesJoueurs(char choix)
+   -void demanderNomJoueurs()
+   -bool joueurPlaceBombe(bool joueur, int xBombe, int yBombe)
+   -void ecrireSauvegarde(string nomSauvegarde, bool tour)
    +void nouveauJeu()
+   +void jouer(bool tour = false)
    +bool checkFinJeu()
 
 }
 
 class Grille{
-   -Pion** grille
-   -{static} int tailleHorizontal
-   -{static} int tailleVertical
+   -char** grille
+   -{static} int largeur
+   -{static} int hauteur
 
    +Grille()
    +~Grille()
-   +void initialiserGrille()
-   +void afficher()
+   +void setTaille(int largeur, int hauteur)
+   +void setGrille(char **grille)
+   +bool verifierPlace(int **tableauDeCoordonnees, int taille)
+   +bool fini()
+   +char get(int x, int y)
+   +int getLargeur()
+   +int getHauteur()
+   +void set(int x, int y, char valeur)
+   +char** getGrille()
    +void reset()
 
 }
 
 class Joueur {
-   -String nom
-   -bool isIA
-   -Grille grille
-   -int nbBateauxTouches
+   #string nom   
+   #Grille grille
+   #Grille grilleTentatives   
+   #int nbCasesBateauxTouches
+   #int nbCasesBateaux
+   #int nbBateaux
+   #Bateau* bateaux
+   #Affichage* affichage
 
   +Joueur()
-  +void initialiserNom()
-  +void initialiserGrille()
-  +void tour()
-
-
-}
-
-class Pion {
-   -int xExtremite
-   -int yExtremite
-
-   +void positionner()
-
+  #virtual void placerBateau(Bateau *b)
+  #void marquerResultatBombeSurGrilleTentative(bool touche, int x, int y)
+  #void marquerResultatBombeSurGrille(bool touche, int x, int y)
+  +~Joueur()
+  +virtual bool estUneIA()
+  +void resetGrilles()
+  +void definirBateauxType2(int nbMaxDeBateaux, int tailleGrille)
+  +void setNom(string nouveauNom)
+  +void setGrille(char **grille, int h, int l)
+  +void setGrilleTentatives(char **grilleTentatives)
+  +virtual void demanderNom()
+  +virtual void demanderTailleGrille()
+  +virtual char demanderTypeJeu()
+  +virtual void placementDesBateaux(char typeJeu)
+  +virtual int* tour()
+  +virtual void resultatBombe(bool touche, int x, int y)
+  +virtual void resultatBombeAdverse(bool touche, int x, int y)
 }
 
 class Bateau{
@@ -56,20 +77,104 @@ class Bateau{
    -bool orientation
 
    +Bateau()
-
+   +bool placerSurGrille(Grille *grille)
+   +void retirerDeLaGrille(Grille *grille)
+   +void setTaille(int taille)
+   +void setxExtremite(int xExtremite)
+   +void setyExtremite(int yExtremite)
+   +void setOrientation(char orientationInput)
+   +bool getOrientation()
+   +int getTaille()
+   +int getxExtremite()
+   +int getyExtremite()
+   +int** getCoordonneesCompletes()
 }
 
-class Sauvegarde{
-   -String nomFichier
-   
-   +void Charger(JeuBatailleNavale* j)
-   +bool Sauvegarder(JeuBatailleNavale)
+class GestionSauvegarde {
+  -string nomFichier
+
+  +GestionSauvegarde()
+  +GestionSauvegarde(string nomFichier)
+  -bool fichierExiste(string nomFichier = "");
+  -int sauvegardeDejaDansListe()
+  -string::size_type debutDeLaChaineSansEspaces(string chaine)
+  -int positionAttribut(string attribut, bool verifierEgale = true)
+  -char* parseLigneGrille(string ligne, int taille)
+  -bool estNumerique(char c)
+  -int recupererHauteurGrille(int pos)
+  -void remplacerLigne(int pos, string nouvelleLigne, bool ajouterLaLigne = false)
+  -void effacerGrille(int pos, int h)
+  +bool nouvelleSauvegarde(bool ecraserFichierSiExisteDeja = false)
+  +{static} std::string* getListeSauvegardes()
+  +{static} void supprimerSauvegarde(string nomFichier)
+  +void ecrireNomJoueur(char numeroJoueur, string nomJoueur)
+  +void ecrireAttribut(string attribut, string valeur)
+  +void ecrireGrille(string nomGrille, char** grille, int largeur, int hauteur)
+  +string lireNomJoueur(char numeroJoueur)
+  +string lireAttribut(string attribut)
+  +char** lireGrille(string nomGrille)
+  +int lireHauteurGrille(string nomGrille)
+  +int lireLargeurGrille(string nomGrille)
 }
 
-Bateau ..|> Pion
-Joueur --> JeuBatailleNavale
-Pion --> Grille
-Grille --> Joueur
-Grille --> JeuBatailleNavale
-JeuBatailleNavale <--> Sauvegarde
+class JoueurHumain {
+  +JoueurHumain()
+  -virtual void placerBateau(Bateau *b)
+  -void demanderCoordonneesBateau(Bateau *b)
+  -int* donnerCoordonneesBombes()
+  +virtual bool estUneIA()
+  +virtual void demanderNom()
+  +virtual void demanderTailleGrille()
+  +virtual char demanderTypeJeu()
+  +virtual void placementDesBateaux(char typeJeu)
+  +virtual int* tour()
+  +virtual void resultatBombe(bool touche, int x, int y)
+  +virtual void resultatBombeAdverse(bool touche, int x, int y)
+}
+
+class JoueurIA{
+  -virtual void placerBateau(Bateau *bateau)
+  -int* retirerDeLaListe(int *liste, int taille, int ind)
+  -int* determinerCoordonneesBombesAleatoire()
+  -int* determinerCoordonneesBombesScan()
+  +virtual bool estUneIA()
+  +virtual void demanderNom()
+  +virtual void demanderTailleGrille()
+  +virtual char demanderTypeJeu()
+  +virtual void placementDesBateaux(char typeJeu)
+  +virtual int* tour()
+  +virtual void resultatBombe(bool touche, int x, int y)
+  +virtual void resultatBombeAdverse(bool touche, int x, int y)
+}
+
+class Affichage {
+  +{static} void afficherMessage(string message)
+  +{static} char proposerNouveauJeuOuSauvegarde()
+  +{static} char choixSauvegarde(string *liste)
+  +{static} char proposerSauvegarder()
+  +{static} string demanderNomSauvegarde()
+  +{static} char menuPrincipal()
+  +{static} void attendreJoueurSuivant()
+  +{static} void afficherGagnant(string nom)
+  +string demanderNom()
+  +int demanderDimensionGrille(string nomDeLaDimension)
+  +char choixTypeJeu()
+  +void afficherGrille(Grille *grille)
+  +char demanderPlacementCorrect()
+  +int demanderCoordonneesBateau(char coordonneee)
+  +char demanderOrientationBateau()
+  + int demanderTailleBateau()
+  +int demanderCoordonneesBombe(char coordonnee)
+}
+
+JoueurHumain ..|> Joueur
+JoueurIA ..|> Joueur
+Joueur<-- JeuBatailleNavale
+Bateau --> Grille
+Affichage --> Grille
+Grille <-- Joueur
+Joueur --> Bateau
+JeuBatailleNavale --> Affichage
+GestionSauvegarde<-- JeuBatailleNavale
+Joueur -->Affichage
 @enduml

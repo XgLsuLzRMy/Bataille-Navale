@@ -1,9 +1,13 @@
 @startuml
 hide members
-Bateau ..|> Pion
-Joueur<--> JeuBatailleNavale
-Pion --> Grille
-Grille --> Joueur
-Grille --> JeuBatailleNavale
-
+JoueurHumain ..|> Joueur
+JoueurIA ..|> Joueur
+Joueur<-- JeuBatailleNavale
+Bateau --> Grille
+Affichage --> Grille
+Grille <-- Joueur
+Joueur --> Bateau
+JeuBatailleNavale --> Affichage
+GestionSauvegadre<-- JeuBatailleNavale
+Joueur -->Affichage
 @enduml
