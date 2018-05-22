@@ -20,7 +20,21 @@ void JoueurIA::demanderTailleGrille(){
 }
 
 char JoueurIA::demanderTypeJeu(){
-	return 1;
+	return 2;
+}
+
+int* JoueurIA::retirerDeLaListe(int *liste, int taille, int ind){
+	int *res = new int[taille-1];
+	int decal = 0;
+	for(int i=0; i<taille; i++){
+		if(i!=ind){
+			res[i-decal] = liste[i];
+		}else{
+			decal = 1;
+		}
+	}
+	delete [] liste;
+	return res;
 }
 
 void JoueurIA::placementDesBateaux(char typeJeu){
@@ -28,12 +42,27 @@ void JoueurIA::placementDesBateaux(char typeJeu){
 	if (typeJeu!=1){
 		// il faut demander le nb de bateaux et leur taille
 		int nbMaxDeBateaux = 5;
+		JoueurIA::definirBateauxType2(nbMaxDeBateaux, std::min(grille.getHauteur(), grille.getLargeur()));
 		int tailleBateau;
 		bool tailleOK = false;
 		int x = 0;
-		JoueurIA::definirBateauxType2(nbMaxDeBateaux, std::min(grille.getHauteur(), grille.getLargeur()));
 		// L'IA place nbBateaux
-		for(int i=0;i<JoueurIA::nbBateaux;i++){
+		int *listeDesNumerosDeBateauxPossibles = new int[nbMaxDeBateaux];
+		// initialisation de la liste à [0 1 2 3 ... nbMaxDeBateaux] puisque n'importe quel bateau peut etre choisi au depart
+		for(int i=0; i<nbMaxDeBateaux; i++){
+			listeDesNumerosDeBateauxPossibles[i] = i;
+		}
+		int tailleListe = nbMaxDeBateaux;
+		// Pour chaque bateau à placer, on crée une liste des numeros de bateaux possibles
+		// Lorsque l'ia choisit un bateau, on enleve le numero de ce bateau de la liste et on recommence
+		for(int i=0; i<JoueurIA::nbBateaux; i++){
+			int numeroChoisi = rand()%tailleListe;
+			JoueurIA::placerBateau(&(JoueurIA::bateaux[listeDesNumerosDeBateauxPossibles[numeroChoisi]]));
+			listeDesNumerosDeBateauxPossibles = JoueurIA::retirerDeLaListe(listeDesNumerosDeBateauxPossibles, tailleListe, numeroChoisi);
+			tailleListe--;
+		}
+
+		/*for(int i=0;i<JoueurIA::nbBateaux;i++){
 			tailleBateau = rand()%(grille.getHauteur()/2); // chaque bateau du joueur a une taille aleatoire
 			// on verrifie que cette taile existe
 			tailleOK = false;
@@ -53,7 +82,7 @@ void JoueurIA::placementDesBateaux(char typeJeu){
 				i = i-1; // Le bateau n'a pas été placé donc
 				// on génére une nouvelle taille pour ce bateau en faisant un nouveau tour de boucle
 			}
-		}
+		}*/
 	}else { // typeJeu 1
 		for(int i=0; i<JoueurIA::nbBateaux; i++){
 			JoueurIA::placerBateau(&(JoueurIA::bateaux[i]));
@@ -70,7 +99,8 @@ void JoueurIA::placerBateau(Bateau *b){
 	int xExtremiteMax = JoueurIA::grille.getLargeur()-b->getTaille() + 1;
 	int yExtremiteMax = JoueurIA::grille.getHauteur()-b->getTaille() + 1;
 	int nbTentativesDePlacement = 0;
-	while(!placementReussi && nbTentativesDePlacement<20){
+	int nbTentativesDePlacementMax = 20;
+	while(!placementReussi && nbTentativesDePlacement<nbTentativesDePlacementMax){
 		xExtremite =trunc(rand()%(xExtremiteMax) + 1) ;
 		yExtremite =trunc(rand()%(yExtremiteMax) + 1) ;
 		orientationInput = round(rand()%(2));
@@ -88,6 +118,9 @@ void JoueurIA::placerBateau(Bateau *b){
 		b->setyExtremite(yExtremite);
 		placementReussi = b->placerSurGrille(&(JoueurIA::grille));
 		nbTentativesDePlacement++;
+	}
+	if(nbTentativesDePlacement>=nbTentativesDePlacementMax){
+		Affichage::afficherMessage("L'IA n'a pas reussi a placer tous ses bateaux...\n");
 	}
 }
 

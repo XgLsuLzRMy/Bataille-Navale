@@ -23,6 +23,7 @@
 class JoueurIA : public Joueur {
 private:
 	virtual void placerBateau(Bateau *bateau);
+	int* retirerDeLaListe(int *liste, int taille, int ind);
 public:
 	JoueurIA();
 	virtual bool estUneIA();
