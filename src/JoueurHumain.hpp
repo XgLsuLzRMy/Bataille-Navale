@@ -93,7 +93,7 @@ public:
 	/**
 	* \fn public resultatBombe(bool touche, int x, int y)
 	*
-	* \brief Notifie le joueur si sa bombe a touché l'adversaire.
+	* \brief Notifie le joueur si sa bombe a touché l'adversaire. On modifie alors sa grille en conséquence.
 	* \param touche: true si la bombe a touché un navire adverse, false sinon.
 	* \param x: La coordonnée en x de la bombe que le joueur avait choisie.
 	* \param y: La coordonnée en y de la bombe que le joueur avait choisie.
