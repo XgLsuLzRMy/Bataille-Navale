@@ -5,6 +5,7 @@ JeuBatailleNavale::JeuBatailleNavale(){
 }
 
 JeuBatailleNavale::JeuBatailleNavale(std::string nomJoueur1, std::string nomJoueur2, char typeJeu, bool IA1, bool IA2, char** grille1, char** grilleTentatives1, char** grille2, char** grilleTentatives2, int h, int l){
+	
 	if(IA1){
 		JeuBatailleNavale::joueur1 = new JoueurIA();
 	}else{

@@ -51,7 +51,6 @@ void Joueur::marquerResultatBombeSurGrille(bool touche, int x, int y){
 void Joueur::definirBateauxType2(int nbMaxDeBateaux,  int tailleGrille){
 	Joueur::bateaux = new Bateau[nbMaxDeBateaux];
 	Bateau b;
-	srand(time(NULL));
 	for (int i=0; i<nbMaxDeBateaux; i++){
 			Joueur::bateaux[i] = b;
 			Joueur::bateaux[i].setTaille(rand()%(tailleGrille/2));

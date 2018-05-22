@@ -4,9 +4,11 @@
 
 #include <string>
 #include <iostream>
+#include <time.h>
 
 int main(){
 	char choix;
+	srand(time(NULL));
 	do{
 		choix = Affichage::proposerNouveauJeuOuSauvegarde();
 	}while(choix!='1' && choix!='2' && choix!='3' && choix!='q');

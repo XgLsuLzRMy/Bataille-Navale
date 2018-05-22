@@ -1,7 +1,7 @@
 #include "JoueurIA.hpp"
 
 JoueurIA::JoueurIA(){
-	srand (time(NULL));
+
 }
 
 void JoueurIA::demanderNom(){
@@ -53,10 +53,11 @@ void JoueurIA::placementDesBateaux(char typeJeu){
 			listeDesNumerosDeBateauxPossibles[i] = i;
 		}
 		int tailleListe = nbMaxDeBateaux;
+		int numeroChoisi = -1;
 		// Pour chaque bateau à placer, on crée une liste des numeros de bateaux possibles
 		// Lorsque l'ia choisit un bateau, on enleve le numero de ce bateau de la liste et on recommence
 		for(int i=0; i<JoueurIA::nbBateaux; i++){
-			int numeroChoisi = rand()%tailleListe;
+			numeroChoisi = rand()%tailleListe;
 			JoueurIA::placerBateau(&(JoueurIA::bateaux[listeDesNumerosDeBateauxPossibles[numeroChoisi]]));
 			listeDesNumerosDeBateauxPossibles = JoueurIA::retirerDeLaListe(listeDesNumerosDeBateauxPossibles, tailleListe, numeroChoisi);
 			tailleListe--;
@@ -110,9 +111,6 @@ void JoueurIA::placerBateau(Bateau *b){
 		else {
 			orientationInput ='h';
 		}
-		std::stringstream sstm;
-		sstm << "xExtremite : " << xExtremite << " yExtremite : " << yExtremite << " orientation : " << orientationInput << "\n";
-		Affichage::afficherMessage(sstm.str());
 		b->setOrientation(orientationInput);
 		b->setxExtremite(xExtremite);
 		b->setyExtremite(yExtremite);
