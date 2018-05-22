@@ -145,7 +145,7 @@ public:
   int demanderCoordonneesBateau(char coordonneee);
   /**
   * \fn public demanderOrientationBateau()
-  * \brief fonction qui demande à l'utilisateur le bateau à placer dans être parallèle à l'axe des abcisses ou à l'axe des ordonnées
+  * \brief fonction qui demande à l'utilisateur si le bateau à placer doit être parallèle à l'axe des abcisses ou à l'axe des ordonnées
   * \return la réponse de l'utilisateur
   */
   char demanderOrientationBateau();
